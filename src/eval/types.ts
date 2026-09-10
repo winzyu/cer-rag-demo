@@ -74,6 +74,9 @@ export interface EvalTurn {
   content: string;
   /** Every turn produces a gradeable answer, so every turn carries its own rubric. */
   rubric: EvalRubric;
+  /** This turn's rubric admits no substantive answer, so the pinned refusal sentence is
+   * required. */
+  requires_refusal?: boolean;
 }
 
 export interface EvalFixture {

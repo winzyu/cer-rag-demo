@@ -90,6 +90,11 @@ const validateTurn = (
   const {
     must_contain, must_not, cite, notes,
   } = rubric as Record<string, unknown>;
+  const { requires_refusal: requiresRefusal } = turn as Record<string, unknown>;
+
+  if (requiresRefusal !== undefined && typeof requiresRefusal !== "boolean") {
+    errors.push(`${where}.requires_refusal must be a boolean when present.`);
+  }
 
   // An empty must_contain would grade to "pass" for any answer at all, including silence.
   if (!isStringArray(must_contain) || must_contain.length === 0) {

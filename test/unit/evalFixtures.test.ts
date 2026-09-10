@@ -224,6 +224,23 @@ describe("fixture validation", () => {
       .toThrow(/at least 2 user turns/);
   });
 
+  it("rejects a non-boolean requires_refusal", () => {
+    const turns = [
+      { ...validFixture.turns[0], requires_refusal: "yes" },
+      validFixture.turns[1],
+    ];
+    expect(() => loadFixtures(withFixture({ turns })))
+      .toThrow(/requires_refusal must be a boolean/);
+  });
+
+  it("accepts a turn with requires_refusal set or omitted", () => {
+    const turns = [
+      { ...validFixture.turns[0], requires_refusal: true },
+      validFixture.turns[1],
+    ];
+    expect(() => loadFixtures(withFixture({ turns }))).not.toThrow();
+  });
+
   it("rejects an assistant turn", () => {
     const turns = [{ ...validFixture.turns[0], role: "assistant" }, validFixture.turns[1]];
     expect(() => loadFixtures(withFixture({ turns }))).toThrow(/role must be "user"/);

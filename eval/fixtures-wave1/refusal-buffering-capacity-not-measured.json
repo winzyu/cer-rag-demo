@@ -25,7 +25,8 @@
           "invents a relationship converting a measured parameter into buffering capacity",
           "silently substitutes the pH reading for the thing that was asked about"
         ]
-      }
+      },
+      "requires_refusal": true
     },
     {
       "role": "user",
@@ -45,7 +46,8 @@
           "offers a hedged numeric estimate in place of a refusal",
           "cites the specific-conductance chapter's statement that conductivity has been used to estimate major solute concentrations as a route to buffering capacity"
         ]
-      }
+      },
+      "requires_refusal": true
     }
   ]
 }

@@ -24,7 +24,8 @@
           "generalizes or averages the other four probes' ratings into an answer",
           "implies a turbidity datasheet exists in the corpus"
         ]
-      }
+      },
+      "requires_refusal": true
     },
     {
       "role": "user",

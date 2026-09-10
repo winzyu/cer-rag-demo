@@ -20,6 +20,34 @@ import {
   normalizeForMatch,
 } from "../../src/eval/gates/normalize";
 import { REFUSAL_SENTENCE } from "../../src/prompt/systemPrompt";
+import { refusalMap } from "../../src/eval/gates/runner";
+import { loadFixtures } from "../../src/eval/fixtures";
+import type { LoadedFixture } from "../../src/eval/fixtures";
+
+jest.mock("../../src/eval/fixtures");
+const mockLoadFixtures = loadFixtures as jest.MockedFunction<typeof loadFixtures>;
+
+/** Enough of `LoadedFixture` for `refusalMap`, which only reads `id`, `class` and `turns`. */
+const fixture = (
+  id: string,
+  fixtureClass: string,
+  turns: { requires_refusal?: boolean }[],
+): LoadedFixture => ({
+  id,
+  class: fixtureClass as LoadedFixture["class"],
+  expected_to_favor: "tie",
+  answerable_from: [],
+  requires: [],
+  notes: "test fixture",
+  sliceCoverage: "none",
+  runnable: true,
+  turns: turns.map((turn) => ({
+    role: "user",
+    content: "question",
+    rubric: { must_contain: ["something"], must_not: [] },
+    ...turn,
+  })),
+});
 
 /**
  * Exactly what `eval/transcripts/warm/firestore-direct/refusal-pathogens.json` turn 2 contained.
@@ -130,6 +158,43 @@ describe("checkRefusal", () => {
   it("keeps every non-exact outcome non-vetoing except an actual answer", () => {
     expect(checkRefusal(REFUSAL_SENTENCE).vetoes).toBe(false);
     expect(checkRefusal(NBSP_HYPHEN_REFUSAL).vetoes).toBe(false);
+  });
+});
+
+describe("refusalMap", () => {
+  it("reads requires_refusal directly, not rubric prose", () => {
+    mockLoadFixtures.mockReturnValue([
+      fixture("probecal-example", "probe-calibration", [
+        { requires_refusal: false },
+        { requires_refusal: true },
+      ]),
+    ]);
+
+    expect(refusalMap().get("probecal-example")).toEqual([false, true]);
+  });
+
+  it("treats a missing flag as false", () => {
+    mockLoadFixtures.mockReturnValue([
+      fixture("refusal-example", "refusal", [{}, { requires_refusal: true }]),
+    ]);
+
+    expect(refusalMap().get("refusal-example")).toEqual([false, true]);
+  });
+
+  it("throws when a refusal-class fixture has no flagged turn", () => {
+    mockLoadFixtures.mockReturnValue([
+      fixture("refusal-unflagged", "refusal", [{}, { requires_refusal: false }]),
+    ]);
+
+    expect(() => refusalMap()).toThrow(/no turn sets requires_refusal: true/);
+  });
+
+  it("does not throw when a non-refusal fixture has no flagged turn", () => {
+    mockLoadFixtures.mockReturnValue([
+      fixture("probecal-example", "probe-calibration", [{}, {}]),
+    ]);
+
+    expect(() => refusalMap()).not.toThrow();
   });
 });
 

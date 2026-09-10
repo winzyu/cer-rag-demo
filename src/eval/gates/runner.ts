@@ -24,15 +24,6 @@ import {
 
 export const TRANSCRIPT_ROOT = path.join(process.cwd(), "eval", "transcripts");
 
-/**
- * A turn requires a refusal when its rubric says so in `must_contain`.
- *
- * Read from the rubric rather than a dedicated boolean because the fixtures are a **pinned
- * control** while ◆G7 is open (`EVAL_FIXTURES.md` §7) — adding a field to them to make this
- * tidier would edit the control to suit the instrument, which is backwards.
- */
-const REFUSAL_REQUIRED = /\brefus(e|es|al|ing)\b/i;
-
 export interface TurnFinding {
   fixtureId: string;
   fixtureClass: string;
@@ -113,25 +104,22 @@ const readTranscripts = (dir: string): { file: string; body: Record<string, unkn
 /**
  * `fixtureId` -> zero-based turn index -> whether that turn's rubric demands a refusal.
  *
- * **Throws when a `refusal`-class fixture yields no refusal-required turn.** The refusal gate is
- * absolute (§8a: 100%), and a detector that finds nothing reports `required: 0` and `met: true` —
- * an arm that answered every unanswerable question would clear a pre-registered gate. That is a
- * worse failure than not running, so it is loud.
+ * Read straight off each turn's `requires_refusal` flag — the only source of truth. There is
+ * deliberately no fallback to matching rubric prose: the earlier approach (regex-matching
+ * `must_contain` for words like "refuse") is what this replaced, and it matched 0 of wave 1's 8
+ * refusal turns because they phrase the same requirement as "Declines to..." and "States that no
+ * source here gives...". A silent prose fallback would reintroduce exactly that failure mode.
  *
- * The wave 1 set trips this: it phrases the same requirement as "Declines to..." and "States that
- * no source here gives...", so `REFUSAL_REQUIRED` matches 0 of its 8 refusal turns where it
- * matched 3 of the archived set's 6. Widening the pattern is not the fix — it caught only 3 of 8
- * with "declines" added, and picked up two false positives elsewhere. The fix is a per-turn
- * `requires_refusal` boolean on the fixture, which `EVAL_FIXTURES.md` §7 previously ruled out
- * because the fixtures were a pinned control while ◆G7 was open. That reason is gone.
+ * **Throws when a `refusal`-class fixture yields no flagged turn.** The refusal gate is absolute
+ * (§8a: 100%), and a map that finds nothing reports `required: 0` and `met: true` — an arm that
+ * answered every unanswerable question would clear a pre-registered gate. That is a worse failure
+ * than not running, so it is loud.
  */
-const refusalMap = (): Map<string, boolean[]> => {
+export const refusalMap = (): Map<string, boolean[]> => {
   const map = new Map<string, boolean[]>();
   const fixtures = loadFixtures();
   fixtures.forEach((fixture) => {
-    map.set(fixture.id, fixture.turns.map((turn) => (
-      (turn.rubric?.must_contain ?? []).some((claim) => REFUSAL_REQUIRED.test(claim))
-    )));
+    map.set(fixture.id, fixture.turns.map((turn) => turn.requires_refusal === true));
   });
 
   const refusalFixtures = fixtures.filter((fixture) => fixture.class === "refusal");
@@ -139,9 +127,9 @@ const refusalMap = (): Map<string, boolean[]> => {
     .reduce((total, fixture) => total + (map.get(fixture.id) ?? []).filter(Boolean).length, 0);
   if (refusalFixtures.length > 0 && detected === 0) {
     throw new Error(
-      `${refusalFixtures.length} refusal-class fixture(s) loaded but no turn's rubric matches `
-      + `${REFUSAL_REQUIRED} in must_contain, so the refusal gate would pass on zero turns. `
-      + "Add a per-turn requires_refusal flag to the fixtures rather than widening the pattern.",
+      `${refusalFixtures.length} refusal-class fixture(s) loaded but no turn sets `
+      + "requires_refusal: true, so the refusal gate would pass on zero turns. "
+      + "Flag the turns whose rubric admits no substantive answer.",
     );
   }
   return map;

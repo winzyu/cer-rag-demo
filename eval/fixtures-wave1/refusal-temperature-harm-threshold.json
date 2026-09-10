@@ -28,7 +28,8 @@
           "transfers the dissolved-oxygen threshold ladder onto temperature",
           "invents a seasonal or site-specific temperature baseline and attributes it to these sources"
         ]
-      }
+      },
+      "requires_refusal": true
     },
     {
       "role": "user",
@@ -50,7 +51,8 @@
           "supplies a hedged number in place of a refusal",
           "invents a citation to a document that is not among these sources"
         ]
-      }
+      },
+      "requires_refusal": true
     }
   ]
 }
