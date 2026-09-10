@@ -9,6 +9,7 @@ import { ChatOrchestrator } from "../services/ChatOrchestrator";
 import { buildToolRegistry } from "../tools";
 import { parseChatRequest } from "../validators/chatValidators";
 import { QuotaService, quotaKeyFor, quotaService } from "../quota";
+import { buildAuditLogRecord, writeAuditLog } from "../services/auditLog";
 import { createStreamingCommentaryFilter } from "../utils/answerFormat";
 import { callerToken } from "../utils/bearerToken";
 import { resolveErrorCode } from "../utils/errors";
@@ -63,6 +64,11 @@ export class ChatController {
       const quotaKey = quotaKeyFor(req);
       this.quota.recordRequest(quotaKey);
 
+      // Caller identity for the audit record (`docs/RESPONSIBILITY.md` #6). Forced to "caller"
+      // scope regardless of `QUERY_QUOTA_SCOPE` — the audit trail must identify who asked even
+      // when the quota counter itself is bucketed globally.
+      const callerId = quotaKeyFor(req, "caller");
+
       // Selection rules (including the DEBUG_RETRIEVAL override rule) live in the
       // registry, so this controller stays a thin HTTP wrapper.
       const adapter = this.registry.resolve(retrieval);
@@ -82,7 +88,17 @@ export class ChatController {
       const token = callerToken(req);
 
       if (stream) {
-        await this.streamAnswer(res, messages, adapter.mode, chunks, quotaKey, device, token);
+        await this.streamAnswer(
+          res,
+          messages,
+          adapter.mode,
+          chunks,
+          quotaKey,
+          query,
+          callerId,
+          device,
+          token,
+        );
         return;
       }
 
@@ -95,6 +111,17 @@ export class ChatController {
       // Retrospective by necessity — a prompt's cost is not knowable before the call. The
       // request that crosses a token ceiling completes; the next one is refused.
       this.quota.recordTokens(quotaKey, answer.usage.totalTokens);
+
+      // Fire-and-forget: `writeAuditLog` never throws and must not delay a response already
+      // decided (§ "A logging failure must never fail a user's answer").
+      writeAuditLog(buildAuditLogRecord({
+        query,
+        answer: answer.content,
+        chunks,
+        model: answer.model,
+        mode: adapter.mode,
+        caller: callerId,
+      }));
 
       res.status(200).json({
         answer: answer.content,
@@ -129,6 +156,8 @@ export class ChatController {
     mode: string,
     chunks: Chunk[],
     quotaKey: string,
+    query: string,
+    callerId: string,
     device?: string,
     token?: string,
   ): Promise<void> => {
@@ -174,6 +203,15 @@ export class ChatController {
           ...(answer.capped ? { tool_round_cap_reached: true } : {}),
         });
         writeSseEvent(res, "end", {});
+
+        writeAuditLog(buildAuditLogRecord({
+          query,
+          answer: answer.content,
+          chunks,
+          model: answer.model,
+          mode,
+          caller: callerId,
+        }));
         return;
       }
 
@@ -183,11 +221,15 @@ export class ChatController {
       // the orchestrator entirely, so without this a leaked `【commentary…】` reached the UI
       // verbatim on the default configuration — the exact defect `answerFormat` exists to fix.
       const commentary = createStreamingCommentaryFilter();
+      // Accumulated for the audit record — nothing else on this path holds the full answer text,
+      // since tokens are only ever written out to the client one piece at a time.
+      let fullAnswer = "";
 
       for await (const event of this.llm.completeStream(messages, controller.signal)) {
         if (event.text) {
           const text = commentary.push(event.text);
           if (text) {
+            fullAnswer += text;
             writeSseEvent(res, "token", { text });
           }
         }
@@ -205,6 +247,7 @@ export class ChatController {
 
       const tail = commentary.flush();
       if (tail) {
+        fullAnswer += tail;
         writeSseEvent(res, "token", { text: tail });
       }
 
@@ -214,6 +257,18 @@ export class ChatController {
       // `done` handler that renders provenance and the series chart.
       writeSseEvent(res, "done", { model, ...(usage ? { usage } : {}) });
       writeSseEvent(res, "end", {});
+
+      writeAuditLog(buildAuditLogRecord({
+        query,
+        answer: fullAnswer,
+        chunks,
+        // The provider omitting `model` on this path is possible in principle (LlmService's own
+        // types allow it) but not observed; "unknown" keeps the record queryable by model rather
+        // than dropping the field.
+        model: model ?? "unknown",
+        mode,
+        caller: callerId,
+      }));
     } catch (error) {
       // Headers are already sent, so the status code cannot be changed and the central
       // error handler cannot render this. Report it in-band instead of dying silently.

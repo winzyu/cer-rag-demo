@@ -175,6 +175,16 @@ export interface QuotaConfig {
   scope: QuotaScope;
 }
 
+/**
+ * Durable per-response record for dispute reconstruction (`docs/RESPONSIBILITY.md` #6).
+ *
+ * Defaults to **off**, same reasoning as `SENSOR_TOOL`/`REPORT_TOOL`: a deployment with no
+ * Firestore credentials configured must not start writing on every chat response.
+ */
+export interface AuditConfig {
+  enabled: boolean;
+}
+
 export type CorpusSourceName = "artifact" | "firestore";
 
 export interface RetrievalConfig {
@@ -204,6 +214,7 @@ export interface Config {
   quota: QuotaConfig;
   retrieval: RetrievalConfig;
   waterType: WaterType;
+  audit: AuditConfig;
 }
 
 // Validation errors are collected so the process fails once, with every problem listed.
@@ -399,6 +410,9 @@ const load = (): Config => {
       ),
     },
     waterType: readEnum<WaterType>("WATER_TYPE", ["freshwater", "saltwater"], "freshwater"),
+    audit: {
+      enabled: readBool("AUDIT_LOG", false),
+    },
   };
 
   // A cap of 0 would offer tools and then never let the model use a result, which reads as
@@ -478,6 +492,12 @@ const load = (): Config => {
         + "the whole deployment.",
       );
     }
+  }
+
+  if (config.audit.enabled) {
+    log.info("AUDIT_LOG is ON — each chat response is persisted to Firestore for dispute reconstruction.");
+  } else {
+    log.info("AUDIT_LOG is OFF — chat responses are not persisted.");
   }
 
   if (config.isProduction && !config.firestore.projectId) {
