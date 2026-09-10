@@ -831,9 +831,13 @@ reporting a vacuous 100% pass. The fix is a per-turn `requires_refusal` flag on 
 
 ## Session handoffs
 
-Current state, open decisions, and how to resume: **[`EVAL_REBUILD.md`](EVAL_REBUILD.md)** for all
-eval work, then [`HANDOFF_2026-08-27.md`](HANDOFF_2026-08-27.md) for everything else. The handoff
-carries a banner marking which of its sections the rebuild superseded.
+**The current handoff is [`HANDOFF_2026-09-10.md`](HANDOFF_2026-09-10.md).** Read it first for
+session state, open blockers and who owns each one, then **[`EVAL_REBUILD.md`](EVAL_REBUILD.md)**
+for the eval plan and its phase order.
+
+[`HANDOFF_2026-08-27.md`](HANDOFF_2026-08-27.md) is **superseded for session state** but still
+current for the device-API and report work it describes; its eval sections were superseded earlier
+by the rebuild, and it carries a banner marking which.
 
 The 2026-07-31 / 2026-08-04 handoff that used to sit here has been removed — every item it listed as
 pending has since happened, and it had begun to contradict the phases above. The findings it carried

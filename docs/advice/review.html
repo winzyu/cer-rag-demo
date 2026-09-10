@@ -1,0 +1,1633 @@
+<title>Advice Catalogue Review</title>
+<style>
+  :root {
+    --bg: #f6f4ef;
+    --bg-raised: #ffffff;
+    --bg-sunken: #ece8df;
+    --text: #1d1c19;
+    --text-dim: #5b584f;
+    --text-faint: #8a8676;
+    --border: #d9d4c6;
+    --border-strong: #b8b19d;
+    --accent: #3d5a80;
+    --accent-text: #1d3a5f;
+    --edu: #3d6b8a;
+    --edu-bg: #e7eef3;
+    --esc: #9a6b1f;
+    --esc-bg: #f5ecd8;
+    --diy: #a13d3d;
+    --diy-bg: #f6e4e2;
+    --diy-border: #c2504f;
+    --ok: #3f7a4a;
+    --ok-bg: #e3efe1;
+    --reject: #a13d3d;
+    --reject-bg: #f6e4e2;
+    --edit: #9a6b1f;
+    --edit-bg: #f5ecd8;
+    --undecided: #6b6759;
+    --warn-bg: #fbe9c9;
+    --warn-border: #c98a1f;
+    --warn-text: #5a3f08;
+    --shadow: 0 1px 3px rgba(30,28,20,0.08), 0 1px 2px rgba(30,28,20,0.06);
+    --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+    --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --serif: Georgia, "Iowan Old Style", "Palatino Linotype", "Book Antiqua", serif;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #171613;
+      --bg-raised: #211f1b;
+      --bg-sunken: #131210;
+      --text: #ece9df;
+      --text-dim: #b3ae9f;
+      --text-faint: #7d7969;
+      --border: #38352c;
+      --border-strong: #4d493c;
+      --accent: #8fb4d9;
+      --accent-text: #a9c8e6;
+      --edu: #7fb0d6;
+      --edu-bg: #1c2a34;
+      --esc: #d6a94f;
+      --esc-bg: #332a15;
+      --diy: #e08585;
+      --diy-bg: #38201e;
+      --diy-border: #c2504f;
+      --ok: #7fbf8a;
+      --ok-bg: #1c3020;
+      --reject: #e08585;
+      --reject-bg: #38201e;
+      --edit: #d6a94f;
+      --edit-bg: #332a15;
+      --undecided: #928d7c;
+      --warn-bg: #3a2c0c;
+      --warn-border: #c98a1f;
+      --warn-text: #f0cd85;
+      --shadow: 0 1px 3px rgba(0,0,0,0.4);
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #171613;
+    --bg-raised: #211f1b;
+    --bg-sunken: #131210;
+    --text: #ece9df;
+    --text-dim: #b3ae9f;
+    --text-faint: #7d7969;
+    --border: #38352c;
+    --border-strong: #4d493c;
+    --accent: #8fb4d9;
+    --accent-text: #a9c8e6;
+    --edu: #7fb0d6;
+    --edu-bg: #1c2a34;
+    --esc: #d6a94f;
+    --esc-bg: #332a15;
+    --diy: #e08585;
+    --diy-bg: #38201e;
+    --diy-border: #c2504f;
+    --ok: #7fbf8a;
+    --ok-bg: #1c3020;
+    --reject: #e08585;
+    --reject-bg: #38201e;
+    --edit: #d6a94f;
+    --edit-bg: #332a15;
+    --undecided: #928d7c;
+    --warn-bg: #3a2c0c;
+    --warn-border: #c98a1f;
+    --warn-text: #f0cd85;
+    --shadow: 0 1px 3px rgba(0,0,0,0.4);
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--sans);
+    line-height: 1.5;
+    padding: 0 max(16px, calc((100% - 920px) / 2)) 80px;
+  }
+  .wrap { max-width: 920px; margin: 0 auto; }
+
+  h1, h2, h3, h4 { font-family: var(--serif); font-weight: 600; margin: 0 0 .4em; color: var(--text); }
+  h1 { font-size: 1.9rem; margin-top: .6em; }
+  h2 { font-size: 1.4rem; border-bottom: 1px solid var(--border); padding-bottom: .3em; margin-top: 2.2em; }
+  h3 { font-size: 1.05rem; }
+  p { margin: .5em 0; }
+  a { color: var(--accent-text); }
+  code { font-family: var(--mono); font-size: .88em; background: var(--bg-sunken); padding: .05em .3em; border-radius: 3px; }
+
+  header.page-head {
+    padding-top: 1.2em;
+  }
+  .kicker {
+    font-family: var(--mono);
+    font-size: .78rem;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    color: var(--text-faint);
+  }
+  .print-hint {
+    font-size: .82rem;
+    color: var(--text-faint);
+    margin-top: .2em;
+  }
+
+  /* Reachability warning */
+  .reach-warning {
+    background: var(--warn-bg);
+    border: 1px solid var(--warn-border);
+    color: var(--warn-text);
+    border-radius: 8px;
+    padding: 1em 1.2em;
+    margin: 1.4em 0;
+  }
+  .reach-warning h2 { margin-top: 0; border: none; padding-bottom: 0; color: var(--warn-text); font-size: 1.1rem; }
+  .reach-warning table { width: 100%; border-collapse: collapse; margin-top: .6em; font-size: .92rem; }
+  .reach-warning th, .reach-warning td { text-align: left; padding: .3em .5em; border-bottom: 1px solid var(--warn-border); vertical-align: top; }
+  .reach-warning th { font-weight: 600; }
+  .reach-status-bad { font-weight: 700; }
+
+  /* Toolbar: filters + tallies */
+  .toolbar {
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    background: var(--bg);
+    padding: .8em 0;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 1.4em;
+  }
+  .tallies {
+    display: flex;
+    gap: .6em;
+    flex-wrap: wrap;
+    margin-bottom: .7em;
+  }
+  .tally {
+    font-family: var(--mono);
+    font-size: .82rem;
+    padding: .3em .6em;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+    background: var(--bg-raised);
+    white-space: nowrap;
+  }
+  .tally b { font-size: 1rem; }
+  .tally.approved { border-color: var(--ok); color: var(--ok); }
+  .tally.rejected { border-color: var(--reject); color: var(--reject); }
+  .tally.edit { border-color: var(--edit); color: var(--edit); }
+  .tally.undecided { color: var(--undecided); }
+
+  .filters {
+    display: flex;
+    gap: .6em;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .filters select, .filters button {
+    font: inherit;
+    font-size: .85rem;
+    padding: .35em .6em;
+    border-radius: 6px;
+    border: 1px solid var(--border-strong);
+    background: var(--bg-raised);
+    color: var(--text);
+  }
+  .filters button.copy-btn {
+    background: var(--accent);
+    color: #fff;
+    border-color: var(--accent);
+    cursor: pointer;
+    font-weight: 600;
+  }
+  .filters button.copy-btn:active { opacity: .85; }
+  .filters .copy-status { font-size: .8rem; color: var(--text-faint); }
+
+  /* Family section */
+  .family-section h2 {
+    display: flex;
+    align-items: baseline;
+    gap: .5em;
+  }
+  .family-count { font-family: var(--mono); font-size: .8rem; color: var(--text-faint); font-weight: 400; }
+  .family-scope { font-size: .88rem; color: var(--text-dim); margin-bottom: 1em; }
+
+  /* Card */
+  .card {
+    background: var(--bg-raised);
+    border: 1px solid var(--border);
+    border-left: 5px solid var(--border-strong);
+    border-radius: 8px;
+    padding: 1.1em 1.3em 1.2em;
+    margin-bottom: 1.1em;
+    box-shadow: var(--shadow);
+  }
+  .card.tier-education { border-left-color: var(--edu); }
+  .card.tier-escalation { border-left-color: var(--esc); }
+  .card.tier-diy-hints { border-left-color: var(--diy); border-left-width: 8px; }
+
+  .card[hidden] { display: none !important; }
+
+  .card-head {
+    display: flex;
+    align-items: center;
+    gap: .5em;
+    flex-wrap: wrap;
+    margin-bottom: .5em;
+  }
+  .cid { font-family: var(--mono); font-weight: 700; font-size: .95rem; }
+  .badge {
+    font-family: var(--mono);
+    font-size: .72rem;
+    padding: .15em .5em;
+    border-radius: 999px;
+    border: 1px solid var(--border-strong);
+    text-transform: uppercase;
+    letter-spacing: .03em;
+  }
+  .badge.tier-education { background: var(--edu-bg); color: var(--edu); border-color: var(--edu); }
+  .badge.tier-escalation { background: var(--esc-bg); color: var(--esc); border-color: var(--esc); }
+  .badge.tier-diy-hints { background: var(--diy-bg); color: var(--diy); border-color: var(--diy-border); font-weight: 700; }
+  .badge.event { background: var(--bg-sunken); color: var(--text-dim); }
+  .badge.unreachable { background: var(--warn-bg); color: var(--warn-text); border-color: var(--warn-border); font-weight: 700; }
+  .badge.forward { background: var(--bg-sunken); color: var(--text-faint); font-style: italic; text-transform: none; }
+  .decision-flag { margin-left: auto; font-family: var(--mono); font-size: .74rem; padding: .15em .5em; border-radius: 999px; border: 1px solid var(--border); color: var(--undecided); }
+  .decision-flag.approved { background: var(--ok-bg); color: var(--ok); border-color: var(--ok); }
+  .decision-flag.rejected { background: var(--reject-bg); color: var(--reject); border-color: var(--reject); }
+  .decision-flag.edit { background: var(--edit-bg); color: var(--edit); border-color: var(--edit); }
+
+  .meta-row {
+    font-size: .84rem;
+    color: var(--text-dim);
+    display: flex;
+    gap: 1.2em;
+    flex-wrap: wrap;
+    margin-bottom: .8em;
+  }
+  .meta-row span b { color: var(--text); font-weight: 600; }
+
+  .draft-text {
+    font-family: var(--serif);
+    font-size: 1.12rem;
+    line-height: 1.55;
+    background: var(--bg-sunken);
+    border-radius: 6px;
+    padding: .9em 1.1em;
+    margin: 0 0 .8em;
+    color: var(--text);
+    border: 1px solid var(--border);
+  }
+  .draft-label { font-family: var(--mono); font-size: .68rem; text-transform: uppercase; letter-spacing: .06em; color: var(--text-faint); display: block; margin-bottom: .35em; }
+
+  .referral-line {
+    font-size: .9rem;
+    margin: 0 0 .8em;
+    padding: .5em .8em;
+    border-left: 3px solid var(--accent);
+    background: var(--bg-sunken);
+    border-radius: 0 4px 4px 0;
+  }
+  .referral-line .lbl { font-weight: 600; margin-right: .3em; }
+  .referral-line.none { color: var(--text-faint); font-style: italic; border-left-color: var(--border-strong); }
+
+  details.evidence { margin: 0 0 .8em; }
+  details.evidence > summary {
+    cursor: pointer;
+    font-family: var(--mono);
+    font-size: .74rem;
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    color: var(--text-faint);
+    padding: .2em 0;
+  }
+  .evidence ul { list-style: none; margin: .5em 0 0; padding: 0; }
+  .evidence li {
+    font-size: .87rem;
+    padding: .5em .7em;
+    background: var(--bg-sunken);
+    border-radius: 5px;
+    margin-bottom: .45em;
+    break-inside: avoid;
+  }
+  .evidence li q { quotes: "\201C" "\201D"; font-style: italic; }
+  .evidence li cite { display: block; font-style: normal; font-family: var(--mono); font-size: .76rem; color: var(--text-faint); margin-top: .3em; }
+
+  .note-box {
+    font-size: .85rem;
+    background: var(--warn-bg);
+    color: var(--warn-text);
+    border: 1px solid var(--warn-border);
+    border-radius: 5px;
+    padding: .55em .8em;
+    margin-bottom: .8em;
+    break-inside: avoid;
+  }
+  .note-box.forward { background: var(--bg-sunken); color: var(--text-dim); border-color: var(--border); }
+  .note-box b { display: block; font-size: .72rem; text-transform: uppercase; letter-spacing: .05em; margin-bottom: .2em; }
+
+  .decision-controls {
+    border-top: 1px dashed var(--border);
+    padding-top: .8em;
+    margin-top: .6em;
+    display: flex;
+    gap: 1em;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+  .decision-btns { display: flex; gap: .4em; flex-wrap: wrap; }
+  .decision-btns button {
+    font: inherit;
+    font-size: .82rem;
+    padding: .4em .8em;
+    border-radius: 6px;
+    border: 1px solid var(--border-strong);
+    background: var(--bg-raised);
+    color: var(--text);
+    cursor: pointer;
+  }
+  .decision-btns button[data-val="approve"].active { background: var(--ok); border-color: var(--ok); color: #fff; }
+  .decision-btns button[data-val="reject"].active { background: var(--reject); border-color: var(--reject); color: #fff; }
+  .decision-btns button[data-val="edit"].active { background: var(--edit); border-color: var(--edit); color: #fff; }
+  .note-field { flex: 1 1 260px; min-width: 220px; }
+  .note-field textarea {
+    width: 100%;
+    font: inherit;
+    font-size: .84rem;
+    padding: .4em .6em;
+    border-radius: 6px;
+    border: 1px solid var(--border-strong);
+    background: var(--bg-raised);
+    color: var(--text);
+    resize: vertical;
+    min-height: 2.4em;
+  }
+  .note-field label { display: block; font-size: .72rem; color: var(--text-faint); margin-bottom: .2em; }
+
+  /* Rejected sections */
+  .rejected-section {
+    margin-top: 2.4em;
+  }
+  .rejected-section > summary {
+    cursor: pointer;
+    font-family: var(--serif);
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: .5em 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .rejected-note { font-size: .84rem; color: var(--text-dim); margin: .6em 0 1em; }
+  .rejected-item {
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--reject);
+    border-radius: 6px;
+    padding: .7em 1em;
+    margin-bottom: .6em;
+    break-inside: avoid;
+  }
+  .rejected-item .rj-head { font-size: .9rem; font-weight: 600; margin-bottom: .3em; }
+  .rejected-item .rj-tag { font-family: var(--mono); font-size: .72rem; color: var(--text-faint); margin-bottom: .3em; }
+  .rejected-item .rj-rule { font-size: .86rem; color: var(--text-dim); }
+  .rejected-item .rj-rule b { color: var(--text); }
+
+  footer.page-foot {
+    margin-top: 3em;
+    padding-top: 1em;
+    border-top: 1px solid var(--border);
+    font-size: .8rem;
+    color: var(--text-faint);
+  }
+
+  @media (max-width: 640px) {
+    .toolbar { position: static; }
+    .meta-row { gap: .6em; }
+  }
+
+  .wide-scroll { overflow-x: auto; }
+
+  @media print {
+    body { background: #fff; color: #000; padding: 0 20px; }
+    .toolbar, .decision-controls, .filters, .print-hint { display: none !important; }
+    .card { break-inside: auto; box-shadow: none; border: 1px solid #999; }
+    details.evidence, .rejected-section { display: block; }
+    details.evidence > summary, .rejected-section > summary { display: none; }
+    .reach-warning { break-inside: avoid; }
+    a { color: #000; text-decoration: underline; }
+  }
+</style>
+
+<div class="wrap">
+<header class="page-head">
+  <div class="kicker">Advice catalogue &middot; operator review</div>
+  <h1>Advice Catalogue Review</h1>
+  <p>Every candidate below is a proposal, not shipped copy. Code selects an entry by matching a detected
+  event or instrument-health signal; the model only phrases what it is handed. Approving an entry means
+  the wording is defensible as written, the tier is right, and Clean Earth Rovers is willing to stand
+  behind it appearing verbatim in a customer-facing answer. Draft text is reproduced exactly as written
+  by the drafting agents &mdash; nothing here has been tidied, shortened, or rephrased.</p>
+  <p class="print-hint">To print or save as PDF: Ctrl/Cmd+P. Controls and filters are hidden in print.</p>
+</header>
+
+<section class="reach-warning" id="reach-warning">
+  <h2>Trigger reachability &mdash; read before approving</h2>
+  <p>Several entries are keyed to event types the pipeline <b>cannot currently produce on live data</b>.
+  They are still worth approving &mdash; approval is cheap and each gap is a fixable code defect &mdash;
+  but a first release should not depend on them.</p>
+  <div class="wide-scroll">
+  <table>
+    <tr><th>Event type</th><th>Live-data status</th></tr>
+    <tr><td>Sewage, Hypoxia, Acidic input, Stormwater</td><td>Reachable</td></tr>
+    <tr><td>Thermal</td><td>Reachable on the full signature only; the temperature-alone branch is downgraded</td></tr>
+    <tr><td>Industrial</td><td class="reach-status-bad">Unreachable &mdash; classified at confidence 0.3, below the 0.5 floor, always rewritten to Inconclusive</td></tr>
+    <tr><td>Saltwater intrusion</td><td class="reach-status-bad">Unreachable &mdash; classified at 0.45, same cause</td></tr>
+    <tr><td>Algal bloom</td><td class="reach-status-bad">Unreachable &mdash; detectAlgalBloom requires a diel pattern tag, and live data is always tagged unknown</td></tr>
+    <tr><td>Instrument-health triggers</td><td>Reachable, except three entries keyed to detectors that exist in the type system but are never computed (marked "not yet wired" below)</td></tr>
+  </table>
+  </div>
+</section>
+
+<div class="toolbar" id="toolbar">
+  <div class="tallies" id="tallies">
+    <span class="tally approved">Approved: <b id="t-approved">0</b></span>
+    <span class="tally rejected">Rejected: <b id="t-rejected">0</b></span>
+    <span class="tally edit">Edit requested: <b id="t-edit">0</b></span>
+    <span class="tally undecided">Undecided: <b id="t-undecided">0</b></span>
+    <span class="tally">Total: <b id="t-total">38</b></span>
+  </div>
+  <div class="filters">
+    <select id="f-family">
+      <option value="">All families</option>
+      <option value="oxygen">Oxygen (Hypoxia / Algal bloom)</option>
+      <option value="discharge">Discharge &amp; contamination</option>
+      <option value="regime">Thermal &amp; Saltwater intrusion</option>
+      <option value="instrument">Instrument health</option>
+    </select>
+    <select id="f-tier">
+      <option value="">All tiers</option>
+      <option value="education">education</option>
+      <option value="escalation">escalation</option>
+      <option value="diy-hints">diy-hints</option>
+    </select>
+    <select id="f-decision">
+      <option value="">All decisions</option>
+      <option value="approve">Approved</option>
+      <option value="reject">Rejected</option>
+      <option value="edit">Edit requested</option>
+      <option value="undecided">Undecided</option>
+    </select>
+    <button type="button" class="copy-btn" id="copy-summary">Copy summary (Markdown)</button>
+    <span class="copy-status" id="copy-status"></span>
+  </div>
+</div>
+
+<main id="candidate-root"></main>
+
+<section id="rejected-root"></section>
+
+<footer class="page-foot">
+  <p>Sourcing candidates flagged in each source document are not part of this approval &mdash; they are
+  possible future corpus additions, unverified against the sourcing protocol, and are not reproduced
+  here. Decisions are saved to this browser's local storage only; they are not submitted anywhere by
+  this page.</p>
+</footer>
+</div>
+
+<script>
+(function () {
+  "use strict";
+
+  // ---------------------------------------------------------------------
+  // Data. Draft text and evidence quotes are transcribed verbatim from
+  // docs/advice/candidates-*.md. Meta prose (labels, "why this clears the
+  // bar" notes framed as such in the source) is reproduced verbatim where
+  // the source itself states it as a quotable line; short structural labels
+  // (Trigger, Water body, etc.) are this page's own framing.
+  // ---------------------------------------------------------------------
+
+  var FAMILIES = [
+    {
+      key: "oxygen",
+      title: "Hypoxia & Algal bloom",
+      file: "candidates-oxygen.md",
+      scope: "Owner scope: the Hypoxia and Algal bloom EventTypes only. Hypoxia fires on DO down and ORP down with turbidity and conductivity both not-up (confidence fixed at 0.6). Algal bloom is a separate path that skips the confidence-floor downgrade: an unconfirmed bloom ships as type \"Algal bloom\" at confidence 0.45, below the 0.5 floor every other event type is held to.",
+      candidates: [
+        {
+          id: "hyp-edu-01",
+          title: "what a Hypoxia flag means",
+          event: "Hypoxia",
+          tier: "education",
+          waterBody: "any",
+          minSeverity: "Low",
+          minConfidence: "0.5 (Hypoxia's only produced value is 0.6, so this always fires when the type is Hypoxia)",
+          draft: "Dissolved oxygen and ORP fell together over this window, with conductivity and turbidity holding steady — a pattern consistent with oxygen being consumed faster than it's being replenished, rather than an external discharge. This describes the shape of the reading, not its cause.",
+          referral: "",
+          evidence: [
+            { quote: "The primary signature of hypoxia or fish-kill conditions is DO and ORP both bottoming out together, with DO approaching zero and ORP going strongly negative.", source: "eval/claims/water-quality-metrics-source-of-truth.json, claim sot-sig-hypoxia-01" },
+            { quote: "Dissolved oxygen and ORP are tightly coupled: abundant DO drives ORP strongly positive, ORP declines as DO is consumed, ORP goes negative once oxygen is exhausted, and ORP often moves before DO hits bottom, giving lead time.", source: "same file, claim sot-do-orp-coupling-01" },
+            { quote: "do_ === \"down\" && orp === \"down\" && turb !== \"up\" && cond !== \"up\"", source: "src/report/events.ts, detector trigger condition (code, cited to show the \"conductivity and turbidity holding steady\" clause matches what the code actually checked)" }
+          ],
+          notes: []
+        },
+        {
+          id: "hyp-diy-01",
+          title: "clear organic debris near the site",
+          event: "Hypoxia",
+          tier: "diy-hints",
+          waterBody: "any",
+          minSeverity: "Low",
+          minConfidence: "0.5",
+          draft: "Decaying organic matter — leaves, grass clippings, algae mats — consumes oxygen as it breaks down. Clearing debris that's accumulated near the monitoring site is a simple, reversible step that removes one possible contributor, though it's unlikely to be the whole story.",
+          referral: "",
+          evidence: [
+            { quote: "organic pollution consumes oxygen through biochemical oxygen demand.", source: "Corpus, claim sot-do-most-important-01" },
+            { quote: "As dead algae decompose, oxygen is consumed in the process, resulting in low levels of oxygen in the water.", source: "EPA, Hypoxia 101 — https://www.epa.gov/ms-htf/hypoxia-101" }
+          ],
+          notes: [
+            { kind: "info", label: "Why it clears the diy-hints bar", text: "no chemical, no permit, no in-water construction — it's picking up debris at the water's edge, and it's reversible in the sense that there's no equipment or process left behind if it turns out to be unrelated." }
+          ]
+        },
+        {
+          id: "hyp-esc-01",
+          title: "sustained low oxygen, general escalation",
+          event: "Hypoxia",
+          tier: "escalation",
+          waterBody: "any",
+          minSeverity: "Moderate (excludes brief <3h blips; fires on genuinely sustained excursions)",
+          minConfidence: "0.5",
+          draft: "Dissolved oxygen has stayed below the normal range for more than a few hours, not just a brief dip. A water-quality professional or your local environmental agency can help investigate — a sustained reading like this is more likely to reflect a real site condition than sensor noise.",
+          referral: "",
+          referralNote: "deliberately not CER — CER doesn't diagnose site-specific water chemistry causes, and pointing there for a chemistry question overstates the referral",
+          evidence: [
+            { quote: "dead zones ... unable to sustain normal populations of fish, shellfish, corals, and other aquatic life", source: "EPA, Hypoxia 101 — https://www.epa.gov/ms-htf/hypoxia-101" },
+            { quote: "src/report/events.ts only assigns Moderate/High once durationHrs > 3", source: "code grounding for the severity gate (paraphrase of the code condition, not a prose quote)" }
+          ],
+          notes: []
+        },
+        {
+          id: "hyp-esc-02",
+          title: "freshwater aeration, name the professional",
+          event: "Hypoxia",
+          tier: "escalation",
+          waterBody: "Freshwater only — a small fountain/diffuser doesn't meaningfully aerate an open harbor or estuary; mirrors the operator-meeting example verbatim",
+          minSeverity: "Moderate",
+          minConfidence: "0.5",
+          draft: "In fresh water, surface aeration is a common approach to raising dissolved oxygen — fountains and bottom diffusers are the usual options. Getting the timing and depth right affects whether aeration helps or briefly makes things worse, so this is worth planning with a pond or lake management professional rather than treating as a quick fix.",
+          referral: "",
+          referralNote: "generic contractor language, no vendor name",
+          evidence: [
+            { quote: "common aeration systems include fountains (surface aerators) and bubblers (diffusers or bottom aerators).", source: "University of Florida IFAS Extension, SS695, Stormwater Pond Management: What You Need to Know about Aeration — ask.ifas.ufl.edu/publication/SS695" },
+            { quote: "aerators should be installed and begin operation in the winter or early spring, when the water is cooler and ponds are generally not stratified… [d]issolved oxygen should be monitored closely during this initial period to ensure hypoxia is not accidentally induced.", source: "same UF IFAS source — why this is escalation, not diy-hints" }
+          ],
+          notes: [
+            { kind: "info", label: "Why escalation, not diy-hints", text: "Installing aeration equipment at the wrong time can worsen the exact condition it's meant to fix — that is precisely why this stays escalation (name the professional) rather than diy-hints (a low-risk reversible action), even though the prompt's own acceptable-wording example (\"fountains and aerators are the usual options\") reads like it could go either way." }
+          ]
+        },
+        {
+          id: "bloom-edu-01",
+          title: "what an Algal-bloom flag means",
+          event: "Algal bloom",
+          tier: "education",
+          unreachable: true,
+          waterBody: "any",
+          minSeverity: "Moderate (the only value detectAlgalBloom ever produces — gating on anything else would never fire)",
+          minConfidence: "0.4 (fires on both the unconfirmed 0.45 base case and the 0.6 pH-confirmed case)",
+          draft: "Dissolved oxygen swung from a midday high to a pre-dawn low within the same 24-hour period — a daily pattern the reference material describes as consistent with heavy algal activity, rather than the smaller day-to-day variation that's typical background. This describes the shape of the measured pattern; it doesn't identify a species or confirm a bloom is present.",
+          referral: "",
+          evidence: [
+            { quote: "The primary signature of an algal bloom or eutrophication is large in-phase daily DO and pH oscillations, with supersaturation midday and a crash pre-dawn, and the pre-dawn DO minimum is the danger window.", source: "eval/claims/water-quality-metrics-source-of-truth.json, claim sot-sig-algal-01" },
+            { quote: "In-phase daily swings of pH and DO are the fingerprint of biological productivity", source: "same file, claim sot-ph-do-coupling-01" }
+          ],
+          notes: [
+            { kind: "unreachable", label: "Trigger unreachable on live data", text: "detectAlgalBloom requires a diel pattern tag, and buildReportInput always tags live parameters \"unknown\" — this event type cannot currently be produced from live data." }
+          ]
+        },
+        {
+          id: "bloom-diy-01",
+          title: "reduce nutrient inputs you control",
+          event: "Algal bloom",
+          tier: "diy-hints",
+          unreachable: true,
+          waterBody: "any",
+          minSeverity: "Moderate",
+          minConfidence: "0.4",
+          draft: "Algae growth is fed by nutrients — fertilizer runoff, grass clippings, and leaf litter reaching the water are common sources. Timing fertilizer application away from the shoreline and keeping yard waste out of the water are simple, reversible steps that reduce one contributor, without addressing whatever else may be driving the pattern.",
+          referral: "",
+          evidence: [
+            { quote: "Apply fertilizers only when necessary and at the recommended amount… avoid applying fertilizer close to waterways.", source: "EPA, What You Can Do: In Your Yard — https://www.epa.gov/nutrientpollution/what-you-can-do-your-yard" },
+            { quote: "[u]se yard waste, which includes grass clippings and leaves, in mulch or compost for your garden… which keeps them from washing into streams.", source: "same EPA page" }
+          ],
+          notes: [
+            { kind: "info", label: "Why diy-hints holds here", text: "no chemical is added, no permit is implicated, nothing is built in the water — it's reducing/timing an input the operator already controls, and stopping is as easy as starting." },
+            { kind: "unreachable", label: "Trigger unreachable on live data", text: "same Algal bloom gap as bloom-edu-01." }
+          ]
+        },
+        {
+          id: "bloom-esc-01",
+          title: "a lab test is the only real confirmation",
+          event: "Algal bloom",
+          tier: "escalation",
+          unreachable: true,
+          waterBody: "any",
+          minSeverity: "Moderate",
+          minConfidence: "0.4",
+          draft: "This pod's sensors can't identify algae species or detect toxins. If knowing for certain matters, your state environmental or health agency can test a water sample directly — that's the only way to confirm whether a bloom is present and whether it's producing toxins.",
+          referral: "",
+          referralNote: "points at the agency, not CER — CER's product has no toxin/species sensor either, so referring there for confirmation would repeat the same overclaim the corpus brief flags in the vendor's own marketing",
+          evidence: [
+            { quote: "State departments of health or environment can test waterbodies to determine if an algal bloom is toxic.", source: "EPA, What to Do If You Suspect a Harmful Algal Bloom — https://www.epa.gov/habs/what-you-can-do" }
+          ],
+          notes: [
+            { kind: "unreachable", label: "Trigger unreachable on live data", text: "same Algal bloom gap as bloom-edu-01." }
+          ]
+        },
+        {
+          id: "bloom-esc-02",
+          title: "Clean Earth Rovers referral, pH-confirmed only",
+          event: "Algal bloom",
+          tier: "escalation",
+          unreachable: true,
+          waterBody: "any",
+          minSeverity: "Moderate",
+          minConfidence: "0.6 — deliberately the higher gate, so this fires only on the pH-confirmed case, not the bare DO-swing-alone 0.45 case",
+          draft: "This kind of recurring swing is worth a closer look. Clean Earth Rovers support can help interpret patterns like this one and talk through additional monitoring options.",
+          referral: "Clean Earth Rovers support (monitoring/interpretation only)",
+          evidence: [
+            { quote: "The referral is worth building. The prediction is not, and must not ship in that form… What survives: an allowlist entry fired by a measured event signature the report pipeline already detects, worded as conditions consistent with a concern, paired with the referral line.", source: "docs/RESPONSIBILITY.md, “Adopted, reworded — the referral”" }
+          ],
+          notes: [
+            { kind: "info", label: "Scope check", text: "the draft text does not say \"cleanup\" — nothing in the corpus or CER's own documented product scope supports that CER performs in-water remediation. \"Interpret patterns… monitoring options\" is what the evidence actually supports CER doing." },
+            { kind: "unreachable", label: "Trigger unreachable on live data", text: "same Algal bloom gap as bloom-edu-01 — this entry additionally requires the pH-confirmed 0.6 branch, which is even further from firing." }
+          ]
+        }
+      ],
+      rejected: [
+        { label: "Install a fountain/aerator yourself", event: "Hypoxia, Freshwater", tier: "diy-hints", rule: "Broke: nothing requiring in-water construction may be diy-hints — and, more concretely, the UF IFAS source shows wrong-timing installation can induce hypoxia rather than relieve it, which fails \"low-risk\" on its own terms even before the construction question. Survives instead as hyp-esc-02 (escalation, name the professional)." },
+        { label: "“You're going to have an algal bloom — call Clean Earth Rovers for cleanup.”", event: "Algal bloom", tier: "—", rule: "Broke: the no-prediction rule (“movements consistent with…”, never “you will have a bloom”) and overstated CER's product scope — nothing evidences CER performs bloom cleanup; it sells a monitoring buoy. This is the exact case docs/RESPONSIBILITY.md calls out by name as “the least defensible claim available.” Reworded and survives as bloom-esc-02." },
+        { label: "“Add an algaecide / hydrogen peroxide treatment to clear the bloom.”", event: "Algal bloom", tier: "diy-hints", rule: "Broke: diy-hints chemical prohibition outright, and edges toward a health/safety claim by implying treatment makes the water fine again." },
+        { label: "“Swimming isn't recommended right now” / any variant naming swim, drink, or fish safety", event: "Hypoxia or Algal bloom", tier: "—", rule: "Broke: the flat no-health/safety-claims rule — the buoy has no sensor that bears on any of those questions, for either event type." },
+        { label: "“This is a toxic bloom of [X species]” or any species/toxin-specific phrasing", event: "Algal bloom", tier: "—", rule: "Broke: nothing the six parameters cannot support — no sensor here measures toxins or distinguishes algae taxa. sot-sig-algal-01 supports a DO/pH pattern claim, nothing about species or toxicity." },
+        { label: "“Check with the harbor master about a possible sewage discharge” attached to a Hypoxia flag", event: "Hypoxia", tier: "—", rule: "Broke: contradicts the detector's own logic — classify() only reaches “Hypoxia” when turbidity and conductivity are specifically not up, which is the same test that rules out the Sewage signature in the same function. Also crosses into the Sewage-event owner's scope." },
+        { label: "“Relocate the pod” / “clean the DO probe — it may be fouled” attached to Hypoxia", event: "Hypoxia", tier: "—", rule: "Broke: scope, not a wording rule — biofouling and instrument placement are the instrument-health agent's event types, not Hypoxia or Algal bloom. A plausible suggestion, but not this catalogue's to make." },
+        { label: "“Reduce boat idling/wake in the marina to improve oxygen levels”", event: "Hypoxia, any water body", tier: "—", rule: "Broke: no-evidence rule — nothing found in the corpus or in public sourcing ties vessel idling to measurable DO change at the scale a single buoy would detect; this would have been asserted, not evidenced, so it was dropped rather than shipped as a guess." },
+        { label: "A generic “normal ranges” restatement (“DO below 5 mg/L is Low per the operator thresholds”) as its own Hypoxia education entry", event: "Hypoxia", tier: "education", rule: "Broke: not really a rule violation so much as redundant — the parameter table in Section 2 of the report already states the operator-threshold flag and source per row; a duplicate allowlist entry saying the same thing adds a second, differently-worded copy of a number the report already prints once, authoritatively." }
+      ]
+    },
+    {
+      key: "discharge",
+      title: "Discharge & contamination",
+      file: "candidates-discharge.md",
+      scope: "Owner scope: Sewage, Stormwater, Industrial, Acidic input. eventForWindow downgrades any classified event to “Inconclusive” whenever confidence < 0.5, before an event ever reaches WQEvent.type. Sewage (0.7 or 0.5) and Acidic input (0.55, fixed) always survive; Stormwater's 0.5 branch survives but its 0.4 branch does not; Industrial's only branch (0.3) never survives. No diy-hints entry is proposed for Sewage, Industrial, or Acidic input — a considered omission: every physical or chemical action constructible for them either touches water that might carry an actual hazard, or crosses into remediation the diy-hints rules exclude.",
+      candidates: [
+        {
+          id: "disc-sewage-edu-01",
+          title: "education",
+          event: "Sewage",
+          tier: "education",
+          waterBody: "Any",
+          minSeverity: "Low",
+          minConfidence: "0.5",
+          draft: "This window shows dissolved oxygen and ORP falling together while turbidity rose — a pattern the reference material associates with organic loading or a sanitary discharge, rather than normal day-to-day variation.",
+          referral: "Clean Earth Rovers support can pull the full sensor history for this window if that would help.",
+          evidence: [
+            { quote: "DO crash + ORP crash + EC rise + turbidity rise, not tied to time of day", source: "water-quality-metrics-source-of-truth.pdf, claim sot-sig-sewage-primary-01" },
+            { quote: "DO and ORP falling together while EC and turbidity rise is a far more specific signal pointing to an organic/sewage source.", source: "same document, claim sot-matrix-reading-01" },
+            { quote: "A drop toward or below zero is a strong signal of organic loading, sewage, or decomposition.", source: "same document, claim sot-orp-early-warning-01 (corroborating)" },
+            { quote: "Decreased dissolved oxygen (increased biological oxygen demand)… Increased dissolved solids (e.g., chloride, sulfate, specific conductance)", source: "EPA CADDIS, Urbanization – Wastewater Inputs — https://www.epa.gov/caddis/urbanization-wastewater-inputs" }
+          ],
+          notes: []
+        },
+        {
+          id: "disc-sewage-esc-01",
+          title: "escalation",
+          event: "Sewage",
+          tier: "escalation",
+          waterBody: "Any",
+          minSeverity: "Moderate (>3 hr excursion)",
+          minConfidence: "0.5",
+          draft: "A pattern consistent with a sanitary or organic discharge signature has persisted for several hours. Your local water or sewer utility, or your state environmental agency, is the right point of contact to look into a signature like this.",
+          referral: "If it helps that conversation, Clean Earth Rovers can provide the raw readings and timestamps for this window.",
+          evidence: [
+            { quote: "(same corpus evidence as disc-sewage-edu-01)", source: "" , skipQuoteBox: true },
+            { quote: "Many issues are handled at the local level", source: "EPA, How to Report Spills and Environmental Violations — https://www.epa.gov/pesticide-incidents/how-report-spills-and-environmental-violations — source for naming “who to involve” generically rather than inventing a contact path" }
+          ],
+          notes: []
+        },
+        {
+          id: "disc-storm-edu-01",
+          title: "education",
+          event: "Stormwater",
+          tier: "education",
+          waterBody: "Any",
+          minSeverity: "Low",
+          minConfidence: "0.5",
+          draft: "Turbidity rose alongside a shift in conductivity during this window — a pattern consistent with runoff entering the water after rain, rather than a steady chemical signature.",
+          referral: "",
+          referralNote: "low-stakes enough not to need one",
+          evidence: [
+            { quote: "Sharp turbidity spike coincident with rainfall; EC shifts (drops in marine, may spike in fresh from road salt)", source: "sot-sig-stormwater-01 — arrow cells flagged damaged in extraction notes, checked against a second source" },
+            { quote: "Turbidity often increases sharply during a rainfall, especially in developed watersheds, which typically have relatively high proportions of impervious surfaces.", source: "EPA archive, 5.5 Turbidity — Monitoring & Assessment — https://archive.epa.gov/water/archive/web/html/vms55.html" }
+          ],
+          notes: []
+        },
+        {
+          id: "disc-storm-diy-01",
+          title: "diy-hints",
+          event: "Stormwater",
+          tier: "diy-hints",
+          waterBody: "Any",
+          minSeverity: "Low",
+          minConfidence: "0.5",
+          draft: "If you have access to a local rainfall or tide record, comparing it against this window's timestamp is a quick way to see whether the timing lines up with runoff.",
+          referral: "",
+          evidence: [
+            { quote: "Sharp turbidity spike coincident with rainfall… (rainfall coincidence is the matrix's own confirming signal)", source: "sot-sig-stormwater-01, plus the events.ts code comment on the Stormwater/Saltwater-intrusion confidence cap" }
+          ],
+          notes: [
+            { kind: "info", label: "Why this clears the diy-hints bar", text: "it is a record-comparison the operator does at a desk — no chemicals, no permit, no in-water action, nothing to reverse because nothing physical is touched. It also matches what the detector itself is honest about needing: events.ts's own header comment says confirming Stormwater “needs tidal-stage/rainfall context this pipeline doesn't have.”" }
+          ]
+        },
+        {
+          id: "disc-storm-esc-01",
+          title: "escalation",
+          event: "Stormwater",
+          tier: "escalation",
+          waterBody: "Any",
+          minSeverity: "Moderate",
+          minConfidence: "0.5",
+          draft: "A sustained turbidity and conductivity pattern like this is consistent with storm or urban runoff. If it recurs or holds for a long window, your local stormwater or public works authority is generally the right party to loop in.",
+          referral: "Clean Earth Rovers can export the readings for this window if you want to share them.",
+          evidence: [
+            { quote: "(same corpus evidence as disc-storm-edu-01, plus the same EPA VMS 5.5 page)", source: "", skipQuoteBox: true }
+          ],
+          notes: [
+            { kind: "info", label: "Flag for reviewer", text: "No source names “public works” specifically as the contact — that phrasing is generic enough (a municipal function in essentially every jurisdiction with storm drains) that it doesn't need a citation of its own, but unlike the sewage escalation line, this contact suggestion is the drafting agent's own generalization, not a direct quote." }
+          ]
+        },
+        {
+          id: "disc-indus-edu-01",
+          title: "education",
+          event: "Industrial",
+          tier: "education",
+          unreachable: true,
+          waterBody: "Any",
+          minSeverity: "Low",
+          minConfidence: "0.3 (see gating note — currently unreachable)",
+          draft: "Conductivity, pH, or ORP shifted abruptly with no daily or tidal rhythm to explain it. That pattern doesn't point to one specific cause — the reference material treats it as a catch-all for chemistry-driven inputs once other explanations are ruled out.",
+          referral: "Clean Earth Rovers support can help pull additional context for this window.",
+          evidence: [
+            { quote: "Abrupt step-changes in EC and/or pH and/or ORP with no diel or tidal explanation.", source: "sot-sig-industrial-01 — flagged damaged in extraction (arrow cells missing), prose-only claim, checked against a second source" },
+            { quote: "Significant changes in conductivity could then be an indicator that a discharge or some other source of pollution has entered a stream.", source: "EPA archive, 5.9 Conductivity — Monitoring & Assessment — https://archive.epa.gov/water/archive/web/html/vms59.html" }
+          ],
+          notes: [
+            { kind: "unreachable", label: "Trigger unreachable on live data", text: "classify()'s only Industrial branch returns confidence 0.3, which eventForWindow always downgrades to “Inconclusive” before this entry could ever be selected. The code's own comment calls this branch “a fallback classification, not a confident one.”" }
+          ]
+        },
+        {
+          id: "disc-indus-esc-01",
+          title: "escalation",
+          event: "Industrial",
+          tier: "escalation",
+          unreachable: true,
+          waterBody: "Any",
+          minSeverity: "Moderate",
+          minConfidence: "0.3 (see gating note — currently unreachable)",
+          draft: "This step-change pattern in conductivity, pH, or ORP doesn't match a more specific known signature, which is itself worth noting. If it persists, your state environmental agency is generally the right party to help interpret it.",
+          referral: "Clean Earth Rovers can provide the underlying readings on request.",
+          evidence: [
+            { quote: "(same as disc-indus-edu-01, plus the EPA reporting-path source used for disc-sewage-esc-01)", source: "", skipQuoteBox: true }
+          ],
+          notes: [
+            { kind: "unreachable", label: "Engineering note carried on this entry specifically", text: "per the gating table, no WQEvent in the current pipeline can have type === “Industrial”. This pair is content-complete and approvable on its merits, but wiring it to fire requires an engineering decision (raise the branch confidence, or key advice selection off something other than the post-floor type field) that is out of scope for the drafting document." }
+          ]
+        },
+        {
+          id: "disc-acid-edu-01",
+          title: "education",
+          event: "Acidic input",
+          tier: "education",
+          waterBody: "Any",
+          minSeverity: "Low",
+          minConfidence: "0.55",
+          draft: "pH dropped while conductivity rose during this window — a pairing consistent with an acidic input, such as acid mine drainage or an acidic effluent, rather than the normal daily swing biological activity produces.",
+          referral: "Clean Earth Rovers support can help pull the full history for this window.",
+          evidence: [
+            { quote: "pH crash paired with EC rise (dissolved metals/sulfate)", source: "sot-sig-acidic-01 — the row the assignment specifically calls out as damaged (five arrow cells for six columns), checked against two independent sources" },
+            { quote: "For acid-mine waters (low pH and elevated iron)…", source: "USGS National Field Manual, eval/claims/usgs-nfm-a6.4-ph.json, claim ph-table642-acid-mine-01 (Table 6.4–2)" },
+            { quote: "An extreme low field pH measurement of -3.6 has been reported for hyperacidic mine waters.", source: "same file, claim ph-extreme-low-01" },
+            { quote: "The practicality of Eh measurements is limited to iron in acidic mine waters and sulfate in waters undergoing sulfate reduction", source: "USGS National Field Manual, eval/claims/usgs-nfm-a6.5-orp.json, claim orp-practical-limits-01" },
+            { quote: "mine-drainage discharges", source: "same file, claim orp-gradients-01 — listed among conditions Eh/ORP can delineate" }
+          ],
+          notes: []
+        },
+        {
+          id: "disc-acid-esc-01",
+          title: "escalation",
+          event: "Acidic input",
+          tier: "escalation",
+          waterBody: "Any",
+          minSeverity: "Moderate",
+          minConfidence: "0.55",
+          draft: "This pH-and-conductivity pairing is consistent with an acidic input. Your state environmental agency is generally the right party to help evaluate a signature like this, especially if it's sustained.",
+          referral: "Clean Earth Rovers can provide the underlying readings on request.",
+          evidence: [
+            { quote: "(same as disc-acid-edu-01, plus the EPA reporting-path source used for disc-sewage-esc-01)", source: "", skipQuoteBox: true }
+          ],
+          notes: []
+        }
+      ],
+      rejected: [
+        { label: "sewage grab-sample", event: "Sewage", tier: "diy-hints", rule: "Implicit safety exposure. “Collect a grab sample near the buoy” sounds procedural, but a sewage-consistent signature is exactly the condition where handling nearby water carries a real, unstated exposure risk. The device cannot say the water is safe to approach or touch, and staying silent on that while directing contact is worse than saying nothing — this is the spirit of “no health or safety claims,” not the letter of it, and it should still fail review." },
+        { label: "sewage swim-safety line", event: "Sewage", tier: "education", rule: "No health or safety claims. Direct statement about swim safety (“water may not be safe for swimming”) — exactly the claim the buoy cannot make; it has no pathogen sensor." },
+        { label: "industrial named-plant", event: "Industrial", tier: "education", rule: "Never name or imply a culprit. “Likely coming from the wastewater treatment plant near your location” names a specific facility type and location as the source." },
+        { label: "industrial halt-use", event: "Industrial", tier: "diy-hints", rule: "Reads as a safety directive disguised as an action (“temporarily halt any water intake used for irrigation”) — implies the water is currently unsafe for that use, which is a safety claim by another name, and it is not a low-risk reversible action so much as an operational/economic one for whoever depends on that intake." },
+        { label: "acidic-input neutralize", event: "Acidic input", tier: "diy-hints", rule: "Chemicals prohibited from diy-hints. “Add agricultural lime or a buffering agent near the buoy” requires a chemical and is an uncontrolled in-water intervention — also likely a permit question in most jurisdictions." },
+        { label: "acidic-input permit accusation", event: "Acidic input", tier: "education", rule: "Never name or imply a culprit / no permit-violation assertions. “This means someone upstream is violating their discharge permit” is exactly the disallowed accusation the hard rules name directly." },
+        { label: "stormwater silt sock", event: "Stormwater", tier: "diy-hints", rule: "In-water construction/installation prohibited from diy-hints. Installing a silt sock or turbidity curtain at the intake is a physical in-water installation, plausibly permit-triggering, and not something to hand a chatbot user as a “quick fix.”" },
+        { label: "stormwater next-storm prediction", event: "Stormwater", tier: "education", rule: "No prediction. “Expect the next heavy rain to trigger another spike” forecasts a future event; the assistant may describe what was measured, not what will happen next." },
+        { label: "stormwater shoreline check", event: "Stormwater", tier: "diy-hints", rule: "Implicit safety issue: “visually confirm runoff near the shoreline” during or shortly after a storm event is exactly the condition (rising water, slick banks, possible flash flow) where suggesting an operator go stand near the water is a bad idea for a device that has no way to know local conditions." }
+      ]
+    },
+    {
+      key: "regime",
+      title: "Thermal & Saltwater intrusion",
+      file: "candidates-regime.md",
+      scope: "Owner scope: Thermal and Saltwater intrusion. The saltwater-intrusion branch is hardcoded to confidence 0.45, and eventForWindow rewrites any classification under the 0.5 floor to “Inconclusive” before WQEvent is built — so a WQEvent with type === “Saltwater intrusion” cannot currently exist. The same happens to the weak temperature-alone Thermal branch (confidence 0.4); only the full thermal signature (confidence 0.6) survives with type: “Thermal.” Flagged as very likely an oversight, not fixed here (docs-only task).",
+      candidates: [
+        {
+          id: "thermal-edu-no-fixed-baseline",
+          title: "no fixed baseline",
+          event: "Thermal",
+          tier: "education",
+          waterBody: "any",
+          minSeverity: "Low",
+          minConfidence: "0.4",
+          draft: "Temperature doesn't have one fixed 'normal' range the way the other measured parameters do — what's typical depends on the season and this specific site, so a warm reading is weighed against what's expected here and now, not a single universal number.",
+          referral: "",
+          evidence: [
+            { quote: "Temperature Climate/season-dependent Climate/season-dependent Climate/season-dependent", source: "water-quality-metrics-source-of-truth.json, chunk water-quality-metrics-source-of-truth.pdf__19b15475035b, claim sot-baseline-temp-01 — the Baseline Reference Ranges table gives no numeric temperature range for any water type" },
+            { quote: "Ranges are general guidance. Establish a site-specific baseline before treating deviations as events.", source: "same chunk, claim sot-baseline-caveat-01" },
+            { quote: "Temperature has NO fixed baseline… 'Climate/season-dependent' for all three water types.", source: "src/report/referenceRanges.ts (code comment) — BASELINE_RANGES omits temperature entirely" }
+          ],
+          notes: [
+            { kind: "info", label: "Trigger note", text: "fires on the one Thermal branch that does survive the confidence floor (temp-alone, 0.4) as well as the full-signature branch (0.6) — both are legitimately Thermal in code, so this entry is unaffected by the reachability gap." }
+          ]
+        },
+        {
+          id: "thermal-edu-persistent-offset",
+          title: "persistent offset",
+          event: "Thermal",
+          tier: "education",
+          waterBody: "any",
+          minSeverity: "Moderate",
+          minConfidence: "0.4",
+          draft: "This reading has stayed elevated for nearly the whole reporting period rather than spiking and coming back down, which points more toward normal seasonal warming — or a site baseline that no longer matches this location — than toward a single incident.",
+          referral: "",
+          evidence: [
+            { quote: "PERSISTENT_WINDOW_SHARE (0.8) reclassifies a window covering most of the report as a baseline offset rather than a discrete event, and caps its severity at Moderate specifically so duration alone can't read as the most severe finding in the report.", source: "events.ts (code grounding, paraphrase of implementation, not a prose quote)" },
+            { quote: "Compare any reading to the same season's baseline.", source: "chunk …__5c7643fce7a3, claim sot-seasonal-cycle-01" }
+          ],
+          notes: [
+            { kind: "info", label: "Trigger note", text: "relies on the interpretation text's “sustained offset spanning the whole reporting period” wording, since WQEvent has no dedicated persistent: boolean field — the catalogue selector needs to either pattern-match that string or events.ts needs to expose the flag structurally." }
+          ]
+        },
+        {
+          id: "thermal-edu-marine-buffering",
+          title: "marine buffering",
+          event: "Thermal",
+          tier: "education",
+          waterBody: "Marine, Estuarine",
+          minSeverity: "Low",
+          minConfidence: "0.4",
+          draft: "Coastal and marine water tends to change temperature more slowly than a small freshwater pond or stream, and a swing here is often tied to the tide bringing in water from a different depth or area rather than a local heat source.",
+          referral: "",
+          evidence: [
+            { quote: "Freshwater bodies are smaller and respond faster to air temperature and runoff. Coastal/marine water is more thermally buffered but driven by tidal exchange and upwelling.", source: "chunk …__c823e6132551, claim sot-temp-fresh-vs-salt-01" },
+            { quote: "Solar input, air temperature, depth/stratification, tidal and current mixing, freshwater inflow, discharges.", source: "same chunk, claim sot-temp-drivers-01" }
+          ],
+          notes: []
+        },
+        {
+          id: "thermal-escalation-sustained-signature",
+          title: "sustained signature",
+          event: "Thermal",
+          tier: "escalation",
+          waterBody: "any",
+          minSeverity: "High",
+          minConfidence: "0.6",
+          draft: "Temperature rose while dissolved oxygen fell in the pattern usually associated with a heat source entering the water, and it held for more than half a day rather than settling back on its own daily rhythm. If you'd like a second set of eyes, your local environmental or water-quality agency can advise on next steps.",
+          referral: "Clean Earth Rovers can pull the full reading history for this window if that's useful context to share with them.",
+          evidence: [
+            { quote: "Temperature rise with proportional DO decline; other chemistry flat", source: "chunk …__3ad84c74c7db, claim sot-sig-thermal-primary-01 — matches classify()'s 0.6-confidence Thermal branch exactly" },
+            { quote: "Thermal pollution (power-plant cooling water, hot-pavement stormwater) is itself an event type.", source: "chunk …__c823e6132551, claim sot-thermal-pollution-01" }
+          ],
+          notes: [
+            { kind: "info", label: "Trigger note", text: "the one Thermal branch that reliably produces type: “Thermal” at ≥0.5 confidence and can reach High severity (duration > 12h) — no floor issue here." }
+          ]
+        },
+        {
+          id: "thermal-diy-check-regional-weather",
+          title: "check regional weather",
+          event: "Thermal",
+          tier: "diy-hints",
+          waterBody: "any",
+          minSeverity: "Low",
+          minConfidence: "0.4",
+          draft: "Before treating a warm reading as unusual, it can help to check whether the wider area has been through an unusually hot stretch of weather — a public streamflow or water-temperature dashboard can show whether nearby waters moved the same way at the same time.",
+          referral: "",
+          evidence: [
+            { quote: "Zoom in and hover your cursor over a station to get a quick real-time reading.", source: "USGS, “Where can I get real-time and historical streamflow information?” — describes the USGS National Water Dashboard — https://www.usgs.gov/faqs/where-can-i-get-real-time-and-historical-streamflow-information" }
+          ],
+          notes: [
+            { kind: "info", label: "Rule check", text: "checking a public dashboard is reversible, free, requires no permit, no chemical, no in-water work — satisfies the diy-hints restriction." }
+          ]
+        },
+        {
+          id: "salt-edu-tidal-rhythm",
+          title: "tidal rhythm",
+          event: "Saltwater intrusion",
+          tier: "education",
+          unreachable: true,
+          waterBody: "Estuarine, Brackish",
+          minSeverity: "Low",
+          minConfidence: "0.45",
+          draft: "In tidal water, conductivity naturally rises and falls with the tide as salt water and fresh water mix on a daily schedule — a rise that lines up with the tide's timing is that normal mixing at work, not an incoming discharge.",
+          referral: "",
+          evidence: [
+            { quote: "An EC change that repeats on the tidal clock is mixing, not a discharge.", source: "chunk …__5c7643fce7a3, claim sot-tidal-cycle-01" },
+            { quote: "Sudden EC shifts flag saltwater intrusion, road-salt runoff, industrial/chemical discharge, or sewage. In estuaries, EC normally tracks the tide", source: "chunk …__57fe7a67fc10, claim sot-ec-pollution-01" },
+            { quote: "A pollution event typically appears as a step-change or sustained excursion that breaks the expected diel/tidal rhythm — not a smooth oscillation.", source: "same chunk, claim sot-event-test-01" }
+          ],
+          notes: [
+            { kind: "unreachable", label: "Trigger unreachable on live data", text: "the confidence-floor gap applies directly here. As coded, this can only fire if the catalogue also matches Inconclusive events whose interpretation text still names the saltwater-intrusion signature, or if events.ts is changed so 0.45 doesn't auto-downgrade. Until then this entry has no live trigger under type === “Saltwater intrusion.”" }
+          ]
+        },
+        {
+          id: "salt-edu-persistent-offset",
+          title: "persistent offset",
+          event: "Saltwater intrusion",
+          tier: "education",
+          unreachable: true,
+          waterBody: "any",
+          minSeverity: "Moderate",
+          minConfidence: "0.45",
+          draft: "Conductivity has stayed elevated for nearly the whole reporting period rather than moving around a single event, which more often means the site's baseline doesn't match this location's actual water chemistry than that saltwater is actively intruding — local conditions can run measurably different from a generic reference range.",
+          referral: "",
+          evidence: [
+            { quote: "(EC) 50–1,500 µS/cm ~1,000–35,000 µS/cm ~45,000–55,000 µS/cm (~35 PSU)", source: "chunk …__19b15475035b, claim sot-baseline-ec-01 — the three-tier baseline conductivity table" },
+            { quote: "Ranges are general guidance. Establish a site-specific baseline before treating deviations as events.", source: "claim sot-baseline-caveat-01 (same as thermal-edu-no-fixed-baseline)" }
+          ],
+          notes: [
+            { kind: "info", label: "Real deployment behind this entry", text: "documents the behaviour behind a real Southern California deployment: 54,100–60,200 µS/cm against a stated marine normal of 40,000–50,000, noted elsewhere as “an open question for the operator, not a software bug” — this entry is the assistant's version of that same framing." },
+            { kind: "unreachable", label: "Trigger unreachable on live data", text: "same floor gap as salt-edu-tidal-rhythm; also relies on the same interpretation-text “persistent” wording as thermal-edu-persistent-offset." }
+          ]
+        },
+        {
+          id: "salt-escalation-non-tidal-rise",
+          title: "non-tidal rise",
+          event: "Saltwater intrusion",
+          tier: "escalation",
+          unreachable: true,
+          waterBody: "Freshwater, Brackish",
+          minSeverity: "Moderate",
+          minConfidence: "0.45",
+          draft: "Conductivity rose well outside the normal range for this site without the daily tidal rhythm that would explain a natural cause. That combination is worth mentioning to your local water-management or environmental agency, who can check regional streamflow, groundwater, or drought conditions.",
+          referral: "Clean Earth Rovers can help pull the full reading history if it's useful to share with them.",
+          evidence: [
+            { quote: "The saltwater intrusion signature is EC strongly up with temperature, DO, ORP and turbidity little changed and pH flat to slightly up, with the EC rise correlated with tidal phase, drought, or sea-level conditions.", source: "chunk …__3ad84c74c7db, claim sot-sig-saltwater-intrusion-01 — note: the claims-file JSON quote field for this claim captures only the matrix's arrow glyphs (“intrusion → → → ↑↑ →/↑ →”), not prose; this sentence is the claims file's own paraphrase of that table row, flagged for transparency rather than presented as a verbatim PDF quote" },
+            { quote: "the direction of an EC change tells you whether freshwater (rain, runoff, groundwater) or saline/ionic input is driving it.", source: "same chunk, claim sot-ec-source-fingerprint-01 — verbatim supporting quote" },
+            { quote: "During extended periods of low flow, saltwater can move upstream, which can threaten drinking-water supplies in the basin.", source: "USGS New Jersey Water Science Center, “Saltwater Intrusion and Sea Level Rise Monitoring” — https://www.usgs.gov/centers/new-jersey-water-science-center/science/saltwater-intrusion-and-sea-level-rise-monitoring (corroborating)" }
+          ],
+          notes: [
+            { kind: "unreachable", label: "Trigger unreachable on live data", text: "same floor gap — this is the entry most worth fixing the gap for, since it is the escalation case (a freshwater/brackish site with an unexplained EC rise) closest to something an operator should actually act on." }
+          ]
+        },
+        {
+          id: "salt-diy-check-tide-drought-gauge",
+          title: "check tide/drought gauge",
+          event: "Saltwater intrusion",
+          tier: "diy-hints",
+          unreachable: true,
+          waterBody: "any",
+          minSeverity: "Low",
+          minConfidence: "0.45",
+          draft: "It can help to compare the timing against a public tide chart or a regional drought/streamflow monitor for the area — if the rise lines up with high tide or a dry stretch upstream, that supports a natural, weather- and tide-driven cause rather than a one-off event.",
+          referral: "",
+          evidence: [
+            { quote: "Real-time water level information updated every 6 minutes… official tidal predictions for the nation.", source: "NOAA CO-OPS, Tides & Currents, water level info page — https://tidesandcurrents.noaa.gov/water_level_info.html" },
+            { quote: "(USGS WaterWatch / National Water Dashboard — streamgage-based, real-time, public)", source: "same USGS FAQ page cited for thermal-diy-check-regional-weather", skipQuoteBox: true }
+          ],
+          notes: [
+            { kind: "info", label: "Rule check", text: "checking two free public data sources; reversible, no permit, no chemical, no in-water work." },
+            { kind: "unreachable", label: "Trigger unreachable on live data", text: "same Saltwater intrusion confidence-floor gap." }
+          ]
+        }
+      ],
+      rejected: [
+        { label: "“Temperatures above 89°F become lethal to many freshwater fish species, so a reading this high warrants immediate concern.”", event: "Thermal", tier: "—", rule: "No health/safety or ecological-harm-threshold claims. The corpus carries no such threshold and the assignment calls this out by name as the exact unsupported claim to avoid. (Most interesting rejection — it's the one the assignment pre-flagged, and it's also the most tempting to write, since “how hot is too hot for fish” is the very first question an operator would ask.)" },
+        { label: "“This pattern is consistent with a nearby industrial facility discharging heated cooling water without a permit.”", event: "Thermal", tier: "—", rule: "No prediction — only description of what was measured. Naming a specific unverified cause (a particular facility, a permit violation) goes past what six generic parameters can establish and is accusatory besides." },
+        { label: "“This saltwater intrusion is likely to worsen over the coming weeks as drought conditions continue, so plan for permanently higher salinity.”", event: "Saltwater intrusion", tier: "—", rule: "No prediction. Forecasts a future trend rather than describing the measured window." },
+        { label: "“Move the pod to a shadier or cooler part of the water body to get a more typical reading.”", event: "Thermal", tier: "diy-hints", rule: "diy-hints must be low-risk and reversible without permits or in-water work. Relocating a moored deployment is not a quick, no-cost, reversible action — it commonly needs marina/harbor mooring authorization, which is functionally a permit." },
+        { label: "“Add a small aerator or de-icing/circulation unit near the pod to help stabilize temperature.”", event: "Thermal", tier: "diy-hints", rule: "Nothing requiring chemicals, permits, or in-water construction may be diy-hints. Installing equipment in the water is in-water construction." },
+        { label: "“Check whether the conductivity probe shows biofouling or drift that could be inflating the reading.”", event: "Saltwater intrusion", tier: "—", rule: "Out of scope for this assignment. A real and reasonable thing to check, but it's instrument-health territory (owned by another agent per the brief), not a regime-event interpretation — including it here would be drafting outside the two owned event types." }
+      ]
+    },
+    {
+      key: "instrument",
+      title: "Instrument health",
+      file: "candidates-instrument.md",
+      scope: "Covers the case where the instrument, not the water, is the likely subject: biofouling, calibration intervals, a probe reading a physical impossibility, a hardware fault flag, an unassessed cross-sensor check, and a pod that has gone silent. 10 of 12 candidates are corpus-grounded (nine USGS National Field Manual chapters and an EPA calibration SOP); INST-10 is primarily code/system-behavior grounded. Three candidates (INST-02, INST-08, INST-12) are forward-looking — pre-registered content for a signal this pipeline does not compute yet, marked “not yet wired” below rather than dressed up as live.",
+      candidates: [
+        {
+          id: "INST-01",
+          title: "Implausible reading, any metric (rail, no fault flag)",
+          trigger: "A decoded reading for any of the six metrics falls outside that metric's PLAUSIBLE_RANGES entry (src/devices/plausibility.ts), and is counted in excluded_implausible (src/report/buildReportInput.ts:159-160, 226-227) — critically, with no corresponding hardware error flag set on that reading. General case; INST-04–INST-07 are the metric-specific variants.",
+          tier: "education",
+          waterBody: "All",
+          draft: "One or more readings from this instrument this period fell outside what that probe can physically produce in water, even though the probe's own diagnostic did not report a fault at the time — that combination is generally associated with a disconnected, shorted, or otherwise compromised sensor rather than with a true water condition.",
+          referral: "",
+          referralNote: "informational only",
+          evidence: [
+            { quote: "water_data[\"102\"] = -1023 (a 10-bit ADC rail) decoded to -1809.4 °F with rtdError = 0 (“hardware says the probe is FINE”), and fourteen such readings exist on that pod across three months.", source: "src/devices/plausibility.ts, module docstring lines 1–24 — verified live example, dev:351077454569099" },
+            { quote: "reading(s) were sensor rails reported without a fault flag … Inspect and recalibrate the affected probes; the hardware did not self-report these.", source: "src/report/buildReportInput.ts:242-249 — calibrationStatus set to “Review” exactly when implausible > 0" }
+          ],
+          notes: []
+        },
+        {
+          id: "INST-02",
+          title: "Recalibration interval, general",
+          trigger: "Forward-looking. The device registry does not currently carry a last-calibrated-date field, so this cannot fire from live data today; pre-registered for when one exists. In the interim can be attached to the same signal as INST-01/INST-03 (calibrationStatus: “Review”) as general context.",
+          forwardLooking: true,
+          tier: "education",
+          waterBody: "All",
+          draft: "Industrial water-quality probes of this kind are typically specified with an approximate recalibration interval by their manufacturer — commonly on the order of one year for probes that react chemically or electrochemically, and considerably longer for a probe that measures conductivity electrically — though manufacturers are explicit that actual use conditions can shorten or lengthen that interval.",
+          referral: "",
+          evidence: [
+            { quote: "~1 Year — Time before recalibration", source: "Atlas Scientific DO probe datasheet, Industrial-DO-probe.pdf__610532812499, claim do-recal-interval-01" },
+            { quote: "Because every use case is different, there is no set schedule for recalibration.", source: "Industrial-DO-probe.pdf__cc6df5ba5474, claim do-no-set-recal-schedule-01" },
+            { quote: "~1 Year — Time before recalibration", source: "ORP probe datasheet, IORP_probe.pdf__5554782eea67, claim orp-recal-interval-01 (plus the same no-set-schedule line, IORP_probe.pdf__566989019e52)" },
+            { quote: "~1 Year — Time before recalibration", source: "pH probe datasheet, IpH_probe.pdf__d3fc1e169fc7, claim ph-recal-interval-01 (plus the same no-set-schedule line, IpH_probe.pdf__950607bd1cfd)" },
+            { quote: "~10 years — Time before recalibration", source: "Conductivity probe datasheet, EC_K_1.0_probe.pdf__e602012341c1, claim ec-recal-interval-01" }
+          ],
+          notes: []
+        },
+        {
+          id: "INST-03",
+          title: "Calibration procedure lives outside the instrument's own datasheet",
+          trigger: "calibrationStatus: “Review” (same underlying signal as INST-01), phrased as a diy-hint toward the corpus's calibration procedure rather than an explanation of the flag.",
+          tier: "diy-hints",
+          waterBody: "All",
+          draft: "Recalibrating these kinds of probes uses named reference standards — buffered pH solutions, a ZoBell solution for oxidation-reduction potential, and a conductivity standard — with the field steps described in standard water-quality field methods; a probe's own specification sheet typically states the recommended interval but not the calibration procedure itself, so the step-by-step belongs to a field methods manual, not the instrument manual.",
+          referral: "",
+          evidence: [
+            { quote: "Allow the calibration standard (a Zobell solution: read the warning on the label before ...)", source: "EPA SOP, ORP calibration — epa-sop-field-instrument-calibration-2010.pdf__dc5fead69969, claim epa-orp-zobell-01" },
+            { quote: "…temperature correction table usually found on the standard bottle or on the standard…", source: "same chunk, claim epa-orp-temp-table-01" },
+            { quote: "(three buffered standards bracketing the expected pH)", source: "epa-sop-field-instrument-calibration-2010.pdf__86e2872125d1, claim epa-ph-three-standards-01" }
+          ],
+          notes: [
+            { kind: "info", label: "Corpus-side gap this entry names directly", text: "Atlas datasheets state an interval, not a procedure (see INST-02's citations) — the procedure itself lives only in the USGS NFM chapters and the EPA SOP." }
+          ]
+        },
+        {
+          id: "INST-04",
+          title: "Dissolved oxygen reading outside the physically possible range",
+          trigger: "excluded_implausible includes a dissolvedOxygen reading — a decoded value outside PLAUSIBLE_RANGES.dissolvedOxygen (0–30 mg/L; src/devices/plausibility.ts:63-68, “beyond the solubility limit of oxygen in water”).",
+          tier: "diy-hints",
+          waterBody: "All",
+          draft: "A dissolved-oxygen reading outside the range that dissolved oxygen can physically occupy in water is a pattern consistent with the probe's membrane or internal electrolyte needing attention rather than with the water itself; these probes consume their electrolyte over time, and periodically replacing the membrane and electrolyte is a routine, low-risk maintenance step.",
+          referral: "",
+          evidence: [
+            { quote: "Typically an industrial dissolved oxygen probe will last 2 years before the electrolyte is depleted (results will vary).", source: "Atlas Scientific DO probe datasheet, Industrial-DO-probe.pdf__cc6df5ba5474, claim do-electrolyte-depletion-01" },
+            { quote: "Best practice is to replace the electrolyte solution and membrane every 1 – 2 years.", source: "same chunk, claim do-replace-electrolyte-membrane-interval-01" },
+            { quote: "(the probe is inspected for air bubbles and nicks before use, and a ripped membrane requires replacement)", source: "EPA SOP, claims epa-do-inspect-membrane-01 / do-ripped-membrane-01" }
+          ],
+          notes: []
+        },
+        {
+          id: "INST-05",
+          title: "pH reading pinned at the scale's own edge",
+          trigger: "excluded_implausible includes a ph reading at or beyond 0 or 14 (exclusive bounds — src/devices/plausibility.ts:54-61: “0 and 14 are the ends of the scale itself. A probe reporting exactly 0.000 or 14.000 is reporting its rail, not water”).",
+          tier: "diy-hints",
+          waterBody: "All",
+          draft: "A pH reading pinned exactly at 0.000 or 14.000 is the scale's own end point rather than a water measurement, since natural water essentially never sits precisely on either edge; a pH probe's reference junction becoming fouled or contaminated is commonly addressed with a brief soak — a dilute acid rinse for mineral buildup, a mild detergent soak for oil or grease, or a dilute bleach soak for biological contamination — followed by a thorough rinse.",
+          referral: "",
+          evidence: [
+            { quote: "Soak the electrode (whether gel- or liquid-filled) in 0.1-M HCl for 30 minutes.", source: "USGS NFM 6.4, pH, usgs-nfm-a6.4-ph.pdf__6e70ac8e24a4, claim ph-hcl-soak-01" },
+            { quote: "(detergent soak for oil/grease contamination and bleach soak for bacterial contamination, same section)", source: "claims ph-detergent-soak-01, ph-bleach-soak-01" },
+            { quote: "note whether stabilization of the electrode requires more than 2 to 3 minutes. Slow response times may indicate reduced electrode performance or a clogged reference junction.", source: "same chunk, claim ph-stabilization-2-3-min-01 — supporting context, not quoted in the draft text (a bench-calibration observation this pipeline does not measure)" }
+          ],
+          notes: []
+        },
+        {
+          id: "INST-06",
+          title: "Conductivity reading at or below the conductivity floor",
+          trigger: "excluded_implausible includes a conductivity reading at or below 0 µS/cm (exclusive minimum — src/devices/plausibility.ts:75-86: “Zero is excluded, unlike ORP and turbidity: every natural water conducts (even lab-grade deionized water reads ~0.055 µS/cm), so an exact 0 is the probe's floor, not a measurement”).",
+          tier: "diy-hints",
+          waterBody: "All (fresh, brackish, and marine all conduct above zero; the floor applies regardless of water type)",
+          draft: "A conductivity reading at or below 0 µS/cm is below the floor any natural water can produce, since even deionized water conducts weakly; documented sources list cell fouling, contamination, or a loose probe connection among the recognized sources of conductivity measurement error, so inspecting the cell for buildup and confirming a clean, secure connection is a reasonable first check.",
+          referral: "",
+          evidence: [
+            { quote: "Additional sources of uncertainty when measuring specific conductance include calibration, preparation of standard solutions, fouling or contamination of the conductivity cell, and improper maintenance of the meter and probe.", source: "USGS NFM 6.3, Specific Conductance, usgs-nfm-a6.3-specific-conductance.pdf__d06365e8c6fd, claim sc-uncertainty-sources-list-01" }
+          ],
+          notes: []
+        },
+        {
+          id: "INST-07",
+          title: "ORP reading outside the physically possible range",
+          trigger: "excluded_implausible includes an orp reading outside ±2,000 mV (src/devices/plausibility.ts:70-73, “outside the range an ORP electrode can develop”).",
+          tier: "diy-hints",
+          waterBody: "All",
+          draft: "An oxidation-reduction potential reading outside the range this kind of electrode can physically develop points to the instrument rather than the water; verifying the electrode against a ZoBell solution, read at its temperature-corrected value from the standard's own correction table, is the standard field check for this parameter.",
+          referral: "",
+          evidence: [
+            { quote: "Allow the calibration standard (a Zobell solution: read the warning on the label before...)", source: "EPA SOP §5.5, epa-sop-field-instrument-calibration-2010.pdf__dc5fead69969, claims epa-orp-zobell-01, epa-orp-temp-table-01" },
+            { quote: "(if the manufacturer states the ORP sensor ships factory-calibrated, that factory calibration is itself verified against ZoBell solution before being trusted)", source: "claim epa-orp-factory-cal-verify-01, same chunk" }
+          ],
+          notes: []
+        },
+        {
+          id: "INST-08",
+          title: "Sustained turbidity drift consistent with fouling",
+          trigger: "Forward-looking. buildReportInput.ts currently tags every parameter's pattern as “unknown”, and biofoulingStatus is always left unset, rendering “Not assessed” — there is no live drift or biofouling detector today. Pre-registered for a detector defined as: the turbidity relative index, or its clarity band, trending upward across multiple report windows with no corresponding change in the other five parameters.",
+          forwardLooking: true,
+          tier: "diy-hints",
+          waterBody: "All",
+          draft: "A turbidity reading that climbs steadily across multiple reporting periods without a matching change in the other measured parameters is a pattern consistent with material building up on the optical sensor rather than with the water becoming less clear; regularly cleaning the optical surface — commonly every two to four weeks for a continuously deployed instrument, more often where buildup is heavier — is the standard maintenance response.",
+          referral: "",
+          evidence: [
+            { quote: "…should be approximately every 2 to 4 weeks. More frequent…", source: "USGS NFM 6.7, Turbidity, usgs-nfm-a6.7-turbidity.pdf__0670bbdf7a56, claim tby-clean-frequency-2-4-weeks-01" },
+            { quote: "Regular cleaning of optical surfaces. Use a lint-free cloth,…", source: "same chunk, claim tby-clean-optics-01" },
+            { quote: "…surface of the instrument, tends to produce a negative bias when light [beams are blocked]", source: "usgs-nfm-a6.7-turbidity.pdf__6155013556ef, claim tby-fouling-bias-01" },
+            { quote: "Readings first appear stable, then begin to increase inexplicably • Check for moisture on cell wall", source: "usgs-nfm-a6.7-turbidity.pdf__5bf774f777a4, claim tby-ts-readings-increase-01 — the troubleshooting table's own description of exactly this drift shape" }
+          ],
+          notes: [
+            { kind: "info", label: "No hardware claim made or implied", text: "the draft text says nothing about NTU, FNU, depth rating, or response time — the corpus carries no turbidity instrument datasheet." }
+          ]
+        },
+        {
+          id: "INST-09",
+          title: "Temperature has no usable site-specific baseline",
+          trigger: "temperatureThreshold() in src/report/operatorThresholds.ts returns usable: false for the device (no-thresholds, missing, non-numeric, unset, inverted, or implausible; lines 60-76), which surfaces as hasFixedBaseline: false and the flag “N/A” for temperature.",
+          tier: "diy-hints",
+          waterBody: "All — the source document gives temperature no range for any water type",
+          draft: "This device has no usable site-specific temperature range on file, so temperature readings cannot currently be judged as in or out of range; standard water-quality guidance treats temperature as climate- and season-dependent rather than a single fixed number, and calls for establishing a site-specific baseline — which an operator can do by setting a minimum and maximum temperature for this device.",
+          referral: "",
+          evidence: [
+            { quote: "Temperature Climate/season-dependent Climate/season-dependent Climate/season-dependent", source: "water-quality-metrics-source-of-truth.pdf__19b15475035b, claim sot-baseline-temp-01" },
+            { quote: "Ranges are general guidance. Establish a site-specific baseline before treating deviations as events", source: "same chunk, claim sot-baseline-caveat-01" },
+            { quote: "(the module docstring calls operatorThresholds.ts “the bridge” between that document's instruction and the device registry's thresholds.minTemperature/maxTemperature fields, and rejects unusable values — e.g. an all-zero row, min === max — rather than printing a fabricated range)", source: "src/report/operatorThresholds.ts module docstring" }
+          ],
+          notes: []
+        },
+        {
+          id: "INST-10",
+          title: "Device has gone silent",
+          trigger: "The device's most recent reading is older than the recent-data threshold this system already uses (frontend/js/provenance.js:53, RECENT_MS = 24 * 60 * 60 * 1000), so a query window that should hold current data returns none. Distinct from, but related to, the system's separate guard against reporting an empty query window as a literal 0 on all six metrics.",
+          tier: "escalation",
+          waterBody: "All",
+          draft: "This device has not returned any readings for longer than expected, including through a period that should hold recent data — that is a gap in reporting or connectivity at the pod, not a water reading of zero, and it is worth flagging to whoever manages this device's deployment so the cause can be confirmed.",
+          referral: "Clean Earth Rovers can help confirm whether a scheduled retrieval, a power or connectivity issue, or something else explains the gap.",
+          evidence: [
+            { quote: "No readings in this window · pod silent since <date>", source: "frontend/js/provenance.js:301,311 — the dashboard already renders exactly this state once a device's last reading is more than RECENT_MS (24 hours) old" },
+            { quote: "An empty window returns literal zeros, not an error or an absent field... Read naively that says the water is anoxic, at pH 0, at 0 °F — a set of catastrophic readings rather than 'no data'", source: "src/devices/metrics.ts, decodeAverages docstring — verified live against “Old Woman Creek 2026,” which had not reported for four days and whose averages came back as all zeros" },
+            { quote: "stale — last reading 2026-08-07, nothing in 4 days", source: "docs/migration/DEVICE_API.md — records “Old Woman Creek 2026” as dev:351077454567580; separately notes a plausible benign explanation (seasonal removal) exists but is not established by any source" }
+          ],
+          notes: []
+        },
+        {
+          id: "INST-11",
+          title: "Hardware fault flag, distinct from an unflagged implausible reading",
+          trigger: "excluded_faulted > 0 for a metric (src/report/buildReportInput.ts:158,217,227) — the probe's own error flag (doError, orpError, phError, ecError, rtdError, turbError) was set on the reading, so decodeMetric marked it invalid at the time it was taken. Complementary to INST-01: here, the hardware did report the fault.",
+          tier: "education",
+          waterBody: "All",
+          draft: "Some readings this period were excluded because the probe's own diagnostic flag reported them as invalid at the time they were taken — a different signal than a reading that looked physically impossible with no flag set — and routine care such as cleaning probes and cable connections before use is a standard way to reduce this kind of fault.",
+          referral: "",
+          evidence: [
+            { quote: "N excluded on the probe's own fault flag", source: "src/report/buildReportInput.ts, completenessNotes — reported as a distinct count from excluded_implausible" },
+            { quote: "Prior to calibration, all instrument probes and cable connections must be cleaned and the battery [checked]... [skipping this] can lead to erratic measurements", source: "EPA SOP, epa-sop-field-instrument-calibration-2010.pdf__a94d853fd809, claim epa-preclean-probes-01" }
+          ],
+          notes: []
+        },
+        {
+          id: "INST-12",
+          title: "Cross-sensor / reference agreement not currently assessed",
+          trigger: "Forward-looking. DataQualityCheck.sensorAgreementStatus is always left unset in the live pipeline (src/report/buildReportInput.ts:254-256), rendering “Not assessed.” Pre-registered for when sensorAgreementStatus is computed and returns “Review.”",
+          forwardLooking: true,
+          tier: "education",
+          waterBody: "All",
+          draft: "Checking a field instrument's readings periodically against an independent reference — a certified reference thermometer, a grab sample, or a second co-located instrument — is standard field practice for catching a sensor that has quietly drifted; this deployment does not currently have a second reference on file to compare against, so that particular check has not been run.",
+          referral: "",
+          evidence: [
+            { quote: "cross-sensor agreement needs a second co-located pod or a grab-sample result to compare against", source: "src/report/buildReportInput.ts, sensorAgreementNotes" },
+            { quote: "Check the temperature reading with a NIST-certified or NIST-traceable digital thermometer and replace the sensor if it does not meet accuracy standards.", source: "USGS NFM 6.8 troubleshooting table, usgs-nfm-a6.8-multiparameter-instruments.pdf__f09f4667e6ea, claim mp-t6-temperature-check-05 — note the draft text deliberately does not repeat “replace the sensor,” which would cross into asserting the probe is broken" },
+            { quote: "A NIST-traceable thermometer and the instrument's temperature sensor are placed in the same water and both readings are allowed to stabilize before they are compared", source: "EPA SOP, epa-sop-field-instrument-calibration-2010.pdf__86e2872125d1, claim epa-temp-verify-nist-both-01" }
+          ],
+          notes: []
+        }
+      ],
+      rejected: [
+        { label: "R1 — “Your DO probe is broken and needs to be replaced.”", event: "instrument health", tier: "—", rule: "Breaks the rule against ever asserting a probe is broken. The honest framing (used in INST-04) is that a reading pattern is outside what the instrument can physically produce or is consistent with a known aging mechanism — the operator decides what that means for the hardware, not the assistant." },
+        { label: "R2 — “Discard the implausible readings and report the corrected average.”", event: "instrument health", tier: "—", rule: "Breaks the rule against ever telling an operator to discard or adjust data. The corpus carries no rule for which part of a record may be kept, and this catalogue exists specifically to prevent inventing one. INST-01 and INST-11 describe what the flag means and stop there." },
+        { label: "R3 — “Recalibrate this pH probe now — its reading is outside the EPA's ±0.3 pH unit tolerance.”", event: "instrument health", tier: "—", rule: "Breaks the rule against stating a calibration tolerance the corpus does not give for the situation at hand. The ±0.3 pH unit figure is the EPA SOP's default post-calibration check criterion, which the SOP itself states applies only “when [a] project's quality assurance plan is silent” on its own criteria — and it is a bench check against a known buffer during calibration, not a rule for judging a live field reading against an arbitrary number. Presenting it as a universal live-deployment tolerance misstates what the source says." },
+        { label: "R4 — “Turbidity is climbing fast — this looks like an algal bloom starting. Contact us for cleanup.”", event: "instrument health", tier: "—", rule: "Crosses out of the instrument-health family into environmental-event/bloom prediction, which docs/RESPONSIBILITY.md's operator-meeting reconciliation explicitly rejects in this form: the six measured parameters cannot detect or forecast a bloom, and “an assistant that announces a coming bloom is making the least defensible claim available to it.” INST-08 stays on the instrument side of that line — a fouling-consistent pattern, never a bloom prediction." },
+        { label: "R5 — “This reading is now above 50 NTU, well past the clear-water threshold.”", event: "instrument health", tier: "—", rule: "Breaks the “no turbidity hardware claims” rule. The corpus holds no datasheet establishing this instrument reports in NTU rather than FNU, and the pipeline itself deliberately labels this row “Turbidity (Relative)” with no unit for exactly that reason. INST-08 discusses direction of change only, never a unit or a numeric threshold." },
+        { label: "R6 — “The conductivity probe's graphite plates never wear out, so this alert can be ignored.”", event: "instrument health", tier: "—", rule: "Breaks two rules at once. It names a specific vendor construction detail (graphite plates) rather than staying generic, and it uses a true fact (a conductivity cell's plates are chemically inert per the Atlas datasheet) to tell the operator to disregard a live data-quality flag — a step toward telling them how to treat the record, the same failure mode R2 names." },
+        { label: "R7 — “This pod probably came out of the water for the season — that's why it's gone quiet.”", event: "instrument health", tier: "—", rule: "Invents a specific, unverified cause for a stale device. No source in this system — the device registry, the corpus, or the report pipeline — can distinguish a seasonal pull from a power or connectivity fault; docs/migration/DEVICE_API.md records the real case this is drawn from and is explicit that the seasonal explanation “lowers the alarm” but does not resolve it. INST-10 reports only the observation and refers the operator to confirm the cause, rather than supplying one." }
+      ]
+    }
+  ];
+
+  // ---------------------------------------------------------------------
+  // Storage
+  // ---------------------------------------------------------------------
+
+  var STORE_KEY = "advice-catalogue-review-v1";
+
+  function loadStore() {
+    try {
+      var raw = window.localStorage.getItem(STORE_KEY);
+      return raw ? JSON.parse(raw) : {};
+    } catch (e) {
+      return {};
+    }
+  }
+  function saveStore(store) {
+    try {
+      window.localStorage.setItem(STORE_KEY, JSON.stringify(store));
+    } catch (e) {
+      // storage unavailable or full: decisions simply won't persist this session
+    }
+  }
+
+  var store = loadStore();
+
+  function getDecision(id) {
+    return (store[id] && store[id].decision) || "";
+  }
+  function getNote(id) {
+    return (store[id] && store[id].note) || "";
+  }
+  function setDecision(id, decision) {
+    store[id] = store[id] || {};
+    if (store[id].decision === decision) {
+      store[id].decision = ""; // toggle off
+    } else {
+      store[id].decision = decision;
+    }
+    saveStore(store);
+  }
+  function setNote(id, note) {
+    store[id] = store[id] || {};
+    store[id].note = note;
+    saveStore(store);
+  }
+
+  // ---------------------------------------------------------------------
+  // Render helpers
+  // ---------------------------------------------------------------------
+
+  function el(tag, cls, text) {
+    var e = document.createElement(tag);
+    if (cls) e.className = cls;
+    if (text !== undefined && text !== null) e.textContent = text;
+    return e;
+  }
+
+  function buildMetaRow(c) {
+    var row = el("div", "meta-row");
+    if (c.trigger) {
+      var t = el("span");
+      var b = el("b", null, "Trigger: ");
+      t.appendChild(b);
+      t.appendChild(document.createTextNode(c.trigger));
+      row.appendChild(t);
+    } else {
+      var pairs = [
+        ["Water body", c.waterBody],
+        ["Min severity", c.minSeverity],
+        ["Min confidence", c.minConfidence]
+      ];
+      pairs.forEach(function (p) {
+        if (!p[1]) return;
+        var s = el("span");
+        var b = el("b", null, p[0] + ": ");
+        s.appendChild(b);
+        s.appendChild(document.createTextNode(p[1]));
+        row.appendChild(s);
+      });
+    }
+    return row;
+  }
+
+  function buildReferral(c) {
+    if (c.referral) {
+      var d = el("div", "referral-line");
+      var lbl = el("span", "lbl", "Referral:");
+      d.appendChild(lbl);
+      d.appendChild(document.createTextNode(" " + c.referral));
+      if (c.referralNote) {
+        d.appendChild(document.createTextNode(" (" + c.referralNote + ")"));
+      }
+      return d;
+    }
+    var d2 = el("div", "referral-line none", "No referral line" + (c.referralNote ? " — " + c.referralNote : "."));
+    return d2;
+  }
+
+  function buildEvidence(c) {
+    var wrap = el("details", "evidence");
+    wrap.open = true;
+    var sum = el("summary", null, "Evidence (" + c.evidence.length + ")");
+    wrap.appendChild(sum);
+    var ul = el("ul");
+    c.evidence.forEach(function (ev) {
+      var li = el("li");
+      if (ev.skipQuoteBox) {
+        li.appendChild(document.createTextNode(ev.quote));
+      } else {
+        var q = el("q", null, ev.quote);
+        li.appendChild(q);
+      }
+      if (ev.source) {
+        var cite = el("cite", null, ev.source);
+        li.appendChild(cite);
+      }
+      ul.appendChild(li);
+    });
+    wrap.appendChild(ul);
+    return wrap;
+  }
+
+  function buildNotes(c) {
+    var frag = document.createDocumentFragment();
+    (c.notes || []).forEach(function (n) {
+      var box = el("div", "note-box" + (n.kind === "info" || n.kind === "forward" ? " forward" : ""));
+      var b = el("b", null, n.label);
+      box.appendChild(b);
+      box.appendChild(document.createTextNode(n.text));
+      frag.appendChild(box);
+    });
+    return frag;
+  }
+
+  function buildCard(c, family) {
+    var card = el("article", "card tier-" + c.tier);
+    card.dataset.id = c.id;
+    card.dataset.family = family.key;
+    card.dataset.tier = c.tier;
+
+    var head = el("div", "card-head");
+    head.appendChild(el("span", "cid", c.id));
+    if (c.event) head.appendChild(el("span", "badge event", c.event));
+    head.appendChild(el("span", "badge tier-" + c.tier, c.tier));
+    if (c.unreachable) head.appendChild(el("span", "badge unreachable", "Unreachable on live data"));
+    if (c.forwardLooking) head.appendChild(el("span", "badge forward", "Not yet wired — no live detector"));
+    var flag = el("span", "decision-flag", "undecided");
+    flag.dataset.flagFor = c.id;
+    head.appendChild(flag);
+    card.appendChild(head);
+
+    var h3 = el("h3", null, c.title);
+    card.appendChild(h3);
+
+    card.appendChild(buildMetaRow(c));
+
+    var draftLabel = el("span", "draft-label", "Draft text — verbatim, pending approval");
+    var draft = el("blockquote", "draft-text");
+    draft.appendChild(draftLabel);
+    draft.appendChild(document.createTextNode(c.draft));
+    card.appendChild(draft);
+
+    card.appendChild(buildReferral(c));
+    card.appendChild(buildEvidence(c));
+    card.appendChild(buildNotes(c));
+
+    // decision controls
+    var controls = el("div", "decision-controls");
+    var btns = el("div", "decision-btns");
+    ["approve", "reject", "edit"].forEach(function (val) {
+      var btn = el("button", null, val === "edit" ? "Request edit" : (val.charAt(0).toUpperCase() + val.slice(1)));
+      btn.type = "button";
+      btn.dataset.val = val;
+      btn.addEventListener("click", function () {
+        setDecision(c.id, val);
+        refreshCardDecision(c.id);
+        refreshTallies();
+        applyFilters();
+      });
+      btns.appendChild(btn);
+    });
+    controls.appendChild(btns);
+
+    var noteField = el("div", "note-field");
+    var noteLabel = el("label", null, "Note");
+    noteLabel.htmlFor = "note-" + c.id;
+    var textarea = document.createElement("textarea");
+    textarea.id = "note-" + c.id;
+    textarea.rows = 1;
+    textarea.value = getNote(c.id);
+    textarea.addEventListener("input", function () {
+      setNote(c.id, textarea.value);
+    });
+    noteField.appendChild(noteLabel);
+    noteField.appendChild(textarea);
+    controls.appendChild(noteField);
+
+    card.appendChild(controls);
+
+    return card;
+  }
+
+  function refreshCardDecision(id) {
+    var flag = document.querySelector('[data-flag-for="' + cssEscape(id) + '"]');
+    var decision = getDecision(id);
+    if (flag) {
+      flag.className = "decision-flag" + (decision ? " " + decision : "");
+      flag.textContent = decision ? labelFor(decision) : "undecided";
+    }
+    var card = document.querySelector('.card[data-id="' + cssEscape(id) + '"]');
+    if (card) {
+      card.querySelectorAll(".decision-btns button").forEach(function (b) {
+        b.classList.toggle("active", b.dataset.val === decision);
+      });
+    }
+  }
+
+  function labelFor(decision) {
+    if (decision === "approve") return "approved";
+    if (decision === "reject") return "rejected";
+    if (decision === "edit") return "edit requested";
+    return "undecided";
+  }
+
+  function cssEscape(s) {
+    return String(s).replace(/[^a-zA-Z0-9_\-]/g, "\\$&");
+  }
+
+  function buildRejectedSection(family) {
+    var details = document.createElement("details");
+    details.className = "rejected-section";
+    var summary = el("summary", null, "Rejected — " + family.title + " (" + family.rejected.length + ")");
+    details.appendChild(summary);
+    var note = el("p", "rejected-note", "Not decisions to make — evidence of where the line was drawn. Each entry names the rule it broke.");
+    details.appendChild(note);
+    family.rejected.forEach(function (r) {
+      var item = el("div", "rejected-item");
+      item.appendChild(el("div", "rj-head", r.label));
+      item.appendChild(el("div", "rj-tag", "Event: " + r.event + (r.tier && r.tier !== "—" ? " · Tier attempted: " + r.tier : "")));
+      var rule = el("div", "rj-rule");
+      var b = el("b", null, "Rule broken: ");
+      rule.appendChild(b);
+      rule.appendChild(document.createTextNode(r.rule));
+      item.appendChild(rule);
+      details.appendChild(item);
+    });
+    return details;
+  }
+
+  // ---------------------------------------------------------------------
+  // Build page
+  // ---------------------------------------------------------------------
+
+  var root = document.getElementById("candidate-root");
+  var rejectedRoot = document.getElementById("rejected-root");
+  var totalCandidates = 0;
+
+  FAMILIES.forEach(function (family) {
+    var section = el("section", "family-section");
+    section.id = "family-" + family.key;
+    var h2 = el("h2");
+    h2.appendChild(document.createTextNode(family.title + " "));
+    h2.appendChild(el("span", "family-count", "(" + family.candidates.length + " candidates · " + family.rejected.length + " rejected)"));
+    section.appendChild(h2);
+    section.appendChild(el("p", "family-scope", family.scope));
+    family.candidates.forEach(function (c) {
+      section.appendChild(buildCard(c, family));
+      totalCandidates++;
+    });
+    root.appendChild(section);
+  });
+
+  FAMILIES.forEach(function (family) {
+    rejectedRoot.appendChild(buildRejectedSection(family));
+  });
+
+  document.getElementById("t-total").textContent = String(totalCandidates);
+
+  // initialize decision flags/buttons from storage
+  FAMILIES.forEach(function (family) {
+    family.candidates.forEach(function (c) {
+      refreshCardDecision(c.id);
+    });
+  });
+
+  // ---------------------------------------------------------------------
+  // Tallies
+  // ---------------------------------------------------------------------
+
+  function refreshTallies() {
+    var counts = { approve: 0, reject: 0, edit: 0, undecided: 0 };
+    FAMILIES.forEach(function (family) {
+      family.candidates.forEach(function (c) {
+        var d = getDecision(c.id);
+        if (d === "approve" || d === "reject" || d === "edit") counts[d]++;
+        else counts.undecided++;
+      });
+    });
+    document.getElementById("t-approved").textContent = String(counts.approve);
+    document.getElementById("t-rejected").textContent = String(counts.reject);
+    document.getElementById("t-edit").textContent = String(counts.edit);
+    document.getElementById("t-undecided").textContent = String(counts.undecided);
+  }
+  refreshTallies();
+
+  // ---------------------------------------------------------------------
+  // Filters
+  // ---------------------------------------------------------------------
+
+  var fFamily = document.getElementById("f-family");
+  var fTier = document.getElementById("f-tier");
+  var fDecision = document.getElementById("f-decision");
+
+  function applyFilters() {
+    var famVal = fFamily.value;
+    var tierVal = fTier.value;
+    var decVal = fDecision.value;
+    document.querySelectorAll(".card").forEach(function (card) {
+      var id = card.dataset.id;
+      var famOk = !famVal || card.dataset.family === famVal;
+      var tierOk = !tierVal || card.dataset.tier === tierVal;
+      var decision = getDecision(id) || "undecided";
+      var decOk = !decVal || decision === decVal;
+      card.hidden = !(famOk && tierOk && decOk);
+    });
+    document.querySelectorAll(".family-section").forEach(function (section) {
+      var visible = section.querySelectorAll(".card:not([hidden])").length;
+      section.hidden = visible === 0;
+    });
+  }
+  fFamily.addEventListener("change", applyFilters);
+  fTier.addEventListener("change", applyFilters);
+  fDecision.addEventListener("change", applyFilters);
+
+  // ---------------------------------------------------------------------
+  // Copy summary
+  // ---------------------------------------------------------------------
+
+  function buildSummaryMarkdown() {
+    var groups = { approve: [], reject: [], edit: [], undecided: [] };
+    FAMILIES.forEach(function (family) {
+      family.candidates.forEach(function (c) {
+        var d = getDecision(c.id) || "undecided";
+        var note = getNote(c.id);
+        groups[d].push({ id: c.id, note: note });
+      });
+    });
+    var titles = { approve: "Approved", reject: "Rejected", edit: "Edit requested", undecided: "Undecided" };
+    var lines = ["# Advice catalogue review summary", ""];
+    ["approve", "reject", "edit", "undecided"].forEach(function (key) {
+      lines.push("## " + titles[key] + " (" + groups[key].length + ")");
+      if (groups[key].length === 0) {
+        lines.push("- (none)");
+      } else {
+        groups[key].forEach(function (item) {
+          var line = "- " + item.id;
+          if (item.note) line += " — " + item.note;
+          lines.push(line);
+        });
+      }
+      lines.push("");
+    });
+    return lines.join("\n");
+  }
+
+  var copyBtn = document.getElementById("copy-summary");
+  var copyStatus = document.getElementById("copy-status");
+  copyBtn.addEventListener("click", function () {
+    var text = buildSummaryMarkdown();
+    var done = function (ok) {
+      copyStatus.textContent = ok ? "Copied." : "Could not copy — select and copy manually.";
+      setTimeout(function () { copyStatus.textContent = ""; }, 3000);
+    };
+    try {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(function () { done(true); }, function () { done(false); });
+      } else {
+        throw new Error("no clipboard api");
+      }
+    } catch (e) {
+      try {
+        var ta = document.createElement("textarea");
+        ta.value = text;
+        ta.style.position = "fixed";
+        ta.style.opacity = "0";
+        document.body.appendChild(ta);
+        ta.select();
+        var ok = document.execCommand("copy");
+        document.body.removeChild(ta);
+        done(ok);
+      } catch (e2) {
+        done(false);
+      }
+    }
+  });
+
+})();
+</script>
