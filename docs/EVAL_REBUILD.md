@@ -708,11 +708,10 @@ completely meaningless dataset.
 | 3 — generation baseline | ⬜ costs money, needs approval |
 | 4 — retrieval | ⬜ |
 
-**A sequencing gap this plan does not settle.** 2c grades 30 stratified rows, but grading needs
-captured answers and the only capture in the plan is Phase 3. Either Phase 3 runs first and 2c
-grades its output, or a separate cheap capture is made for calibration. Running Phase 3 first is
-one capture (~$0.02–0.05) for both the generation baseline and the calibration rows, and that is
-the recommendation — but it inverts the numbering, so it is the user's call.
+**Sequencing — SETTLED 2026-09-09: Phase 3 runs before 2c.** 2c grades 30 stratified rows, and
+grading needs captured answers that only Phase 3 produces. One capture (~$0.02–0.05) therefore
+serves both the generation baseline and the calibration rows. The numbering is inverted and stays
+that way; read the phases in the order 0, 1, 2a, 2b, **3, 2c**, 4.
 
 ### Known blocker — the refusal gate reads zero on this set
 
