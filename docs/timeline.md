@@ -785,7 +785,7 @@ conversations that survive a page reload.*
 | ◆ G10 | Third bake-off arm | **Resolved → yes, three arms**: `firestore-direct`, `pgvector-rag`, `firestore-vector`. Also answers whether Firestore's own vector search is good enough if RAG wins | — |
 | ◆ G11 | Does `search_documents` return as a **tool** after ◆G7 settles, or is up-front retrieval permanent? A hybrid — up-front retrieval for the first pass, an optional follow-up search tool for multi-part questions — is plausible. Decide **after** N2, so the bake-off measures strategies rather than tool-calling behavior | Open — **cheaper now**: N3 built the loop, so adding it is one entry in `buildToolRegistry` plus a prompt line, not new machinery | multi-part answer quality |
 | ◆ G8 | Sensor-data store (Firestore port vs device-API) | **Resolved → device API** (most direct path to the real codebase) | — |
-| ◆ G3 | Site-baseline definition (operator range vs. computed) | Open | Phase N4 flag logic |
+| ◆ G3 | Site-baseline definition (operator range vs. computed) | Open. An operator meeting restated it as "pull ranges from the registry, refine per site from history" — decoded, with the prompt-caching and `precedence`-fixture constraints that shape any implementation, in [`RESPONSIBILITY.md`](RESPONSIBILITY.md) | Phase N4 flag logic |
 | ◆ G4 | Event-detection context source | Open | Phase N6 §4 |
 | ◆ G5 | Frontend responsiveness (mobile/tablet) | Open | Phase N7 UI |
 | ◆ G6 | Redesign vs. match existing style | Open | Phase N7 UI |

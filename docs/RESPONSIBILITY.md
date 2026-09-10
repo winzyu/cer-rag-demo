@@ -167,3 +167,88 @@ pinned/tested per state, rather than a soft distinction left to prompt wording a
 every phase transition the same guarantee this repo already relies on for its retrieval bake-off:
 a byte-identical, hash-pinned prompt per state, so "which phase was this answer generated under" is
 never ambiguous after the fact.
+
+---
+
+# Operator meeting — reconciliation against the codebase
+
+Action items raised in an operator/product meeting, decoded into what they mean here. Several are
+existing project decisions in different words; one collides with a documented constraint. Recorded
+so the same ground is not re-covered, and so the reasons a proposal was reshaped survive.
+
+## Adopted, with a changed mechanism
+
+**"Pull ranges directly from the database via a tool call rather than from a document or the
+source-of-truth."** This is ◆G3 and the open half of Phase N4. The report path already does it:
+`src/report/operatorThresholds.ts` reads per-device `thresholds.min/maxTemperature` and
+`operatingEnvironment` from the backend device registry (`migration/BACKEND_FIELDS.md`). The chat
+path does not — it still reads one global `WATER_TYPE`, because per-device ranges mean editing the
+system prompt.
+
+**Do not implement it as stated.** The prompt's `AUTHORITATIVE NORMAL RANGES` block is static
+deliberately, and three things depend on that:
+
+- **Prompt caching.** Static content first, dynamic last, is what makes the cached-input discount
+  work (`timeline.md`, Phase N1). A per-request range block breaks byte-identical prompts.
+- **Grounding.** A figure is grounded if it appears in the retrieval context, the system prompt, the
+  user's question, or a tool result. The ranges are quotable today *because they are in the prompt*.
+  Moving them to a tool result keeps them grounded — but only when the tool actually ran.
+- **The `precedence` fixture class**, which tests that an operator range outranks a document. Wave 1
+  declares no `requires`, so every fixture runs with `SENSOR_TOOL` off. Sourcing ranges from a tool
+  makes that class depend on a capability the default configuration does not have.
+
+**The version that works:** keep the prompt block as the default, and have `query_sensor_data`
+surface the device's registry thresholds in its result, flagging disagreement — the pattern the tool
+already uses for the `WATER_TYPE`-vs-`operatingEnvironment` mismatch. It lands after the generation
+baseline is captured, batched with the other prompt work.
+
+**"Generalized ranges could stay, with what is normal for this location derived from historical
+data."** This is ◆G3's open question stated precisely: is the site baseline the operator-provided
+range or computed from history. The instinct — keep the rule of thumb, refine per site — is the
+right shape, and rolling-percentile baselines from historical data are unbuilt. It stays a gate, not
+a task.
+
+**"Educational tool — explain what this data means."** This is the `education` tier, and it is
+approximately what ships today.
+
+**"Keeping it generic is good; it gives operators freedom to find their own contractors and
+solutions."** Direct support for the allowlist decision above. Generic, non-prescriptive suggestions
+are what a curated list carries safely, and the tier that needs no legal sign-off.
+
+**"Low dissolved oxygen in fresh water — a valid instruction would be to install a fountain. In a
+harbor that does not make sense."** The clearest available statement of what the allowlist is: entries
+keyed to **(event type, water-body type)**. Note the dependency it creates — the fountain example only
+works if the system knows fresh water from harbor *per device*, which is the same registry field as
+the first item. These two action items are one feature.
+
+## Adopted, reworded — the referral
+
+**"'You're going to have an algal bloom' → refer the operator to Clean Earth Rovers for cleanup."**
+
+The referral is worth building. The prediction is not, and must not ship in that form:
+
+- The six measured parameters cannot detect or forecast a bloom. There is no such sensor.
+- The vendor's public marketing already overclaims this (turbidity "identifies bacteria and algae
+  presence", early warning of "bacterial outbreaks"), and `CORPUS_SOURCING_BRIEF.md` §3 is explicit
+  that the assistant must decline these **without contradicting the vendor or telling the customer
+  they are wrong**.
+- An assistant that announces a coming bloom is making the least defensible claim available to it.
+
+**What survives:** an allowlist entry fired by a *measured* event signature the report pipeline
+already detects, worded as conditions consistent with a concern, paired with the referral line.
+Detection, never prophecy.
+
+## Deferred — right idea, wrong moment
+
+**"Update the prompt to emphasise the importance of the Firestore data."** Reasonable, but it is a
+precedence rule, and precedence is already specified and tested. It is a prompt edit, so it batches
+with quote-based citations and the tier flag and lands once — every prompt change invalidates every
+capture made before it.
+
+## Not carried forward
+
+**"What tools are available."** Ambiguous between "tell operators what Clean Earth Rovers offers" —
+which is allowlist and referral content, not engineering — and "expose the model's tool inventory to
+users", which nobody asked for and which the prompt deliberately omits (promising tools that do not
+exist invites the model to announce lookups it cannot perform). Treated as the former; no
+engineering item.
