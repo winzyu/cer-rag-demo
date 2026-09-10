@@ -1,0 +1,19 @@
+{
+  "fixtureId": "refusal-turbidity-sensor-hardware",
+  "set": "committed",
+  "fixtureClass": "refusal",
+  "turns": [
+    {
+      "turn": 1,
+      "query": "I have depth ratings written down for four of our sensors but nothing for the one that reads clarity. How deep can we hang that one?",
+      "relevant": [],
+      "noRelevantChunks": "refusal fixture (answerable_from empty) — no corpus chunk answers this query. Mechanically labelled by scripts/resolveRetrievalLabels.ts; not human-verified."
+    },
+    {
+      "turn": 2,
+      "query": "Then what unit is that reading even in? The display just hands me a number with nothing next to it.",
+      "relevant": [],
+      "noRelevantChunks": "refusal fixture (answerable_from empty) — no corpus chunk answers this query. Mechanically labelled by scripts/resolveRetrievalLabels.ts; not human-verified."
+    }
+  ]
+}

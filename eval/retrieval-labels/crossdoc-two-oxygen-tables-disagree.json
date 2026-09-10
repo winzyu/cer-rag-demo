@@ -1,0 +1,249 @@
+{
+  "fixtureId": "crossdoc-two-oxygen-tables-disagree",
+  "set": "committed",
+  "fixtureClass": "cross-document",
+  "turns": [
+    {
+      "turn": 1,
+      "query": "I've got two oxygen saturation tables in front of me — the USGS one and the one stapled to the back of the EPA field SOP. At 20 degrees and standard pressure they don't give me quite the same number. Which one am I supposed to hold the sensor to?",
+      "relevant": [
+        {
+          "chunkId": "usgs-nfm-a6.2-dissolved-oxygen.pdf__b2afa57c2372",
+          "contentHash": "b2afa57c2372",
+          "filename": "usgs-nfm-a6.2-dissolved-oxygen.pdf",
+          "grade": 2,
+          "evidence": "20.0\n \n8.36\n \n8.42\n \n8.48\n \n8.54\n \n8.60\n \n8.66\n \n8.73\n \n8.79\n \n8.85\n \n8.91\n \n8.97\n \n9.03\n \n9.09\n \n9.15\n \n9.21\n \n9.28\n \n9.34\n \n9.40\n \n9.46\n \n9.52",
+          "locator": "Table 6.2-2 —Continued (700-795 mmHg), caption and column header present — \"Solubility of oxygen in freshwater at various temperatures and pressures.—Continued\"",
+          "claimIds": [
+            "do-t622-20c-750-897-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.2-dissolved-oxygen.pdf__2d5d863cf1da",
+          "contentHash": "2d5d863cf1da",
+          "filename": "usgs-nfm-a6.2-dissolved-oxygen.pdf",
+          "grade": 2,
+          "evidence": "were generated\nfrom the equations of Benson and Krause (1980, 1984)",
+          "locator": "Section 3.3 step 11-12, Section 4.0 Reporting, and Section 5.0 opening — \"reported to the nearest 0.1 mg/L and stored to the nearest 0.01 mg/L\"",
+          "claimIds": [
+            "do-tables-benson-krause-01",
+            "do-saline-above-2000-01"
+          ]
+        },
+        {
+          "chunkId": "epa-sop-field-instrument-calibration-2010.pdf__6f26a0f9a8d0",
+          "contentHash": "6f26a0f9a8d0",
+          "filename": "epa-sop-field-instrument-calibration-2010.pdf",
+          "grade": 2,
+          "evidence": "20 9.06 9.00 8.94 8.88 8.82 8.75 8.69",
+          "locator": "Attachment, \"Oxygen Solubility at Indicated Pressure\" chart, 760-730 mm Hg block plus the head of the 725-690 mm Hg block (tail of the Table 1 calibration log precedes it)",
+          "claimIds": [
+            "epa-do-solubility-20c-01",
+            "epa-do-solubility-units-mgl-01",
+            "epa-do-solubility-range-45c-01",
+            "epa-do-solubility-lowpressure-block-01",
+            "epa-do-solubility-0c-725-01"
+          ]
+        },
+        {
+          "chunkId": "epa-sop-field-instrument-calibration-2010.pdf__2d02065fcb50",
+          "contentHash": "2d02065fcb50",
+          "filename": "epa-sop-field-instrument-calibration-2010.pdf",
+          "grade": 2,
+          "evidence": "760 755 750 TAS 740 735 730 mm",
+          "locator": "§6.0 post calibration criteria table, §7.0 Records, §8.0 References, Table 1 — \"Measurement Post Calibration Criteria\"",
+          "claimIds": [
+            "epa-oxygen-solubility-chart-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.0-field-measurement-guidelines.pdf__1b7e9852e841",
+          "contentHash": "1b7e9852e841",
+          "filename": "usgs-nfm-a6.0-field-measurement-guidelines.pdf",
+          "grade": 2,
+          "evidence": "±3%Dissolved oxygen\nOptical/luminescent sensors \t±0.2 mg/L\npH:\nMeter displays to 0.01 \t±0.1 unit",
+          "locator": "Table 6.0–1 remainder and its footnotes — \"Dissolved oxygen\\nOptical/luminescent sensors\"",
+          "claimIds": [
+            "a60-xcut-tbl601-all-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.2-dissolved-oxygen.pdf__5eec7fdae2c7",
+          "contentHash": "5eec7fdae2c7",
+          "filename": "usgs-nfm-a6.2-dissolved-oxygen.pdf",
+          "grade": 2,
+          "evidence": "40.0\n \n4.96\n \n5.00\n \n5.05\n \n5.09\n \n5.14\n \n5.18\n \n5.23\n \n5.28\n \n5.32\n \n5.37\n \n5.41\n \n5.46\n \n5.50\n \n5.55\n \n5.59\n \n5.64\n \n5.69\n \n5.73\n \n5.78\n \n5.82",
+          "locator": "Table 6.2-2 —Continued (600-695 mmHg), caption and column header present — rows 31.0 to 40.0",
+          "claimIds": [
+            "do-t622-40c-600-496-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.2-dissolved-oxygen.pdf__bff422358156",
+          "contentHash": "bff422358156",
+          "filename": "usgs-nfm-a6.2-dissolved-oxygen.pdf",
+          "grade": 2,
+          "evidence": "Atmospheric pressure, in millimeters of mercury\n600\n \n605\n \n610",
+          "locator": "Table 6.2-2 second pressure block (600-695 mmHg), column header present but caption on the preceding page — \"Atmospheric pressure, in millimeters of mercury 600\"",
+          "claimIds": [
+            "do-t622-block2-header-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.2-dissolved-oxygen.pdf__44dccd598c09",
+          "contentHash": "44dccd598c09",
+          "filename": "usgs-nfm-a6.2-dissolved-oxygen.pdf",
+          "grade": 2,
+          "evidence": "Atmospheric pressure, in millimeters of mercury\n700\n \n705\n \n710",
+          "locator": "Table 6.2-2 (first block, 700-795 mmHg), caption and column header present — \"Solubility of oxygen in freshwater at various temperatures and pressures.\"",
+          "claimIds": [
+            "do-t622-block1-header-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.2-dissolved-oxygen.pdf__4ca2d16f1916",
+          "contentHash": "4ca2d16f1916",
+          "filename": "usgs-nfm-a6.2-dissolved-oxygen.pdf",
+          "grade": 2,
+          "evidence": "Salinity correction factors for dissolved oxygen in water",
+          "locator": "List of tables — \"Tables\" (NEWLY RECOVERED; front matter, but names the two data tables)",
+          "claimIds": [
+            "do-table624-title-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.2-dissolved-oxygen.pdf__dcddd06f1651",
+          "contentHash": "dcddd06f1651",
+          "filename": "usgs-nfm-a6.2-dissolved-oxygen.pdf",
+          "grade": 2,
+          "evidence": "Specific conductance, in microsiemens per centimeter at 25 degrees Celsius\n0 \n1,000\n \n2,000",
+          "locator": "Table 6.2-4 (first block, 0-14,000 microsiemens per centimeter), caption and column header present — \"Salinity correction factors for dissolved oxygen in water (based on specific conductance).\"",
+          "claimIds": [
+            "do-t624-identity-01"
+          ]
+        }
+      ]
+    },
+    {
+      "turn": 2,
+      "query": "We're going up to a high-desert site — thin air, and the water can push past 40 in the shallows in August. Will either table still cover me up there?",
+      "relevant": [
+        {
+          "chunkId": "usgs-nfm-a6.2-dissolved-oxygen.pdf__b2afa57c2372",
+          "contentHash": "b2afa57c2372",
+          "filename": "usgs-nfm-a6.2-dissolved-oxygen.pdf",
+          "grade": 2,
+          "evidence": "20.0\n \n8.36\n \n8.42\n \n8.48\n \n8.54\n \n8.60\n \n8.66\n \n8.73\n \n8.79\n \n8.85\n \n8.91\n \n8.97\n \n9.03\n \n9.09\n \n9.15\n \n9.21\n \n9.28\n \n9.34\n \n9.40\n \n9.46\n \n9.52",
+          "locator": "Table 6.2-2 —Continued (700-795 mmHg), caption and column header present — \"Solubility of oxygen in freshwater at various temperatures and pressures.—Continued\"",
+          "claimIds": [
+            "do-t622-20c-750-897-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.2-dissolved-oxygen.pdf__2d5d863cf1da",
+          "contentHash": "2d5d863cf1da",
+          "filename": "usgs-nfm-a6.2-dissolved-oxygen.pdf",
+          "grade": 2,
+          "evidence": "were generated\nfrom the equations of Benson and Krause (1980, 1984)",
+          "locator": "Section 3.3 step 11-12, Section 4.0 Reporting, and Section 5.0 opening — \"reported to the nearest 0.1 mg/L and stored to the nearest 0.01 mg/L\"",
+          "claimIds": [
+            "do-tables-benson-krause-01",
+            "do-saline-above-2000-01"
+          ]
+        },
+        {
+          "chunkId": "epa-sop-field-instrument-calibration-2010.pdf__6f26a0f9a8d0",
+          "contentHash": "6f26a0f9a8d0",
+          "filename": "epa-sop-field-instrument-calibration-2010.pdf",
+          "grade": 2,
+          "evidence": "20 9.06 9.00 8.94 8.88 8.82 8.75 8.69",
+          "locator": "Attachment, \"Oxygen Solubility at Indicated Pressure\" chart, 760-730 mm Hg block plus the head of the 725-690 mm Hg block (tail of the Table 1 calibration log precedes it)",
+          "claimIds": [
+            "epa-do-solubility-20c-01",
+            "epa-do-solubility-units-mgl-01",
+            "epa-do-solubility-range-45c-01",
+            "epa-do-solubility-lowpressure-block-01",
+            "epa-do-solubility-0c-725-01"
+          ]
+        },
+        {
+          "chunkId": "epa-sop-field-instrument-calibration-2010.pdf__2d02065fcb50",
+          "contentHash": "2d02065fcb50",
+          "filename": "epa-sop-field-instrument-calibration-2010.pdf",
+          "grade": 2,
+          "evidence": "760 755 750 TAS 740 735 730 mm",
+          "locator": "§6.0 post calibration criteria table, §7.0 Records, §8.0 References, Table 1 — \"Measurement Post Calibration Criteria\"",
+          "claimIds": [
+            "epa-oxygen-solubility-chart-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.0-field-measurement-guidelines.pdf__1b7e9852e841",
+          "contentHash": "1b7e9852e841",
+          "filename": "usgs-nfm-a6.0-field-measurement-guidelines.pdf",
+          "grade": 2,
+          "evidence": "±3%Dissolved oxygen\nOptical/luminescent sensors \t±0.2 mg/L\npH:\nMeter displays to 0.01 \t±0.1 unit",
+          "locator": "Table 6.0–1 remainder and its footnotes — \"Dissolved oxygen\\nOptical/luminescent sensors\"",
+          "claimIds": [
+            "a60-xcut-tbl601-all-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.2-dissolved-oxygen.pdf__5eec7fdae2c7",
+          "contentHash": "5eec7fdae2c7",
+          "filename": "usgs-nfm-a6.2-dissolved-oxygen.pdf",
+          "grade": 2,
+          "evidence": "40.0\n \n4.96\n \n5.00\n \n5.05\n \n5.09\n \n5.14\n \n5.18\n \n5.23\n \n5.28\n \n5.32\n \n5.37\n \n5.41\n \n5.46\n \n5.50\n \n5.55\n \n5.59\n \n5.64\n \n5.69\n \n5.73\n \n5.78\n \n5.82",
+          "locator": "Table 6.2-2 —Continued (600-695 mmHg), caption and column header present — rows 31.0 to 40.0",
+          "claimIds": [
+            "do-t622-40c-600-496-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.2-dissolved-oxygen.pdf__bff422358156",
+          "contentHash": "bff422358156",
+          "filename": "usgs-nfm-a6.2-dissolved-oxygen.pdf",
+          "grade": 2,
+          "evidence": "Atmospheric pressure, in millimeters of mercury\n600\n \n605\n \n610",
+          "locator": "Table 6.2-2 second pressure block (600-695 mmHg), column header present but caption on the preceding page — \"Atmospheric pressure, in millimeters of mercury 600\"",
+          "claimIds": [
+            "do-t622-block2-header-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.2-dissolved-oxygen.pdf__44dccd598c09",
+          "contentHash": "44dccd598c09",
+          "filename": "usgs-nfm-a6.2-dissolved-oxygen.pdf",
+          "grade": 2,
+          "evidence": "Atmospheric pressure, in millimeters of mercury\n700\n \n705\n \n710",
+          "locator": "Table 6.2-2 (first block, 700-795 mmHg), caption and column header present — \"Solubility of oxygen in freshwater at various temperatures and pressures.\"",
+          "claimIds": [
+            "do-t622-block1-header-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.2-dissolved-oxygen.pdf__4ca2d16f1916",
+          "contentHash": "4ca2d16f1916",
+          "filename": "usgs-nfm-a6.2-dissolved-oxygen.pdf",
+          "grade": 2,
+          "evidence": "Salinity correction factors for dissolved oxygen in water",
+          "locator": "List of tables — \"Tables\" (NEWLY RECOVERED; front matter, but names the two data tables)",
+          "claimIds": [
+            "do-table624-title-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.2-dissolved-oxygen.pdf__dcddd06f1651",
+          "contentHash": "dcddd06f1651",
+          "filename": "usgs-nfm-a6.2-dissolved-oxygen.pdf",
+          "grade": 2,
+          "evidence": "Specific conductance, in microsiemens per centimeter at 25 degrees Celsius\n0 \n1,000\n \n2,000",
+          "locator": "Table 6.2-4 (first block, 0-14,000 microsiemens per centimeter), caption and column header present — \"Salinity correction factors for dissolved oxygen in water (based on specific conductance).\"",
+          "claimIds": [
+            "do-t624-identity-01"
+          ]
+        }
+      ]
+    }
+  ]
+}

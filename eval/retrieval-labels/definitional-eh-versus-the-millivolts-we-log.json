@@ -1,0 +1,173 @@
+{
+  "fixtureId": "definitional-eh-versus-the-millivolts-we-log",
+  "set": "committed",
+  "fixtureClass": "definitional",
+  "turns": [
+    {
+      "turn": 1,
+      "query": "The USGS chapters keep saying Eh where our kit just says ORP in millivolts. Is Eh the same number our probe is giving us, or something else?",
+      "relevant": [
+        {
+          "chunkId": "usgs-nfm-a6.5-orp.pdf__dcd192573a81",
+          "contentHash": "dcd192573a81",
+          "filename": "usgs-nfm-a6.5-orp.pdf",
+          "grade": 2,
+          "evidence": "measure of the equilibrium potential, relative to",
+          "locator": "Section 6.5 opening — \"should not be considered a routine determination\"",
+          "claimIds": [
+            "orp-eh-definition-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.5-orp.pdf__0fc2879a5e90",
+          "contentHash": "0fc2879a5e90",
+          "filename": "usgs-nfm-a6.5-orp.pdf",
+          "grade": 2,
+          "evidence": "Eh = emf + Eref",
+          "locator": "Section 6.5.2 seven-step equipment test and worked EXAMPLE",
+          "claimIds": [
+            "orp-eh-equation-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.5-orp.pdf__9dfb772d652d",
+          "contentHash": "9dfb772d652d",
+          "filename": "usgs-nfm-a6.5-orp.pdf",
+          "grade": 2,
+          "evidence": "TECHNICAL NOTE: Eref is the whole-cell potential of the",
+          "locator": "Section 6.5.2 Equipment Test Procedure — \"Eh measuring systems can be tested for accuracy\"",
+          "claimIds": [
+            "orp-eref-definition-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.0-field-measurement-guidelines.pdf__ca460547d41b",
+          "contentHash": "ca460547d41b",
+          "filename": "usgs-nfm-a6.0-field-measurement-guidelines.pdf",
+          "grade": 2,
+          "evidence": "measure of the oxidation-reduction potential of a solution",
+          "locator": "Conversion Factors and Abbreviations and Symbols — \"Temperature is reported in degrees Celsius\"",
+          "claimIds": [
+            "a60-eh-definition-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.0-field-measurement-guidelines.pdf__1b7e9852e841",
+          "contentHash": "1b7e9852e841",
+          "filename": "usgs-nfm-a6.0-field-measurement-guidelines.pdf",
+          "grade": 2,
+          "evidence": "Eh is not considered to be a routine or direct field measurement (see National Field Manual (NFM) A6.5).",
+          "locator": "Table 6.0–1 remainder and its footnotes — \"Dissolved oxygen\\nOptical/luminescent sensors\"",
+          "claimIds": [
+            "a60-eh-not-direct-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.0-field-measurement-guidelines.pdf__a038c4c76937",
+          "contentHash": "a038c4c76937",
+          "filename": "usgs-nfm-a6.0-field-measurement-guidelines.pdf",
+          "grade": 2,
+          "evidence": "Routine field measurements include\npH, temperature, conductivity, DO concentration, and turbid-\nity.",
+          "locator": "Section 3.2 well-type bullets and section 3.2.1 Summary of Well-Purging Protocols - \"The standard USGS well-purging protocol is to remove three or more well casing volumes\"",
+          "claimIds": [
+            "a60-xcut-routine-gw-params-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.0-field-measurement-guidelines.pdf__91f856db8d42",
+          "contentHash": "91f856db8d42",
+          "filename": "usgs-nfm-a6.0-field-measurement-guidelines.pdf",
+          "grade": 2,
+          "evidence": "concentration, specific electrical conductance (SC), pH,\nreduction-oxidation potential (redox/ORP), alkalinity and\nacid-neutralizing capacity (ANC)2, and turbidity.3",
+          "locator": "End of section 1.0 and section 2.0 Quality Assurance / 2.1 Records — \"Adherence to standard U.S. Geological Survey (USGS)\\nquality-assurance protocols is required\"",
+          "claimIds": [
+            "a60-xcut-field-param-list-01"
+          ]
+        }
+      ]
+    },
+    {
+      "turn": 2,
+      "query": "Then why isn't it in the list of things we're told to watch settle down before we take a reading? Everything else is on there.",
+      "relevant": [
+        {
+          "chunkId": "usgs-nfm-a6.5-orp.pdf__dcd192573a81",
+          "contentHash": "dcd192573a81",
+          "filename": "usgs-nfm-a6.5-orp.pdf",
+          "grade": 2,
+          "evidence": "measure of the equilibrium potential, relative to",
+          "locator": "Section 6.5 opening — \"should not be considered a routine determination\"",
+          "claimIds": [
+            "orp-eh-definition-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.5-orp.pdf__0fc2879a5e90",
+          "contentHash": "0fc2879a5e90",
+          "filename": "usgs-nfm-a6.5-orp.pdf",
+          "grade": 2,
+          "evidence": "Eh = emf + Eref",
+          "locator": "Section 6.5.2 seven-step equipment test and worked EXAMPLE",
+          "claimIds": [
+            "orp-eh-equation-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.5-orp.pdf__9dfb772d652d",
+          "contentHash": "9dfb772d652d",
+          "filename": "usgs-nfm-a6.5-orp.pdf",
+          "grade": 2,
+          "evidence": "TECHNICAL NOTE: Eref is the whole-cell potential of the",
+          "locator": "Section 6.5.2 Equipment Test Procedure — \"Eh measuring systems can be tested for accuracy\"",
+          "claimIds": [
+            "orp-eref-definition-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.0-field-measurement-guidelines.pdf__ca460547d41b",
+          "contentHash": "ca460547d41b",
+          "filename": "usgs-nfm-a6.0-field-measurement-guidelines.pdf",
+          "grade": 2,
+          "evidence": "measure of the oxidation-reduction potential of a solution",
+          "locator": "Conversion Factors and Abbreviations and Symbols — \"Temperature is reported in degrees Celsius\"",
+          "claimIds": [
+            "a60-eh-definition-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.0-field-measurement-guidelines.pdf__1b7e9852e841",
+          "contentHash": "1b7e9852e841",
+          "filename": "usgs-nfm-a6.0-field-measurement-guidelines.pdf",
+          "grade": 2,
+          "evidence": "Eh is not considered to be a routine or direct field measurement (see National Field Manual (NFM) A6.5).",
+          "locator": "Table 6.0–1 remainder and its footnotes — \"Dissolved oxygen\\nOptical/luminescent sensors\"",
+          "claimIds": [
+            "a60-eh-not-direct-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.0-field-measurement-guidelines.pdf__a038c4c76937",
+          "contentHash": "a038c4c76937",
+          "filename": "usgs-nfm-a6.0-field-measurement-guidelines.pdf",
+          "grade": 2,
+          "evidence": "Routine field measurements include\npH, temperature, conductivity, DO concentration, and turbid-\nity.",
+          "locator": "Section 3.2 well-type bullets and section 3.2.1 Summary of Well-Purging Protocols - \"The standard USGS well-purging protocol is to remove three or more well casing volumes\"",
+          "claimIds": [
+            "a60-xcut-routine-gw-params-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.0-field-measurement-guidelines.pdf__91f856db8d42",
+          "contentHash": "91f856db8d42",
+          "filename": "usgs-nfm-a6.0-field-measurement-guidelines.pdf",
+          "grade": 2,
+          "evidence": "concentration, specific electrical conductance (SC), pH,\nreduction-oxidation potential (redox/ORP), alkalinity and\nacid-neutralizing capacity (ANC)2, and turbidity.3",
+          "locator": "End of section 1.0 and section 2.0 Quality Assurance / 2.1 Records — \"Adherence to standard U.S. Geological Survey (USGS)\\nquality-assurance protocols is required\"",
+          "claimIds": [
+            "a60-xcut-field-param-list-01"
+          ]
+        }
+      ]
+    }
+  ]
+}

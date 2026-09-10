@@ -1,0 +1,19 @@
+{
+  "fixtureId": "refusal-temperature-harm-threshold",
+  "set": "committed",
+  "fixtureClass": "refusal",
+  "turns": [
+    {
+      "turn": 1,
+      "query": "We had a hot stretch and the creek sat around 24 degrees all week. Is that actually too warm for the fish? I need to know what number to flag on.",
+      "relevant": [],
+      "noRelevantChunks": "refusal fixture (answerable_from empty) — no corpus chunk answers this query. Mechanically labelled by scripts/resolveRetrievalLabels.ts; not human-verified."
+    },
+    {
+      "turn": 2,
+      "query": "If I want to put \"too warm\" in the report, is there anything in what we've got that I can point at, or am I going to the state for that?",
+      "relevant": [],
+      "noRelevantChunks": "refusal fixture (answerable_from empty) — no corpus chunk answers this query. Mechanically labelled by scripts/resolveRetrievalLabels.ts; not human-verified."
+    }
+  ]
+}

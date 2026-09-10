@@ -1,0 +1,229 @@
+{
+  "fixtureId": "crossdoc-orp-sliding-do-steady",
+  "set": "committed",
+  "fixtureClass": "cross-document",
+  "turns": [
+    {
+      "turn": 1,
+      "query": "ORP at one of our pods has slid about 120 mV over two weeks while oxygen has barely moved — still sitting near 6. Before I go tell anyone there's something organic going in upstream, how do I prove the ORP probe itself isn't the thing that's drifting?",
+      "relevant": [
+        {
+          "chunkId": "usgs-nfm-a6.5-orp.pdf__a49a822f593f",
+          "contentHash": "a49a822f593f",
+          "filename": "usgs-nfm-a6.5-orp.pdf",
+          "grade": 2,
+          "evidence": "stable for at least 90 days if kept chilled at 4°C.",
+          "locator": "Sections 6.5.1.A Electrode Selection and 6.5.1.B ZoBell's Solution",
+          "claimIds": [
+            "orp-zobells-shelf-life-01",
+            "orp-quinhydrone-30c-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.5-orp.pdf__5d571cf4d09e",
+          "contentHash": "5d571cf4d09e",
+          "filename": "usgs-nfm-a6.5-orp.pdf",
+          "grade": 2,
+          "evidence": "[From Nordstrom (1977); O C, degrees Celsius; mV, millivolts]",
+          "locator": "Table 6.5-2 (half-cell potentials) and Table 6.5-3 (Eh of ZoBell's vs temperature)",
+          "claimIds": [
+            "orp-table653-25c-430-01",
+            "orp-table653-values-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.5-orp.pdf__0fc2879a5e90",
+          "contentHash": "0fc2879a5e90",
+          "filename": "usgs-nfm-a6.5-orp.pdf",
+          "grade": 2,
+          "evidence": "potential = 202 mV for Ag:AgCl−saturated KCl at 22°C.",
+          "locator": "Section 6.5.2 seven-step equipment test and worked EXAMPLE",
+          "claimIds": [
+            "orp-example-22c-01",
+            "orp-equilibrate-15-30-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.5-orp.pdf__b575099996ac",
+          "contentHash": "b575099996ac",
+          "filename": "usgs-nfm-a6.5-orp.pdf",
+          "grade": 2,
+          "evidence": "Allow the electrode to reach thermal equilibrium (15 to 30",
+          "locator": "Figure 6.5-2 Eh data record: field measurements, and field-calibration steps",
+          "claimIds": [
+            "orp-field-cal-equilibrate-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.5-orp.pdf__9dfb772d652d",
+          "contentHash": "9dfb772d652d",
+          "filename": "usgs-nfm-a6.5-orp.pdf",
+          "grade": 2,
+          "evidence": "those temperatures not shown on tables 6.5–2 and 6.5–3, interpolate",
+          "locator": "Section 6.5.2 Equipment Test Procedure — \"Eh measuring systems can be tested for accuracy\"",
+          "claimIds": [
+            "orp-interpolate-tables-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.8-multiparameter-instruments.pdf__f09f4667e6ea",
+          "contentHash": "f09f4667e6ea",
+          "filename": "usgs-nfm-a6.8-multiparameter-instruments.pdf",
+          "grade": 2,
+          "evidence": "• If the ZoBell solution check fails, was temperature dependence of the ZoBell solution accounted\nfor?",
+          "locator": "Table 6.8–6. Troubleshooting tips for typical problems with multiparameter instruments",
+          "claimIds": [
+            "mp-t6-zobell-temperature-11",
+            "mp-t6-parameter-chapter-map-06"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.0-field-measurement-guidelines.pdf__1b7e9852e841",
+          "contentHash": "1b7e9852e841",
+          "filename": "usgs-nfm-a6.0-field-measurement-guidelines.pdf",
+          "grade": 2,
+          "evidence": "±3%Dissolved oxygen\nOptical/luminescent sensors \t±0.2 mg/L\npH:\nMeter displays to 0.01 \t±0.1 unit",
+          "locator": "Table 6.0–1 remainder and its footnotes — \"Dissolved oxygen\\nOptical/luminescent sensors\"",
+          "claimIds": [
+            "a60-xcut-tbl601-all-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.0-field-measurement-guidelines.pdf__e157e31940ab",
+          "contentHash": "e157e31940ab",
+          "filename": "usgs-nfm-a6.0-field-measurement-guidelines.pdf",
+          "grade": 2,
+          "evidence": "Surface water: Allow at least 60 seconds (or follow\nthe manufacturer’s guidelines) for sensors to equilibrate\nwith sample water.",
+          "locator": "Section 3.0 Performance bullets — \"Surface water: Allow at least 60 seconds\" and \"Groundwater: Begin recording measurements\"",
+          "claimIds": [
+            "a60-xcut-sw-60s-median3-01",
+            "a60-xcut-gw-median5-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.5-orp.pdf__79b5d6c04cc9",
+          "contentHash": "79b5d6c04cc9",
+          "filename": "usgs-nfm-a6.5-orp.pdf",
+          "grade": 2,
+          "evidence": "4. Take readings of the sample temperature and potential (in millivolts) every few",
+          "locator": "Section 6.5.3 Measurement steps 1-4 and thermal-equilibrium technical note",
+          "claimIds": [
+            "orp-reading-cadence-01",
+            "orp-thermal-equilibrium-30min-01"
+          ]
+        }
+      ]
+    },
+    {
+      "turn": 2,
+      "query": "And the oxygen side — it moves about 0.3 mg/L between readings at that site. Is that noise or is that a real change I should be logging?",
+      "relevant": [
+        {
+          "chunkId": "usgs-nfm-a6.5-orp.pdf__a49a822f593f",
+          "contentHash": "a49a822f593f",
+          "filename": "usgs-nfm-a6.5-orp.pdf",
+          "grade": 2,
+          "evidence": "stable for at least 90 days if kept chilled at 4°C.",
+          "locator": "Sections 6.5.1.A Electrode Selection and 6.5.1.B ZoBell's Solution",
+          "claimIds": [
+            "orp-zobells-shelf-life-01",
+            "orp-quinhydrone-30c-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.5-orp.pdf__5d571cf4d09e",
+          "contentHash": "5d571cf4d09e",
+          "filename": "usgs-nfm-a6.5-orp.pdf",
+          "grade": 2,
+          "evidence": "[From Nordstrom (1977); O C, degrees Celsius; mV, millivolts]",
+          "locator": "Table 6.5-2 (half-cell potentials) and Table 6.5-3 (Eh of ZoBell's vs temperature)",
+          "claimIds": [
+            "orp-table653-25c-430-01",
+            "orp-table653-values-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.5-orp.pdf__0fc2879a5e90",
+          "contentHash": "0fc2879a5e90",
+          "filename": "usgs-nfm-a6.5-orp.pdf",
+          "grade": 2,
+          "evidence": "potential = 202 mV for Ag:AgCl−saturated KCl at 22°C.",
+          "locator": "Section 6.5.2 seven-step equipment test and worked EXAMPLE",
+          "claimIds": [
+            "orp-example-22c-01",
+            "orp-equilibrate-15-30-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.5-orp.pdf__b575099996ac",
+          "contentHash": "b575099996ac",
+          "filename": "usgs-nfm-a6.5-orp.pdf",
+          "grade": 2,
+          "evidence": "Allow the electrode to reach thermal equilibrium (15 to 30",
+          "locator": "Figure 6.5-2 Eh data record: field measurements, and field-calibration steps",
+          "claimIds": [
+            "orp-field-cal-equilibrate-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.5-orp.pdf__9dfb772d652d",
+          "contentHash": "9dfb772d652d",
+          "filename": "usgs-nfm-a6.5-orp.pdf",
+          "grade": 2,
+          "evidence": "those temperatures not shown on tables 6.5–2 and 6.5–3, interpolate",
+          "locator": "Section 6.5.2 Equipment Test Procedure — \"Eh measuring systems can be tested for accuracy\"",
+          "claimIds": [
+            "orp-interpolate-tables-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.8-multiparameter-instruments.pdf__f09f4667e6ea",
+          "contentHash": "f09f4667e6ea",
+          "filename": "usgs-nfm-a6.8-multiparameter-instruments.pdf",
+          "grade": 2,
+          "evidence": "• If the ZoBell solution check fails, was temperature dependence of the ZoBell solution accounted\nfor?",
+          "locator": "Table 6.8–6. Troubleshooting tips for typical problems with multiparameter instruments",
+          "claimIds": [
+            "mp-t6-zobell-temperature-11",
+            "mp-t6-parameter-chapter-map-06"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.0-field-measurement-guidelines.pdf__1b7e9852e841",
+          "contentHash": "1b7e9852e841",
+          "filename": "usgs-nfm-a6.0-field-measurement-guidelines.pdf",
+          "grade": 2,
+          "evidence": "±3%Dissolved oxygen\nOptical/luminescent sensors \t±0.2 mg/L\npH:\nMeter displays to 0.01 \t±0.1 unit",
+          "locator": "Table 6.0–1 remainder and its footnotes — \"Dissolved oxygen\\nOptical/luminescent sensors\"",
+          "claimIds": [
+            "a60-xcut-tbl601-all-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.0-field-measurement-guidelines.pdf__e157e31940ab",
+          "contentHash": "e157e31940ab",
+          "filename": "usgs-nfm-a6.0-field-measurement-guidelines.pdf",
+          "grade": 2,
+          "evidence": "Surface water: Allow at least 60 seconds (or follow\nthe manufacturer’s guidelines) for sensors to equilibrate\nwith sample water.",
+          "locator": "Section 3.0 Performance bullets — \"Surface water: Allow at least 60 seconds\" and \"Groundwater: Begin recording measurements\"",
+          "claimIds": [
+            "a60-xcut-sw-60s-median3-01",
+            "a60-xcut-gw-median5-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.5-orp.pdf__79b5d6c04cc9",
+          "contentHash": "79b5d6c04cc9",
+          "filename": "usgs-nfm-a6.5-orp.pdf",
+          "grade": 2,
+          "evidence": "4. Take readings of the sample temperature and potential (in millivolts) every few",
+          "locator": "Section 6.5.3 Measurement steps 1-4 and thermal-equilibrium technical note",
+          "claimIds": [
+            "orp-reading-cadence-01",
+            "orp-thermal-equilibrium-30min-01"
+          ]
+        }
+      ]
+    }
+  ]
+}

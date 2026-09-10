@@ -1,0 +1,183 @@
+{
+  "fixtureId": "probecal-ph-what-solutions",
+  "set": "committed",
+  "fixtureClass": "probe-calibration",
+  "turns": [
+    {
+      "turn": 1,
+      "query": "The sheet that came with our pH probe says it is about due for a recalibration, but it never says how to do one. What do I actually dunk it in, and how many different solutions do I need?",
+      "relevant": [
+        {
+          "chunkId": "usgs-nfm-a6.4-ph.pdf__a03e15a87724",
+          "contentHash": "a03e15a87724",
+          "filename": "usgs-nfm-a6.4-ph.pdf",
+          "grade": 2,
+          "evidence": "Standard USGS procedure for\ncalibration requires a two- or three-point calibration.",
+          "locator": "Section 4.1.1 steps 6-10 — \"Begin calibration procedures\" and the pour-swirl-discard rinse sequence",
+          "claimIds": [
+            "ph-usgs-two-or-three-point-01",
+            "ph-single-point-unacceptable-01",
+            "ph-begin-with-ph7-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.4-ph.pdf__434fe1dc3109",
+          "contentHash": "434fe1dc3109",
+          "filename": "usgs-nfm-a6.4-ph.pdf",
+          "grade": 2,
+          "evidence": "Use at least two pH buffer solutions with documented,\nNIST-traceable pH values that bracket the sample pH\nfor accurate calibration of the pH instrument system.",
+          "locator": "Section 4.0 calibration guidelines and section 4.1 Calibration Procedure — \"Use at least two pH buffer solutions with documented, NIST-traceable pH values\"",
+          "claimIds": [
+            "ph-two-nist-brackets-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.4-ph.pdf__9fd4fb61c959",
+          "contentHash": "9fd4fb61c959",
+          "filename": "usgs-nfm-a6.4-ph.pdf",
+          "grade": 2,
+          "evidence": "A calibration curve is created by measurement of two or\nmore standard pH buffers that bracket the pH of the water\nbeing measured.",
+          "locator": "Section 3.3 long-term storage and section 4.0 Calibration of the pH Instrument System — \"A calibration curve is created by measurement of two or more standard pH buffers\"",
+          "claimIds": [
+            "ph-cal-curve-brackets-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.4-ph.pdf__463363d709a0",
+          "contentHash": "463363d709a0",
+          "filename": "usgs-nfm-a6.4-ph.pdf",
+          "grade": 2,
+          "evidence": "Most pH meters recognize\nthe e.m.f. range of certain pH buffers (commonly pH 1.68,\n4.01, 7.00, and 10.01 buffers) and are able to automatically\ncompensate for temperature during calibration.",
+          "locator": "Section 2.3 Standard pH Buffer Solutions — \"Measurements of pH are only as accurate as the buffers\"",
+          "claimIds": [
+            "ph-buffer-common-values-01",
+            "ph-buffer-nist-required-01",
+            "ph-buffer-temp-adjust-entry-01",
+            "ph-buffer-temp-dependence-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.4-ph.pdf__a5e101e3271a",
+          "contentHash": "a5e101e3271a",
+          "filename": "usgs-nfm-a6.4-ph.pdf",
+          "grade": 2,
+          "evidence": "Do not use expired buffers.",
+          "locator": "Section 2.3 buffer precautions and Table 6.4–3 — \"Values of pH from 0 to 90 degrees Celsius\"",
+          "claimIds": [
+            "ph-buffer-no-expired-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.4-ph.pdf__b1653e60dd01",
+          "contentHash": "b1653e60dd01",
+          "filename": "usgs-nfm-a6.4-ph.pdf",
+          "grade": 2,
+          "evidence": "If pH values are expected to be between 7 and 8,\nthen the standard pH-7 and pH-10.01 buffers (at a\nminimum) should be selected.",
+          "locator": "Section 4.0 Calibration of the pH Instrument System — \"A properly working pH system has—\"",
+          "claimIds": [
+            "ph-example-7-to-8-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.4-ph.pdf__ff61308669d5",
+          "contentHash": "ff61308669d5",
+          "filename": "usgs-nfm-a6.4-ph.pdf",
+          "grade": 2,
+          "evidence": "brating a pH meter and electrode with buffers that are within±10 °C of the sample temperature is recommended.",
+          "locator": "Section 4.0 temperature guidance and general calibration guidelines — \"Calibrating a pH meter and electrode with buffers that are within ±10 °C\"",
+          "claimIds": [
+            "ph-buffer-within-10c-01"
+          ]
+        }
+      ]
+    },
+    {
+      "turn": 2,
+      "query": "Our creek sits around 7.5 most of the year. Which of those should I pick, and does it matter how cold the bottles are when I pour them out?",
+      "relevant": [
+        {
+          "chunkId": "usgs-nfm-a6.4-ph.pdf__a03e15a87724",
+          "contentHash": "a03e15a87724",
+          "filename": "usgs-nfm-a6.4-ph.pdf",
+          "grade": 2,
+          "evidence": "Standard USGS procedure for\ncalibration requires a two- or three-point calibration.",
+          "locator": "Section 4.1.1 steps 6-10 — \"Begin calibration procedures\" and the pour-swirl-discard rinse sequence",
+          "claimIds": [
+            "ph-usgs-two-or-three-point-01",
+            "ph-single-point-unacceptable-01",
+            "ph-begin-with-ph7-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.4-ph.pdf__434fe1dc3109",
+          "contentHash": "434fe1dc3109",
+          "filename": "usgs-nfm-a6.4-ph.pdf",
+          "grade": 2,
+          "evidence": "Use at least two pH buffer solutions with documented,\nNIST-traceable pH values that bracket the sample pH\nfor accurate calibration of the pH instrument system.",
+          "locator": "Section 4.0 calibration guidelines and section 4.1 Calibration Procedure — \"Use at least two pH buffer solutions with documented, NIST-traceable pH values\"",
+          "claimIds": [
+            "ph-two-nist-brackets-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.4-ph.pdf__9fd4fb61c959",
+          "contentHash": "9fd4fb61c959",
+          "filename": "usgs-nfm-a6.4-ph.pdf",
+          "grade": 2,
+          "evidence": "A calibration curve is created by measurement of two or\nmore standard pH buffers that bracket the pH of the water\nbeing measured.",
+          "locator": "Section 3.3 long-term storage and section 4.0 Calibration of the pH Instrument System — \"A calibration curve is created by measurement of two or more standard pH buffers\"",
+          "claimIds": [
+            "ph-cal-curve-brackets-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.4-ph.pdf__463363d709a0",
+          "contentHash": "463363d709a0",
+          "filename": "usgs-nfm-a6.4-ph.pdf",
+          "grade": 2,
+          "evidence": "Most pH meters recognize\nthe e.m.f. range of certain pH buffers (commonly pH 1.68,\n4.01, 7.00, and 10.01 buffers) and are able to automatically\ncompensate for temperature during calibration.",
+          "locator": "Section 2.3 Standard pH Buffer Solutions — \"Measurements of pH are only as accurate as the buffers\"",
+          "claimIds": [
+            "ph-buffer-common-values-01",
+            "ph-buffer-nist-required-01",
+            "ph-buffer-temp-adjust-entry-01",
+            "ph-buffer-temp-dependence-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.4-ph.pdf__a5e101e3271a",
+          "contentHash": "a5e101e3271a",
+          "filename": "usgs-nfm-a6.4-ph.pdf",
+          "grade": 2,
+          "evidence": "Do not use expired buffers.",
+          "locator": "Section 2.3 buffer precautions and Table 6.4–3 — \"Values of pH from 0 to 90 degrees Celsius\"",
+          "claimIds": [
+            "ph-buffer-no-expired-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.4-ph.pdf__b1653e60dd01",
+          "contentHash": "b1653e60dd01",
+          "filename": "usgs-nfm-a6.4-ph.pdf",
+          "grade": 2,
+          "evidence": "If pH values are expected to be between 7 and 8,\nthen the standard pH-7 and pH-10.01 buffers (at a\nminimum) should be selected.",
+          "locator": "Section 4.0 Calibration of the pH Instrument System — \"A properly working pH system has—\"",
+          "claimIds": [
+            "ph-example-7-to-8-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.4-ph.pdf__ff61308669d5",
+          "contentHash": "ff61308669d5",
+          "filename": "usgs-nfm-a6.4-ph.pdf",
+          "grade": 2,
+          "evidence": "brating a pH meter and electrode with buffers that are within±10 °C of the sample temperature is recommended.",
+          "locator": "Section 4.0 temperature guidance and general calibration guidelines — \"Calibrating a pH meter and electrode with buffers that are within ±10 °C\"",
+          "claimIds": [
+            "ph-buffer-within-10c-01"
+          ]
+        }
+      ]
+    }
+  ]
+}

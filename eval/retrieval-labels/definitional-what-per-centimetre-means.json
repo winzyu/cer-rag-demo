@@ -1,0 +1,93 @@
+{
+  "fixtureId": "definitional-what-per-centimetre-means",
+  "set": "committed",
+  "fixtureClass": "definitional",
+  "turns": [
+    {
+      "turn": 1,
+      "query": "Our sonde spits out a number in uS/cm for salt. I get the microsiemens part, but what is the 'per centimetre' actually doing there - is that a reading divided by something, or a property of the water itself?",
+      "relevant": [
+        {
+          "chunkId": "usgs-nfm-a6.3-specific-conductance.pdf__fc9b0488e3d3",
+          "contentHash": "fc9b0488e3d3",
+          "filename": "usgs-nfm-a6.3-specific-conductance.pdf",
+          "grade": 2,
+          "evidence": "as the electrical conductance of 1 cubic centimeter (cm³) of a",
+          "locator": "Section 1.1 Overview of Specific Conductance — \"defined as the electrical conductance of 1 cubic centimeter\"",
+          "claimIds": [
+            "sc-definition-1cm3-25c-01",
+            "sc-conductance-inverse-resistance-01",
+            "sc-conductivity-normalized-01",
+            "sc-units-mhos-pre1971-01",
+            "sc-terms-interchangeable-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.3-specific-conductance.pdf__d06365e8c6fd",
+          "contentHash": "d06365e8c6fd",
+          "filename": "usgs-nfm-a6.3-specific-conductance.pdf",
+          "grade": 2,
+          "evidence": "The USGS typically reports the electrical conductivity of",
+          "locator": "Section 2.0 Equipment and Supplies and Table 6.3-1 — \"High-quality specific conductance meters, including multiparameter sondes\"",
+          "claimIds": [
+            "sc-usgs-reporting-units-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.3-specific-conductance.pdf__298c8c9bd3bf",
+          "contentHash": "298c8c9bd3bf",
+          "filename": "usgs-nfm-a6.3-specific-conductance.pdf",
+          "grade": 2,
+          "evidence": "Siemens per centimeter are the equivalent of mhos per centimeter.",
+          "locator": "Conversion Factors and Abbreviations and Symbols — \"Specific conductance is reported in microsiemens per centimeter\"",
+          "claimIds": [
+            "sc-siemens-mhos-equivalence-01"
+          ]
+        }
+      ]
+    },
+    {
+      "turn": 2,
+      "query": "Someone dug up a survey of the same creek from decades back and every salt number in it is written in micromhos per centimetre. Do we have to convert those before we can put them next to ours?",
+      "relevant": [
+        {
+          "chunkId": "usgs-nfm-a6.3-specific-conductance.pdf__fc9b0488e3d3",
+          "contentHash": "fc9b0488e3d3",
+          "filename": "usgs-nfm-a6.3-specific-conductance.pdf",
+          "grade": 2,
+          "evidence": "as the electrical conductance of 1 cubic centimeter (cm³) of a",
+          "locator": "Section 1.1 Overview of Specific Conductance — \"defined as the electrical conductance of 1 cubic centimeter\"",
+          "claimIds": [
+            "sc-definition-1cm3-25c-01",
+            "sc-conductance-inverse-resistance-01",
+            "sc-conductivity-normalized-01",
+            "sc-units-mhos-pre1971-01",
+            "sc-terms-interchangeable-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.3-specific-conductance.pdf__d06365e8c6fd",
+          "contentHash": "d06365e8c6fd",
+          "filename": "usgs-nfm-a6.3-specific-conductance.pdf",
+          "grade": 2,
+          "evidence": "The USGS typically reports the electrical conductivity of",
+          "locator": "Section 2.0 Equipment and Supplies and Table 6.3-1 — \"High-quality specific conductance meters, including multiparameter sondes\"",
+          "claimIds": [
+            "sc-usgs-reporting-units-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.3-specific-conductance.pdf__298c8c9bd3bf",
+          "contentHash": "298c8c9bd3bf",
+          "filename": "usgs-nfm-a6.3-specific-conductance.pdf",
+          "grade": 2,
+          "evidence": "Siemens per centimeter are the equivalent of mhos per centimeter.",
+          "locator": "Conversion Factors and Abbreviations and Symbols — \"Specific conductance is reported in microsiemens per centimeter\"",
+          "claimIds": [
+            "sc-siemens-mhos-equivalence-01"
+          ]
+        }
+      ]
+    }
+  ]
+}

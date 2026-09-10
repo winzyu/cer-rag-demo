@@ -1,0 +1,143 @@
+{
+  "fixtureId": "probecal-end-of-day-check",
+  "set": "committed",
+  "fixtureClass": "probe-calibration",
+  "turns": [
+    {
+      "turn": 1,
+      "query": "All our probe paperwork talks in years between calibrations, but we are out sampling four days straight next week under a project plan. What is the real cadence for a week like that, and is there anything we have to do at the end of each day?",
+      "relevant": [
+        {
+          "chunkId": "epa-sop-field-instrument-calibration-2010.pdf__a94d853fd809",
+          "contentHash": "a94d853fd809",
+          "filename": "epa-sop-field-instrument-calibration-2010.pdf",
+          "grade": 2,
+          "evidence": "At a minimum, the instrument is calibrated prior to use on the day the measurements are to be",
+          "locator": "§4.0 Frequency of Calibration and §5.1 Temperature — \"At a minimum, the instrument is calibrated prior to use\"",
+          "claimIds": [
+            "epa-cal-frequency-daily-01",
+            "epa-post-cal-end-of-day-01",
+            "epa-midday-check-qualify-01",
+            "epa-sonde-deploy-cal-01"
+          ]
+        },
+        {
+          "chunkId": "epa-sop-field-instrument-calibration-2010.pdf__80b3b684098e",
+          "contentHash": "80b3b684098e",
+          "filename": "epa-sop-field-instrument-calibration-2010.pdf",
+          "grade": 2,
+          "evidence": "initial calibration; for turbidity place the standard in a cuvette and then into the turbidimeter.",
+          "locator": "§5.6 Turbidity steps 2-6 and §6.0 Post Calibration Check — \"a zero or 0.02 NTU\"",
+          "claimIds": [
+            "epa-postcal-procedure-01",
+            "epa-postcal-defaults-apply-when-01"
+          ]
+        },
+        {
+          "chunkId": "epa-sop-field-instrument-calibration-2010.pdf__2d02065fcb50",
+          "contentHash": "2d02065fcb50",
+          "filename": "epa-sop-field-instrument-calibration-2010.pdf",
+          "grade": 2,
+          "evidence": "pH + 0.3 pH unit with pH 7 buffer*",
+          "locator": "§6.0 post calibration criteria table, §7.0 Records, §8.0 References, Table 1 — \"Measurement Post Calibration Criteria\"",
+          "claimIds": [
+            "epa-postcal-ph-criteria-01",
+            "epa-postcal-do-criteria-01",
+            "epa-postcal-spc-criteria-01",
+            "epa-postcal-orp-criteria-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.4-ph.pdf__434fe1dc3109",
+          "contentHash": "434fe1dc3109",
+          "filename": "usgs-nfm-a6.4-ph.pdf",
+          "grade": 2,
+          "evidence": "calibrated daily\nand recalibrated if a check of either of the two pH\nbuffers nearest to the pH of the sample at a temperature\nthat is ± 10 °C of the sample deviates by more than\n± 0.05 pH units.",
+          "locator": "Section 4.0 calibration guidelines and section 4.1 Calibration Procedure — \"Use at least two pH buffer solutions with documented, NIST-traceable pH values\"",
+          "claimIds": [
+            "ph-daily-cal-and-recal-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.4-ph.pdf__82b12bdb95cd",
+          "contentHash": "82b12bdb95cd",
+          "filename": "usgs-nfm-a6.4-ph.pdf",
+          "grade": 2,
+          "evidence": "If the pH of the buffer differs by more\nthan 0.05 pH units from the certified value at the measured\ntemperature (table 6.4–3), recalibrate the pH system",
+          "locator": "Section 5.1 Step 4 and section 5.2 Measurement of pH in Waters with Low Specific Conductance — \"adding a small amount of potassium chloride (KCl)\"",
+          "claimIds": [
+            "ph-recheck-005-recal-01"
+          ]
+        }
+      ]
+    },
+    {
+      "turn": 2,
+      "query": "What is the number that check has to land inside for acidity and for oxygen? And does that match what the federal water-survey guidance wants?",
+      "relevant": [
+        {
+          "chunkId": "epa-sop-field-instrument-calibration-2010.pdf__a94d853fd809",
+          "contentHash": "a94d853fd809",
+          "filename": "epa-sop-field-instrument-calibration-2010.pdf",
+          "grade": 2,
+          "evidence": "At a minimum, the instrument is calibrated prior to use on the day the measurements are to be",
+          "locator": "§4.0 Frequency of Calibration and §5.1 Temperature — \"At a minimum, the instrument is calibrated prior to use\"",
+          "claimIds": [
+            "epa-cal-frequency-daily-01",
+            "epa-post-cal-end-of-day-01",
+            "epa-midday-check-qualify-01",
+            "epa-sonde-deploy-cal-01"
+          ]
+        },
+        {
+          "chunkId": "epa-sop-field-instrument-calibration-2010.pdf__80b3b684098e",
+          "contentHash": "80b3b684098e",
+          "filename": "epa-sop-field-instrument-calibration-2010.pdf",
+          "grade": 2,
+          "evidence": "initial calibration; for turbidity place the standard in a cuvette and then into the turbidimeter.",
+          "locator": "§5.6 Turbidity steps 2-6 and §6.0 Post Calibration Check — \"a zero or 0.02 NTU\"",
+          "claimIds": [
+            "epa-postcal-procedure-01",
+            "epa-postcal-defaults-apply-when-01"
+          ]
+        },
+        {
+          "chunkId": "epa-sop-field-instrument-calibration-2010.pdf__2d02065fcb50",
+          "contentHash": "2d02065fcb50",
+          "filename": "epa-sop-field-instrument-calibration-2010.pdf",
+          "grade": 2,
+          "evidence": "pH + 0.3 pH unit with pH 7 buffer*",
+          "locator": "§6.0 post calibration criteria table, §7.0 Records, §8.0 References, Table 1 — \"Measurement Post Calibration Criteria\"",
+          "claimIds": [
+            "epa-postcal-ph-criteria-01",
+            "epa-postcal-do-criteria-01",
+            "epa-postcal-spc-criteria-01",
+            "epa-postcal-orp-criteria-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.4-ph.pdf__434fe1dc3109",
+          "contentHash": "434fe1dc3109",
+          "filename": "usgs-nfm-a6.4-ph.pdf",
+          "grade": 2,
+          "evidence": "calibrated daily\nand recalibrated if a check of either of the two pH\nbuffers nearest to the pH of the sample at a temperature\nthat is ± 10 °C of the sample deviates by more than\n± 0.05 pH units.",
+          "locator": "Section 4.0 calibration guidelines and section 4.1 Calibration Procedure — \"Use at least two pH buffer solutions with documented, NIST-traceable pH values\"",
+          "claimIds": [
+            "ph-daily-cal-and-recal-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.4-ph.pdf__82b12bdb95cd",
+          "contentHash": "82b12bdb95cd",
+          "filename": "usgs-nfm-a6.4-ph.pdf",
+          "grade": 2,
+          "evidence": "If the pH of the buffer differs by more\nthan 0.05 pH units from the certified value at the measured\ntemperature (table 6.4–3), recalibrate the pH system",
+          "locator": "Section 5.1 Step 4 and section 5.2 Measurement of pH in Waters with Low Specific Conductance — \"adding a small amount of potassium chloride (KCl)\"",
+          "claimIds": [
+            "ph-recheck-005-recal-01"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,153 @@
+{
+  "fixtureId": "deepmanual-cross-section-points",
+  "set": "committed",
+  "fixtureClass": "deep-in-manual",
+  "turns": [
+    {
+      "turn": 1,
+      "query": "Our pod sits at one fixed spot mid-channel. How do we know that one spot speaks for the whole stream, and if it doesn't, how many spots do we need?",
+      "relevant": [
+        {
+          "chunkId": "usgs-nfm-a6.0-field-measurement-guidelines.pdf__19b41bfb8c9f",
+          "contentHash": "19b41bfb8c9f",
+          "filename": "usgs-nfm-a6.0-field-measurement-guidelines.pdf",
+          "grade": 2,
+          "evidence": "If profile values of pH, conductivity, temperature,\nand DO concentration differ by less than 5 percent\nand show that the stream is well mixed both across\nthe section and from top to bottom",
+          "locator": "Section 3.1.1 Equal-Discharge Increments (EDI) — \"If profile values of pH, conductivity, temperature,\\nand DO concentration differ by less than 5 percent\"",
+          "claimIds": [
+            "a60-xcut-well-mixed-5pct-01",
+            "a60-edi-min-four-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.0-field-measurement-guidelines.pdf__d2c6ff539118",
+          "contentHash": "d2c6ff539118",
+          "filename": "usgs-nfm-a6.0-field-measurement-guidelines.pdf",
+          "grade": 2,
+          "evidence": "In a small stream, typically less than 5 feet (ft)\nin width, that is well mixed, a single point at the\ncentroid of flow may be used to represent the cross\nsection.",
+          "locator": "Section 3.1.1, \"To locate measurement points\" steps 1–2 — \"Field-measurement profiles of stream variability are\\nneeded for low- and high-flow conditions\"",
+          "claimIds": [
+            "a60-small-stream-centroid-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.0-field-measurement-guidelines.pdf__3d34fa1943f9",
+          "contentHash": "3d34fa1943f9",
+          "filename": "usgs-nfm-a6.0-field-measurement-guidelines.pdf",
+          "grade": 2,
+          "evidence": "In streams 5 ft wide or greater, a minimum of 10 equal-\nwidth increments is recommended.",
+          "locator": "Section 3.1.1 end of EDI example and Equal-Width Increments (EWI) — \"the correct value for the discharge-weighted mean conductivity is 163 μS/cm\"",
+          "claimIds": [
+            "a60-ewi-min-10-increments-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.0-field-measurement-guidelines.pdf__74a385b04ce6",
+          "contentHash": "74a385b04ce6",
+          "filename": "usgs-nfm-a6.0-field-measurement-guidelines.pdf",
+          "grade": 2,
+          "evidence": "The value recorded at each vertical should\nbe the median of values observed within approxi-\nmately 60 seconds after sensor(s) have equilibrated\nwith streamwater.",
+          "locator": "Section 3.1.1 EDI, \"When making field measurements\" — \"Use a median value for pH\"",
+          "claimIds": [
+            "a60-xcut-edi-60s-median-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.0-field-measurement-guidelines.pdf__4eb25a3b143b",
+          "contentHash": "4eb25a3b143b",
+          "filename": "usgs-nfm-a6.0-field-measurement-guidelines.pdf",
+          "grade": 2,
+          "evidence": "The value recorded at each\nvertical should be the median of values observed\nwithin approximately 60 seconds after the sensor(s)\nhave equilibrated with streamwater.",
+          "locator": "Section 3.1.1 EWI worked example and table 6.0–3 with full caption and headers — \"the area-weighted median conductivity\\nequals 130 μS/cm\"",
+          "claimIds": [
+            "a60-xcut-ewi-60s-median-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.0-field-measurement-guidelines.pdf__e157e31940ab",
+          "contentHash": "e157e31940ab",
+          "filename": "usgs-nfm-a6.0-field-measurement-guidelines.pdf",
+          "grade": 2,
+          "evidence": "Surface water: Allow at least 60 seconds (or follow\nthe manufacturer’s guidelines) for sensors to equilibrate\nwith sample water.",
+          "locator": "Section 3.0 Performance bullets — \"Surface water: Allow at least 60 seconds\" and \"Groundwater: Begin recording measurements\"",
+          "claimIds": [
+            "a60-xcut-sw-60s-median3-01"
+          ]
+        }
+      ]
+    },
+    {
+      "turn": 2,
+      "query": "Say we do have to work across the section. How long do we hold at each vertical, and what number goes in the log?",
+      "relevant": [
+        {
+          "chunkId": "usgs-nfm-a6.0-field-measurement-guidelines.pdf__19b41bfb8c9f",
+          "contentHash": "19b41bfb8c9f",
+          "filename": "usgs-nfm-a6.0-field-measurement-guidelines.pdf",
+          "grade": 2,
+          "evidence": "If profile values of pH, conductivity, temperature,\nand DO concentration differ by less than 5 percent\nand show that the stream is well mixed both across\nthe section and from top to bottom",
+          "locator": "Section 3.1.1 Equal-Discharge Increments (EDI) — \"If profile values of pH, conductivity, temperature,\\nand DO concentration differ by less than 5 percent\"",
+          "claimIds": [
+            "a60-xcut-well-mixed-5pct-01",
+            "a60-edi-min-four-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.0-field-measurement-guidelines.pdf__d2c6ff539118",
+          "contentHash": "d2c6ff539118",
+          "filename": "usgs-nfm-a6.0-field-measurement-guidelines.pdf",
+          "grade": 2,
+          "evidence": "In a small stream, typically less than 5 feet (ft)\nin width, that is well mixed, a single point at the\ncentroid of flow may be used to represent the cross\nsection.",
+          "locator": "Section 3.1.1, \"To locate measurement points\" steps 1–2 — \"Field-measurement profiles of stream variability are\\nneeded for low- and high-flow conditions\"",
+          "claimIds": [
+            "a60-small-stream-centroid-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.0-field-measurement-guidelines.pdf__3d34fa1943f9",
+          "contentHash": "3d34fa1943f9",
+          "filename": "usgs-nfm-a6.0-field-measurement-guidelines.pdf",
+          "grade": 2,
+          "evidence": "In streams 5 ft wide or greater, a minimum of 10 equal-\nwidth increments is recommended.",
+          "locator": "Section 3.1.1 end of EDI example and Equal-Width Increments (EWI) — \"the correct value for the discharge-weighted mean conductivity is 163 μS/cm\"",
+          "claimIds": [
+            "a60-ewi-min-10-increments-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.0-field-measurement-guidelines.pdf__74a385b04ce6",
+          "contentHash": "74a385b04ce6",
+          "filename": "usgs-nfm-a6.0-field-measurement-guidelines.pdf",
+          "grade": 2,
+          "evidence": "The value recorded at each vertical should\nbe the median of values observed within approxi-\nmately 60 seconds after sensor(s) have equilibrated\nwith streamwater.",
+          "locator": "Section 3.1.1 EDI, \"When making field measurements\" — \"Use a median value for pH\"",
+          "claimIds": [
+            "a60-xcut-edi-60s-median-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.0-field-measurement-guidelines.pdf__4eb25a3b143b",
+          "contentHash": "4eb25a3b143b",
+          "filename": "usgs-nfm-a6.0-field-measurement-guidelines.pdf",
+          "grade": 2,
+          "evidence": "The value recorded at each\nvertical should be the median of values observed\nwithin approximately 60 seconds after the sensor(s)\nhave equilibrated with streamwater.",
+          "locator": "Section 3.1.1 EWI worked example and table 6.0–3 with full caption and headers — \"the area-weighted median conductivity\\nequals 130 μS/cm\"",
+          "claimIds": [
+            "a60-xcut-ewi-60s-median-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.0-field-measurement-guidelines.pdf__e157e31940ab",
+          "contentHash": "e157e31940ab",
+          "filename": "usgs-nfm-a6.0-field-measurement-guidelines.pdf",
+          "grade": 2,
+          "evidence": "Surface water: Allow at least 60 seconds (or follow\nthe manufacturer’s guidelines) for sensors to equilibrate\nwith sample water.",
+          "locator": "Section 3.0 Performance bullets — \"Surface water: Allow at least 60 seconds\" and \"Groundwater: Begin recording measurements\"",
+          "claimIds": [
+            "a60-xcut-sw-60s-median3-01"
+          ]
+        }
+      ]
+    }
+  ]
+}

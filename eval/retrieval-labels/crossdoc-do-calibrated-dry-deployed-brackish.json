@@ -1,0 +1,361 @@
+{
+  "fixtureId": "crossdoc-do-calibrated-dry-deployed-brackish",
+  "set": "committed",
+  "fixtureClass": "cross-document",
+  "turns": [
+    {
+      "turn": 1,
+      "query": "I calibrate the oxygen sensor in air at the truck and then the pod goes into brackish water. What do I actually have to have right at the truck for that calibration to mean anything once it's in the water?",
+      "relevant": [
+        {
+          "chunkId": "usgs-nfm-a6.2-dissolved-oxygen.pdf__25b8f6270fca",
+          "contentHash": "25b8f6270fca",
+          "filename": "usgs-nfm-a6.2-dissolved-oxygen.pdf",
+          "grade": 2,
+          "evidence": "The main goal of the one-point\nDO calibration procedure is to create a 100-percent saturated\noxygen environment in which the DO sensor and its thermistor\nare at the same temperature.",
+          "locator": "Section 2.2 Calibration of Optical Sensors — \"One-point calibration\" / \"Two-point calibration\"",
+          "claimIds": [
+            "do-one-point-goal-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.2-dissolved-oxygen.pdf__7609693093b6",
+          "contentHash": "7609693093b6",
+          "filename": "usgs-nfm-a6.2-dissolved-oxygen.pdf",
+          "grade": 2,
+          "evidence": "Read the temperature to the nearest\n0.1 degree Celsius (°C).",
+          "locator": "Procedure 1—Calibration in Air — \"Wet the inside of the calibration chamber\"",
+          "claimIds": [
+            "do-proc1-read-precision-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.2-dissolved-oxygen.pdf__10b503e7f3e2",
+          "contentHash": "10b503e7f3e2",
+          "filename": "usgs-nfm-a6.2-dissolved-oxygen.pdf",
+          "grade": 2,
+          "evidence": "water droplets on the\nsensor module or on the temperature sensor can cause\nimproper calibration.",
+          "locator": "Procedure 1—Calibration in Air, steps 7–9 / Variation of Procedure 1 — \"within ±0.2 mg/L or 2 percent of the computed saturation value\"",
+          "claimIds": [
+            "do-water-droplets-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.2-dissolved-oxygen.pdf__4ab23372fa3d",
+          "contentHash": "4ab23372fa3d",
+          "filename": "usgs-nfm-a6.2-dissolved-oxygen.pdf",
+          "grade": 2,
+          "evidence": "Place the wrapped sensor into the plastic bag and\nkeep it out of direct sunlight to keep the temperature\nfrom changing.",
+          "locator": "Variation of Procedure 1—Air Calibration with a Wet Towel / Procedure 2 introduction — \"Place the wrapped sensor into the plastic bag\"",
+          "claimIds": [
+            "do-wet-towel-bag-shade-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.2-dissolved-oxygen.pdf__940ba0bb0a8a",
+          "contentHash": "940ba0bb0a8a",
+          "filename": "usgs-nfm-a6.2-dissolved-oxygen.pdf",
+          "grade": 2,
+          "evidence": "DO calibration procedures include corrections for\natmospheric pressure and ionic strength. (Ionic strength is\nestimated from the conductivity measurement for routine field\napplications.)",
+          "locator": "Section 2.2.1 Correction for Atmospheric Pressure and Salinity / Technical Note 2 — \"DO sensors do not directly measure oxygen in milligrams per liter\"",
+          "claimIds": [
+            "do-calibration-corrections-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.2-dissolved-oxygen.pdf__dc51eae3cee7",
+          "contentHash": "dc51eae3cee7",
+          "filename": "usgs-nfm-a6.2-dissolved-oxygen.pdf",
+          "grade": 2,
+          "evidence": "instruments have a built-in conductivity sensor that is used\nto correct the DO-concentration data for salinity automatically.\nFor instruments that are not equipped with a conductivity\nsensor",
+          "locator": "Section 2.2.1 Correction for Atmospheric Pressure and Salinity / 2.2.2 Selection of Calibration Method — \"It is required that the barometric pressure be measured at the altitude of the DO calibration\"",
+          "claimIds": [
+            "do-auto-salinity-correction-01",
+            "do-salinity-correction-after-01",
+            "do-manual-salinity-recalibration-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.2-dissolved-oxygen.pdf__2d5d863cf1da",
+          "contentHash": "2d5d863cf1da",
+          "filename": "usgs-nfm-a6.2-dissolved-oxygen.pdf",
+          "grade": 2,
+          "evidence": "Most multiparameter instruments that\ninclude DO and specific-conductance sensors automatically\ncorrect the DO reading for salinity if needed, unless the fea-\nture is turned off by the user.",
+          "locator": "Section 3.3 step 11-12, Section 4.0 Reporting, and Section 5.0 opening — \"reported to the nearest 0.1 mg/L and stored to the nearest 0.01 mg/L\"",
+          "claimIds": [
+            "do-auto-salinity-multiparameter-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.2-dissolved-oxygen.pdf__632e22bc5d2f",
+          "contentHash": "632e22bc5d2f",
+          "filename": "usgs-nfm-a6.2-dissolved-oxygen.pdf",
+          "grade": 2,
+          "evidence": "Temperature stability during calibration and\nmeasurement is extremely important, as temperature controls\nthe solubility of oxygen in water.",
+          "locator": "Section 2.1.1 Equipment Description and Maintenance — \"Guidance on when to replace the luminophore-containing cap\"",
+          "claimIds": [
+            "do-temp-controls-solubility-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.8-multiparameter-instruments.pdf__4d253f9f732f",
+          "contentHash": "4d253f9f732f",
+          "filename": "usgs-nfm-a6.8-multiparameter-instruments.pdf",
+          "grade": 2,
+          "evidence": "Calibration\nTemperature\nºC\nBarometric\nPressure\nmm Hg\nDO Table\nReading\nmg/L\nSalinity\nCorrec-\ntion\nFactor",
+          "locator": "Appendix 6.8–1, figure 6.8–01.01 USGS GW Form version 9.1 — \"METER CALIBRATIONS and FIELD MEASUREMENTS\"",
+          "claimIds": [
+            "mp-form-do-columns-05"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.8-multiparameter-instruments.pdf__81332f744656",
+          "contentHash": "81332f744656",
+          "filename": "usgs-nfm-a6.8-multiparameter-instruments.pdf",
+          "grade": 2,
+          "evidence": "Calibration thermometer and barometer \tNIST-certified or NIST-traceable. (see NFM A6.1 and A6.2 for USGS standard",
+          "locator": "Table 6.8–4 (Ancillary supplies) and start of table 6.8–3 (Specifications for calibration solutions)",
+          "claimIds": [
+            "mp-t4-nist-thermometer-02"
+          ]
+        },
+        {
+          "chunkId": "epa-sop-field-instrument-calibration-2010.pdf__a94d853fd809",
+          "contentHash": "a94d853fd809",
+          "filename": "epa-sop-field-instrument-calibration-2010.pdf",
+          "grade": 2,
+          "evidence": "At a minimum, the instrument is calibrated prior to use on the day the measurements are to be",
+          "locator": "§4.0 Frequency of Calibration and §5.1 Temperature — \"At a minimum, the instrument is calibrated prior to use\"",
+          "claimIds": [
+            "epa-cal-frequency-daily-01",
+            "epa-post-cal-end-of-day-01",
+            "epa-midday-check-qualify-01",
+            "epa-sonde-deploy-cal-01"
+          ]
+        },
+        {
+          "chunkId": "epa-sop-field-instrument-calibration-2010.pdf__80b3b684098e",
+          "contentHash": "80b3b684098e",
+          "filename": "epa-sop-field-instrument-calibration-2010.pdf",
+          "grade": 2,
+          "evidence": "For the dissolved oxygen calibration check, follow the calibration instructions steps one through",
+          "locator": "§5.6 Turbidity steps 2-6 and §6.0 Post Calibration Check — \"a zero or 0.02 NTU\"",
+          "claimIds": [
+            "epa-postcal-do-steps-01",
+            "epa-postcal-defaults-apply-when-01"
+          ]
+        },
+        {
+          "chunkId": "epa-sop-field-instrument-calibration-2010.pdf__2d02065fcb50",
+          "contentHash": "2d02065fcb50",
+          "filename": "epa-sop-field-instrument-calibration-2010.pdf",
+          "grade": 2,
+          "evidence": "760 755 750 TAS 740 735 730 mm",
+          "locator": "§6.0 post calibration criteria table, §7.0 Records, §8.0 References, Table 1 — \"Measurement Post Calibration Criteria\"",
+          "claimIds": [
+            "epa-oxygen-solubility-chart-01"
+          ]
+        },
+        {
+          "chunkId": "epa-sop-field-instrument-calibration-2010.pdf__6f26a0f9a8d0",
+          "contentHash": "6f26a0f9a8d0",
+          "filename": "epa-sop-field-instrument-calibration-2010.pdf",
+          "grade": 2,
+          "evidence": "20 9.06 9.00 8.94 8.88 8.82 8.75 8.69",
+          "locator": "Attachment, \"Oxygen Solubility at Indicated Pressure\" chart, 760-730 mm Hg block plus the head of the 725-690 mm Hg block (tail of the Table 1 calibration log precedes it)",
+          "claimIds": [
+            "epa-do-solubility-20c-01"
+          ]
+        },
+        {
+          "chunkId": "epa-sop-field-instrument-calibration-2010.pdf__79fe9d98c188",
+          "contentHash": "79fe9d98c188",
+          "filename": "epa-sop-field-instrument-calibration-2010.pdf",
+          "grade": 2,
+          "evidence": "evaporation of moisture on the temperature sensor or DO probe may influence the",
+          "locator": "§5.2 pH steps 11-13 and §5.3 Dissolved Oxygen setup — \"Create a 100 percent water-saturated air environment\"",
+          "claimIds": [
+            "epa-do-dry-sensor-01"
+          ]
+        }
+      ]
+    },
+    {
+      "turn": 2,
+      "query": "The contract we're working under says follow the EPA field SOP, not the USGS one. Does that change how often I calibrate and what I do at the end of the day?",
+      "relevant": [
+        {
+          "chunkId": "usgs-nfm-a6.2-dissolved-oxygen.pdf__25b8f6270fca",
+          "contentHash": "25b8f6270fca",
+          "filename": "usgs-nfm-a6.2-dissolved-oxygen.pdf",
+          "grade": 2,
+          "evidence": "The main goal of the one-point\nDO calibration procedure is to create a 100-percent saturated\noxygen environment in which the DO sensor and its thermistor\nare at the same temperature.",
+          "locator": "Section 2.2 Calibration of Optical Sensors — \"One-point calibration\" / \"Two-point calibration\"",
+          "claimIds": [
+            "do-one-point-goal-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.2-dissolved-oxygen.pdf__7609693093b6",
+          "contentHash": "7609693093b6",
+          "filename": "usgs-nfm-a6.2-dissolved-oxygen.pdf",
+          "grade": 2,
+          "evidence": "Read the temperature to the nearest\n0.1 degree Celsius (°C).",
+          "locator": "Procedure 1—Calibration in Air — \"Wet the inside of the calibration chamber\"",
+          "claimIds": [
+            "do-proc1-read-precision-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.2-dissolved-oxygen.pdf__10b503e7f3e2",
+          "contentHash": "10b503e7f3e2",
+          "filename": "usgs-nfm-a6.2-dissolved-oxygen.pdf",
+          "grade": 2,
+          "evidence": "water droplets on the\nsensor module or on the temperature sensor can cause\nimproper calibration.",
+          "locator": "Procedure 1—Calibration in Air, steps 7–9 / Variation of Procedure 1 — \"within ±0.2 mg/L or 2 percent of the computed saturation value\"",
+          "claimIds": [
+            "do-water-droplets-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.2-dissolved-oxygen.pdf__4ab23372fa3d",
+          "contentHash": "4ab23372fa3d",
+          "filename": "usgs-nfm-a6.2-dissolved-oxygen.pdf",
+          "grade": 2,
+          "evidence": "Place the wrapped sensor into the plastic bag and\nkeep it out of direct sunlight to keep the temperature\nfrom changing.",
+          "locator": "Variation of Procedure 1—Air Calibration with a Wet Towel / Procedure 2 introduction — \"Place the wrapped sensor into the plastic bag\"",
+          "claimIds": [
+            "do-wet-towel-bag-shade-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.2-dissolved-oxygen.pdf__940ba0bb0a8a",
+          "contentHash": "940ba0bb0a8a",
+          "filename": "usgs-nfm-a6.2-dissolved-oxygen.pdf",
+          "grade": 2,
+          "evidence": "DO calibration procedures include corrections for\natmospheric pressure and ionic strength. (Ionic strength is\nestimated from the conductivity measurement for routine field\napplications.)",
+          "locator": "Section 2.2.1 Correction for Atmospheric Pressure and Salinity / Technical Note 2 — \"DO sensors do not directly measure oxygen in milligrams per liter\"",
+          "claimIds": [
+            "do-calibration-corrections-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.2-dissolved-oxygen.pdf__dc51eae3cee7",
+          "contentHash": "dc51eae3cee7",
+          "filename": "usgs-nfm-a6.2-dissolved-oxygen.pdf",
+          "grade": 2,
+          "evidence": "instruments have a built-in conductivity sensor that is used\nto correct the DO-concentration data for salinity automatically.\nFor instruments that are not equipped with a conductivity\nsensor",
+          "locator": "Section 2.2.1 Correction for Atmospheric Pressure and Salinity / 2.2.2 Selection of Calibration Method — \"It is required that the barometric pressure be measured at the altitude of the DO calibration\"",
+          "claimIds": [
+            "do-auto-salinity-correction-01",
+            "do-salinity-correction-after-01",
+            "do-manual-salinity-recalibration-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.2-dissolved-oxygen.pdf__2d5d863cf1da",
+          "contentHash": "2d5d863cf1da",
+          "filename": "usgs-nfm-a6.2-dissolved-oxygen.pdf",
+          "grade": 2,
+          "evidence": "Most multiparameter instruments that\ninclude DO and specific-conductance sensors automatically\ncorrect the DO reading for salinity if needed, unless the fea-\nture is turned off by the user.",
+          "locator": "Section 3.3 step 11-12, Section 4.0 Reporting, and Section 5.0 opening — \"reported to the nearest 0.1 mg/L and stored to the nearest 0.01 mg/L\"",
+          "claimIds": [
+            "do-auto-salinity-multiparameter-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.2-dissolved-oxygen.pdf__632e22bc5d2f",
+          "contentHash": "632e22bc5d2f",
+          "filename": "usgs-nfm-a6.2-dissolved-oxygen.pdf",
+          "grade": 2,
+          "evidence": "Temperature stability during calibration and\nmeasurement is extremely important, as temperature controls\nthe solubility of oxygen in water.",
+          "locator": "Section 2.1.1 Equipment Description and Maintenance — \"Guidance on when to replace the luminophore-containing cap\"",
+          "claimIds": [
+            "do-temp-controls-solubility-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.8-multiparameter-instruments.pdf__4d253f9f732f",
+          "contentHash": "4d253f9f732f",
+          "filename": "usgs-nfm-a6.8-multiparameter-instruments.pdf",
+          "grade": 2,
+          "evidence": "Calibration\nTemperature\nºC\nBarometric\nPressure\nmm Hg\nDO Table\nReading\nmg/L\nSalinity\nCorrec-\ntion\nFactor",
+          "locator": "Appendix 6.8–1, figure 6.8–01.01 USGS GW Form version 9.1 — \"METER CALIBRATIONS and FIELD MEASUREMENTS\"",
+          "claimIds": [
+            "mp-form-do-columns-05"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.8-multiparameter-instruments.pdf__81332f744656",
+          "contentHash": "81332f744656",
+          "filename": "usgs-nfm-a6.8-multiparameter-instruments.pdf",
+          "grade": 2,
+          "evidence": "Calibration thermometer and barometer \tNIST-certified or NIST-traceable. (see NFM A6.1 and A6.2 for USGS standard",
+          "locator": "Table 6.8–4 (Ancillary supplies) and start of table 6.8–3 (Specifications for calibration solutions)",
+          "claimIds": [
+            "mp-t4-nist-thermometer-02"
+          ]
+        },
+        {
+          "chunkId": "epa-sop-field-instrument-calibration-2010.pdf__a94d853fd809",
+          "contentHash": "a94d853fd809",
+          "filename": "epa-sop-field-instrument-calibration-2010.pdf",
+          "grade": 2,
+          "evidence": "At a minimum, the instrument is calibrated prior to use on the day the measurements are to be",
+          "locator": "§4.0 Frequency of Calibration and §5.1 Temperature — \"At a minimum, the instrument is calibrated prior to use\"",
+          "claimIds": [
+            "epa-cal-frequency-daily-01",
+            "epa-post-cal-end-of-day-01",
+            "epa-midday-check-qualify-01",
+            "epa-sonde-deploy-cal-01"
+          ]
+        },
+        {
+          "chunkId": "epa-sop-field-instrument-calibration-2010.pdf__80b3b684098e",
+          "contentHash": "80b3b684098e",
+          "filename": "epa-sop-field-instrument-calibration-2010.pdf",
+          "grade": 2,
+          "evidence": "For the dissolved oxygen calibration check, follow the calibration instructions steps one through",
+          "locator": "§5.6 Turbidity steps 2-6 and §6.0 Post Calibration Check — \"a zero or 0.02 NTU\"",
+          "claimIds": [
+            "epa-postcal-do-steps-01",
+            "epa-postcal-defaults-apply-when-01"
+          ]
+        },
+        {
+          "chunkId": "epa-sop-field-instrument-calibration-2010.pdf__2d02065fcb50",
+          "contentHash": "2d02065fcb50",
+          "filename": "epa-sop-field-instrument-calibration-2010.pdf",
+          "grade": 2,
+          "evidence": "760 755 750 TAS 740 735 730 mm",
+          "locator": "§6.0 post calibration criteria table, §7.0 Records, §8.0 References, Table 1 — \"Measurement Post Calibration Criteria\"",
+          "claimIds": [
+            "epa-oxygen-solubility-chart-01"
+          ]
+        },
+        {
+          "chunkId": "epa-sop-field-instrument-calibration-2010.pdf__6f26a0f9a8d0",
+          "contentHash": "6f26a0f9a8d0",
+          "filename": "epa-sop-field-instrument-calibration-2010.pdf",
+          "grade": 2,
+          "evidence": "20 9.06 9.00 8.94 8.88 8.82 8.75 8.69",
+          "locator": "Attachment, \"Oxygen Solubility at Indicated Pressure\" chart, 760-730 mm Hg block plus the head of the 725-690 mm Hg block (tail of the Table 1 calibration log precedes it)",
+          "claimIds": [
+            "epa-do-solubility-20c-01"
+          ]
+        },
+        {
+          "chunkId": "epa-sop-field-instrument-calibration-2010.pdf__79fe9d98c188",
+          "contentHash": "79fe9d98c188",
+          "filename": "epa-sop-field-instrument-calibration-2010.pdf",
+          "grade": 2,
+          "evidence": "evaporation of moisture on the temperature sensor or DO probe may influence the",
+          "locator": "§5.2 pH steps 11-13 and §5.3 Dissolved Oxygen setup — \"Create a 100 percent water-saturated air environment\"",
+          "claimIds": [
+            "epa-do-dry-sensor-01"
+          ]
+        }
+      ]
+    }
+  ]
+}

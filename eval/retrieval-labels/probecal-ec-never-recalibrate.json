@@ -1,0 +1,203 @@
+{
+  "fixtureId": "probecal-ec-never-recalibrate",
+  "set": "committed",
+  "fixtureClass": "probe-calibration",
+  "turns": [
+    {
+      "turn": 1,
+      "query": "The vendor sheet for our conductivity sensor says the plates do not change and it never really needs recalibrating after the first time. Is that how we should be running it on a station that reports data, or is there something we still have to do?",
+      "relevant": [
+        {
+          "chunkId": "EC_K_1.0_probe.pdf__e602012341c1",
+          "contentHash": "e602012341c1",
+          "filename": "EC_K_1.0_probe.pdf",
+          "grade": 2,
+          "evidence": "~10 years\tTime before recalibration",
+          "locator": "Front spec table through \"How often do you need to recalibrate a conductivity probe?\" — \"Range \t5 − 200,000 μS/cm\"",
+          "claimIds": [
+            "ec-recal-interval-01",
+            "ec-no-recal-needed-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.3-specific-conductance.pdf__2cade3723a66",
+          "contentHash": "2cade3723a66",
+          "filename": "usgs-nfm-a6.3-specific-conductance.pdf",
+          "grade": 2,
+          "evidence": "Specific conductance meters must be checked or calibrated",
+          "locator": "Section 2.2.1 cleaning and storage and Section 3.0 Calibration — \"Specific conductance measurements are only as good as the calibration itself\"",
+          "claimIds": [
+            "sc-check-before-field-trip-01",
+            "sc-recalibration-unnecessary-01",
+            "sc-accuracy-criteria-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.3-specific-conductance.pdf__31a944e77d5e",
+          "contentHash": "31a944e77d5e",
+          "filename": "usgs-nfm-a6.3-specific-conductance.pdf",
+          "grade": 2,
+          "evidence": "measurement at the field site by measuring the",
+          "locator": "Section 4.1.1 In Situ Measurement in Surface Water, steps 1-2a — \"Before making a measurement of specific conductance\"",
+          "claimIds": [
+            "sc-field-site-check-standard-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.3-specific-conductance.pdf__f9d002693709",
+          "contentHash": "f9d002693709",
+          "filename": "usgs-nfm-a6.3-specific-conductance.pdf",
+          "grade": 2,
+          "evidence": "(NIST traceable) with values between 50 and 50,000 μS/cm",
+          "locator": "Section 3.0 Calibration and 3.1 One-Point Calibration — \"To verify that the specific conductance meter is responding properly at low values\"",
+          "claimIds": [
+            "sc-nist-traceable-standards-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.3-specific-conductance.pdf__b3064a2bd728",
+          "contentHash": "b3064a2bd728",
+          "filename": "usgs-nfm-a6.3-specific-conductance.pdf",
+          "grade": 2,
+          "evidence": "standard solutions having specific conductance values of 500,",
+          "locator": "Table 6.3-2 and Sections 3.1-3.2 — \"Electrical conductivity of molality-based primary KCl standards\"",
+          "claimIds": [
+            "sc-one-point-standard-values-01",
+            "sc-cell-constant-2-percent-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.3-specific-conductance.pdf__603c9e54d9bd",
+          "contentHash": "603c9e54d9bd",
+          "filename": "usgs-nfm-a6.3-specific-conductance.pdf",
+          "grade": 2,
+          "evidence": "specific conductance standards that bracket",
+          "locator": "Section 3.3 Meter Calibration Procedure, steps 1-8a — \"Select calibration standards\"",
+          "claimIds": [
+            "sc-bracket-or-near-standards-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.3-specific-conductance.pdf__d8ae5e803001",
+          "contentHash": "d8ae5e803001",
+          "filename": "usgs-nfm-a6.3-specific-conductance.pdf",
+          "grade": 2,
+          "evidence": "recommended to calibrate specific conductance with stan-",
+          "locator": "Section 3.2 and 3.3 Meter Calibration Procedure — \"it is recommended to calibrate specific conductance with standards with values that are greater than 200\"",
+          "claimIds": [
+            "sc-calibrate-above-200-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.3-specific-conductance.pdf__d36f674ffd4f",
+          "contentHash": "d36f674ffd4f",
+          "filename": "usgs-nfm-a6.3-specific-conductance.pdf",
+          "grade": 2,
+          "evidence": "cm for measurements ≤100 μS/cm or ±3 percent",
+          "locator": "Section 3.3 steps 8b-11 — \"Record the following in the instrument log book\"",
+          "claimIds": [
+            "sc-check-standard-criterion-01"
+          ]
+        }
+      ]
+    },
+    {
+      "turn": 2,
+      "query": "Fine - so what do I carry to check it with? Our water runs somewhere around 700 in the summer.",
+      "relevant": [
+        {
+          "chunkId": "EC_K_1.0_probe.pdf__e602012341c1",
+          "contentHash": "e602012341c1",
+          "filename": "EC_K_1.0_probe.pdf",
+          "grade": 2,
+          "evidence": "~10 years\tTime before recalibration",
+          "locator": "Front spec table through \"How often do you need to recalibrate a conductivity probe?\" — \"Range \t5 − 200,000 μS/cm\"",
+          "claimIds": [
+            "ec-recal-interval-01",
+            "ec-no-recal-needed-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.3-specific-conductance.pdf__2cade3723a66",
+          "contentHash": "2cade3723a66",
+          "filename": "usgs-nfm-a6.3-specific-conductance.pdf",
+          "grade": 2,
+          "evidence": "Specific conductance meters must be checked or calibrated",
+          "locator": "Section 2.2.1 cleaning and storage and Section 3.0 Calibration — \"Specific conductance measurements are only as good as the calibration itself\"",
+          "claimIds": [
+            "sc-check-before-field-trip-01",
+            "sc-recalibration-unnecessary-01",
+            "sc-accuracy-criteria-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.3-specific-conductance.pdf__31a944e77d5e",
+          "contentHash": "31a944e77d5e",
+          "filename": "usgs-nfm-a6.3-specific-conductance.pdf",
+          "grade": 2,
+          "evidence": "measurement at the field site by measuring the",
+          "locator": "Section 4.1.1 In Situ Measurement in Surface Water, steps 1-2a — \"Before making a measurement of specific conductance\"",
+          "claimIds": [
+            "sc-field-site-check-standard-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.3-specific-conductance.pdf__f9d002693709",
+          "contentHash": "f9d002693709",
+          "filename": "usgs-nfm-a6.3-specific-conductance.pdf",
+          "grade": 2,
+          "evidence": "(NIST traceable) with values between 50 and 50,000 μS/cm",
+          "locator": "Section 3.0 Calibration and 3.1 One-Point Calibration — \"To verify that the specific conductance meter is responding properly at low values\"",
+          "claimIds": [
+            "sc-nist-traceable-standards-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.3-specific-conductance.pdf__b3064a2bd728",
+          "contentHash": "b3064a2bd728",
+          "filename": "usgs-nfm-a6.3-specific-conductance.pdf",
+          "grade": 2,
+          "evidence": "standard solutions having specific conductance values of 500,",
+          "locator": "Table 6.3-2 and Sections 3.1-3.2 — \"Electrical conductivity of molality-based primary KCl standards\"",
+          "claimIds": [
+            "sc-one-point-standard-values-01",
+            "sc-cell-constant-2-percent-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.3-specific-conductance.pdf__603c9e54d9bd",
+          "contentHash": "603c9e54d9bd",
+          "filename": "usgs-nfm-a6.3-specific-conductance.pdf",
+          "grade": 2,
+          "evidence": "specific conductance standards that bracket",
+          "locator": "Section 3.3 Meter Calibration Procedure, steps 1-8a — \"Select calibration standards\"",
+          "claimIds": [
+            "sc-bracket-or-near-standards-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.3-specific-conductance.pdf__d8ae5e803001",
+          "contentHash": "d8ae5e803001",
+          "filename": "usgs-nfm-a6.3-specific-conductance.pdf",
+          "grade": 2,
+          "evidence": "recommended to calibrate specific conductance with stan-",
+          "locator": "Section 3.2 and 3.3 Meter Calibration Procedure — \"it is recommended to calibrate specific conductance with standards with values that are greater than 200\"",
+          "claimIds": [
+            "sc-calibrate-above-200-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.3-specific-conductance.pdf__d36f674ffd4f",
+          "contentHash": "d36f674ffd4f",
+          "filename": "usgs-nfm-a6.3-specific-conductance.pdf",
+          "grade": 2,
+          "evidence": "cm for measurements ≤100 μS/cm or ±3 percent",
+          "locator": "Section 3.3 steps 8b-11 — \"Record the following in the instrument log book\"",
+          "claimIds": [
+            "sc-check-standard-criterion-01"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "fixtureId": "precedence-hypoxia-threshold-split",
+  "set": "committed",
+  "fixtureClass": "precedence",
+  "turns": [
+    {
+      "turn": 1,
+      "query": "The card taped inside our case says oxygen under 2 mg/L means the water has gone hypoxic. Somebody from the state told my crew chief the federal number is 1. Do we need to change what we are telling people, or is one of us wrong?",
+      "relevant": [
+        {
+          "chunkId": "water-quality-metrics-source-of-truth.pdf__57fe7a67fc10",
+          "contentHash": "57fe7a67fc10",
+          "filename": "water-quality-metrics-source-of-truth.pdf",
+          "grade": 2,
+          "evidence": "Thresholds (general): >6 mg/L healthy · 4–6 mg/L stress · 2–4 mg/L hypoxic stress · <2 mg/L\nhypoxia · ~0 anoxia.",
+          "locator": "DO thresholds through section 1 entries for ORP, EC and pH — \"Thresholds (general): >6 mg/L healthy\"",
+          "claimIds": [
+            "sot-do-thresholds-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.2-dissolved-oxygen.pdf__a2b58928d95a",
+          "contentHash": "a2b58928d95a",
+          "filename": "usgs-nfm-a6.2-dissolved-oxygen.pdf",
+          "grade": 2,
+          "evidence": "hypoxic to anoxic (concentration\nless than 1.0 mg/L) DO-concentration data from optical sen-\nsors, the capability and accuracy of the optical sensor in this\nlow-DO concentration range is required",
+          "locator": "Table 6.2-3 and Section 3.1 Equipment and Supplies — \"hypoxic to anoxic (concentration less than 1.0 mg/L)\"",
+          "claimIds": [
+            "do-hypoxic-anoxic-1mgl-01",
+            "do-rhodazine-range-0025-10-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.2-dissolved-oxygen.pdf__f3c3c9519851",
+          "contentHash": "f3c3c9519851",
+          "filename": "usgs-nfm-a6.2-dissolved-oxygen.pdf",
+          "grade": 2,
+          "evidence": "If the anticipated DO concentration is less than 1.0 mg/L,\nuse of spectrophotometric methods (section 3.0) is required\nto develop an instrument-specific rating",
+          "locator": "Section 2.3.1 Surface Water — \"cross-sectional DO variation less than 0.5 mg/L\"",
+          "claimIds": [
+            "do-below-1mgL-spectro-required-01"
+          ]
+        }
+      ]
+    },
+    {
+      "turn": 2,
+      "query": "So when our sonde is sitting down in that bottom range, near zero, is the number it hands us even good enough to put in a report?",
+      "relevant": [
+        {
+          "chunkId": "water-quality-metrics-source-of-truth.pdf__57fe7a67fc10",
+          "contentHash": "57fe7a67fc10",
+          "filename": "water-quality-metrics-source-of-truth.pdf",
+          "grade": 2,
+          "evidence": "Thresholds (general): >6 mg/L healthy · 4–6 mg/L stress · 2–4 mg/L hypoxic stress · <2 mg/L\nhypoxia · ~0 anoxia.",
+          "locator": "DO thresholds through section 1 entries for ORP, EC and pH — \"Thresholds (general): >6 mg/L healthy\"",
+          "claimIds": [
+            "sot-do-thresholds-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.2-dissolved-oxygen.pdf__a2b58928d95a",
+          "contentHash": "a2b58928d95a",
+          "filename": "usgs-nfm-a6.2-dissolved-oxygen.pdf",
+          "grade": 2,
+          "evidence": "hypoxic to anoxic (concentration\nless than 1.0 mg/L) DO-concentration data from optical sen-\nsors, the capability and accuracy of the optical sensor in this\nlow-DO concentration range is required",
+          "locator": "Table 6.2-3 and Section 3.1 Equipment and Supplies — \"hypoxic to anoxic (concentration less than 1.0 mg/L)\"",
+          "claimIds": [
+            "do-hypoxic-anoxic-1mgl-01",
+            "do-rhodazine-range-0025-10-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.2-dissolved-oxygen.pdf__f3c3c9519851",
+          "contentHash": "f3c3c9519851",
+          "filename": "usgs-nfm-a6.2-dissolved-oxygen.pdf",
+          "grade": 2,
+          "evidence": "If the anticipated DO concentration is less than 1.0 mg/L,\nuse of spectrophotometric methods (section 3.0) is required\nto develop an instrument-specific rating",
+          "locator": "Section 2.3.1 Surface Water — \"cross-sectional DO variation less than 0.5 mg/L\"",
+          "claimIds": [
+            "do-below-1mgL-spectro-required-01"
+          ]
+        }
+      ]
+    }
+  ]
+}

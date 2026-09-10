@@ -1,0 +1,197 @@
+{
+  "fixtureId": "crossdoc-temp-sensor-drift-blast-radius",
+  "set": "committed",
+  "fixtureClass": "cross-document",
+  "turns": [
+    {
+      "turn": 1,
+      "query": "If the temperature sensor on one of our pods has gone off by half a degree and nobody noticed, which of the other readings are wrong because of it?",
+      "relevant": [
+        {
+          "chunkId": "epa-sop-field-instrument-calibration-2010.pdf__91b16d25fd4a",
+          "contentHash": "91b16d25fd4a",
+          "filename": "epa-sop-field-instrument-calibration-2010.pdf",
+          "grade": 2,
+          "evidence": "be checked for accuracy against a thermometer that is traceable to the National Institute of",
+          "locator": "§1.0 Scope and Application through §3.0 General — \"This SOP supplements, but does not replace\"",
+          "claimIds": [
+            "epa-nist-temp-check-01"
+          ]
+        },
+        {
+          "chunkId": "epa-sop-field-instrument-calibration-2010.pdf__a94d853fd809",
+          "contentHash": "a94d853fd809",
+          "filename": "epa-sop-field-instrument-calibration-2010.pdf",
+          "grade": 2,
+          "evidence": "The volume of the calibration solutions must be sufficient to cover both the probe and",
+          "locator": "§4.0 Frequency of Calibration and §5.1 Temperature — \"At a minimum, the instrument is calibrated prior to use\"",
+          "claimIds": [
+            "epa-solution-volume-01"
+          ]
+        },
+        {
+          "chunkId": "epa-sop-field-instrument-calibration-2010.pdf__79fe9d98c188",
+          "contentHash": "79fe9d98c188",
+          "filename": "epa-sop-field-instrument-calibration-2010.pdf",
+          "grade": 2,
+          "evidence": "evaporation of moisture on the temperature sensor or DO probe may influence the",
+          "locator": "§5.2 pH steps 11-13 and §5.3 Dissolved Oxygen setup — \"Create a 100 percent water-saturated air environment\"",
+          "claimIds": [
+            "epa-do-dry-sensor-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.1-temperature.pdf__6c3145b44cb4",
+          "contentHash": "6c3145b44cb4",
+          "filename": "usgs-nfm-a6.1-temperature.pdf",
+          "grade": 2,
+          "evidence": "another water-quality parameter (such as dissolved\noxygen or specific conductance). The accuracy of such\na sensor is required to be less than or equal to ±0.2°C.",
+          "locator": "Section 2.1 Definitions — 'Certified Temperature Sensor', 'Traceable', 'Verified'",
+          "claimIds": [
+            "t-verified-multiparam-accuracy-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.1-temperature.pdf__aa7664732370",
+          "contentHash": "aa7664732370",
+          "filename": "usgs-nfm-a6.1-temperature.pdf",
+          "grade": 2,
+          "evidence": "differ from the process by which a pH or conductivity sensor\nis adjusted until the accuracy of its performance conforms",
+          "locator": "Sections 2.3 logbooks and 3.0 Calibration Verification — 'differ from the process by which a pH or conductivity sensor is adjusted'",
+          "claimIds": [
+            "t-temp-cal-differs-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.1-temperature.pdf__b94bbf9a9ecf",
+          "contentHash": "b94bbf9a9ecf",
+          "filename": "usgs-nfm-a6.1-temperature.pdf",
+          "grade": 2,
+          "evidence": "tion of dissolved-oxygen concentrations, conductivity, pH,\nrate and equilibria of chemical reactions, biological activity,\nand fluid properties relies on accurate temperature measure-",
+          "locator": "Section 1.1 Overview of Temperature and 2.0 Equipment and Supplies — 'TEMPERATURE: a measure of warmth or coldness'",
+          "claimIds": [
+            "t-temp-master-variable-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.4-ph.pdf__434fe1dc3109",
+          "contentHash": "434fe1dc3109",
+          "filename": "usgs-nfm-a6.4-ph.pdf",
+          "grade": 2,
+          "evidence": "A calibration check of the pH meter’s temperature\nsensor is required to be performed at least annually\n(NFM A6.1).",
+          "locator": "Section 4.0 calibration guidelines and section 4.1 Calibration Procedure — \"Use at least two pH buffer solutions with documented, NIST-traceable pH values\"",
+          "claimIds": [
+            "ph-temp-sensor-annual-cal-01",
+            "ph-sensor-location-difference-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.8-multiparameter-instruments.pdf__81332f744656",
+          "contentHash": "81332f744656",
+          "filename": "usgs-nfm-a6.8-multiparameter-instruments.pdf",
+          "grade": 2,
+          "evidence": "Calibration thermometer and barometer \tNIST-certified or NIST-traceable. (see NFM A6.1 and A6.2 for USGS standard",
+          "locator": "Table 6.8–4 (Ancillary supplies) and start of table 6.8–3 (Specifications for calibration solutions)",
+          "claimIds": [
+            "mp-t4-nist-thermometer-02"
+          ]
+        }
+      ]
+    },
+    {
+      "turn": 2,
+      "query": "So how do I keep that from happening — do I calibrate the temperature sensor like I do the pH one, and how often?",
+      "relevant": [
+        {
+          "chunkId": "epa-sop-field-instrument-calibration-2010.pdf__91b16d25fd4a",
+          "contentHash": "91b16d25fd4a",
+          "filename": "epa-sop-field-instrument-calibration-2010.pdf",
+          "grade": 2,
+          "evidence": "be checked for accuracy against a thermometer that is traceable to the National Institute of",
+          "locator": "§1.0 Scope and Application through §3.0 General — \"This SOP supplements, but does not replace\"",
+          "claimIds": [
+            "epa-nist-temp-check-01"
+          ]
+        },
+        {
+          "chunkId": "epa-sop-field-instrument-calibration-2010.pdf__a94d853fd809",
+          "contentHash": "a94d853fd809",
+          "filename": "epa-sop-field-instrument-calibration-2010.pdf",
+          "grade": 2,
+          "evidence": "The volume of the calibration solutions must be sufficient to cover both the probe and",
+          "locator": "§4.0 Frequency of Calibration and §5.1 Temperature — \"At a minimum, the instrument is calibrated prior to use\"",
+          "claimIds": [
+            "epa-solution-volume-01"
+          ]
+        },
+        {
+          "chunkId": "epa-sop-field-instrument-calibration-2010.pdf__79fe9d98c188",
+          "contentHash": "79fe9d98c188",
+          "filename": "epa-sop-field-instrument-calibration-2010.pdf",
+          "grade": 2,
+          "evidence": "evaporation of moisture on the temperature sensor or DO probe may influence the",
+          "locator": "§5.2 pH steps 11-13 and §5.3 Dissolved Oxygen setup — \"Create a 100 percent water-saturated air environment\"",
+          "claimIds": [
+            "epa-do-dry-sensor-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.1-temperature.pdf__6c3145b44cb4",
+          "contentHash": "6c3145b44cb4",
+          "filename": "usgs-nfm-a6.1-temperature.pdf",
+          "grade": 2,
+          "evidence": "another water-quality parameter (such as dissolved\noxygen or specific conductance). The accuracy of such\na sensor is required to be less than or equal to ±0.2°C.",
+          "locator": "Section 2.1 Definitions — 'Certified Temperature Sensor', 'Traceable', 'Verified'",
+          "claimIds": [
+            "t-verified-multiparam-accuracy-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.1-temperature.pdf__aa7664732370",
+          "contentHash": "aa7664732370",
+          "filename": "usgs-nfm-a6.1-temperature.pdf",
+          "grade": 2,
+          "evidence": "differ from the process by which a pH or conductivity sensor\nis adjusted until the accuracy of its performance conforms",
+          "locator": "Sections 2.3 logbooks and 3.0 Calibration Verification — 'differ from the process by which a pH or conductivity sensor is adjusted'",
+          "claimIds": [
+            "t-temp-cal-differs-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.1-temperature.pdf__b94bbf9a9ecf",
+          "contentHash": "b94bbf9a9ecf",
+          "filename": "usgs-nfm-a6.1-temperature.pdf",
+          "grade": 2,
+          "evidence": "tion of dissolved-oxygen concentrations, conductivity, pH,\nrate and equilibria of chemical reactions, biological activity,\nand fluid properties relies on accurate temperature measure-",
+          "locator": "Section 1.1 Overview of Temperature and 2.0 Equipment and Supplies — 'TEMPERATURE: a measure of warmth or coldness'",
+          "claimIds": [
+            "t-temp-master-variable-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.4-ph.pdf__434fe1dc3109",
+          "contentHash": "434fe1dc3109",
+          "filename": "usgs-nfm-a6.4-ph.pdf",
+          "grade": 2,
+          "evidence": "A calibration check of the pH meter’s temperature\nsensor is required to be performed at least annually\n(NFM A6.1).",
+          "locator": "Section 4.0 calibration guidelines and section 4.1 Calibration Procedure — \"Use at least two pH buffer solutions with documented, NIST-traceable pH values\"",
+          "claimIds": [
+            "ph-temp-sensor-annual-cal-01",
+            "ph-sensor-location-difference-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.8-multiparameter-instruments.pdf__81332f744656",
+          "contentHash": "81332f744656",
+          "filename": "usgs-nfm-a6.8-multiparameter-instruments.pdf",
+          "grade": 2,
+          "evidence": "Calibration thermometer and barometer \tNIST-certified or NIST-traceable. (see NFM A6.1 and A6.2 for USGS standard",
+          "locator": "Table 6.8–4 (Ancillary supplies) and start of table 6.8–3 (Specifications for calibration solutions)",
+          "claimIds": [
+            "mp-t4-nist-thermometer-02"
+          ]
+        }
+      ]
+    }
+  ]
+}

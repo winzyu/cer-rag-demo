@@ -1,0 +1,65 @@
+{
+  "fixtureId": "followup-cleaning-the-salt-sensor",
+  "set": "committed",
+  "fixtureClass": "follow-up",
+  "turns": [
+    {
+      "turn": 1,
+      "query": "Our salt sensor has been reading low and a soft brush around the electrodes didn't bring it back. The vendor sheet just says to clean it chemically without saying what with. What do the field manuals put you in?",
+      "relevant": [
+        {
+          "chunkId": "usgs-nfm-a6.3-specific-conductance.pdf__b5488a5db6ff",
+          "contentHash": "b5488a5db6ff",
+          "filename": "usgs-nfm-a6.3-specific-conductance.pdf",
+          "grade": 2,
+          "evidence": "• Electrodes dirty—first clean with a detergent solution, then if necessary with 5-percent HCl.",
+          "locator": "Table 6.3-3 Troubleshooting guide and Section 7.0 — \"Symptom / Possible cause and corrective action\"",
+          "claimIds": [
+            "sc-t633-electrode-cleaning-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.3-specific-conductance.pdf__2cade3723a66",
+          "contentHash": "2cade3723a66",
+          "filename": "usgs-nfm-a6.3-specific-conductance.pdf",
+          "grade": 2,
+          "evidence": "should not be cleaned in nitric acid (HNO3), aqua",
+          "locator": "Section 2.2.1 cleaning and storage and Section 3.0 Calibration — \"Specific conductance measurements are only as good as the calibration itself\"",
+          "claimIds": [
+            "sc-no-nitric-acid-01",
+            "sc-hcl-soak-01"
+          ]
+        }
+      ]
+    },
+    {
+      "turn": 2,
+      "query": "How long can it sit in that before we're doing more harm than good, and then what?",
+      "relevant": [
+        {
+          "chunkId": "usgs-nfm-a6.3-specific-conductance.pdf__b5488a5db6ff",
+          "contentHash": "b5488a5db6ff",
+          "filename": "usgs-nfm-a6.3-specific-conductance.pdf",
+          "grade": 2,
+          "evidence": "• Electrodes dirty—first clean with a detergent solution, then if necessary with 5-percent HCl.",
+          "locator": "Table 6.3-3 Troubleshooting guide and Section 7.0 — \"Symptom / Possible cause and corrective action\"",
+          "claimIds": [
+            "sc-t633-electrode-cleaning-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.3-specific-conductance.pdf__2cade3723a66",
+          "contentHash": "2cade3723a66",
+          "filename": "usgs-nfm-a6.3-specific-conductance.pdf",
+          "grade": 2,
+          "evidence": "should not be cleaned in nitric acid (HNO3), aqua",
+          "locator": "Section 2.2.1 cleaning and storage and Section 3.0 Calibration — \"Specific conductance measurements are only as good as the calibration itself\"",
+          "claimIds": [
+            "sc-no-nitric-acid-01",
+            "sc-hcl-soak-01"
+          ]
+        }
+      ]
+    }
+  ]
+}

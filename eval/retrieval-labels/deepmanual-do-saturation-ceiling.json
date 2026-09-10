@@ -1,0 +1,63 @@
+{
+  "fixtureId": "deepmanual-do-saturation-ceiling",
+  "set": "committed",
+  "fixtureClass": "deep-in-manual",
+  "turns": [
+    {
+      "turn": 1,
+      "query": "Water at one of our sites was 20 °C this morning and the barometer on the pod read 760 mm. If that water were fully saturated with air, what should the DO sensor be showing?",
+      "relevant": [
+        {
+          "chunkId": "usgs-nfm-a6.2-dissolved-oxygen.pdf__b2afa57c2372",
+          "contentHash": "b2afa57c2372",
+          "filename": "usgs-nfm-a6.2-dissolved-oxygen.pdf",
+          "grade": 2,
+          "evidence": "20.0\n \n8.36\n \n8.42\n \n8.48\n \n8.54\n \n8.60\n \n8.66\n \n8.73\n \n8.79\n \n8.85\n \n8.91\n \n8.97\n \n9.03\n \n9.09\n \n9.15\n \n9.21\n \n9.28\n \n9.34\n \n9.40\n \n9.46\n \n9.52",
+          "locator": "Table 6.2-2 —Continued (700-795 mmHg), caption and column header present — \"Solubility of oxygen in freshwater at various temperatures and pressures.—Continued\"",
+          "claimIds": [
+            "do-t622-20c-750-897-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.2-dissolved-oxygen.pdf__01e0280e31f9",
+          "contentHash": "01e0280e31f9",
+          "filename": "usgs-nfm-a6.2-dissolved-oxygen.pdf",
+          "grade": 2,
+          "evidence": "35.0\n \n6.37\n \n6.42\n \n6.47\n \n6.51\n \n6.56\n \n6.61\n \n6.66\n \n6.71\n \n6.76\n \n6.80\n \n6.85\n \n6.90\n \n6.95\n \n7.00\n \n7.05\n \n7.09\n \n7.14\n \n7.19\n \n7.24\n \n7.29",
+          "locator": "Table 6.2-2 —Continued (700-795 mmHg), caption and column header present — rows 30.0 to 38.5",
+          "claimIds": [
+            "do-t622-35c-760-695-01"
+          ]
+        }
+      ]
+    },
+    {
+      "turn": 2,
+      "query": "By late afternoon the same spot was up to 35 °C and the barometer hadn't moved. How much does that change the number?",
+      "relevant": [
+        {
+          "chunkId": "usgs-nfm-a6.2-dissolved-oxygen.pdf__b2afa57c2372",
+          "contentHash": "b2afa57c2372",
+          "filename": "usgs-nfm-a6.2-dissolved-oxygen.pdf",
+          "grade": 2,
+          "evidence": "20.0\n \n8.36\n \n8.42\n \n8.48\n \n8.54\n \n8.60\n \n8.66\n \n8.73\n \n8.79\n \n8.85\n \n8.91\n \n8.97\n \n9.03\n \n9.09\n \n9.15\n \n9.21\n \n9.28\n \n9.34\n \n9.40\n \n9.46\n \n9.52",
+          "locator": "Table 6.2-2 —Continued (700-795 mmHg), caption and column header present — \"Solubility of oxygen in freshwater at various temperatures and pressures.—Continued\"",
+          "claimIds": [
+            "do-t622-20c-750-897-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.2-dissolved-oxygen.pdf__01e0280e31f9",
+          "contentHash": "01e0280e31f9",
+          "filename": "usgs-nfm-a6.2-dissolved-oxygen.pdf",
+          "grade": 2,
+          "evidence": "35.0\n \n6.37\n \n6.42\n \n6.47\n \n6.51\n \n6.56\n \n6.61\n \n6.66\n \n6.71\n \n6.76\n \n6.80\n \n6.85\n \n6.90\n \n6.95\n \n7.00\n \n7.05\n \n7.09\n \n7.14\n \n7.19\n \n7.24\n \n7.29",
+          "locator": "Table 6.2-2 —Continued (700-795 mmHg), caption and column header present — rows 30.0 to 38.5",
+          "claimIds": [
+            "do-t622-35c-760-695-01"
+          ]
+        }
+      ]
+    }
+  ]
+}

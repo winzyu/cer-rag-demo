@@ -1,0 +1,107 @@
+{
+  "fixtureId": "followup-mixing-the-clarity-bottle",
+  "set": "committed",
+  "fixtureClass": "follow-up",
+  "turns": [
+    {
+      "turn": 1,
+      "query": "We fill a bottle at the creek and read it on the bench meter back at the truck. How are we supposed to mix it before it goes into the little glass tube - is a good shake fine?",
+      "relevant": [
+        {
+          "chunkId": "usgs-nfm-a6.7-turbidity.pdf__deff04ad4ab8",
+          "contentHash": "deff04ad4ab8",
+          "filename": "usgs-nfm-a6.7-turbidity.pdf",
+          "grade": 2,
+          "evidence": "Gently invert—do not shake—the sample 25 times (ASTM,\nwritten commun., undated) to completely disperse the solids,\ntaking care not to entrain air bubbles.",
+          "locator": "§6.7.3.A steps 1b-3e for samples below 40 turbidity units — \"Gently invert—do not shake—the sample 25 times\"",
+          "claimIds": [
+            "tby-static-invert-25-no-shake-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.7-turbidity.pdf__95357f36ac1b",
+          "contentHash": "95357f36ac1b",
+          "filename": "usgs-nfm-a6.7-turbidity.pdf",
+          "grade": 2,
+          "evidence": "invert the bottle 25 times using\na 1-second inversion cycle and pour off the sample\nimmediately to capture suspended particles.",
+          "locator": "§6.7.3.A Preliminary steps and \"For samples with turbidity less than 40 turbidity units\" step 1 — \"invert the bottle 25 times using a 1-second inversion cycle\"",
+          "claimIds": [
+            "tby-bottle-invert-25-1s-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.7-turbidity.pdf__967bc8728d56",
+          "contentHash": "967bc8728d56",
+          "filename": "usgs-nfm-a6.7-turbidity.pdf",
+          "grade": 2,
+          "evidence": "gently re-invert\nthe cell 25 times and record at least three readings over a\nshort, defined time interval (for example, 30 seconds to\n1 minute).",
+          "locator": "§6.7.3.A step 4 and TECHNICAL NOTE (6) — \"three or more sample values fall within ±10 percent\"",
+          "claimIds": [
+            "tby-first-readings-settling-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.7-turbidity.pdf__449b5d2a0b80",
+          "contentHash": "449b5d2a0b80",
+          "filename": "usgs-nfm-a6.7-turbidity.pdf",
+          "grade": 2,
+          "evidence": "collect samples in\nclean amber bottles, keep out of sunlight, and chill at or below\n4°C to prevent biodegradation of solids or biological growth.\nThe holding time must not exceed 24 hours",
+          "locator": "§6.7.3 Measurement introduction — \"The holding time must not exceed 24 hours\"",
+          "claimIds": [
+            "tby-storage-amber-4c-24h-01"
+          ]
+        }
+      ]
+    },
+    {
+      "turn": 2,
+      "query": "And if we can't get to it until the next morning?",
+      "relevant": [
+        {
+          "chunkId": "usgs-nfm-a6.7-turbidity.pdf__deff04ad4ab8",
+          "contentHash": "deff04ad4ab8",
+          "filename": "usgs-nfm-a6.7-turbidity.pdf",
+          "grade": 2,
+          "evidence": "Gently invert—do not shake—the sample 25 times (ASTM,\nwritten commun., undated) to completely disperse the solids,\ntaking care not to entrain air bubbles.",
+          "locator": "§6.7.3.A steps 1b-3e for samples below 40 turbidity units — \"Gently invert—do not shake—the sample 25 times\"",
+          "claimIds": [
+            "tby-static-invert-25-no-shake-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.7-turbidity.pdf__95357f36ac1b",
+          "contentHash": "95357f36ac1b",
+          "filename": "usgs-nfm-a6.7-turbidity.pdf",
+          "grade": 2,
+          "evidence": "invert the bottle 25 times using\na 1-second inversion cycle and pour off the sample\nimmediately to capture suspended particles.",
+          "locator": "§6.7.3.A Preliminary steps and \"For samples with turbidity less than 40 turbidity units\" step 1 — \"invert the bottle 25 times using a 1-second inversion cycle\"",
+          "claimIds": [
+            "tby-bottle-invert-25-1s-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.7-turbidity.pdf__967bc8728d56",
+          "contentHash": "967bc8728d56",
+          "filename": "usgs-nfm-a6.7-turbidity.pdf",
+          "grade": 2,
+          "evidence": "gently re-invert\nthe cell 25 times and record at least three readings over a\nshort, defined time interval (for example, 30 seconds to\n1 minute).",
+          "locator": "§6.7.3.A step 4 and TECHNICAL NOTE (6) — \"three or more sample values fall within ±10 percent\"",
+          "claimIds": [
+            "tby-first-readings-settling-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.7-turbidity.pdf__449b5d2a0b80",
+          "contentHash": "449b5d2a0b80",
+          "filename": "usgs-nfm-a6.7-turbidity.pdf",
+          "grade": 2,
+          "evidence": "collect samples in\nclean amber bottles, keep out of sunlight, and chill at or below\n4°C to prevent biodegradation of solids or biological growth.\nThe holding time must not exceed 24 hours",
+          "locator": "§6.7.3 Measurement introduction — \"The holding time must not exceed 24 hours\"",
+          "claimIds": [
+            "tby-storage-amber-4c-24h-01"
+          ]
+        }
+      ]
+    }
+  ]
+}

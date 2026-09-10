@@ -1,0 +1,65 @@
+{
+  "fixtureId": "deepmanual-turbidity-rounding",
+  "set": "committed",
+  "fixtureClass": "deep-in-manual",
+  "turns": [
+    {
+      "turn": 1,
+      "query": "The turbidity meter showed 0.42 at one site and 63.7 at another. How many decimal places do we actually keep when we log those?",
+      "relevant": [
+        {
+          "chunkId": "usgs-nfm-a6.7-turbidity.pdf__ac8bab5fcc79",
+          "contentHash": "ac8bab5fcc79",
+          "filename": "usgs-nfm-a6.7-turbidity.pdf",
+          "grade": 2,
+          "evidence": "0–<1 \t0.05 \t0.05 \t0.05 \t0.05 \t0.01\n1–<10 \t.1 \t.1 \t.1 \t.1 \t.1",
+          "locator": "§6.7.5 low-end and high-end censoring plus Table 6.7-6 Guidelines for reporting turbidity units — \"censored data below 2 NTU as not-detected\"",
+          "claimIds": [
+            "tby-t6-low-rows-01",
+            "tby-t6-40-100-row-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.7-turbidity.pdf__d154f3467ba4",
+          "contentHash": "d154f3467ba4",
+          "filename": "usgs-nfm-a6.7-turbidity.pdf",
+          "grade": 2,
+          "evidence": "the USGS will conform to ASTM guidelines unless data were\nspecifically collected for drinking-water compliance",
+          "locator": "§6.7.5 Data reporting and interpretation — \"a value of 43.12 units displayed by an instrument would be reported as 45\"",
+          "claimIds": [
+            "tby-usgs-conforms-astm-01"
+          ]
+        }
+      ]
+    },
+    {
+      "turn": 2,
+      "query": "One of those sites feeds a drinking-water intake and that data goes out under EPA Method 180.1. Does the same rounding apply there?",
+      "relevant": [
+        {
+          "chunkId": "usgs-nfm-a6.7-turbidity.pdf__ac8bab5fcc79",
+          "contentHash": "ac8bab5fcc79",
+          "filename": "usgs-nfm-a6.7-turbidity.pdf",
+          "grade": 2,
+          "evidence": "0–<1 \t0.05 \t0.05 \t0.05 \t0.05 \t0.01\n1–<10 \t.1 \t.1 \t.1 \t.1 \t.1",
+          "locator": "§6.7.5 low-end and high-end censoring plus Table 6.7-6 Guidelines for reporting turbidity units — \"censored data below 2 NTU as not-detected\"",
+          "claimIds": [
+            "tby-t6-low-rows-01",
+            "tby-t6-40-100-row-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.7-turbidity.pdf__d154f3467ba4",
+          "contentHash": "d154f3467ba4",
+          "filename": "usgs-nfm-a6.7-turbidity.pdf",
+          "grade": 2,
+          "evidence": "the USGS will conform to ASTM guidelines unless data were\nspecifically collected for drinking-water compliance",
+          "locator": "§6.7.5 Data reporting and interpretation — \"a value of 43.12 units displayed by an instrument would be reported as 45\"",
+          "claimIds": [
+            "tby-usgs-conforms-astm-01"
+          ]
+        }
+      ]
+    }
+  ]
+}

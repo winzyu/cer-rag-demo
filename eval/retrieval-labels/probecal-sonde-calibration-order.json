@@ -1,0 +1,181 @@
+{
+  "fixtureId": "probecal-sonde-calibration-order",
+  "set": "committed",
+  "fixtureClass": "probe-calibration",
+  "turns": [
+    {
+      "turn": 1,
+      "query": "We have got the acidity, conductivity, oxygen and redox sensors all hanging off one instrument and they are all due at once. Does it matter what order I work through them in, or can I just start anywhere?",
+      "relevant": [
+        {
+          "chunkId": "usgs-nfm-a6.8-multiparameter-instruments.pdf__01d6f39b352b",
+          "contentHash": "01d6f39b352b",
+          "filename": "usgs-nfm-a6.8-multiparameter-instruments.pdf",
+          "grade": 2,
+          "evidence": "The following order is recommended for performing\nparameter calibrations or checks of multiparameter\ninstruments.",
+          "locator": "Section 2.2 storage bullets and section 3.0 Calibration — \"The following order is recommended for performing parameter calibrations\"",
+          "claimIds": [
+            "mp-calibration-order-08",
+            "mp-ionic-strength-rationale-09",
+            "mp-triple-rinse-10"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.3-specific-conductance.pdf__3082a6f1985a",
+          "contentHash": "3082a6f1985a",
+          "filename": "usgs-nfm-a6.3-specific-conductance.pdf",
+          "grade": 2,
+          "evidence": "calibrate specific conduc-\ntance before pH.",
+          "locator": "Section 4.0 Measurement of Specific Conductance and 4.1 — \"In situ measurements generally are preferred\"",
+          "claimIds": [
+            "sc-calibrate-sc-before-ph-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.2-dissolved-oxygen.pdf__25b8f6270fca",
+          "contentHash": "25b8f6270fca",
+          "filename": "usgs-nfm-a6.2-dissolved-oxygen.pdf",
+          "grade": 2,
+          "evidence": "calibrate the\nDO sensor only after calibrating other field-measure-\nment sensors to prevent possible interference of the\nsodium sulfite (zero-DO) solution",
+          "locator": "Section 2.2 Calibration of Optical Sensors — \"One-point calibration\" / \"Two-point calibration\"",
+          "claimIds": [
+            "do-two-point-order-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.8-multiparameter-instruments.pdf__f09f4667e6ea",
+          "contentHash": "f09f4667e6ea",
+          "filename": "usgs-nfm-a6.8-multiparameter-instruments.pdf",
+          "grade": 2,
+          "evidence": "• Calibrations may have been rushed with inadequate rinsing of sensors. Check sensors and\nrecalibrate if necessary.",
+          "locator": "Table 6.8–6. Troubleshooting tips for typical problems with multiparameter instruments",
+          "claimIds": [
+            "mp-t6-rushed-calibration-08"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.3-specific-conductance.pdf__603c9e54d9bd",
+          "contentHash": "603c9e54d9bd",
+          "filename": "usgs-nfm-a6.3-specific-conductance.pdf",
+          "grade": 2,
+          "evidence": "third full with DIW. Place the probe in the beaker",
+          "locator": "Section 3.3 Meter Calibration Procedure, steps 1-8a — \"Select calibration standards\"",
+          "claimIds": [
+            "sc-diw-rinse-three-times-01",
+            "sc-standard-rinse-three-times-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.4-ph.pdf__3dad515d4597",
+          "contentHash": "3dad515d4597",
+          "filename": "usgs-nfm-a6.4-ph.pdf",
+          "grade": 2,
+          "evidence": "Rinse the sonde, calibration cup, and electrode\nthoroughly three times with DIW before the calibration\nand three times with DIW and buffer solution between\nmeasurement of each buffer solution.",
+          "locator": "Section 4.1.2 Calibration of the pH Sensor in Multiparameter Sondes, steps 1-5 — \"General procedures for calibration of the pH sensor on a multiparameter sonde\"",
+          "claimIds": [
+            "ph-sonde-rinse-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.4-ph.pdf__a03e15a87724",
+          "contentHash": "a03e15a87724",
+          "filename": "usgs-nfm-a6.4-ph.pdf",
+          "grade": 2,
+          "evidence": "pour swirl discard—Pour\nenough buffer into the dedicated beaker so that it\ncovers the electrode reference junction and some of\nthe electrode body but does not cover the fill hole.",
+          "locator": "Section 4.1.1 steps 6-10 — \"Begin calibration procedures\" and the pour-swirl-discard rinse sequence",
+          "claimIds": [
+            "ph-pour-swirl-discard-01",
+            "ph-pour-sit-measure-01"
+          ]
+        }
+      ]
+    },
+    {
+      "turn": 2,
+      "query": "What do I need to do to the sensors in between each one so nothing carries over?",
+      "relevant": [
+        {
+          "chunkId": "usgs-nfm-a6.8-multiparameter-instruments.pdf__01d6f39b352b",
+          "contentHash": "01d6f39b352b",
+          "filename": "usgs-nfm-a6.8-multiparameter-instruments.pdf",
+          "grade": 2,
+          "evidence": "The following order is recommended for performing\nparameter calibrations or checks of multiparameter\ninstruments.",
+          "locator": "Section 2.2 storage bullets and section 3.0 Calibration — \"The following order is recommended for performing parameter calibrations\"",
+          "claimIds": [
+            "mp-calibration-order-08",
+            "mp-ionic-strength-rationale-09",
+            "mp-triple-rinse-10"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.3-specific-conductance.pdf__3082a6f1985a",
+          "contentHash": "3082a6f1985a",
+          "filename": "usgs-nfm-a6.3-specific-conductance.pdf",
+          "grade": 2,
+          "evidence": "calibrate specific conduc-\ntance before pH.",
+          "locator": "Section 4.0 Measurement of Specific Conductance and 4.1 — \"In situ measurements generally are preferred\"",
+          "claimIds": [
+            "sc-calibrate-sc-before-ph-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.2-dissolved-oxygen.pdf__25b8f6270fca",
+          "contentHash": "25b8f6270fca",
+          "filename": "usgs-nfm-a6.2-dissolved-oxygen.pdf",
+          "grade": 2,
+          "evidence": "calibrate the\nDO sensor only after calibrating other field-measure-\nment sensors to prevent possible interference of the\nsodium sulfite (zero-DO) solution",
+          "locator": "Section 2.2 Calibration of Optical Sensors — \"One-point calibration\" / \"Two-point calibration\"",
+          "claimIds": [
+            "do-two-point-order-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.8-multiparameter-instruments.pdf__f09f4667e6ea",
+          "contentHash": "f09f4667e6ea",
+          "filename": "usgs-nfm-a6.8-multiparameter-instruments.pdf",
+          "grade": 2,
+          "evidence": "• Calibrations may have been rushed with inadequate rinsing of sensors. Check sensors and\nrecalibrate if necessary.",
+          "locator": "Table 6.8–6. Troubleshooting tips for typical problems with multiparameter instruments",
+          "claimIds": [
+            "mp-t6-rushed-calibration-08"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.3-specific-conductance.pdf__603c9e54d9bd",
+          "contentHash": "603c9e54d9bd",
+          "filename": "usgs-nfm-a6.3-specific-conductance.pdf",
+          "grade": 2,
+          "evidence": "third full with DIW. Place the probe in the beaker",
+          "locator": "Section 3.3 Meter Calibration Procedure, steps 1-8a — \"Select calibration standards\"",
+          "claimIds": [
+            "sc-diw-rinse-three-times-01",
+            "sc-standard-rinse-three-times-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.4-ph.pdf__3dad515d4597",
+          "contentHash": "3dad515d4597",
+          "filename": "usgs-nfm-a6.4-ph.pdf",
+          "grade": 2,
+          "evidence": "Rinse the sonde, calibration cup, and electrode\nthoroughly three times with DIW before the calibration\nand three times with DIW and buffer solution between\nmeasurement of each buffer solution.",
+          "locator": "Section 4.1.2 Calibration of the pH Sensor in Multiparameter Sondes, steps 1-5 — \"General procedures for calibration of the pH sensor on a multiparameter sonde\"",
+          "claimIds": [
+            "ph-sonde-rinse-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.4-ph.pdf__a03e15a87724",
+          "contentHash": "a03e15a87724",
+          "filename": "usgs-nfm-a6.4-ph.pdf",
+          "grade": 2,
+          "evidence": "pour swirl discard—Pour\nenough buffer into the dedicated beaker so that it\ncovers the electrode reference junction and some of\nthe electrode body but does not cover the fill hole.",
+          "locator": "Section 4.1.1 steps 6-10 — \"Begin calibration procedures\" and the pour-swirl-discard rinse sequence",
+          "claimIds": [
+            "ph-pour-swirl-discard-01",
+            "ph-pour-sit-measure-01"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "fixtureId": "deepmanual-do-air-calibration",
+  "set": "committed",
+  "fixtureClass": "deep-in-manual",
+  "turns": [
+    {
+      "turn": 1,
+      "query": "Our DO calibration is done in air rather than in a solution. What does the SOP actually require for the setup, and how do we tell it worked?",
+      "relevant": [
+        {
+          "chunkId": "epa-sop-field-instrument-calibration-2010.pdf__79fe9d98c188",
+          "contentHash": "79fe9d98c188",
+          "filename": "epa-sop-field-instrument-calibration-2010.pdf",
+          "grade": 2,
+          "evidence": "2. Create a 100 percent water-saturated air environment by placing a wet sponge or a",
+          "locator": "§5.2 pH steps 11-13 and §5.3 Dissolved Oxygen setup — \"Create a 100 percent water-saturated air environment\"",
+          "claimIds": [
+            "epa-do-water-saturated-air-01",
+            "epa-do-probe-loose-fit-01",
+            "epa-do-saturation-time-01"
+          ]
+        },
+        {
+          "chunkId": "epa-sop-field-instrument-calibration-2010.pdf__bff7518da28e",
+          "contentHash": "bff7518da28e",
+          "filename": "epa-sop-field-instrument-calibration-2010.pdf",
+          "grade": 2,
+          "evidence": "barometer. Do not use barometric pressure obtained from the local weather services",
+          "locator": "§5.3 Dissolved Oxygen steps 5-11 and §5.4 Specific Conductance intro — \"The instrument should read less than 0.5 mg/L\"",
+          "claimIds": [
+            "epa-do-baro-onsite-01",
+            "epa-do-compare-chart-02-01",
+            "epa-do-zero-check-05-01",
+            "epa-do-zero-project-adjust-01"
+          ]
+        }
+      ]
+    },
+    {
+      "turn": 2,
+      "query": "We also carry a zero-oxygen solution. What should the meter read in it, and what does it mean if it doesn't?",
+      "relevant": [
+        {
+          "chunkId": "epa-sop-field-instrument-calibration-2010.pdf__79fe9d98c188",
+          "contentHash": "79fe9d98c188",
+          "filename": "epa-sop-field-instrument-calibration-2010.pdf",
+          "grade": 2,
+          "evidence": "2. Create a 100 percent water-saturated air environment by placing a wet sponge or a",
+          "locator": "§5.2 pH steps 11-13 and §5.3 Dissolved Oxygen setup — \"Create a 100 percent water-saturated air environment\"",
+          "claimIds": [
+            "epa-do-water-saturated-air-01",
+            "epa-do-probe-loose-fit-01",
+            "epa-do-saturation-time-01"
+          ]
+        },
+        {
+          "chunkId": "epa-sop-field-instrument-calibration-2010.pdf__bff7518da28e",
+          "contentHash": "bff7518da28e",
+          "filename": "epa-sop-field-instrument-calibration-2010.pdf",
+          "grade": 2,
+          "evidence": "barometer. Do not use barometric pressure obtained from the local weather services",
+          "locator": "§5.3 Dissolved Oxygen steps 5-11 and §5.4 Specific Conductance intro — \"The instrument should read less than 0.5 mg/L\"",
+          "claimIds": [
+            "epa-do-baro-onsite-01",
+            "epa-do-compare-chart-02-01",
+            "epa-do-zero-check-05-01",
+            "epa-do-zero-project-adjust-01"
+          ]
+        }
+      ]
+    }
+  ]
+}

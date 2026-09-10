@@ -1,0 +1,43 @@
+{
+  "fixtureId": "followup-jumpy-temperature-trace",
+  "set": "committed",
+  "fixtureClass": "follow-up",
+  "turns": [
+    {
+      "turn": 1,
+      "query": "The water temperature on one of our pods has gone jumpy - it steps around by a degree or two between readings while everything else on the same instrument looks steady. Where do we start looking?",
+      "relevant": [
+        {
+          "chunkId": "usgs-nfm-a6.1-temperature.pdf__c4c215ab7bd4",
+          "contentHash": "c4c215ab7bd4",
+          "filename": "usgs-nfm-a6.1-temperature.pdf",
+          "grade": 2,
+          "evidence": "• Break in the cables—replace cables, which may require recertification.",
+          "locator": "Table 6.1-1 Troubleshooting guide — 'The sensor does not read accurately'",
+          "claimIds": [
+            "t-table-erratic-01",
+            "t-table-inaccurate-causes-01"
+          ]
+        }
+      ]
+    },
+    {
+      "turn": 2,
+      "query": "If it turns out to be that one, can we just swap it ourselves and carry on?",
+      "relevant": [
+        {
+          "chunkId": "usgs-nfm-a6.1-temperature.pdf__c4c215ab7bd4",
+          "contentHash": "c4c215ab7bd4",
+          "filename": "usgs-nfm-a6.1-temperature.pdf",
+          "grade": 2,
+          "evidence": "• Break in the cables—replace cables, which may require recertification.",
+          "locator": "Table 6.1-1 Troubleshooting guide — 'The sensor does not read accurately'",
+          "claimIds": [
+            "t-table-erratic-01",
+            "t-table-inaccurate-causes-01"
+          ]
+        }
+      ]
+    }
+  ]
+}

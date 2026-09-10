@@ -1,0 +1,163 @@
+{
+  "fixtureId": "probecal-do-saturation-target",
+  "set": "committed",
+  "fixtureClass": "probe-calibration",
+  "turns": [
+    {
+      "turn": 1,
+      "query": "Our oxygen sensor is coming up on its yearly recalibration per the vendor sheet, which gives no steps at all. What am I calibrating it against out here, and how do I set that up?",
+      "relevant": [
+        {
+          "chunkId": "usgs-nfm-a6.2-dissolved-oxygen.pdf__25b8f6270fca",
+          "contentHash": "25b8f6270fca",
+          "filename": "usgs-nfm-a6.2-dissolved-oxygen.pdf",
+          "grade": 2,
+          "evidence": "The main goal of the one-point\nDO calibration procedure is to create a 100-percent saturated\noxygen environment in which the DO sensor and its thermistor\nare at the same temperature.",
+          "locator": "Section 2.2 Calibration of Optical Sensors — \"One-point calibration\" / \"Two-point calibration\"",
+          "claimIds": [
+            "do-one-point-goal-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.2-dissolved-oxygen.pdf__7609693093b6",
+          "contentHash": "7609693093b6",
+          "filename": "usgs-nfm-a6.2-dissolved-oxygen.pdf",
+          "grade": 2,
+          "evidence": "Insert the sensor into the chamber per manufacturer’s\ninstructions to ensure 100-percent humidity.",
+          "locator": "Procedure 1—Calibration in Air — \"Wet the inside of the calibration chamber\"",
+          "claimIds": [
+            "do-proc1-chamber-humidity-01",
+            "do-proc1-no-airtight-seal-01",
+            "do-proc1-equilibration-time-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.2-dissolved-oxygen.pdf__dc51eae3cee7",
+          "contentHash": "dc51eae3cee7",
+          "filename": "usgs-nfm-a6.2-dissolved-oxygen.pdf",
+          "grade": 2,
+          "evidence": "For DO calibrations, the ambient atmospheric pressure\nmust be determined to the nearest 1 millimeter (mm) of\nmercury.",
+          "locator": "Section 2.2.1 Correction for Atmospheric Pressure and Salinity / 2.2.2 Selection of Calibration Method — \"It is required that the barometric pressure be measured at the altitude of the DO calibration\"",
+          "claimIds": [
+            "do-pressure-nearest-mm-01",
+            "do-barometer-at-altitude-01",
+            "do-salinity-correction-after-01",
+            "do-manual-salinity-recalibration-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.2-dissolved-oxygen.pdf__10b503e7f3e2",
+          "contentHash": "10b503e7f3e2",
+          "filename": "usgs-nfm-a6.2-dissolved-oxygen.pdf",
+          "grade": 2,
+          "evidence": "Verify that the instrument reading is within ±0.2 mg/L or\n2 percent of the computed saturation value, or use more",
+          "locator": "Procedure 1—Calibration in Air, steps 7–9 / Variation of Procedure 1 — \"within ±0.2 mg/L or 2 percent of the computed saturation value\"",
+          "claimIds": [
+            "do-proc1-verify-tolerance-01",
+            "do-water-droplets-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.2-dissolved-oxygen.pdf__116a7989b64e",
+          "contentHash": "116a7989b64e",
+          "filename": "usgs-nfm-a6.2-dissolved-oxygen.pdf",
+          "grade": 2,
+          "evidence": "Calibrated specific-conductance sensor, if measurement is being made in a saline or brackish system",
+          "locator": "Table 6.2–1, Equipment and supplies for the optical sensor method — \"DO instrument should have a digital temperature and DO readout display\"",
+          "claimIds": [
+            "do-spc-sensor-for-saline-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.2-dissolved-oxygen.pdf__2d5d863cf1da",
+          "contentHash": "2d5d863cf1da",
+          "filename": "usgs-nfm-a6.2-dissolved-oxygen.pdf",
+          "grade": 2,
+          "evidence": "Correcting DO solubility for saline waters (specific\nconductance greater than 2,000 μS/cm) varies with instru-\nment type, calibration method, and the salts in solution.",
+          "locator": "Section 3.3 step 11-12, Section 4.0 Reporting, and Section 5.0 opening — \"reported to the nearest 0.1 mg/L and stored to the nearest 0.01 mg/L\"",
+          "claimIds": [
+            "do-saline-above-2000-01"
+          ]
+        }
+      ]
+    },
+    {
+      "turn": 2,
+      "query": "How do I know it took? And one of our sites is brackish - does that change anything?",
+      "relevant": [
+        {
+          "chunkId": "usgs-nfm-a6.2-dissolved-oxygen.pdf__25b8f6270fca",
+          "contentHash": "25b8f6270fca",
+          "filename": "usgs-nfm-a6.2-dissolved-oxygen.pdf",
+          "grade": 2,
+          "evidence": "The main goal of the one-point\nDO calibration procedure is to create a 100-percent saturated\noxygen environment in which the DO sensor and its thermistor\nare at the same temperature.",
+          "locator": "Section 2.2 Calibration of Optical Sensors — \"One-point calibration\" / \"Two-point calibration\"",
+          "claimIds": [
+            "do-one-point-goal-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.2-dissolved-oxygen.pdf__7609693093b6",
+          "contentHash": "7609693093b6",
+          "filename": "usgs-nfm-a6.2-dissolved-oxygen.pdf",
+          "grade": 2,
+          "evidence": "Insert the sensor into the chamber per manufacturer’s\ninstructions to ensure 100-percent humidity.",
+          "locator": "Procedure 1—Calibration in Air — \"Wet the inside of the calibration chamber\"",
+          "claimIds": [
+            "do-proc1-chamber-humidity-01",
+            "do-proc1-no-airtight-seal-01",
+            "do-proc1-equilibration-time-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.2-dissolved-oxygen.pdf__dc51eae3cee7",
+          "contentHash": "dc51eae3cee7",
+          "filename": "usgs-nfm-a6.2-dissolved-oxygen.pdf",
+          "grade": 2,
+          "evidence": "For DO calibrations, the ambient atmospheric pressure\nmust be determined to the nearest 1 millimeter (mm) of\nmercury.",
+          "locator": "Section 2.2.1 Correction for Atmospheric Pressure and Salinity / 2.2.2 Selection of Calibration Method — \"It is required that the barometric pressure be measured at the altitude of the DO calibration\"",
+          "claimIds": [
+            "do-pressure-nearest-mm-01",
+            "do-barometer-at-altitude-01",
+            "do-salinity-correction-after-01",
+            "do-manual-salinity-recalibration-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.2-dissolved-oxygen.pdf__10b503e7f3e2",
+          "contentHash": "10b503e7f3e2",
+          "filename": "usgs-nfm-a6.2-dissolved-oxygen.pdf",
+          "grade": 2,
+          "evidence": "Verify that the instrument reading is within ±0.2 mg/L or\n2 percent of the computed saturation value, or use more",
+          "locator": "Procedure 1—Calibration in Air, steps 7–9 / Variation of Procedure 1 — \"within ±0.2 mg/L or 2 percent of the computed saturation value\"",
+          "claimIds": [
+            "do-proc1-verify-tolerance-01",
+            "do-water-droplets-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.2-dissolved-oxygen.pdf__116a7989b64e",
+          "contentHash": "116a7989b64e",
+          "filename": "usgs-nfm-a6.2-dissolved-oxygen.pdf",
+          "grade": 2,
+          "evidence": "Calibrated specific-conductance sensor, if measurement is being made in a saline or brackish system",
+          "locator": "Table 6.2–1, Equipment and supplies for the optical sensor method — \"DO instrument should have a digital temperature and DO readout display\"",
+          "claimIds": [
+            "do-spc-sensor-for-saline-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.2-dissolved-oxygen.pdf__2d5d863cf1da",
+          "contentHash": "2d5d863cf1da",
+          "filename": "usgs-nfm-a6.2-dissolved-oxygen.pdf",
+          "grade": 2,
+          "evidence": "Correcting DO solubility for saline waters (specific\nconductance greater than 2,000 μS/cm) varies with instru-\nment type, calibration method, and the salts in solution.",
+          "locator": "Section 3.3 step 11-12, Section 4.0 Reporting, and Section 5.0 opening — \"reported to the nearest 0.1 mg/L and stored to the nearest 0.01 mg/L\"",
+          "claimIds": [
+            "do-saline-above-2000-01"
+          ]
+        }
+      ]
+    }
+  ]
+}

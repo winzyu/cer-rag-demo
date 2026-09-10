@@ -1,0 +1,133 @@
+{
+  "fixtureId": "deepmanual-zobell-check",
+  "set": "committed",
+  "fixtureClass": "deep-in-manual",
+  "turns": [
+    {
+      "turn": 1,
+      "query": "Before we trust the ORP numbers from a deployment, how do we prove the electrode is reading right, and what counts as passing?",
+      "relevant": [
+        {
+          "chunkId": "usgs-nfm-a6.5-orp.pdf__9dfb772d652d",
+          "contentHash": "9dfb772d652d",
+          "filename": "usgs-nfm-a6.5-orp.pdf",
+          "grade": 2,
+          "evidence": "Test the Eh equipment using the ZoBell’s solution before and",
+          "locator": "Section 6.5.2 Equipment Test Procedure — \"Eh measuring systems can be tested for accuracy\"",
+          "claimIds": [
+            "orp-test-before-field-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.5-orp.pdf__0fc2879a5e90",
+          "contentHash": "0fc2879a5e90",
+          "filename": "usgs-nfm-a6.5-orp.pdf",
+          "grade": 2,
+          "evidence": "If the value is within 5 mV of the ZoBell Eh given on table",
+          "locator": "Section 6.5.2 seven-step equipment test and worked EXAMPLE",
+          "claimIds": [
+            "orp-pass-criterion-5mv-01",
+            "orp-stabilize-5mv-01",
+            "orp-equilibrate-15-30-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.5-orp.pdf__5d571cf4d09e",
+          "contentHash": "5d571cf4d09e",
+          "filename": "usgs-nfm-a6.5-orp.pdf",
+          "grade": 2,
+          "evidence": "[From Nordstrom (1977); O C, degrees Celsius; mV, millivolts]",
+          "locator": "Table 6.5-2 (half-cell potentials) and Table 6.5-3 (Eh of ZoBell's vs temperature)",
+          "claimIds": [
+            "orp-table653-25c-430-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.5-orp.pdf__79b5d6c04cc9",
+          "contentHash": "79b5d6c04cc9",
+          "filename": "usgs-nfm-a6.5-orp.pdf",
+          "grade": 2,
+          "evidence": "Stabilization should occur within 30 minutes.",
+          "locator": "Section 6.5.3 Measurement steps 1-4 and thermal-equilibrium technical note",
+          "claimIds": [
+            "orp-stabilize-30min-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.5-orp.pdf__d38f4e5fb14d",
+          "contentHash": "d38f4e5fb14d",
+          "filename": "usgs-nfm-a6.5-orp.pdf",
+          "grade": 2,
+          "evidence": "stabilize within about 30 minutes, record the potential and its",
+          "locator": "Section 6.5.3.A Interferences and Limitations",
+          "claimIds": [
+            "orp-no-stabilize-30min-01"
+          ]
+        }
+      ]
+    },
+    {
+      "turn": 2,
+      "query": "How long should that take, and what do we do if the reading just never settles?",
+      "relevant": [
+        {
+          "chunkId": "usgs-nfm-a6.5-orp.pdf__9dfb772d652d",
+          "contentHash": "9dfb772d652d",
+          "filename": "usgs-nfm-a6.5-orp.pdf",
+          "grade": 2,
+          "evidence": "Test the Eh equipment using the ZoBell’s solution before and",
+          "locator": "Section 6.5.2 Equipment Test Procedure — \"Eh measuring systems can be tested for accuracy\"",
+          "claimIds": [
+            "orp-test-before-field-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.5-orp.pdf__0fc2879a5e90",
+          "contentHash": "0fc2879a5e90",
+          "filename": "usgs-nfm-a6.5-orp.pdf",
+          "grade": 2,
+          "evidence": "If the value is within 5 mV of the ZoBell Eh given on table",
+          "locator": "Section 6.5.2 seven-step equipment test and worked EXAMPLE",
+          "claimIds": [
+            "orp-pass-criterion-5mv-01",
+            "orp-stabilize-5mv-01",
+            "orp-equilibrate-15-30-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.5-orp.pdf__5d571cf4d09e",
+          "contentHash": "5d571cf4d09e",
+          "filename": "usgs-nfm-a6.5-orp.pdf",
+          "grade": 2,
+          "evidence": "[From Nordstrom (1977); O C, degrees Celsius; mV, millivolts]",
+          "locator": "Table 6.5-2 (half-cell potentials) and Table 6.5-3 (Eh of ZoBell's vs temperature)",
+          "claimIds": [
+            "orp-table653-25c-430-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.5-orp.pdf__79b5d6c04cc9",
+          "contentHash": "79b5d6c04cc9",
+          "filename": "usgs-nfm-a6.5-orp.pdf",
+          "grade": 2,
+          "evidence": "Stabilization should occur within 30 minutes.",
+          "locator": "Section 6.5.3 Measurement steps 1-4 and thermal-equilibrium technical note",
+          "claimIds": [
+            "orp-stabilize-30min-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.5-orp.pdf__d38f4e5fb14d",
+          "contentHash": "d38f4e5fb14d",
+          "filename": "usgs-nfm-a6.5-orp.pdf",
+          "grade": 2,
+          "evidence": "stabilize within about 30 minutes, record the potential and its",
+          "locator": "Section 6.5.3.A Interferences and Limitations",
+          "claimIds": [
+            "orp-no-stabilize-30min-01"
+          ]
+        }
+      ]
+    }
+  ]
+}

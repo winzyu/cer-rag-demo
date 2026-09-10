@@ -1,0 +1,155 @@
+{
+  "fixtureId": "precedence-orp-reference-offset",
+  "set": "committed",
+  "fixtureClass": "precedence",
+  "turns": [
+    {
+      "turn": 1,
+      "query": "Our card says healthy water reads +200 to +400 millivolts and we have been signing sites off against it. Is that band solid enough to be doing that with, or is there something about these readings that makes an absolute number like that shaky?",
+      "relevant": [
+        {
+          "chunkId": "water-quality-metrics-source-of-truth.pdf__57fe7a67fc10",
+          "contentHash": "57fe7a67fc10",
+          "filename": "water-quality-metrics-source-of-truth.pdf",
+          "grade": 2,
+          "evidence": "Healthy aerobic water typically reads +200 to +400 mV. Negative values\nindicate reducing, anoxic, or septic conditions.",
+          "locator": "DO thresholds through section 1 entries for ORP, EC and pH — \"Thresholds (general): >6 mg/L healthy\"",
+          "claimIds": [
+            "sot-orp-healthy-range-01",
+            "sot-orp-seawater-comparability-01"
+          ]
+        },
+        {
+          "chunkId": "water-quality-metrics-source-of-truth.pdf__19b15475035b",
+          "contentHash": "19b15475035b",
+          "filename": "water-quality-metrics-source-of-truth.pdf",
+          "grade": 2,
+          "evidence": "ORP \t+200 to +400 mV \t+150 to +350 mV \t+200 to +400 mV",
+          "locator": "Turbidity entry and section 2 Baseline Reference Ranges table — \"2. Baseline Reference Ranges\"",
+          "claimIds": [
+            "sot-baseline-orp-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.5-orp.pdf__9dfb772d652d",
+          "contentHash": "9dfb772d652d",
+          "filename": "usgs-nfm-a6.5-orp.pdf",
+          "grade": 2,
+          "evidence": "Eref = 238 mV (saturated KCl, immersed with the platinum",
+          "locator": "Section 6.5.2 Equipment Test Procedure — \"Eh measuring systems can be tested for accuracy\"",
+          "claimIds": [
+            "orp-eref-agagcl-238-01",
+            "orp-eref-calomel-1855-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.5-orp.pdf__5d571cf4d09e",
+          "contentHash": "5d571cf4d09e",
+          "filename": "usgs-nfm-a6.5-orp.pdf",
+          "grade": 2,
+          "evidence": "25 \t0.209 \t0.205 \t0.199 \t0.255 \t0.250 \t0.246 \t0.244 \t0.246",
+          "locator": "Table 6.5-2 (half-cell potentials) and Table 6.5-3 (Eh of ZoBell's vs temperature)",
+          "claimIds": [
+            "orp-table652-25c-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.5-orp.pdf__def2994c3f8f",
+          "contentHash": "def2994c3f8f",
+          "filename": "usgs-nfm-a6.5-orp.pdf",
+          "grade": 2,
+          "evidence": "Potentials are reported to the nearest 10 mV, along with the tempera-",
+          "locator": "Section 6.5.5 Reporting and start of Selected References",
+          "claimIds": [
+            "orp-report-nearest-10mv-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.5-orp.pdf__b575099996ac",
+          "contentHash": "b575099996ac",
+          "filename": "usgs-nfm-a6.5-orp.pdf",
+          "grade": 2,
+          "evidence": "6. Field measurements should agree within about 10 mV.",
+          "locator": "Figure 6.5-2 Eh data record: field measurements, and field-calibration steps",
+          "claimIds": [
+            "orp-field-agreement-10mv-01"
+          ]
+        }
+      ]
+    },
+    {
+      "turn": 2,
+      "query": "Alright, so we stop signing off on the bare number. What should the crew actually be writing down at each site so the readings are worth something later?",
+      "relevant": [
+        {
+          "chunkId": "water-quality-metrics-source-of-truth.pdf__57fe7a67fc10",
+          "contentHash": "57fe7a67fc10",
+          "filename": "water-quality-metrics-source-of-truth.pdf",
+          "grade": 2,
+          "evidence": "Healthy aerobic water typically reads +200 to +400 mV. Negative values\nindicate reducing, anoxic, or septic conditions.",
+          "locator": "DO thresholds through section 1 entries for ORP, EC and pH — \"Thresholds (general): >6 mg/L healthy\"",
+          "claimIds": [
+            "sot-orp-healthy-range-01",
+            "sot-orp-seawater-comparability-01"
+          ]
+        },
+        {
+          "chunkId": "water-quality-metrics-source-of-truth.pdf__19b15475035b",
+          "contentHash": "19b15475035b",
+          "filename": "water-quality-metrics-source-of-truth.pdf",
+          "grade": 2,
+          "evidence": "ORP \t+200 to +400 mV \t+150 to +350 mV \t+200 to +400 mV",
+          "locator": "Turbidity entry and section 2 Baseline Reference Ranges table — \"2. Baseline Reference Ranges\"",
+          "claimIds": [
+            "sot-baseline-orp-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.5-orp.pdf__9dfb772d652d",
+          "contentHash": "9dfb772d652d",
+          "filename": "usgs-nfm-a6.5-orp.pdf",
+          "grade": 2,
+          "evidence": "Eref = 238 mV (saturated KCl, immersed with the platinum",
+          "locator": "Section 6.5.2 Equipment Test Procedure — \"Eh measuring systems can be tested for accuracy\"",
+          "claimIds": [
+            "orp-eref-agagcl-238-01",
+            "orp-eref-calomel-1855-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.5-orp.pdf__5d571cf4d09e",
+          "contentHash": "5d571cf4d09e",
+          "filename": "usgs-nfm-a6.5-orp.pdf",
+          "grade": 2,
+          "evidence": "25 \t0.209 \t0.205 \t0.199 \t0.255 \t0.250 \t0.246 \t0.244 \t0.246",
+          "locator": "Table 6.5-2 (half-cell potentials) and Table 6.5-3 (Eh of ZoBell's vs temperature)",
+          "claimIds": [
+            "orp-table652-25c-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.5-orp.pdf__def2994c3f8f",
+          "contentHash": "def2994c3f8f",
+          "filename": "usgs-nfm-a6.5-orp.pdf",
+          "grade": 2,
+          "evidence": "Potentials are reported to the nearest 10 mV, along with the tempera-",
+          "locator": "Section 6.5.5 Reporting and start of Selected References",
+          "claimIds": [
+            "orp-report-nearest-10mv-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.5-orp.pdf__b575099996ac",
+          "contentHash": "b575099996ac",
+          "filename": "usgs-nfm-a6.5-orp.pdf",
+          "grade": 2,
+          "evidence": "6. Field measurements should agree within about 10 mV.",
+          "locator": "Figure 6.5-2 Eh data record: field measurements, and field-calibration steps",
+          "claimIds": [
+            "orp-field-agreement-10mv-01"
+          ]
+        }
+      ]
+    }
+  ]
+}

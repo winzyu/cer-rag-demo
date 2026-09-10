@@ -1,0 +1,225 @@
+{
+  "fixtureId": "crossdoc-warm-week-oxygen-drop",
+  "set": "committed",
+  "fixtureClass": "cross-document",
+  "turns": [
+    {
+      "turn": 1,
+      "query": "Brackish site, our pod sat around 15 C last week and it's up near 20 C now. Oxygen went from about 9 mg/L down to 7.6. How much of that drop should I have expected just from the water getting warmer, and how much is left over to worry about?",
+      "relevant": [
+        {
+          "chunkId": "usgs-nfm-a6.2-dissolved-oxygen.pdf__b2afa57c2372",
+          "contentHash": "b2afa57c2372",
+          "filename": "usgs-nfm-a6.2-dissolved-oxygen.pdf",
+          "grade": 2,
+          "evidence": "15.0\n \n9.27\n \n9.34\n \n9.41\n \n9.48\n \n9.54\n \n9.61\n \n9.68\n \n9.75\n \n9.81\n \n9.88\n \n9.95\n \n10.02\n \n10.08\n \n10.15\n \n10.22\n \n10.29\n \n10.35\n \n10.42\n \n10.49\n \n10.56",
+          "locator": "Table 6.2-2 —Continued (700-795 mmHg), caption and column header present — \"Solubility of oxygen in freshwater at various temperatures and pressures.—Continued\"",
+          "claimIds": [
+            "do-t622-15c-760-1008-01",
+            "do-t622-20c-750-897-01",
+            "do-t622-23c-760-858-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.2-dissolved-oxygen.pdf__aef58b3384c0",
+          "contentHash": "aef58b3384c0",
+          "filename": "usgs-nfm-a6.2-dissolved-oxygen.pdf",
+          "grade": 2,
+          "evidence": "The higher the\natmospheric pressure on the water’s surface and the lower the\ntemperature and conductivity of the water, the more oxygen\nwill be dissolved in the water.",
+          "locator": "Procedure 2 steps 6–11 / Section 2.3 Measurement — \"The solubility of oxygen in water depends on the temperature and ionic strength\"",
+          "claimIds": [
+            "do-solubility-drivers-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.2-dissolved-oxygen.pdf__dcddd06f1651",
+          "contentHash": "dcddd06f1651",
+          "filename": "usgs-nfm-a6.2-dissolved-oxygen.pdf",
+          "grade": 2,
+          "evidence": "Specific conductance, in microsiemens per centimeter at 25 degrees Celsius\n0 \n1,000\n \n2,000",
+          "locator": "Table 6.2-4 (first block, 0-14,000 microsiemens per centimeter), caption and column header present — \"Salinity correction factors for dissolved oxygen in water (based on specific conductance).\"",
+          "claimIds": [
+            "do-t624-identity-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.2-dissolved-oxygen.pdf__af19876f2172",
+          "contentHash": "af19876f2172",
+          "filename": "usgs-nfm-a6.2-dissolved-oxygen.pdf",
+          "grade": 2,
+          "evidence": "freshwater oxygen solubility from table 6.2–2 (at end of chap-\nter) is 8.97 mg/L for that temperature and pressure; the salinity\ncorrection factor from table 6.2–4 (at end of chapter) is 0.9733",
+          "locator": "Section 5.0 worked examples — \"8.97 mg/L x 0.9733 = 8.73 mg/L\"",
+          "claimIds": [
+            "do-example-897-09733-01",
+            "do-example-873-product-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.2-dissolved-oxygen.pdf__2d5d863cf1da",
+          "contentHash": "2d5d863cf1da",
+          "filename": "usgs-nfm-a6.2-dissolved-oxygen.pdf",
+          "grade": 2,
+          "evidence": "Correcting DO solubility for saline waters (specific\nconductance greater than 2,000 μS/cm) varies with instru-\nment type, calibration method, and the salts in solution.",
+          "locator": "Section 3.3 step 11-12, Section 4.0 Reporting, and Section 5.0 opening — \"reported to the nearest 0.1 mg/L and stored to the nearest 0.01 mg/L\"",
+          "claimIds": [
+            "do-saline-above-2000-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.3-specific-conductance.pdf__298c8c9bd3bf",
+          "contentHash": "298c8c9bd3bf",
+          "filename": "usgs-nfm-a6.3-specific-conductance.pdf",
+          "grade": 2,
+          "evidence": "Specific conductance is reported in microsiemens per centimeter at 25 degrees Celsius (μS/cm",
+          "locator": "Conversion Factors and Abbreviations and Symbols — \"Specific conductance is reported in microsiemens per centimeter\"",
+          "claimIds": [
+            "sc-reporting-unit-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.3-specific-conductance.pdf__fc9b0488e3d3",
+          "contentHash": "fc9b0488e3d3",
+          "filename": "usgs-nfm-a6.3-specific-conductance.pdf",
+          "grade": 2,
+          "evidence": "of electrical conductance as specific conductance at 25 °C,",
+          "locator": "Section 1.1 Overview of Specific Conductance — \"defined as the electrical conductance of 1 cubic centimeter\"",
+          "claimIds": [
+            "sc-nwis-25c-correction-01",
+            "sc-meters-auto-compensate-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.3-specific-conductance.pdf__361ef9509206",
+          "contentHash": "361ef9509206",
+          "filename": "usgs-nfm-a6.3-specific-conductance.pdf",
+          "grade": 2,
+          "evidence": "where α is the temperature-compensation factor and t is the",
+          "locator": "Section 1.1 temperature dependence and equation 2 — \"Electrical conductivity increases by 0.5 to 3 percent per degree Celsius\"",
+          "claimIds": [
+            "sc-equation2-compensation-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.3-specific-conductance.pdf__e7c93d2b2493",
+          "contentHash": "e7c93d2b2493",
+          "filename": "usgs-nfm-a6.3-specific-conductance.pdf",
+          "grade": 2,
+          "evidence": "(typically 0.019–0.020 per °C) or a nonlinear α (International",
+          "locator": "Technical Notes and Sections 4.3, 4.3.1, 4.3.2, 5.0 — \"Specific conductance (and electrical conductivity) data are reported at 25 degrees C\"",
+          "claimIds": [
+            "sc-alpha-typical-value-01"
+          ]
+        }
+      ]
+    },
+    {
+      "turn": 2,
+      "query": "The conductivity number I'd feed that correction with is whatever the pod is showing me at the time. Is that the right number to look up, or does it need fixing first?",
+      "relevant": [
+        {
+          "chunkId": "usgs-nfm-a6.2-dissolved-oxygen.pdf__b2afa57c2372",
+          "contentHash": "b2afa57c2372",
+          "filename": "usgs-nfm-a6.2-dissolved-oxygen.pdf",
+          "grade": 2,
+          "evidence": "15.0\n \n9.27\n \n9.34\n \n9.41\n \n9.48\n \n9.54\n \n9.61\n \n9.68\n \n9.75\n \n9.81\n \n9.88\n \n9.95\n \n10.02\n \n10.08\n \n10.15\n \n10.22\n \n10.29\n \n10.35\n \n10.42\n \n10.49\n \n10.56",
+          "locator": "Table 6.2-2 —Continued (700-795 mmHg), caption and column header present — \"Solubility of oxygen in freshwater at various temperatures and pressures.—Continued\"",
+          "claimIds": [
+            "do-t622-15c-760-1008-01",
+            "do-t622-20c-750-897-01",
+            "do-t622-23c-760-858-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.2-dissolved-oxygen.pdf__aef58b3384c0",
+          "contentHash": "aef58b3384c0",
+          "filename": "usgs-nfm-a6.2-dissolved-oxygen.pdf",
+          "grade": 2,
+          "evidence": "The higher the\natmospheric pressure on the water’s surface and the lower the\ntemperature and conductivity of the water, the more oxygen\nwill be dissolved in the water.",
+          "locator": "Procedure 2 steps 6–11 / Section 2.3 Measurement — \"The solubility of oxygen in water depends on the temperature and ionic strength\"",
+          "claimIds": [
+            "do-solubility-drivers-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.2-dissolved-oxygen.pdf__dcddd06f1651",
+          "contentHash": "dcddd06f1651",
+          "filename": "usgs-nfm-a6.2-dissolved-oxygen.pdf",
+          "grade": 2,
+          "evidence": "Specific conductance, in microsiemens per centimeter at 25 degrees Celsius\n0 \n1,000\n \n2,000",
+          "locator": "Table 6.2-4 (first block, 0-14,000 microsiemens per centimeter), caption and column header present — \"Salinity correction factors for dissolved oxygen in water (based on specific conductance).\"",
+          "claimIds": [
+            "do-t624-identity-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.2-dissolved-oxygen.pdf__af19876f2172",
+          "contentHash": "af19876f2172",
+          "filename": "usgs-nfm-a6.2-dissolved-oxygen.pdf",
+          "grade": 2,
+          "evidence": "freshwater oxygen solubility from table 6.2–2 (at end of chap-\nter) is 8.97 mg/L for that temperature and pressure; the salinity\ncorrection factor from table 6.2–4 (at end of chapter) is 0.9733",
+          "locator": "Section 5.0 worked examples — \"8.97 mg/L x 0.9733 = 8.73 mg/L\"",
+          "claimIds": [
+            "do-example-897-09733-01",
+            "do-example-873-product-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.2-dissolved-oxygen.pdf__2d5d863cf1da",
+          "contentHash": "2d5d863cf1da",
+          "filename": "usgs-nfm-a6.2-dissolved-oxygen.pdf",
+          "grade": 2,
+          "evidence": "Correcting DO solubility for saline waters (specific\nconductance greater than 2,000 μS/cm) varies with instru-\nment type, calibration method, and the salts in solution.",
+          "locator": "Section 3.3 step 11-12, Section 4.0 Reporting, and Section 5.0 opening — \"reported to the nearest 0.1 mg/L and stored to the nearest 0.01 mg/L\"",
+          "claimIds": [
+            "do-saline-above-2000-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.3-specific-conductance.pdf__298c8c9bd3bf",
+          "contentHash": "298c8c9bd3bf",
+          "filename": "usgs-nfm-a6.3-specific-conductance.pdf",
+          "grade": 2,
+          "evidence": "Specific conductance is reported in microsiemens per centimeter at 25 degrees Celsius (μS/cm",
+          "locator": "Conversion Factors and Abbreviations and Symbols — \"Specific conductance is reported in microsiemens per centimeter\"",
+          "claimIds": [
+            "sc-reporting-unit-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.3-specific-conductance.pdf__fc9b0488e3d3",
+          "contentHash": "fc9b0488e3d3",
+          "filename": "usgs-nfm-a6.3-specific-conductance.pdf",
+          "grade": 2,
+          "evidence": "of electrical conductance as specific conductance at 25 °C,",
+          "locator": "Section 1.1 Overview of Specific Conductance — \"defined as the electrical conductance of 1 cubic centimeter\"",
+          "claimIds": [
+            "sc-nwis-25c-correction-01",
+            "sc-meters-auto-compensate-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.3-specific-conductance.pdf__361ef9509206",
+          "contentHash": "361ef9509206",
+          "filename": "usgs-nfm-a6.3-specific-conductance.pdf",
+          "grade": 2,
+          "evidence": "where α is the temperature-compensation factor and t is the",
+          "locator": "Section 1.1 temperature dependence and equation 2 — \"Electrical conductivity increases by 0.5 to 3 percent per degree Celsius\"",
+          "claimIds": [
+            "sc-equation2-compensation-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.3-specific-conductance.pdf__e7c93d2b2493",
+          "contentHash": "e7c93d2b2493",
+          "filename": "usgs-nfm-a6.3-specific-conductance.pdf",
+          "grade": 2,
+          "evidence": "(typically 0.019–0.020 per °C) or a nonlinear α (International",
+          "locator": "Technical Notes and Sections 4.3, 4.3.1, 4.3.2, 5.0 — \"Specific conductance (and electrical conductivity) data are reported at 25 degrees C\"",
+          "claimIds": [
+            "sc-alpha-typical-value-01"
+          ]
+        }
+      ]
+    }
+  ]
+}

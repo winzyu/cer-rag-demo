@@ -1,0 +1,85 @@
+{
+  "fixtureId": "followup-clarity-calibration-whole-head",
+  "set": "committed",
+  "fixtureClass": "follow-up",
+  "turns": [
+    {
+      "turn": 1,
+      "query": "When we calibrate the clarity sensor on the sonde, are we meant to sink the whole sensor head into the standard, or just that one sensor on its own?",
+      "relevant": [
+        {
+          "chunkId": "usgs-nfm-a6.7-turbidity.pdf__bde5db3720f7",
+          "contentHash": "bde5db3720f7",
+          "filename": "usgs-nfm-a6.7-turbidity.pdf",
+          "grade": 2,
+          "evidence": "Immersion of the entire sonde (bundle of field-\nmeasurement sensors, including the turbidity sensor) requires\nlarger volumes of calibrant; calibrant is vulnerable to contam-\nination and dilution.",
+          "locator": "§6.7.2.B Submersible (dynamic) turbidity sensor calibration, preliminary bullets and steps 1-3 — \"a minimum of two, but three is preferred\"",
+          "claimIds": [
+            "tby-sub-cal-proc-a-b-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.7-turbidity.pdf__af6c9f365e31",
+          "contentHash": "af6c9f365e31",
+          "filename": "usgs-nfm-a6.7-turbidity.pdf",
+          "grade": 2,
+          "evidence": "but are calibrated using a separate chamber",
+          "locator": "Benchtop (static) turbidimeter calibration steps 1-2 — \"inverting the calibrant 25 times (1-second inversion cycle)\"",
+          "claimIds": [
+            "tby-submersible-separate-chamber-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.7-turbidity.pdf__cd4dfb5fb149",
+          "contentHash": "cd4dfb5fb149",
+          "filename": "usgs-nfm-a6.7-turbidity.pdf",
+          "grade": 2,
+          "evidence": "Agitate the sonde/sensor repeatedly to remove bubbles from\nthe optical surface (activate mechanical wiper, if present).",
+          "locator": "§6.7.2.B Submersible sensor calibration steps 4-6 — \"Monitor turbidity readings for 1 to 2 minutes or longer\"",
+          "claimIds": [
+            "tby-sub-cal-zero-steps-01"
+          ]
+        }
+      ]
+    },
+    {
+      "turn": 2,
+      "query": "We've been doing the second one to save standard. What are we trading away?",
+      "relevant": [
+        {
+          "chunkId": "usgs-nfm-a6.7-turbidity.pdf__bde5db3720f7",
+          "contentHash": "bde5db3720f7",
+          "filename": "usgs-nfm-a6.7-turbidity.pdf",
+          "grade": 2,
+          "evidence": "Immersion of the entire sonde (bundle of field-\nmeasurement sensors, including the turbidity sensor) requires\nlarger volumes of calibrant; calibrant is vulnerable to contam-\nination and dilution.",
+          "locator": "§6.7.2.B Submersible (dynamic) turbidity sensor calibration, preliminary bullets and steps 1-3 — \"a minimum of two, but three is preferred\"",
+          "claimIds": [
+            "tby-sub-cal-proc-a-b-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.7-turbidity.pdf__af6c9f365e31",
+          "contentHash": "af6c9f365e31",
+          "filename": "usgs-nfm-a6.7-turbidity.pdf",
+          "grade": 2,
+          "evidence": "but are calibrated using a separate chamber",
+          "locator": "Benchtop (static) turbidimeter calibration steps 1-2 — \"inverting the calibrant 25 times (1-second inversion cycle)\"",
+          "claimIds": [
+            "tby-submersible-separate-chamber-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.7-turbidity.pdf__cd4dfb5fb149",
+          "contentHash": "cd4dfb5fb149",
+          "filename": "usgs-nfm-a6.7-turbidity.pdf",
+          "grade": 2,
+          "evidence": "Agitate the sonde/sensor repeatedly to remove bubbles from\nthe optical surface (activate mechanical wiper, if present).",
+          "locator": "§6.7.2.B Submersible sensor calibration steps 4-6 — \"Monitor turbidity readings for 1 to 2 minutes or longer\"",
+          "claimIds": [
+            "tby-sub-cal-zero-steps-01"
+          ]
+        }
+      ]
+    }
+  ]
+}

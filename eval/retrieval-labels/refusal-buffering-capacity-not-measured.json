@@ -1,0 +1,19 @@
+{
+  "fixtureId": "refusal-buffering-capacity-not-measured",
+  "set": "committed",
+  "fixtureClass": "refusal",
+  "turns": [
+    {
+      "turn": 1,
+      "query": "Before we call a pH drop at the mill creek a real event, I want to know how much acid that creek can soak up before the pH actually moves. Can our pods tell me that?",
+      "relevant": [],
+      "noRelevantChunks": "refusal fixture (answerable_from empty) — no corpus chunk answers this query. Mechanically labelled by scripts/resolveRetrievalLabels.ts; not human-verified."
+    },
+    {
+      "turn": 2,
+      "query": "Those pods are already logging pH and conductivity every fifteen minutes. Is there really no way to work it out from those two?",
+      "relevant": [],
+      "noRelevantChunks": "refusal fixture (answerable_from empty) — no corpus chunk answers this query. Mechanically labelled by scripts/resolveRetrievalLabels.ts; not human-verified."
+    }
+  ]
+}

@@ -1,0 +1,139 @@
+{
+  "fixtureId": "crossdoc-sonde-sensor-order",
+  "set": "committed",
+  "fixtureClass": "cross-document",
+  "turns": [
+    {
+      "turn": 1,
+      "query": "New tech is doing his first sonde calibration. Does the order he does the sensors in actually matter, or can he just work through them however?",
+      "relevant": [
+        {
+          "chunkId": "usgs-nfm-a6.8-multiparameter-instruments.pdf__01d6f39b352b",
+          "contentHash": "01d6f39b352b",
+          "filename": "usgs-nfm-a6.8-multiparameter-instruments.pdf",
+          "grade": 2,
+          "evidence": "The following order is recommended for performing\nparameter calibrations or checks of multiparameter\ninstruments.",
+          "locator": "Section 2.2 storage bullets and section 3.0 Calibration — \"The following order is recommended for performing parameter calibrations\"",
+          "claimIds": [
+            "mp-calibration-order-08",
+            "mp-ionic-strength-rationale-09",
+            "mp-triple-rinse-10",
+            "mp-calibrate-before-each-use-04",
+            "mp-a61-a67-definitive-06"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.8-multiparameter-instruments.pdf__75d13350deef",
+          "contentHash": "75d13350deef",
+          "filename": "usgs-nfm-a6.8-multiparameter-instruments.pdf",
+          "grade": 2,
+          "evidence": "Note that generally standards are chosen\nthat bracket the expected measurement or deployment\nrange of measurements.",
+          "locator": "Section 3.0 Calibration, record-keeping bullets — \"Calibration records must be maintained\"",
+          "claimIds": [
+            "mp-bracket-standards-04"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.3-specific-conductance.pdf__3082a6f1985a",
+          "contentHash": "3082a6f1985a",
+          "filename": "usgs-nfm-a6.3-specific-conductance.pdf",
+          "grade": 2,
+          "evidence": "calibrate specific conduc-\ntance before pH.",
+          "locator": "Section 4.0 Measurement of Specific Conductance and 4.1 — \"In situ measurements generally are preferred\"",
+          "claimIds": [
+            "sc-calibrate-sc-before-ph-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.0-field-measurement-guidelines.pdf__d7462e09e17b",
+          "contentHash": "d7462e09e17b",
+          "filename": "usgs-nfm-a6.0-field-measurement-guidelines.pdf",
+          "grade": 2,
+          "evidence": "install the pH sensor down-\nstream from the conductivity sensor",
+          "locator": "§3.2.2 Inline-Flow (Flow-Through Cell/Chamber) Procedure — 'All sensors must be calibrated'",
+          "claimIds": [
+            "fm-ph-downstream-of-conductivity-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.3-specific-conductance.pdf__630a36494d64",
+          "contentHash": "630a36494d64",
+          "filename": "usgs-nfm-a6.3-specific-conductance.pdf",
+          "grade": 2,
+          "evidence": "upstream from the pH electrode.",
+          "locator": "Section 4.2.1 flow-cell and purging steps 2b-7 and Section 4.2.2 — \"For measurement with a pumped flow-cell system\"",
+          "claimIds": [
+            "sc-probe-upstream-of-ph-01",
+            "sc-flowcell-shield-sunlight-01"
+          ]
+        }
+      ]
+    },
+    {
+      "turn": 2,
+      "query": "Same question for the flow cell we run at the well — does it matter which probe the water hits first once they're all plumbed in there?",
+      "relevant": [
+        {
+          "chunkId": "usgs-nfm-a6.8-multiparameter-instruments.pdf__01d6f39b352b",
+          "contentHash": "01d6f39b352b",
+          "filename": "usgs-nfm-a6.8-multiparameter-instruments.pdf",
+          "grade": 2,
+          "evidence": "The following order is recommended for performing\nparameter calibrations or checks of multiparameter\ninstruments.",
+          "locator": "Section 2.2 storage bullets and section 3.0 Calibration — \"The following order is recommended for performing parameter calibrations\"",
+          "claimIds": [
+            "mp-calibration-order-08",
+            "mp-ionic-strength-rationale-09",
+            "mp-triple-rinse-10",
+            "mp-calibrate-before-each-use-04",
+            "mp-a61-a67-definitive-06"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.8-multiparameter-instruments.pdf__75d13350deef",
+          "contentHash": "75d13350deef",
+          "filename": "usgs-nfm-a6.8-multiparameter-instruments.pdf",
+          "grade": 2,
+          "evidence": "Note that generally standards are chosen\nthat bracket the expected measurement or deployment\nrange of measurements.",
+          "locator": "Section 3.0 Calibration, record-keeping bullets — \"Calibration records must be maintained\"",
+          "claimIds": [
+            "mp-bracket-standards-04"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.3-specific-conductance.pdf__3082a6f1985a",
+          "contentHash": "3082a6f1985a",
+          "filename": "usgs-nfm-a6.3-specific-conductance.pdf",
+          "grade": 2,
+          "evidence": "calibrate specific conduc-\ntance before pH.",
+          "locator": "Section 4.0 Measurement of Specific Conductance and 4.1 — \"In situ measurements generally are preferred\"",
+          "claimIds": [
+            "sc-calibrate-sc-before-ph-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.0-field-measurement-guidelines.pdf__d7462e09e17b",
+          "contentHash": "d7462e09e17b",
+          "filename": "usgs-nfm-a6.0-field-measurement-guidelines.pdf",
+          "grade": 2,
+          "evidence": "install the pH sensor down-\nstream from the conductivity sensor",
+          "locator": "§3.2.2 Inline-Flow (Flow-Through Cell/Chamber) Procedure — 'All sensors must be calibrated'",
+          "claimIds": [
+            "fm-ph-downstream-of-conductivity-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.3-specific-conductance.pdf__630a36494d64",
+          "contentHash": "630a36494d64",
+          "filename": "usgs-nfm-a6.3-specific-conductance.pdf",
+          "grade": 2,
+          "evidence": "upstream from the pH electrode.",
+          "locator": "Section 4.2.1 flow-cell and purging steps 2b-7 and Section 4.2.2 — \"For measurement with a pumped flow-cell system\"",
+          "claimIds": [
+            "sc-probe-upstream-of-ph-01",
+            "sc-flowcell-shield-sunlight-01"
+          ]
+        }
+      ]
+    }
+  ]
+}

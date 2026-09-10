@@ -1,0 +1,19 @@
+{
+  "fixtureId": "refusal-how-long-can-it-stay-in",
+  "set": "committed",
+  "fixtureClass": "refusal",
+  "turns": [
+    {
+      "turn": 1,
+      "query": "We want to drop a pod in the creek and leave it there. Nobody is going out to it unless we put it on the calendar. Is there a limit on how long it can sit in the water before the readings stop being any good?",
+      "relevant": [],
+      "noRelevantChunks": "refusal fixture (answerable_from empty) — no corpus chunk answers this query. Mechanically labelled by scripts/resolveRetrievalLabels.ts; not human-verified."
+    },
+    {
+      "turn": 2,
+      "query": "Say we leave it a month anyway. When we pull it out, how much of that month am I allowed to keep?",
+      "relevant": [],
+      "noRelevantChunks": "refusal fixture (answerable_from empty) — no corpus chunk answers this query. Mechanically labelled by scripts/resolveRetrievalLabels.ts; not human-verified."
+    }
+  ]
+}

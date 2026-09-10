@@ -1,0 +1,113 @@
+{
+  "fixtureId": "probecal-buffer-handling",
+  "set": "committed",
+  "fixtureClass": "probe-calibration",
+  "turns": [
+    {
+      "turn": 1,
+      "query": "Dumb question, but when I calibrate the acidity sensor can I just put it straight into the bottle the solution came in? Feels wasteful pouring it out every time.",
+      "relevant": [
+        {
+          "chunkId": "usgs-nfm-a6.4-ph.pdf__35d0f93e82e8",
+          "contentHash": "35d0f93e82e8",
+          "filename": "usgs-nfm-a6.4-ph.pdf",
+          "grade": 2,
+          "evidence": "Do not insert an electrode or other material into a bottle\ncontaining stock buffer solution",
+          "locator": "Section 2.3 buffer precautions and section 3.0 / 3.1 Electrode Care and Cleaning — \"Do not insert an electrode or other material into a bottle\"",
+          "claimIds": [
+            "ph-buffer-no-electrode-in-stock-01",
+            "ph-buffer-temp-protection-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.4-ph.pdf__a5e101e3271a",
+          "contentHash": "a5e101e3271a",
+          "filename": "usgs-nfm-a6.4-ph.pdf",
+          "grade": 2,
+          "evidence": "Never pour used buffer back into a bottle containing the\nstock buffer solution.",
+          "locator": "Section 2.3 buffer precautions and Table 6.4–3 — \"Values of pH from 0 to 90 degrees Celsius\"",
+          "claimIds": [
+            "ph-buffer-no-return-01",
+            "ph-buffer-no-expired-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.4-ph.pdf__434fe1dc3109",
+          "contentHash": "434fe1dc3109",
+          "filename": "usgs-nfm-a6.4-ph.pdf",
+          "grade": 2,
+          "evidence": "label the bottle with the buffer’s pH value,\nlot number, and expiration date.",
+          "locator": "Section 4.0 calibration guidelines and section 4.1 Calibration Procedure — \"Use at least two pH buffer solutions with documented, NIST-traceable pH values\"",
+          "claimIds": [
+            "ph-secondary-bottle-01",
+            "ph-secondary-refresh-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.4-ph.pdf__a03e15a87724",
+          "contentHash": "a03e15a87724",
+          "filename": "usgs-nfm-a6.4-ph.pdf",
+          "grade": 2,
+          "evidence": "Record the temperature and value of pH buffers used at\nthat temperature, with lot numbers and expiration dates,\nin the pH-meter/electrode logbook.",
+          "locator": "Section 4.1.1 steps 6-10 — \"Begin calibration procedures\" and the pour-swirl-discard rinse sequence",
+          "claimIds": [
+            "ph-record-buffer-lot-temp-01"
+          ]
+        }
+      ]
+    },
+    {
+      "turn": 2,
+      "query": "The decanted bottles live in the truck. How long can I keep using those before I throw them out?",
+      "relevant": [
+        {
+          "chunkId": "usgs-nfm-a6.4-ph.pdf__35d0f93e82e8",
+          "contentHash": "35d0f93e82e8",
+          "filename": "usgs-nfm-a6.4-ph.pdf",
+          "grade": 2,
+          "evidence": "Do not insert an electrode or other material into a bottle\ncontaining stock buffer solution",
+          "locator": "Section 2.3 buffer precautions and section 3.0 / 3.1 Electrode Care and Cleaning — \"Do not insert an electrode or other material into a bottle\"",
+          "claimIds": [
+            "ph-buffer-no-electrode-in-stock-01",
+            "ph-buffer-temp-protection-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.4-ph.pdf__a5e101e3271a",
+          "contentHash": "a5e101e3271a",
+          "filename": "usgs-nfm-a6.4-ph.pdf",
+          "grade": 2,
+          "evidence": "Never pour used buffer back into a bottle containing the\nstock buffer solution.",
+          "locator": "Section 2.3 buffer precautions and Table 6.4–3 — \"Values of pH from 0 to 90 degrees Celsius\"",
+          "claimIds": [
+            "ph-buffer-no-return-01",
+            "ph-buffer-no-expired-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.4-ph.pdf__434fe1dc3109",
+          "contentHash": "434fe1dc3109",
+          "filename": "usgs-nfm-a6.4-ph.pdf",
+          "grade": 2,
+          "evidence": "label the bottle with the buffer’s pH value,\nlot number, and expiration date.",
+          "locator": "Section 4.0 calibration guidelines and section 4.1 Calibration Procedure — \"Use at least two pH buffer solutions with documented, NIST-traceable pH values\"",
+          "claimIds": [
+            "ph-secondary-bottle-01",
+            "ph-secondary-refresh-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.4-ph.pdf__a03e15a87724",
+          "contentHash": "a03e15a87724",
+          "filename": "usgs-nfm-a6.4-ph.pdf",
+          "grade": 2,
+          "evidence": "Record the temperature and value of pH buffers used at\nthat temperature, with lot numbers and expiration dates,\nin the pH-meter/electrode logbook.",
+          "locator": "Section 4.1.1 steps 6-10 — \"Begin calibration procedures\" and the pour-swirl-discard rinse sequence",
+          "claimIds": [
+            "ph-record-buffer-lot-temp-01"
+          ]
+        }
+      ]
+    }
+  ]
+}

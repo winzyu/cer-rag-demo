@@ -1,0 +1,155 @@
+{
+  "fixtureId": "crossdoc-conductivity-rise-with-warming",
+  "set": "committed",
+  "fixtureClass": "cross-document",
+  "turns": [
+    {
+      "turn": 1,
+      "query": "Our conductivity climbed through a warm spell and I can't tell whether the water actually changed or the pod is just reacting to the heat. How does the correction work, and how much per degree are we talking about?",
+      "relevant": [
+        {
+          "chunkId": "usgs-nfm-a6.3-specific-conductance.pdf__361ef9509206",
+          "contentHash": "361ef9509206",
+          "filename": "usgs-nfm-a6.3-specific-conductance.pdf",
+          "grade": 2,
+          "evidence": "Electrical conductivity increases by 0.5 to 3 percent per",
+          "locator": "Section 1.1 temperature dependence and equation 2 — \"Electrical conductivity increases by 0.5 to 3 percent per degree Celsius\"",
+          "claimIds": [
+            "sc-temperature-coefficient-01",
+            "sc-equation2-compensation-01",
+            "sc-compensation-accuracy-5pct-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.3-specific-conductance.pdf__e7c93d2b2493",
+          "contentHash": "e7c93d2b2493",
+          "filename": "usgs-nfm-a6.3-specific-conductance.pdf",
+          "grade": 2,
+          "evidence": "(typically 0.019–0.020 per °C) or a nonlinear α (International",
+          "locator": "Technical Notes and Sections 4.3, 4.3.1, 4.3.2, 5.0 — \"Specific conductance (and electrical conductivity) data are reported at 25 degrees C\"",
+          "claimIds": [
+            "sc-alpha-typical-value-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.3-specific-conductance.pdf__e49322bacce3",
+          "contentHash": "e49322bacce3",
+          "filename": "usgs-nfm-a6.3-specific-conductance.pdf",
+          "grade": 2,
+          "evidence": "tain thermistors used for automatic temperature compensation.",
+          "locator": "Section 2.1 Electrical Conductivity Cells and Specific Conductance Meters — \"Other less commonly used conductivity cells\"",
+          "claimIds": [
+            "sc-thermistor-check-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.1-temperature.pdf__6c3145b44cb4",
+          "contentHash": "6c3145b44cb4",
+          "filename": "usgs-nfm-a6.1-temperature.pdf",
+          "grade": 2,
+          "evidence": "another water-quality parameter (such as dissolved\noxygen or specific conductance). The accuracy of such\na sensor is required to be less than or equal to ±0.2°C.",
+          "locator": "Section 2.1 Definitions — 'Certified Temperature Sensor', 'Traceable', 'Verified'",
+          "claimIds": [
+            "t-verified-multiparam-accuracy-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.1-temperature.pdf__aa7664732370",
+          "contentHash": "aa7664732370",
+          "filename": "usgs-nfm-a6.1-temperature.pdf",
+          "grade": 2,
+          "evidence": "differ from the process by which a pH or conductivity sensor\nis adjusted until the accuracy of its performance conforms",
+          "locator": "Sections 2.3 logbooks and 3.0 Calibration Verification — 'differ from the process by which a pH or conductivity sensor is adjusted'",
+          "claimIds": [
+            "t-temp-cal-differs-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.8-multiparameter-instruments.pdf__81332f744656",
+          "contentHash": "81332f744656",
+          "filename": "usgs-nfm-a6.8-multiparameter-instruments.pdf",
+          "grade": 2,
+          "evidence": "Calibration thermometer and barometer \tNIST-certified or NIST-traceable. (see NFM A6.1 and A6.2 for USGS standard",
+          "locator": "Table 6.8–4 (Ancillary supplies) and start of table 6.8–3 (Specifications for calibration solutions)",
+          "claimIds": [
+            "mp-t4-nist-thermometer-02"
+          ]
+        }
+      ]
+    },
+    {
+      "turn": 2,
+      "query": "That correction leans entirely on the temperature reading. How good does our temperature sensor have to be before I trust the corrected number, and how do I check it?",
+      "relevant": [
+        {
+          "chunkId": "usgs-nfm-a6.3-specific-conductance.pdf__361ef9509206",
+          "contentHash": "361ef9509206",
+          "filename": "usgs-nfm-a6.3-specific-conductance.pdf",
+          "grade": 2,
+          "evidence": "Electrical conductivity increases by 0.5 to 3 percent per",
+          "locator": "Section 1.1 temperature dependence and equation 2 — \"Electrical conductivity increases by 0.5 to 3 percent per degree Celsius\"",
+          "claimIds": [
+            "sc-temperature-coefficient-01",
+            "sc-equation2-compensation-01",
+            "sc-compensation-accuracy-5pct-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.3-specific-conductance.pdf__e7c93d2b2493",
+          "contentHash": "e7c93d2b2493",
+          "filename": "usgs-nfm-a6.3-specific-conductance.pdf",
+          "grade": 2,
+          "evidence": "(typically 0.019–0.020 per °C) or a nonlinear α (International",
+          "locator": "Technical Notes and Sections 4.3, 4.3.1, 4.3.2, 5.0 — \"Specific conductance (and electrical conductivity) data are reported at 25 degrees C\"",
+          "claimIds": [
+            "sc-alpha-typical-value-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.3-specific-conductance.pdf__e49322bacce3",
+          "contentHash": "e49322bacce3",
+          "filename": "usgs-nfm-a6.3-specific-conductance.pdf",
+          "grade": 2,
+          "evidence": "tain thermistors used for automatic temperature compensation.",
+          "locator": "Section 2.1 Electrical Conductivity Cells and Specific Conductance Meters — \"Other less commonly used conductivity cells\"",
+          "claimIds": [
+            "sc-thermistor-check-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.1-temperature.pdf__6c3145b44cb4",
+          "contentHash": "6c3145b44cb4",
+          "filename": "usgs-nfm-a6.1-temperature.pdf",
+          "grade": 2,
+          "evidence": "another water-quality parameter (such as dissolved\noxygen or specific conductance). The accuracy of such\na sensor is required to be less than or equal to ±0.2°C.",
+          "locator": "Section 2.1 Definitions — 'Certified Temperature Sensor', 'Traceable', 'Verified'",
+          "claimIds": [
+            "t-verified-multiparam-accuracy-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.1-temperature.pdf__aa7664732370",
+          "contentHash": "aa7664732370",
+          "filename": "usgs-nfm-a6.1-temperature.pdf",
+          "grade": 2,
+          "evidence": "differ from the process by which a pH or conductivity sensor\nis adjusted until the accuracy of its performance conforms",
+          "locator": "Sections 2.3 logbooks and 3.0 Calibration Verification — 'differ from the process by which a pH or conductivity sensor is adjusted'",
+          "claimIds": [
+            "t-temp-cal-differs-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.8-multiparameter-instruments.pdf__81332f744656",
+          "contentHash": "81332f744656",
+          "filename": "usgs-nfm-a6.8-multiparameter-instruments.pdf",
+          "grade": 2,
+          "evidence": "Calibration thermometer and barometer \tNIST-certified or NIST-traceable. (see NFM A6.1 and A6.2 for USGS standard",
+          "locator": "Table 6.8–4 (Ancillary supplies) and start of table 6.8–3 (Specifications for calibration solutions)",
+          "claimIds": [
+            "mp-t4-nist-thermometer-02"
+          ]
+        }
+      ]
+    }
+  ]
+}

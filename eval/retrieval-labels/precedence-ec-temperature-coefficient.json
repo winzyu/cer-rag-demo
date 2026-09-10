@@ -1,0 +1,93 @@
+{
+  "fixtureId": "precedence-ec-temperature-coefficient",
+  "set": "committed",
+  "fixtureClass": "precedence",
+  "turns": [
+    {
+      "turn": 1,
+      "query": "Our notes say conductivity climbs about 2 percent for every degree the water warms. Where does that number come from, and can I lean on it at a creek that swings ten degrees between dawn and afternoon?",
+      "relevant": [
+        {
+          "chunkId": "water-quality-metrics-source-of-truth.pdf__3ad84c74c7db",
+          "contentHash": "3ad84c74c7db",
+          "filename": "water-quality-metrics-source-of-truth.pdf",
+          "grade": 2,
+          "evidence": "Ion mobility rises with temperature; raw EC increases ~2% per °C.",
+          "locator": "Section 3 parameter couplings and section 4 Pollution Event Signature Matrix — \"4. Pollution Event Signature Matrix\"",
+          "claimIds": [
+            "sot-temp-ec-2pct-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.3-specific-conductance.pdf__361ef9509206",
+          "contentHash": "361ef9509206",
+          "filename": "usgs-nfm-a6.3-specific-conductance.pdf",
+          "grade": 2,
+          "evidence": "Electrical conductivity increases by 0.5 to 3 percent per",
+          "locator": "Section 1.1 temperature dependence and equation 2 — \"Electrical conductivity increases by 0.5 to 3 percent per degree Celsius\"",
+          "claimIds": [
+            "sc-temperature-coefficient-01",
+            "sc-linear-nonlinear-alpha-01",
+            "sc-equation2-compensation-01",
+            "sc-compensation-accuracy-5pct-01",
+            "sc-low-ph-50pct-error-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.3-specific-conductance.pdf__e7c93d2b2493",
+          "contentHash": "e7c93d2b2493",
+          "filename": "usgs-nfm-a6.3-specific-conductance.pdf",
+          "grade": 2,
+          "evidence": "(typically 0.019–0.020 per °C) or a nonlinear α (International",
+          "locator": "Technical Notes and Sections 4.3, 4.3.1, 4.3.2, 5.0 — \"Specific conductance (and electrical conductivity) data are reported at 25 degrees C\"",
+          "claimIds": [
+            "sc-alpha-typical-value-01"
+          ]
+        }
+      ]
+    },
+    {
+      "turn": 2,
+      "query": "Where does that correction stop being trustworthy? We run one site below an old mine and the water there is properly acidic.",
+      "relevant": [
+        {
+          "chunkId": "water-quality-metrics-source-of-truth.pdf__3ad84c74c7db",
+          "contentHash": "3ad84c74c7db",
+          "filename": "water-quality-metrics-source-of-truth.pdf",
+          "grade": 2,
+          "evidence": "Ion mobility rises with temperature; raw EC increases ~2% per °C.",
+          "locator": "Section 3 parameter couplings and section 4 Pollution Event Signature Matrix — \"4. Pollution Event Signature Matrix\"",
+          "claimIds": [
+            "sot-temp-ec-2pct-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.3-specific-conductance.pdf__361ef9509206",
+          "contentHash": "361ef9509206",
+          "filename": "usgs-nfm-a6.3-specific-conductance.pdf",
+          "grade": 2,
+          "evidence": "Electrical conductivity increases by 0.5 to 3 percent per",
+          "locator": "Section 1.1 temperature dependence and equation 2 — \"Electrical conductivity increases by 0.5 to 3 percent per degree Celsius\"",
+          "claimIds": [
+            "sc-temperature-coefficient-01",
+            "sc-linear-nonlinear-alpha-01",
+            "sc-equation2-compensation-01",
+            "sc-compensation-accuracy-5pct-01",
+            "sc-low-ph-50pct-error-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.3-specific-conductance.pdf__e7c93d2b2493",
+          "contentHash": "e7c93d2b2493",
+          "filename": "usgs-nfm-a6.3-specific-conductance.pdf",
+          "grade": 2,
+          "evidence": "(typically 0.019–0.020 per °C) or a nonlinear α (International",
+          "locator": "Technical Notes and Sections 4.3, 4.3.1, 4.3.2, 5.0 — \"Specific conductance (and electrical conductivity) data are reported at 25 degrees C\"",
+          "claimIds": [
+            "sc-alpha-typical-value-01"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "fixtureId": "deepmanual-sonde-settle-time",
+  "set": "committed",
+  "fixtureClass": "deep-in-manual",
+  "turns": [
+    {
+      "turn": 1,
+      "query": "When we shift the sonde to a new spot in the creek, how long do we have to leave it there before the readings are worth writing down?",
+      "relevant": [
+        {
+          "chunkId": "usgs-nfm-a6.8-multiparameter-instruments.pdf__fea0c27e3094",
+          "contentHash": "fea0c27e3094",
+          "filename": "usgs-nfm-a6.8-multiparameter-instruments.pdf",
+          "grade": 2,
+          "evidence": "Wait a minimum of 60 seconds for the sensors and\nsonde body to reach thermal equilibrium with the water\nat each new measurement location.",
+          "locator": "Sections 4.0 Measurement and 4.1 Surface Water — \"Wait a minimum of 60 seconds for the sensors\"",
+          "claimIds": [
+            "mp-60s-surface-water-06",
+            "mp-60s-longer-manufacturer-07",
+            "mp-stabilize-to-table-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.8-multiparameter-instruments.pdf__6ae74c4bc1f3",
+          "contentHash": "6ae74c4bc1f3",
+          "filename": "usgs-nfm-a6.8-multiparameter-instruments.pdf",
+          "grade": 2,
+          "evidence": "Wait a minimum of 60 seconds for the sensors and\nsonde body to reach thermal equilibrium with the water\nbefore monitoring field-parameter values.",
+          "locator": "Section 4.2 Groundwater bullets and section 5.0 Troubleshooting — \"Field-measurement sensors must first be allowed to reach thermal equilibrium\"",
+          "claimIds": [
+            "mp-60s-groundwater-03",
+            "mp-equilibrium-range-04"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.8-multiparameter-instruments.pdf__4e9dfc809f8a",
+          "contentHash": "4e9dfc809f8a",
+          "filename": "usgs-nfm-a6.8-multiparameter-instruments.pdf",
+          "grade": 2,
+          "evidence": "Temperature \t± 0.2 °C",
+          "locator": "Section 4.2 Groundwater and table 6.8–5. Stabilization criteria for common field parameters",
+          "claimIds": [
+            "mp-t5-temperature-03"
+          ]
+        }
+      ]
+    },
+    {
+      "turn": 2,
+      "query": "Once we've waited, how do I know the numbers have actually settled and aren't still creeping?",
+      "relevant": [
+        {
+          "chunkId": "usgs-nfm-a6.8-multiparameter-instruments.pdf__fea0c27e3094",
+          "contentHash": "fea0c27e3094",
+          "filename": "usgs-nfm-a6.8-multiparameter-instruments.pdf",
+          "grade": 2,
+          "evidence": "Wait a minimum of 60 seconds for the sensors and\nsonde body to reach thermal equilibrium with the water\nat each new measurement location.",
+          "locator": "Sections 4.0 Measurement and 4.1 Surface Water — \"Wait a minimum of 60 seconds for the sensors\"",
+          "claimIds": [
+            "mp-60s-surface-water-06",
+            "mp-60s-longer-manufacturer-07",
+            "mp-stabilize-to-table-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.8-multiparameter-instruments.pdf__6ae74c4bc1f3",
+          "contentHash": "6ae74c4bc1f3",
+          "filename": "usgs-nfm-a6.8-multiparameter-instruments.pdf",
+          "grade": 2,
+          "evidence": "Wait a minimum of 60 seconds for the sensors and\nsonde body to reach thermal equilibrium with the water\nbefore monitoring field-parameter values.",
+          "locator": "Section 4.2 Groundwater bullets and section 5.0 Troubleshooting — \"Field-measurement sensors must first be allowed to reach thermal equilibrium\"",
+          "claimIds": [
+            "mp-60s-groundwater-03",
+            "mp-equilibrium-range-04"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.8-multiparameter-instruments.pdf__4e9dfc809f8a",
+          "contentHash": "4e9dfc809f8a",
+          "filename": "usgs-nfm-a6.8-multiparameter-instruments.pdf",
+          "grade": 2,
+          "evidence": "Temperature \t± 0.2 °C",
+          "locator": "Section 4.2 Groundwater and table 6.8–5. Stabilization criteria for common field parameters",
+          "claimIds": [
+            "mp-t5-temperature-03"
+          ]
+        }
+      ]
+    }
+  ]
+}

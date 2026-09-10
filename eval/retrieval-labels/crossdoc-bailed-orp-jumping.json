@@ -1,0 +1,229 @@
+{
+  "fixtureId": "crossdoc-bailed-orp-jumping",
+  "set": "committed",
+  "fixtureClass": "cross-document",
+  "turns": [
+    {
+      "turn": 1,
+      "query": "We've been pulling water up out of a monitoring well with a bailer, tipping it into a beaker and reading ORP off that. Numbers jump all over the place between samples. Is the probe bad or is our method bad?",
+      "relevant": [
+        {
+          "chunkId": "usgs-nfm-a6.0-field-measurement-guidelines.pdf__99e41b1c2b83",
+          "contentHash": "99e41b1c2b83",
+          "filename": "usgs-nfm-a6.0-field-measurement-guidelines.pdf",
+          "grade": 2,
+          "evidence": "Therefore, water\nsubsampled from a bailed sample may not be used for\nmeasurements of DO concentration, Eh, and water\ntemperature.",
+          "locator": "Section 3.2 Groundwater, bailer and well-type bullets and the three groundwater field-measurement procedures - \"Bailers are not recommended for purging\"",
+          "claimIds": [
+            "a60-xcut-bailer-no-do-eh-temp-01",
+            "a60-gw-recommended-pump-cell-01",
+            "a60-bailer-turbidity-bias-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.0-field-measurement-guidelines.pdf__022b8f31556f",
+          "contentHash": "022b8f31556f",
+          "filename": "usgs-nfm-a6.0-field-measurement-guidelines.pdf",
+          "grade": 2,
+          "evidence": "ments of water temperature, DO concentration, and Eh cannot\nbe made using a subsample and are required be made in situ.",
+          "locator": "Sections 3.1.2 In Situ Field-Measurement Procedures, 3.1.3 Subsample Field-Measurement Procedures, and 3.2 Groundwater - \"In situ measurement is required (where possible)\"",
+          "claimIds": [
+            "a60-xcut-subsample-valid-params-01",
+            "a60-anoxic-insitu-required-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.0-field-measurement-guidelines.pdf__f1715861e455",
+          "contentHash": "f1715861e455",
+          "filename": "usgs-nfm-a6.0-field-measurement-guidelines.pdf",
+          "grade": 2,
+          "evidence": "Subsamples must not be used for reported measure-\nments of temperature, DO concentration, Eh, or tur-\nbidity without value qualifiers",
+          "locator": "§3.2.2 Downhole (In Situ) Procedure and §3.2.3 Subsample procedures — 'locate sensors approximately 1 ft above the screened interval'",
+          "claimIds": [
+            "fm-subsample-forbidden-params-01",
+            "fm-subsample-anoxic-forbidden-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.0-field-measurement-guidelines.pdf__47bda63fa730",
+          "contentHash": "47bda63fa730",
+          "filename": "usgs-nfm-a6.0-field-measurement-guidelines.pdf",
+          "grade": 2,
+          "evidence": "Properties of temperature, DO concentration, and Eh are\nrequired to be measured directly (in situ) in the water body\nwhere possible. Other properties such as pH, conductivity,\nand turbidity are",
+          "locator": "Section 3.0 Performing Field Measurements and start of table 6.0–1 — \"Properties of temperature, DO concentration, and Eh are\\nrequired to be measured directly (in situ)\"",
+          "claimIds": [
+            "a60-xcut-insitu-required-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.0-field-measurement-guidelines.pdf__a00fa6fab567",
+          "contentHash": "a00fa6fab567",
+          "filename": "usgs-nfm-a6.0-field-measurement-guidelines.pdf",
+          "grade": 2,
+          "evidence": "should not be used when measuring DO, Eh, or other\nproperties that could be modified by placing a negative\npressure on the water, which can cause volatilization of",
+          "locator": "Section 3.2 Groundwater, pump-selection bullets - \"A positive-displacement submersible pump (portable or dedicated) is recommended\"",
+          "claimIds": [
+            "a60-xcut-peristaltic-no-do-eh-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.5-orp.pdf__58b0a2a90e37",
+          "contentHash": "58b0a2a90e37",
+          "filename": "usgs-nfm-a6.5-orp.pdf",
+          "grade": 2,
+          "evidence": "submersible instrument or use an airtight flowthrough system.",
+          "locator": "Figure 6.5-1 Eh data record form and Section 6.5.3 Measurement preamble",
+          "claimIds": [
+            "orp-in-situ-or-airtight-01",
+            "orp-purge-oxygen-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.5-orp.pdf__79b5d6c04cc9",
+          "contentHash": "79b5d6c04cc9",
+          "filename": "usgs-nfm-a6.5-orp.pdf",
+          "grade": 2,
+          "evidence": "take longer than 30 minutes but it is essential before beginning the",
+          "locator": "Section 6.5.3 Measurement steps 1-4 and thermal-equilibrium technical note",
+          "claimIds": [
+            "orp-thermal-equilibrium-30min-01",
+            "orp-reading-cadence-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.5-orp.pdf__d38f4e5fb14d",
+          "contentHash": "d38f4e5fb14d",
+          "filename": "usgs-nfm-a6.5-orp.pdf",
+          "grade": 2,
+          "evidence": "system may be considerably slower than that of the pH system",
+          "locator": "Section 6.5.3.A Interferences and Limitations",
+          "claimIds": [
+            "orp-slow-asymmetric-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.5-orp.pdf__def2994c3f8f",
+          "contentHash": "def2994c3f8f",
+          "filename": "usgs-nfm-a6.5-orp.pdf",
+          "grade": 2,
+          "evidence": "Potentials are reported to the nearest 10 mV, along with the tempera-",
+          "locator": "Section 6.5.5 Reporting and start of Selected References",
+          "claimIds": [
+            "orp-report-nearest-10mv-01"
+          ]
+        }
+      ]
+    },
+    {
+      "turn": 2,
+      "query": "Right, so we put it in a flow cell instead. How long before the number is actually real, and what do I have to log alongside it?",
+      "relevant": [
+        {
+          "chunkId": "usgs-nfm-a6.0-field-measurement-guidelines.pdf__99e41b1c2b83",
+          "contentHash": "99e41b1c2b83",
+          "filename": "usgs-nfm-a6.0-field-measurement-guidelines.pdf",
+          "grade": 2,
+          "evidence": "Therefore, water\nsubsampled from a bailed sample may not be used for\nmeasurements of DO concentration, Eh, and water\ntemperature.",
+          "locator": "Section 3.2 Groundwater, bailer and well-type bullets and the three groundwater field-measurement procedures - \"Bailers are not recommended for purging\"",
+          "claimIds": [
+            "a60-xcut-bailer-no-do-eh-temp-01",
+            "a60-gw-recommended-pump-cell-01",
+            "a60-bailer-turbidity-bias-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.0-field-measurement-guidelines.pdf__022b8f31556f",
+          "contentHash": "022b8f31556f",
+          "filename": "usgs-nfm-a6.0-field-measurement-guidelines.pdf",
+          "grade": 2,
+          "evidence": "ments of water temperature, DO concentration, and Eh cannot\nbe made using a subsample and are required be made in situ.",
+          "locator": "Sections 3.1.2 In Situ Field-Measurement Procedures, 3.1.3 Subsample Field-Measurement Procedures, and 3.2 Groundwater - \"In situ measurement is required (where possible)\"",
+          "claimIds": [
+            "a60-xcut-subsample-valid-params-01",
+            "a60-anoxic-insitu-required-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.0-field-measurement-guidelines.pdf__f1715861e455",
+          "contentHash": "f1715861e455",
+          "filename": "usgs-nfm-a6.0-field-measurement-guidelines.pdf",
+          "grade": 2,
+          "evidence": "Subsamples must not be used for reported measure-\nments of temperature, DO concentration, Eh, or tur-\nbidity without value qualifiers",
+          "locator": "§3.2.2 Downhole (In Situ) Procedure and §3.2.3 Subsample procedures — 'locate sensors approximately 1 ft above the screened interval'",
+          "claimIds": [
+            "fm-subsample-forbidden-params-01",
+            "fm-subsample-anoxic-forbidden-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.0-field-measurement-guidelines.pdf__47bda63fa730",
+          "contentHash": "47bda63fa730",
+          "filename": "usgs-nfm-a6.0-field-measurement-guidelines.pdf",
+          "grade": 2,
+          "evidence": "Properties of temperature, DO concentration, and Eh are\nrequired to be measured directly (in situ) in the water body\nwhere possible. Other properties such as pH, conductivity,\nand turbidity are",
+          "locator": "Section 3.0 Performing Field Measurements and start of table 6.0–1 — \"Properties of temperature, DO concentration, and Eh are\\nrequired to be measured directly (in situ)\"",
+          "claimIds": [
+            "a60-xcut-insitu-required-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.0-field-measurement-guidelines.pdf__a00fa6fab567",
+          "contentHash": "a00fa6fab567",
+          "filename": "usgs-nfm-a6.0-field-measurement-guidelines.pdf",
+          "grade": 2,
+          "evidence": "should not be used when measuring DO, Eh, or other\nproperties that could be modified by placing a negative\npressure on the water, which can cause volatilization of",
+          "locator": "Section 3.2 Groundwater, pump-selection bullets - \"A positive-displacement submersible pump (portable or dedicated) is recommended\"",
+          "claimIds": [
+            "a60-xcut-peristaltic-no-do-eh-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.5-orp.pdf__58b0a2a90e37",
+          "contentHash": "58b0a2a90e37",
+          "filename": "usgs-nfm-a6.5-orp.pdf",
+          "grade": 2,
+          "evidence": "submersible instrument or use an airtight flowthrough system.",
+          "locator": "Figure 6.5-1 Eh data record form and Section 6.5.3 Measurement preamble",
+          "claimIds": [
+            "orp-in-situ-or-airtight-01",
+            "orp-purge-oxygen-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.5-orp.pdf__79b5d6c04cc9",
+          "contentHash": "79b5d6c04cc9",
+          "filename": "usgs-nfm-a6.5-orp.pdf",
+          "grade": 2,
+          "evidence": "take longer than 30 minutes but it is essential before beginning the",
+          "locator": "Section 6.5.3 Measurement steps 1-4 and thermal-equilibrium technical note",
+          "claimIds": [
+            "orp-thermal-equilibrium-30min-01",
+            "orp-reading-cadence-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.5-orp.pdf__d38f4e5fb14d",
+          "contentHash": "d38f4e5fb14d",
+          "filename": "usgs-nfm-a6.5-orp.pdf",
+          "grade": 2,
+          "evidence": "system may be considerably slower than that of the pH system",
+          "locator": "Section 6.5.3.A Interferences and Limitations",
+          "claimIds": [
+            "orp-slow-asymmetric-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.5-orp.pdf__def2994c3f8f",
+          "contentHash": "def2994c3f8f",
+          "filename": "usgs-nfm-a6.5-orp.pdf",
+          "grade": 2,
+          "evidence": "Potentials are reported to the nearest 10 mV, along with the tempera-",
+          "locator": "Section 6.5.5 Reporting and start of Selected References",
+          "claimIds": [
+            "orp-report-nearest-10mv-01"
+          ]
+        }
+      ]
+    }
+  ]
+}

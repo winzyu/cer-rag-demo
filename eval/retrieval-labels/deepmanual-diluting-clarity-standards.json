@@ -1,0 +1,111 @@
+{
+  "fixtureId": "deepmanual-diluting-clarity-standards",
+  "set": "committed",
+  "fixtureClass": "deep-in-manual",
+  "turns": [
+    {
+      "turn": 1,
+      "query": "The clarity standards we buy are expensive and we mostly work in fairly clean water. Can we just buy the strong one and water it down to make the weaker points we actually need?",
+      "relevant": [
+        {
+          "chunkId": "usgs-nfm-a6.7-turbidity.pdf__8e84ac907e15",
+          "contentHash": "8e84ac907e15",
+          "filename": "usgs-nfm-a6.7-turbidity.pdf",
+          "grade": 2,
+          "evidence": "NTU formazin, commercial calibration solutions such as",
+          "locator": "§6.7.2.A Calibration Solution: Use, Preparation, and Dilution — \"To prepare a 4,000 turbidity-unit formazin stock suspension\"",
+          "claimIds": [
+            "tby-no-dilute-commercial-01",
+            "tby-commercial-recommended-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.7-turbidity.pdf__383bf1e6348d",
+          "contentHash": "383bf1e6348d",
+          "filename": "usgs-nfm-a6.7-turbidity.pdf",
+          "grade": 2,
+          "evidence": "Select the desired turbidity range. Use a calibration range to",
+          "locator": "Benchtop calibration steps 3-6 — \"Index-mark the cell to ensure consistent orientation\"",
+          "claimIds": [
+            "tby-cal-range-high-value-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.7-turbidity.pdf__af6c9f365e31",
+          "contentHash": "af6c9f365e31",
+          "filename": "usgs-nfm-a6.7-turbidity.pdf",
+          "grade": 2,
+          "evidence": "Do not use calibrants with flocculated suspensions.",
+          "locator": "Benchtop (static) turbidimeter calibration steps 1-2 — \"inverting the calibrant 25 times (1-second inversion cycle)\"",
+          "claimIds": [
+            "tby-no-flocculated-calibrants-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.7-turbidity.pdf__29a459b07785",
+          "contentHash": "29a459b07785",
+          "filename": "usgs-nfm-a6.7-turbidity.pdf",
+          "grade": 2,
+          "evidence": "calibrant is prepared, label the container with the contents, date of",
+          "locator": "40 turbidity-unit dilution, labeling, and §6.7.2.B Calibration Procedures — \"15- to 25-mL sample holding cell\"",
+          "claimIds": [
+            "tby-calibrant-labeling-01",
+            "tby-formazin-storage-disposal-01"
+          ]
+        }
+      ]
+    },
+    {
+      "turn": 2,
+      "query": "One bottle has been in the truck since spring and there is a layer settled at the bottom. Shake it back up and use it, or bin it?",
+      "relevant": [
+        {
+          "chunkId": "usgs-nfm-a6.7-turbidity.pdf__8e84ac907e15",
+          "contentHash": "8e84ac907e15",
+          "filename": "usgs-nfm-a6.7-turbidity.pdf",
+          "grade": 2,
+          "evidence": "NTU formazin, commercial calibration solutions such as",
+          "locator": "§6.7.2.A Calibration Solution: Use, Preparation, and Dilution — \"To prepare a 4,000 turbidity-unit formazin stock suspension\"",
+          "claimIds": [
+            "tby-no-dilute-commercial-01",
+            "tby-commercial-recommended-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.7-turbidity.pdf__383bf1e6348d",
+          "contentHash": "383bf1e6348d",
+          "filename": "usgs-nfm-a6.7-turbidity.pdf",
+          "grade": 2,
+          "evidence": "Select the desired turbidity range. Use a calibration range to",
+          "locator": "Benchtop calibration steps 3-6 — \"Index-mark the cell to ensure consistent orientation\"",
+          "claimIds": [
+            "tby-cal-range-high-value-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.7-turbidity.pdf__af6c9f365e31",
+          "contentHash": "af6c9f365e31",
+          "filename": "usgs-nfm-a6.7-turbidity.pdf",
+          "grade": 2,
+          "evidence": "Do not use calibrants with flocculated suspensions.",
+          "locator": "Benchtop (static) turbidimeter calibration steps 1-2 — \"inverting the calibrant 25 times (1-second inversion cycle)\"",
+          "claimIds": [
+            "tby-no-flocculated-calibrants-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.7-turbidity.pdf__29a459b07785",
+          "contentHash": "29a459b07785",
+          "filename": "usgs-nfm-a6.7-turbidity.pdf",
+          "grade": 2,
+          "evidence": "calibrant is prepared, label the container with the contents, date of",
+          "locator": "40 turbidity-unit dilution, labeling, and §6.7.2.B Calibration Procedures — \"15- to 25-mL sample holding cell\"",
+          "claimIds": [
+            "tby-calibrant-labeling-01",
+            "tby-formazin-storage-disposal-01"
+          ]
+        }
+      ]
+    }
+  ]
+}

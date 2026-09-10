@@ -1,0 +1,109 @@
+{
+  "fixtureId": "precedence-ph-band-asserted-vs-described",
+  "set": "committed",
+  "fixtureClass": "precedence",
+  "turns": [
+    {
+      "turn": 1,
+      "query": "We flag any freshwater site that comes in outside 6.5 to 8.5. Is that a limit somebody official actually set, or is it just a rule of thumb we inherited?",
+      "relevant": [
+        {
+          "chunkId": "water-quality-metrics-source-of-truth.pdf__57fe7a67fc10",
+          "contentHash": "57fe7a67fc10",
+          "filename": "water-quality-metrics-source-of-truth.pdf",
+          "grade": 2,
+          "evidence": "Freshwater (typically 6.5–8.5) is poorly buffered and naturally variable.",
+          "locator": "DO thresholds through section 1 entries for ORP, EC and pH — \"Thresholds (general): >6 mg/L healthy\"",
+          "claimIds": [
+            "sot-ph-fresh-range-01"
+          ]
+        },
+        {
+          "chunkId": "water-quality-metrics-source-of-truth.pdf__19b15475035b",
+          "contentHash": "19b15475035b",
+          "filename": "water-quality-metrics-source-of-truth.pdf",
+          "grade": 2,
+          "evidence": "pH \t6.5–8.5 \t7.0–8.3 \t7.8–8.3",
+          "locator": "Turbidity entry and section 2 Baseline Reference Ranges table — \"2. Baseline Reference Ranges\"",
+          "claimIds": [
+            "sot-baseline-ph-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.4-ph.pdf__d69cb303fc10",
+          "contentHash": "d69cb303fc10",
+          "filename": "usgs-nfm-a6.4-ph.pdf",
+          "grade": 2,
+          "evidence": "River waters not affected by contamination generally\nhave a pH in the range of 6.5 to 8.5 and commonly\nexhibit diel fluctuations in pH as a result of photosyn-\nthesis, respiration, and temperature",
+          "locator": "Section 1.1 Overview of pH, \"Information on pH—\" bullet list",
+          "claimIds": [
+            "ph-river-range-6p5-8p5-01",
+            "ph-groundwater-range-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.4-ph.pdf__3dad515d4597",
+          "contentHash": "3dad515d4597",
+          "filename": "usgs-nfm-a6.4-ph.pdf",
+          "grade": 2,
+          "evidence": "have acceptable accuracy under normal field conditions\nfor temperatures ranging from 5 to 35 °C and for pH\nmeasurements ranging from 4.0 to 9.5.",
+          "locator": "Section 4.1.2 Calibration of the pH Sensor in Multiparameter Sondes, steps 1-5 — \"General procedures for calibration of the pH sensor on a multiparameter sonde\"",
+          "claimIds": [
+            "ph-sonde-accuracy-envelope-01"
+          ]
+        }
+      ]
+    },
+    {
+      "turn": 2,
+      "query": "One of our well sites came back at 6.2 last week and it tripped the flag. Should it have?",
+      "relevant": [
+        {
+          "chunkId": "water-quality-metrics-source-of-truth.pdf__57fe7a67fc10",
+          "contentHash": "57fe7a67fc10",
+          "filename": "water-quality-metrics-source-of-truth.pdf",
+          "grade": 2,
+          "evidence": "Freshwater (typically 6.5–8.5) is poorly buffered and naturally variable.",
+          "locator": "DO thresholds through section 1 entries for ORP, EC and pH — \"Thresholds (general): >6 mg/L healthy\"",
+          "claimIds": [
+            "sot-ph-fresh-range-01"
+          ]
+        },
+        {
+          "chunkId": "water-quality-metrics-source-of-truth.pdf__19b15475035b",
+          "contentHash": "19b15475035b",
+          "filename": "water-quality-metrics-source-of-truth.pdf",
+          "grade": 2,
+          "evidence": "pH \t6.5–8.5 \t7.0–8.3 \t7.8–8.3",
+          "locator": "Turbidity entry and section 2 Baseline Reference Ranges table — \"2. Baseline Reference Ranges\"",
+          "claimIds": [
+            "sot-baseline-ph-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.4-ph.pdf__d69cb303fc10",
+          "contentHash": "d69cb303fc10",
+          "filename": "usgs-nfm-a6.4-ph.pdf",
+          "grade": 2,
+          "evidence": "River waters not affected by contamination generally\nhave a pH in the range of 6.5 to 8.5 and commonly\nexhibit diel fluctuations in pH as a result of photosyn-\nthesis, respiration, and temperature",
+          "locator": "Section 1.1 Overview of pH, \"Information on pH—\" bullet list",
+          "claimIds": [
+            "ph-river-range-6p5-8p5-01",
+            "ph-groundwater-range-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.4-ph.pdf__3dad515d4597",
+          "contentHash": "3dad515d4597",
+          "filename": "usgs-nfm-a6.4-ph.pdf",
+          "grade": 2,
+          "evidence": "have acceptable accuracy under normal field conditions\nfor temperatures ranging from 5 to 35 °C and for pH\nmeasurements ranging from 4.0 to 9.5.",
+          "locator": "Section 4.1.2 Calibration of the pH Sensor in Multiparameter Sondes, steps 1-5 — \"General procedures for calibration of the pH sensor on a multiparameter sonde\"",
+          "claimIds": [
+            "ph-sonde-accuracy-envelope-01"
+          ]
+        }
+      ]
+    }
+  ]
+}

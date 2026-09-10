@@ -1,0 +1,89 @@
+{
+  "fixtureId": "definitional-required-versus-recommended",
+  "set": "committed",
+  "fixtureClass": "definitional",
+  "turns": [
+    {
+      "turn": 1,
+      "query": "Reading through these chapters, some steps are flagged as required and others as recommended. Practically speaking, what's the difference in what we have to do?",
+      "relevant": [
+        {
+          "chunkId": "usgs-nfm-a6.0-field-measurement-guidelines.pdf__bf7814090774",
+          "contentHash": "bf7814090774",
+          "filename": "usgs-nfm-a6.0-field-measurement-guidelines.pdf",
+          "grade": 2,
+          "evidence": "USGS field personnel are instructed to use required equipment and procedures\nas described in the NFM.",
+          "locator": "Requirements and Recommendations — \"the terms “required” and “recommended” have the USGS-specific meanings\"",
+          "claimIds": [
+            "a60-required-meaning-01",
+            "a60-recommended-meaning-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.3-specific-conductance.pdf__0635a458648f",
+          "contentHash": "0635a458648f",
+          "filename": "usgs-nfm-a6.3-specific-conductance.pdf",
+          "grade": 2,
+          "evidence": "indicate that USGS Water Mission Area (WMA) policy has been established on the",
+          "locator": "Requirements and Recommendations — \"the terms 'required' and 'recommended' have the USGS-specific meanings\"",
+          "claimIds": [
+            "sc-required-definition-01",
+            "sc-recommended-definition-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.3-specific-conductance.pdf__8407c56c9542",
+          "contentHash": "8407c56c9542",
+          "filename": "usgs-nfm-a6.3-specific-conductance.pdf",
+          "grade": 2,
+          "evidence": "use protocols provided in the NFM (USGS Office of Water-",
+          "locator": "Abstract and Section 1.0 Introduction — \"This chapter, NFM A6.3, provides guidance and protocols\"",
+          "claimIds": [
+            "sc-nfm-mandate-01"
+          ]
+        }
+      ]
+    },
+    {
+      "turn": 2,
+      "query": "And if a site just won't let us do the required one - no room for the gear, say - is it enough to note it in the log and move on?",
+      "relevant": [
+        {
+          "chunkId": "usgs-nfm-a6.0-field-measurement-guidelines.pdf__bf7814090774",
+          "contentHash": "bf7814090774",
+          "filename": "usgs-nfm-a6.0-field-measurement-guidelines.pdf",
+          "grade": 2,
+          "evidence": "USGS field personnel are instructed to use required equipment and procedures\nas described in the NFM.",
+          "locator": "Requirements and Recommendations — \"the terms “required” and “recommended” have the USGS-specific meanings\"",
+          "claimIds": [
+            "a60-required-meaning-01",
+            "a60-recommended-meaning-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.3-specific-conductance.pdf__0635a458648f",
+          "contentHash": "0635a458648f",
+          "filename": "usgs-nfm-a6.3-specific-conductance.pdf",
+          "grade": 2,
+          "evidence": "indicate that USGS Water Mission Area (WMA) policy has been established on the",
+          "locator": "Requirements and Recommendations — \"the terms 'required' and 'recommended' have the USGS-specific meanings\"",
+          "claimIds": [
+            "sc-required-definition-01",
+            "sc-recommended-definition-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.3-specific-conductance.pdf__8407c56c9542",
+          "contentHash": "8407c56c9542",
+          "filename": "usgs-nfm-a6.3-specific-conductance.pdf",
+          "grade": 2,
+          "evidence": "use protocols provided in the NFM (USGS Office of Water-",
+          "locator": "Abstract and Section 1.0 Introduction — \"This chapter, NFM A6.3, provides guidance and protocols\"",
+          "claimIds": [
+            "sc-nfm-mandate-01"
+          ]
+        }
+      ]
+    }
+  ]
+}

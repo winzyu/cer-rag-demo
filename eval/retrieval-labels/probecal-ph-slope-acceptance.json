@@ -1,0 +1,177 @@
+{
+  "fixtureId": "probecal-ph-slope-acceptance",
+  "set": "committed",
+  "fixtureClass": "probe-calibration",
+  "turns": [
+    {
+      "turn": 1,
+      "query": "Our pH probe has been in the water two seasons and the readings feel sluggish. After I run a fresh calibration, what number should I be looking at to tell me the electrode itself is still any good, and what counts as passing?",
+      "relevant": [
+        {
+          "chunkId": "usgs-nfm-a6.4-ph.pdf__823654fb151f",
+          "contentHash": "823654fb151f",
+          "filename": "usgs-nfm-a6.4-ph.pdf",
+          "grade": 2,
+          "evidence": "The slope test—Properly working electrodes should\nhave slopes that are 56.2 to 59.8 mV/pH unit at\n25 °C, which is 95 to 101 percent of the expected\nslope from the theoretical Nernst relation",
+          "locator": "Section 4.1.1 steps 10j-12, the slope test — \"Properly working electrodes should have slopes that are 56.2 to 59.8 mV/pH unit at 25 °C\"",
+          "claimIds": [
+            "ph-slope-test-definition-01",
+            "ph-slope-out-of-range-action-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.4-ph.pdf__9fd4fb61c959",
+          "contentHash": "9fd4fb61c959",
+          "filename": "usgs-nfm-a6.4-ph.pdf",
+          "grade": 2,
+          "evidence": "The ideal slope of the calibration curve\nat 25 °C, based on the Nernst equation (see section 2.2), is\n59.16 mV/pH unit.",
+          "locator": "Section 3.3 long-term storage and section 4.0 Calibration of the pH Instrument System — \"A calibration curve is created by measurement of two or more standard pH buffers\"",
+          "claimIds": [
+            "ph-ideal-cal-slope-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.4-ph.pdf__b1653e60dd01",
+          "contentHash": "b1653e60dd01",
+          "filename": "usgs-nfm-a6.4-ph.pdf",
+          "grade": 2,
+          "evidence": "a pH electrode with an accurate Nernstian response\n(slope of 95–101 percent of the theoretical\nNernstian slope)",
+          "locator": "Section 4.0 Calibration of the pH Instrument System — \"A properly working pH system has—\"",
+          "claimIds": [
+            "ph-working-system-checklist-01",
+            "ph-response-time-1-2-min-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.4-ph.pdf__b9b676eac883",
+          "contentHash": "b9b676eac883",
+          "filename": "usgs-nfm-a6.4-ph.pdf",
+          "grade": 2,
+          "evidence": "Reconditioning\nprocedures should be implemented if the electrode’s slope\nresponse has deteriorated to less than 95 percent or greater\nthan 101 percent",
+          "locator": "Section 3.2 Reconditioning (Flushing and Refilling) of Liquid-Filled Electrodes — \"If problems persist during calibration\"",
+          "claimIds": [
+            "ph-recondition-triggers-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.4-ph.pdf__6f4fa660b169",
+          "contentHash": "6f4fa660b169",
+          "filename": "usgs-nfm-a6.4-ph.pdf",
+          "grade": 2,
+          "evidence": "If the slope\nfalls outside this range, do not use the electrode.",
+          "locator": "Section 3.2 reconditioning steps 3-4 and section 3.3 Electrode Storage — \"Flush and fill the electrode with fresh filling solution\"",
+          "claimIds": [
+            "ph-post-recondition-reject-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.4-ph.pdf__147ba11e0c62",
+          "contentHash": "147ba11e0c62",
+          "filename": "usgs-nfm-a6.4-ph.pdf",
+          "grade": 2,
+          "evidence": "Clean, recondition, or replace the electrode if, after reca-\nlibration, the slope remains outside the acceptable range\nof 95 to 101 percent",
+          "locator": "Section 4.1.1 step 12 slope and millivolt tests, technical note, and section 4.1.2 — \"The millivolt test\"",
+          "claimIds": [
+            "ph-replace-after-recal-fail-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.4-ph.pdf__c4d565e70268",
+          "contentHash": "c4d565e70268",
+          "filename": "usgs-nfm-a6.4-ph.pdf",
+          "grade": 2,
+          "evidence": "Replace calibration buffers that yield inaccurate results with fresh NIST-traceable buffers.",
+          "locator": "Table 6.4-4 Troubleshooting guide for pH measurement — \"Symptom / Possible cause—corrective action\"",
+          "claimIds": [
+            "ph-table644-slope-out-01"
+          ]
+        }
+      ]
+    },
+    {
+      "turn": 2,
+      "query": "It came back at 92 percent. What am I supposed to do with it now, and at what point do I just order a new one?",
+      "relevant": [
+        {
+          "chunkId": "usgs-nfm-a6.4-ph.pdf__823654fb151f",
+          "contentHash": "823654fb151f",
+          "filename": "usgs-nfm-a6.4-ph.pdf",
+          "grade": 2,
+          "evidence": "The slope test—Properly working electrodes should\nhave slopes that are 56.2 to 59.8 mV/pH unit at\n25 °C, which is 95 to 101 percent of the expected\nslope from the theoretical Nernst relation",
+          "locator": "Section 4.1.1 steps 10j-12, the slope test — \"Properly working electrodes should have slopes that are 56.2 to 59.8 mV/pH unit at 25 °C\"",
+          "claimIds": [
+            "ph-slope-test-definition-01",
+            "ph-slope-out-of-range-action-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.4-ph.pdf__9fd4fb61c959",
+          "contentHash": "9fd4fb61c959",
+          "filename": "usgs-nfm-a6.4-ph.pdf",
+          "grade": 2,
+          "evidence": "The ideal slope of the calibration curve\nat 25 °C, based on the Nernst equation (see section 2.2), is\n59.16 mV/pH unit.",
+          "locator": "Section 3.3 long-term storage and section 4.0 Calibration of the pH Instrument System — \"A calibration curve is created by measurement of two or more standard pH buffers\"",
+          "claimIds": [
+            "ph-ideal-cal-slope-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.4-ph.pdf__b1653e60dd01",
+          "contentHash": "b1653e60dd01",
+          "filename": "usgs-nfm-a6.4-ph.pdf",
+          "grade": 2,
+          "evidence": "a pH electrode with an accurate Nernstian response\n(slope of 95–101 percent of the theoretical\nNernstian slope)",
+          "locator": "Section 4.0 Calibration of the pH Instrument System — \"A properly working pH system has—\"",
+          "claimIds": [
+            "ph-working-system-checklist-01",
+            "ph-response-time-1-2-min-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.4-ph.pdf__b9b676eac883",
+          "contentHash": "b9b676eac883",
+          "filename": "usgs-nfm-a6.4-ph.pdf",
+          "grade": 2,
+          "evidence": "Reconditioning\nprocedures should be implemented if the electrode’s slope\nresponse has deteriorated to less than 95 percent or greater\nthan 101 percent",
+          "locator": "Section 3.2 Reconditioning (Flushing and Refilling) of Liquid-Filled Electrodes — \"If problems persist during calibration\"",
+          "claimIds": [
+            "ph-recondition-triggers-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.4-ph.pdf__6f4fa660b169",
+          "contentHash": "6f4fa660b169",
+          "filename": "usgs-nfm-a6.4-ph.pdf",
+          "grade": 2,
+          "evidence": "If the slope\nfalls outside this range, do not use the electrode.",
+          "locator": "Section 3.2 reconditioning steps 3-4 and section 3.3 Electrode Storage — \"Flush and fill the electrode with fresh filling solution\"",
+          "claimIds": [
+            "ph-post-recondition-reject-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.4-ph.pdf__147ba11e0c62",
+          "contentHash": "147ba11e0c62",
+          "filename": "usgs-nfm-a6.4-ph.pdf",
+          "grade": 2,
+          "evidence": "Clean, recondition, or replace the electrode if, after reca-\nlibration, the slope remains outside the acceptable range\nof 95 to 101 percent",
+          "locator": "Section 4.1.1 step 12 slope and millivolt tests, technical note, and section 4.1.2 — \"The millivolt test\"",
+          "claimIds": [
+            "ph-replace-after-recal-fail-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.4-ph.pdf__c4d565e70268",
+          "contentHash": "c4d565e70268",
+          "filename": "usgs-nfm-a6.4-ph.pdf",
+          "grade": 2,
+          "evidence": "Replace calibration buffers that yield inaccurate results with fresh NIST-traceable buffers.",
+          "locator": "Table 6.4-4 Troubleshooting guide for pH measurement — \"Symptom / Possible cause—corrective action\"",
+          "claimIds": [
+            "ph-table644-slope-out-01"
+          ]
+        }
+      ]
+    }
+  ]
+}

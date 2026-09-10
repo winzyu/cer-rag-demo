@@ -1,0 +1,117 @@
+{
+  "fixtureId": "deepmanual-thermistor-annual-check",
+  "set": "committed",
+  "fixtureClass": "deep-in-manual",
+  "turns": [
+    {
+      "turn": 1,
+      "query": "It's time for the yearly check on our temperature sensor. That site runs about 4 to 12 °C over the year — how many check points do we need, and at what temperatures?",
+      "relevant": [
+        {
+          "chunkId": "usgs-nfm-a6.1-temperature.pdf__1d1da8dd9efb",
+          "contentHash": "1d1da8dd9efb",
+          "filename": "usgs-nfm-a6.1-temperature.pdf",
+          "grade": 2,
+          "evidence": "The minimum number of verification points is two.\nThe verification points must be ±2°C of the minimum and\nmaximum and ±4°C of the mean of the annual range.",
+          "locator": "Sections 3.0 Methods 1-2 and 3.1 Determination of Points — 'The minimum number of verification points is two'",
+          "claimIds": [
+            "t-min-two-points-01",
+            "t-points-2c-apart-01",
+            "t-method1-lab-01",
+            "t-method2-insitu-01",
+            "t-onepoint-pre-trip-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.1-temperature.pdf__18b2d83e251e",
+          "contentHash": "18b2d83e251e",
+          "filename": "usgs-nfm-a6.1-temperature.pdf",
+          "grade": 2,
+          "evidence": "be as much as ±10°C apart. The maximum number of points\nrequired is five.",
+          "locator": "Section 3.1 examples and 3.2 intro — 'The maximum number of points required is five'",
+          "claimIds": [
+            "t-points-10c-large-range-01",
+            "t-example-4-12-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.1-temperature.pdf__aa7664732370",
+          "contentHash": "aa7664732370",
+          "filename": "usgs-nfm-a6.1-temperature.pdf",
+          "grade": 2,
+          "evidence": "data for USGS publication is required to be performed every\n12 months through one of the following two methods.",
+          "locator": "Sections 2.3 logbooks and 3.0 Calibration Verification — 'differ from the process by which a pH or conductivity sensor is adjusted'",
+          "claimIds": [
+            "t-cal-verif-12mo-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.1-temperature.pdf__a69ab8527908",
+          "contentHash": "a69ab8527908",
+          "filename": "usgs-nfm-a6.1-temperature.pdf",
+          "grade": 2,
+          "evidence": "sensors for field data collection at least once every 12\nmonths.",
+          "locator": "Sections 3.2.1, 3.2.2, and 3.2.2.1 — 'limited to points of 0°C (ice and deionized water [DIW] bath), room temperature (20–25°C)'",
+          "claimIds": [
+            "t-321-verify-12mo-01"
+          ]
+        }
+      ]
+    },
+    {
+      "turn": 2,
+      "query": "Do we have to do that in a lab water bath, or does checking against our reference thermometer in the stream on each visit count?",
+      "relevant": [
+        {
+          "chunkId": "usgs-nfm-a6.1-temperature.pdf__1d1da8dd9efb",
+          "contentHash": "1d1da8dd9efb",
+          "filename": "usgs-nfm-a6.1-temperature.pdf",
+          "grade": 2,
+          "evidence": "The minimum number of verification points is two.\nThe verification points must be ±2°C of the minimum and\nmaximum and ±4°C of the mean of the annual range.",
+          "locator": "Sections 3.0 Methods 1-2 and 3.1 Determination of Points — 'The minimum number of verification points is two'",
+          "claimIds": [
+            "t-min-two-points-01",
+            "t-points-2c-apart-01",
+            "t-method1-lab-01",
+            "t-method2-insitu-01",
+            "t-onepoint-pre-trip-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.1-temperature.pdf__18b2d83e251e",
+          "contentHash": "18b2d83e251e",
+          "filename": "usgs-nfm-a6.1-temperature.pdf",
+          "grade": 2,
+          "evidence": "be as much as ±10°C apart. The maximum number of points\nrequired is five.",
+          "locator": "Section 3.1 examples and 3.2 intro — 'The maximum number of points required is five'",
+          "claimIds": [
+            "t-points-10c-large-range-01",
+            "t-example-4-12-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.1-temperature.pdf__aa7664732370",
+          "contentHash": "aa7664732370",
+          "filename": "usgs-nfm-a6.1-temperature.pdf",
+          "grade": 2,
+          "evidence": "data for USGS publication is required to be performed every\n12 months through one of the following two methods.",
+          "locator": "Sections 2.3 logbooks and 3.0 Calibration Verification — 'differ from the process by which a pH or conductivity sensor is adjusted'",
+          "claimIds": [
+            "t-cal-verif-12mo-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.1-temperature.pdf__a69ab8527908",
+          "contentHash": "a69ab8527908",
+          "filename": "usgs-nfm-a6.1-temperature.pdf",
+          "grade": 2,
+          "evidence": "sensors for field data collection at least once every 12\nmonths.",
+          "locator": "Sections 3.2.1, 3.2.2, and 3.2.2.1 — 'limited to points of 0°C (ice and deionized water [DIW] bath), room temperature (20–25°C)'",
+          "claimIds": [
+            "t-321-verify-12mo-01"
+          ]
+        }
+      ]
+    }
+  ]
+}

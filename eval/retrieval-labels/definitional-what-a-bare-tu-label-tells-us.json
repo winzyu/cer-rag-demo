@@ -1,0 +1,135 @@
+{
+  "fixtureId": "definitional-what-a-bare-tu-label-tells-us",
+  "set": "committed",
+  "fixtureClass": "definitional",
+  "turns": [
+    {
+      "turn": 1,
+      "query": "We inherited a folder of old clarity readings and the column is just headed 'TU'. What does a bare label like that actually tell us about those numbers?",
+      "relevant": [
+        {
+          "chunkId": "usgs-nfm-a6.7-turbidity.pdf__f9ac2c6ac6c1",
+          "contentHash": "f9ac2c6ac6c1",
+          "filename": "usgs-nfm-a6.7-turbidity.pdf",
+          "grade": 2,
+          "evidence": "The term “turbidity unit,” as used in this manual, refers generically to",
+          "locator": "§6.7.1.B Data Storage and Technical Note (2) — \"The designations NTU, NTRU, BU, AU, and NTMU\"",
+          "claimIds": [
+            "tby-turbidity-unit-generic-01",
+            "tby-jtu-ftu-obsolete-01",
+            "tby-fnu-family-wavelength-01",
+            "tby-ntu-family-wavelength-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.0-field-measurement-guidelines.pdf__1b7e9852e841",
+          "contentHash": "1b7e9852e841",
+          "filename": "usgs-nfm-a6.0-field-measurement-guidelines.pdf",
+          "grade": 2,
+          "evidence": "unit, standard pH unit; mg/L, mil-\nligrams per liter; FNU, formazin nephelometric units; TU, turbidity units; %, percent]",
+          "locator": "Table 6.0–1 remainder and its footnotes — \"Dissolved oxygen\\nOptical/luminescent sensors\"",
+          "claimIds": [
+            "a60-tbl601-units-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.7-turbidity.pdf__a079d759fdae",
+          "contentHash": "a079d759fdae",
+          "filename": "usgs-nfm-a6.7-turbidity.pdf",
+          "grade": 2,
+          "evidence": "Nephelometry: the measurement of light scattering",
+          "locator": "§6.7.1.C continued and Technical Note (3) — \"ISO 7027 had not been accepted by USEPA\"",
+          "claimIds": [
+            "tby-nephelometry-definition-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.7-turbidity.pdf__0663ce0e133d",
+          "contentHash": "0663ce0e133d",
+          "filename": "usgs-nfm-a6.7-turbidity.pdf",
+          "grade": 2,
+          "evidence": "Nephelometric Turbidity Unit\n(NTU)1 (P63675)",
+          "locator": "Table 6.7-4 Reporting units corresponding to turbidity instrument designs — \"(NTU)1 (P63675)\"",
+          "claimIds": [
+            "tby-t4-ntu-fnu-90deg-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.7-turbidity.pdf__ac8bab5fcc79",
+          "contentHash": "ac8bab5fcc79",
+          "filename": "usgs-nfm-a6.7-turbidity.pdf",
+          "grade": 2,
+          "evidence": "FNMU, Formazin Nephelometric\nMultibeam Units; FNU, Formazin Nephelometric Units",
+          "locator": "§6.7.5 low-end and high-end censoring plus Table 6.7-6 Guidelines for reporting turbidity units — \"censored data below 2 NTU as not-detected\"",
+          "claimIds": [
+            "tby-t6-fnmu-fnu-expansion-01"
+          ]
+        }
+      ]
+    },
+    {
+      "turn": 2,
+      "query": "So for our own gear, what decides which of those labels we're supposed to write on the readings? Is it just a house style we pick once?",
+      "relevant": [
+        {
+          "chunkId": "usgs-nfm-a6.7-turbidity.pdf__f9ac2c6ac6c1",
+          "contentHash": "f9ac2c6ac6c1",
+          "filename": "usgs-nfm-a6.7-turbidity.pdf",
+          "grade": 2,
+          "evidence": "The term “turbidity unit,” as used in this manual, refers generically to",
+          "locator": "§6.7.1.B Data Storage and Technical Note (2) — \"The designations NTU, NTRU, BU, AU, and NTMU\"",
+          "claimIds": [
+            "tby-turbidity-unit-generic-01",
+            "tby-jtu-ftu-obsolete-01",
+            "tby-fnu-family-wavelength-01",
+            "tby-ntu-family-wavelength-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.0-field-measurement-guidelines.pdf__1b7e9852e841",
+          "contentHash": "1b7e9852e841",
+          "filename": "usgs-nfm-a6.0-field-measurement-guidelines.pdf",
+          "grade": 2,
+          "evidence": "unit, standard pH unit; mg/L, mil-\nligrams per liter; FNU, formazin nephelometric units; TU, turbidity units; %, percent]",
+          "locator": "Table 6.0–1 remainder and its footnotes — \"Dissolved oxygen\\nOptical/luminescent sensors\"",
+          "claimIds": [
+            "a60-tbl601-units-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.7-turbidity.pdf__a079d759fdae",
+          "contentHash": "a079d759fdae",
+          "filename": "usgs-nfm-a6.7-turbidity.pdf",
+          "grade": 2,
+          "evidence": "Nephelometry: the measurement of light scattering",
+          "locator": "§6.7.1.C continued and Technical Note (3) — \"ISO 7027 had not been accepted by USEPA\"",
+          "claimIds": [
+            "tby-nephelometry-definition-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.7-turbidity.pdf__0663ce0e133d",
+          "contentHash": "0663ce0e133d",
+          "filename": "usgs-nfm-a6.7-turbidity.pdf",
+          "grade": 2,
+          "evidence": "Nephelometric Turbidity Unit\n(NTU)1 (P63675)",
+          "locator": "Table 6.7-4 Reporting units corresponding to turbidity instrument designs — \"(NTU)1 (P63675)\"",
+          "claimIds": [
+            "tby-t4-ntu-fnu-90deg-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.7-turbidity.pdf__ac8bab5fcc79",
+          "contentHash": "ac8bab5fcc79",
+          "filename": "usgs-nfm-a6.7-turbidity.pdf",
+          "grade": 2,
+          "evidence": "FNMU, Formazin Nephelometric\nMultibeam Units; FNU, Formazin Nephelometric Units",
+          "locator": "§6.7.5 low-end and high-end censoring plus Table 6.7-6 Guidelines for reporting turbidity units — \"censored data below 2 NTU as not-detected\"",
+          "claimIds": [
+            "tby-t6-fnmu-fnu-expansion-01"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,143 @@
+{
+  "fixtureId": "crossdoc-soft-water-ph-wont-settle",
+  "set": "committed",
+  "fixtureClass": "cross-document",
+  "turns": [
+    {
+      "turn": 1,
+      "query": "Headwater stream, very soft water, conductivity sits around 55. The pH reading never settles — it wanders half a unit and keeps creeping. Probe is new. What's actually going on and what do I do about it?",
+      "relevant": [
+        {
+          "chunkId": "usgs-nfm-a6.4-ph.pdf__82b12bdb95cd",
+          "contentHash": "82b12bdb95cd",
+          "filename": "usgs-nfm-a6.4-ph.pdf",
+          "grade": 2,
+          "evidence": "Accurate and precise measurement of pH in low-specific-\nconductance waters (less than 100 μS/cm) is challenging",
+          "locator": "Section 5.1 Step 4 and section 5.2 Measurement of pH in Waters with Low Specific Conductance — \"adding a small amount of potassium chloride (KCl)\"",
+          "claimIds": [
+            "ph-low-sc-threshold-01",
+            "ph-low-sc-causes-01",
+            "ph-kcl-method-01",
+            "ph-kcl-procedure-01",
+            "ph-kcl-bias-01",
+            "ph-kcl-trigger-01",
+            "ph-kcl-other-salts-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.4-ph.pdf__17e96af99482",
+          "contentHash": "17e96af99482",
+          "filename": "usgs-nfm-a6.4-ph.pdf",
+          "grade": 2,
+          "evidence": "Specific conductance <100 μS/\ncm\nWater is not sufficiently\nconductive to complete the\nelectrical circuit, causing an\nunstable pH reading.",
+          "locator": "Section 2.2.1 and Table 6.4–2 (first rows) — \"Recommended pH electrodes for a variety of water types\"",
+          "claimIds": [
+            "ph-table642-low-ionic-01",
+            "ph-table642-low-ionic-electrode-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.0-field-measurement-guidelines.pdf__3d55916fcc8a",
+          "contentHash": "3d55916fcc8a",
+          "filename": "usgs-nfm-a6.0-field-measurement-guidelines.pdf",
+          "grade": 2,
+          "evidence": "For pH measurement, do not stir samples having conductivity less than 100 μS/cm.",
+          "locator": "Figure 6.0-7 — subsample field-measurement procedure, steps 1-9",
+          "claimIds": [
+            "fm-no-stir-below-100-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.0-field-measurement-guidelines.pdf__14c93889640a",
+          "contentHash": "14c93889640a",
+          "filename": "usgs-nfm-a6.0-field-measurement-guidelines.pdf",
+          "grade": 2,
+          "evidence": "For pH measurement, do not stir samples having conductivity less than 100 μS/cm.",
+          "locator": "Figure 6.0-2, \"Subsample field-measurement procedures for conductivity, pH, and alkalinity of surface water\" steps 1-9, plus figure 6.0-3 and 6.0-4 captions",
+          "claimIds": [
+            "a60-xcut-ph-no-stir-below-100-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.8-multiparameter-instruments.pdf__4d253f9f732f",
+          "contentHash": "4d253f9f732f",
+          "filename": "usgs-nfm-a6.8-multiparameter-instruments.pdf",
+          "grade": 2,
+          "evidence": "Calibration Criteria: ± 0.1 pH units, ± 0.3 if SC <75us/cm",
+          "locator": "Appendix 6.8–1, figure 6.8–01.01 USGS GW Form version 9.1 — \"METER CALIBRATIONS and FIELD MEASUREMENTS\"",
+          "claimIds": [
+            "mp-form-ph-criteria-06"
+          ]
+        }
+      ]
+    },
+    {
+      "turn": 2,
+      "query": "So when I do my buffer check at this site, how close does it have to land before I stop fiddling with it? Same number as at our estuary pod?",
+      "relevant": [
+        {
+          "chunkId": "usgs-nfm-a6.4-ph.pdf__82b12bdb95cd",
+          "contentHash": "82b12bdb95cd",
+          "filename": "usgs-nfm-a6.4-ph.pdf",
+          "grade": 2,
+          "evidence": "Accurate and precise measurement of pH in low-specific-\nconductance waters (less than 100 μS/cm) is challenging",
+          "locator": "Section 5.1 Step 4 and section 5.2 Measurement of pH in Waters with Low Specific Conductance — \"adding a small amount of potassium chloride (KCl)\"",
+          "claimIds": [
+            "ph-low-sc-threshold-01",
+            "ph-low-sc-causes-01",
+            "ph-kcl-method-01",
+            "ph-kcl-procedure-01",
+            "ph-kcl-bias-01",
+            "ph-kcl-trigger-01",
+            "ph-kcl-other-salts-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.4-ph.pdf__17e96af99482",
+          "contentHash": "17e96af99482",
+          "filename": "usgs-nfm-a6.4-ph.pdf",
+          "grade": 2,
+          "evidence": "Specific conductance <100 μS/\ncm\nWater is not sufficiently\nconductive to complete the\nelectrical circuit, causing an\nunstable pH reading.",
+          "locator": "Section 2.2.1 and Table 6.4–2 (first rows) — \"Recommended pH electrodes for a variety of water types\"",
+          "claimIds": [
+            "ph-table642-low-ionic-01",
+            "ph-table642-low-ionic-electrode-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.0-field-measurement-guidelines.pdf__3d55916fcc8a",
+          "contentHash": "3d55916fcc8a",
+          "filename": "usgs-nfm-a6.0-field-measurement-guidelines.pdf",
+          "grade": 2,
+          "evidence": "For pH measurement, do not stir samples having conductivity less than 100 μS/cm.",
+          "locator": "Figure 6.0-7 — subsample field-measurement procedure, steps 1-9",
+          "claimIds": [
+            "fm-no-stir-below-100-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.0-field-measurement-guidelines.pdf__14c93889640a",
+          "contentHash": "14c93889640a",
+          "filename": "usgs-nfm-a6.0-field-measurement-guidelines.pdf",
+          "grade": 2,
+          "evidence": "For pH measurement, do not stir samples having conductivity less than 100 μS/cm.",
+          "locator": "Figure 6.0-2, \"Subsample field-measurement procedures for conductivity, pH, and alkalinity of surface water\" steps 1-9, plus figure 6.0-3 and 6.0-4 captions",
+          "claimIds": [
+            "a60-xcut-ph-no-stir-below-100-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.8-multiparameter-instruments.pdf__4d253f9f732f",
+          "contentHash": "4d253f9f732f",
+          "filename": "usgs-nfm-a6.8-multiparameter-instruments.pdf",
+          "grade": 2,
+          "evidence": "Calibration Criteria: ± 0.1 pH units, ± 0.3 if SC <75us/cm",
+          "locator": "Appendix 6.8–1, figure 6.8–01.01 USGS GW Form version 9.1 — \"METER CALIBRATIONS and FIELD MEASUREMENTS\"",
+          "claimIds": [
+            "mp-form-ph-criteria-06"
+          ]
+        }
+      ]
+    }
+  ]
+}

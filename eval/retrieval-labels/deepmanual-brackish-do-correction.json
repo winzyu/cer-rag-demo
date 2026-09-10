@@ -1,0 +1,107 @@
+{
+  "fixtureId": "deepmanual-brackish-do-correction",
+  "set": "committed",
+  "fixtureClass": "deep-in-manual",
+  "turns": [
+    {
+      "turn": 1,
+      "query": "We just moved a pod into a tidal creek. Conductivity is running about 50,000 µS/cm and the water is around 20 °C. The DO sensor has no salt compensation — how do we fix its readings?",
+      "relevant": [
+        {
+          "chunkId": "usgs-nfm-a6.2-dissolved-oxygen.pdf__af61f5c3c21e",
+          "contentHash": "af61f5c3c21e",
+          "filename": "usgs-nfm-a6.2-dissolved-oxygen.pdf",
+          "grade": 2,
+          "evidence": "20.0\n \n0.8419\n \n0.8383\n \n0.8346\n \n0.8309\n \n0.8272\n \n0.8235\n \n0.8198\n \n0.8161\n \n0.8124\n \n0.8087\n \n0.8050\n \n0.8013\n \n0.7976\n \n0.7939\n \n0.7902",
+          "locator": "Table 6.2-4 fourth block (45,000-59,000 microsiemens per centimeter), column header present but caption on the preceding page — \"Specific conductance, in microsiemens per centimeter at 25 degrees Celsius 45,000\"",
+          "claimIds": [
+            "do-t624-20c-50000-08235-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.2-dissolved-oxygen.pdf__dcddd06f1651",
+          "contentHash": "dcddd06f1651",
+          "filename": "usgs-nfm-a6.2-dissolved-oxygen.pdf",
+          "grade": 2,
+          "evidence": "0.0\n \n1.0000\n \n0.9961\n \n0.9922\n \n0.9882\n \n0.9843\n \n0.9804\n \n0.9764\n \n0.9724\n \n0.9684\n \n0.9644\n \n0.9604\n \n0.9564\n \n0.9524\n \n0.9483\n \n0.9443",
+          "locator": "Table 6.2-4 (first block, 0-14,000 microsiemens per centimeter), caption and column header present — \"Salinity correction factors for dissolved oxygen in water (based on specific conductance).\"",
+          "claimIds": [
+            "do-t624-0uscm-unity-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.2-dissolved-oxygen.pdf__2d5d863cf1da",
+          "contentHash": "2d5d863cf1da",
+          "filename": "usgs-nfm-a6.2-dissolved-oxygen.pdf",
+          "grade": 2,
+          "evidence": "Correcting DO solubility for saline waters (specific\nconductance greater than 2,000 μS/cm) varies with instru-\nment type, calibration method, and the salts in solution.",
+          "locator": "Section 3.3 step 11-12, Section 4.0 Reporting, and Section 5.0 opening — \"reported to the nearest 0.1 mg/L and stored to the nearest 0.01 mg/L\"",
+          "claimIds": [
+            "do-saline-above-2000-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.2-dissolved-oxygen.pdf__af19876f2172",
+          "contentHash": "af19876f2172",
+          "filename": "usgs-nfm-a6.2-dissolved-oxygen.pdf",
+          "grade": 2,
+          "evidence": "8.97 mg/L x 0.9733 = 8.73 mg/L",
+          "locator": "Section 5.0 worked examples — \"8.97 mg/L x 0.9733 = 8.73 mg/L\"",
+          "claimIds": [
+            "do-example-873-product-01"
+          ]
+        }
+      ]
+    },
+    {
+      "turn": 2,
+      "query": "We have three more pods upstream in fresh water. Do those need the same treatment?",
+      "relevant": [
+        {
+          "chunkId": "usgs-nfm-a6.2-dissolved-oxygen.pdf__af61f5c3c21e",
+          "contentHash": "af61f5c3c21e",
+          "filename": "usgs-nfm-a6.2-dissolved-oxygen.pdf",
+          "grade": 2,
+          "evidence": "20.0\n \n0.8419\n \n0.8383\n \n0.8346\n \n0.8309\n \n0.8272\n \n0.8235\n \n0.8198\n \n0.8161\n \n0.8124\n \n0.8087\n \n0.8050\n \n0.8013\n \n0.7976\n \n0.7939\n \n0.7902",
+          "locator": "Table 6.2-4 fourth block (45,000-59,000 microsiemens per centimeter), column header present but caption on the preceding page — \"Specific conductance, in microsiemens per centimeter at 25 degrees Celsius 45,000\"",
+          "claimIds": [
+            "do-t624-20c-50000-08235-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.2-dissolved-oxygen.pdf__dcddd06f1651",
+          "contentHash": "dcddd06f1651",
+          "filename": "usgs-nfm-a6.2-dissolved-oxygen.pdf",
+          "grade": 2,
+          "evidence": "0.0\n \n1.0000\n \n0.9961\n \n0.9922\n \n0.9882\n \n0.9843\n \n0.9804\n \n0.9764\n \n0.9724\n \n0.9684\n \n0.9644\n \n0.9604\n \n0.9564\n \n0.9524\n \n0.9483\n \n0.9443",
+          "locator": "Table 6.2-4 (first block, 0-14,000 microsiemens per centimeter), caption and column header present — \"Salinity correction factors for dissolved oxygen in water (based on specific conductance).\"",
+          "claimIds": [
+            "do-t624-0uscm-unity-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.2-dissolved-oxygen.pdf__2d5d863cf1da",
+          "contentHash": "2d5d863cf1da",
+          "filename": "usgs-nfm-a6.2-dissolved-oxygen.pdf",
+          "grade": 2,
+          "evidence": "Correcting DO solubility for saline waters (specific\nconductance greater than 2,000 μS/cm) varies with instru-\nment type, calibration method, and the salts in solution.",
+          "locator": "Section 3.3 step 11-12, Section 4.0 Reporting, and Section 5.0 opening — \"reported to the nearest 0.1 mg/L and stored to the nearest 0.01 mg/L\"",
+          "claimIds": [
+            "do-saline-above-2000-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.2-dissolved-oxygen.pdf__af19876f2172",
+          "contentHash": "af19876f2172",
+          "filename": "usgs-nfm-a6.2-dissolved-oxygen.pdf",
+          "grade": 2,
+          "evidence": "8.97 mg/L x 0.9733 = 8.73 mg/L",
+          "locator": "Section 5.0 worked examples — \"8.97 mg/L x 0.9733 = 8.73 mg/L\"",
+          "claimIds": [
+            "do-example-873-product-01"
+          ]
+        }
+      ]
+    }
+  ]
+}

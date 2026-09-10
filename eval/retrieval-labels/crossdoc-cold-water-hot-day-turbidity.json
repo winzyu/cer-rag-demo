@@ -1,0 +1,181 @@
+{
+  "fixtureId": "crossdoc-cold-water-hot-day-turbidity",
+  "set": "committed",
+  "fixtureClass": "cross-document",
+  "turns": [
+    {
+      "turn": 1,
+      "query": "Snowmelt creek, water is about 4 C and it was 30 C and sunny on the bank. My bench readings on grab samples came out consistently higher than what the pod in the water was showing. Which one is lying?",
+      "relevant": [
+        {
+          "chunkId": "usgs-nfm-a6.7-turbidity.pdf__449b5d2a0b80",
+          "contentHash": "449b5d2a0b80",
+          "filename": "usgs-nfm-a6.7-turbidity.pdf",
+          "grade": 2,
+          "evidence": "Condensation on the sample cell\ncommonly occurs when the water sample is much colder than\nthe air temperature.",
+          "locator": "§6.7.3 Measurement introduction — \"The holding time must not exceed 24 hours\"",
+          "claimIds": [
+            "tby-bias-factors-condensation-01",
+            "tby-time-sensitive-onsite-01",
+            "tby-ph-change-precipitation-01",
+            "tby-storage-amber-4c-24h-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.7-turbidity.pdf__2b7bfe2e5921",
+          "contentHash": "2b7bfe2e5921",
+          "filename": "usgs-nfm-a6.7-turbidity.pdf",
+          "grade": 2,
+          "evidence": "sample during transport from source water to laboratory can cause",
+          "locator": "Decision Considerations for Instrument Selection — \"static or dynamic conditions\"",
+          "claimIds": [
+            "tby-transport-temp-difference-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.7-turbidity.pdf__a8e30bddcdef",
+          "contentHash": "a8e30bddcdef",
+          "filename": "usgs-nfm-a6.7-turbidity.pdf",
+          "grade": 2,
+          "evidence": "Dynamic measurement is preferred to static measure-",
+          "locator": "Decision Considerations 3, 4 and 5 — \"Dynamic measurement is preferred to static measurement\"",
+          "claimIds": [
+            "tby-dynamic-preferred-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.7-turbidity.pdf__deff04ad4ab8",
+          "contentHash": "deff04ad4ab8",
+          "filename": "usgs-nfm-a6.7-turbidity.pdf",
+          "grade": 2,
+          "evidence": "equilibrate to ambient temperature, if necessary, before\nsubsampling to help minimize condensation problems. Note:\nwarming the sample may change particle associations in the\nwater matrix.",
+          "locator": "§6.7.3.A steps 1b-3e for samples below 40 turbidity units — \"Gently invert—do not shake—the sample 25 times\"",
+          "claimIds": [
+            "tby-equilibrate-ambient-warning-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.7-turbidity.pdf__833295123a5d",
+          "contentHash": "833295123a5d",
+          "filename": "usgs-nfm-a6.7-turbidity.pdf",
+          "grade": 2,
+          "evidence": "Do not collect the discharge passing through the\nflowthrough chamber in which pH, conductivity, or other\nfield-measurement sensors are installed.",
+          "locator": "§6.7.3.A step 6e and ground-water turbidity guidance — \"natural turbidity in ground water generally is less than 5 turbidity units\"",
+          "claimIds": [
+            "tby-not-flowthrough-discharge-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.0-field-measurement-guidelines.pdf__f1715861e455",
+          "contentHash": "f1715861e455",
+          "filename": "usgs-nfm-a6.0-field-measurement-guidelines.pdf",
+          "grade": 2,
+          "evidence": "Subsamples must not be used for reported measure-\nments of temperature, DO concentration, Eh, or tur-\nbidity without value qualifiers",
+          "locator": "§3.2.2 Downhole (In Situ) Procedure and §3.2.3 Subsample procedures — 'locate sensors approximately 1 ft above the screened interval'",
+          "claimIds": [
+            "fm-subsample-forbidden-params-01",
+            "fm-subsample-bias-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.0-field-measurement-guidelines.pdf__99e41b1c2b83",
+          "contentHash": "99e41b1c2b83",
+          "filename": "usgs-nfm-a6.0-field-measurement-guidelines.pdf",
+          "grade": 2,
+          "evidence": "downhole can introduce atmospheric gases and\nparticulates into the water column, also resulting in\nbiased turbidity and other field measurements.",
+          "locator": "Section 3.2 Groundwater, bailer and well-type bullets and the three groundwater field-measurement procedures - \"Bailers are not recommended for purging\"",
+          "claimIds": [
+            "a60-bailer-turbidity-bias-01"
+          ]
+        }
+      ]
+    },
+    {
+      "turn": 2,
+      "query": "If I do end up having to report a bench number off a grab sample, what has to go with it? And can I just fill the bottle off the outlet of the flow cell while I'm there?",
+      "relevant": [
+        {
+          "chunkId": "usgs-nfm-a6.7-turbidity.pdf__449b5d2a0b80",
+          "contentHash": "449b5d2a0b80",
+          "filename": "usgs-nfm-a6.7-turbidity.pdf",
+          "grade": 2,
+          "evidence": "Condensation on the sample cell\ncommonly occurs when the water sample is much colder than\nthe air temperature.",
+          "locator": "§6.7.3 Measurement introduction — \"The holding time must not exceed 24 hours\"",
+          "claimIds": [
+            "tby-bias-factors-condensation-01",
+            "tby-time-sensitive-onsite-01",
+            "tby-ph-change-precipitation-01",
+            "tby-storage-amber-4c-24h-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.7-turbidity.pdf__2b7bfe2e5921",
+          "contentHash": "2b7bfe2e5921",
+          "filename": "usgs-nfm-a6.7-turbidity.pdf",
+          "grade": 2,
+          "evidence": "sample during transport from source water to laboratory can cause",
+          "locator": "Decision Considerations for Instrument Selection — \"static or dynamic conditions\"",
+          "claimIds": [
+            "tby-transport-temp-difference-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.7-turbidity.pdf__a8e30bddcdef",
+          "contentHash": "a8e30bddcdef",
+          "filename": "usgs-nfm-a6.7-turbidity.pdf",
+          "grade": 2,
+          "evidence": "Dynamic measurement is preferred to static measure-",
+          "locator": "Decision Considerations 3, 4 and 5 — \"Dynamic measurement is preferred to static measurement\"",
+          "claimIds": [
+            "tby-dynamic-preferred-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.7-turbidity.pdf__deff04ad4ab8",
+          "contentHash": "deff04ad4ab8",
+          "filename": "usgs-nfm-a6.7-turbidity.pdf",
+          "grade": 2,
+          "evidence": "equilibrate to ambient temperature, if necessary, before\nsubsampling to help minimize condensation problems. Note:\nwarming the sample may change particle associations in the\nwater matrix.",
+          "locator": "§6.7.3.A steps 1b-3e for samples below 40 turbidity units — \"Gently invert—do not shake—the sample 25 times\"",
+          "claimIds": [
+            "tby-equilibrate-ambient-warning-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.7-turbidity.pdf__833295123a5d",
+          "contentHash": "833295123a5d",
+          "filename": "usgs-nfm-a6.7-turbidity.pdf",
+          "grade": 2,
+          "evidence": "Do not collect the discharge passing through the\nflowthrough chamber in which pH, conductivity, or other\nfield-measurement sensors are installed.",
+          "locator": "§6.7.3.A step 6e and ground-water turbidity guidance — \"natural turbidity in ground water generally is less than 5 turbidity units\"",
+          "claimIds": [
+            "tby-not-flowthrough-discharge-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.0-field-measurement-guidelines.pdf__f1715861e455",
+          "contentHash": "f1715861e455",
+          "filename": "usgs-nfm-a6.0-field-measurement-guidelines.pdf",
+          "grade": 2,
+          "evidence": "Subsamples must not be used for reported measure-\nments of temperature, DO concentration, Eh, or tur-\nbidity without value qualifiers",
+          "locator": "§3.2.2 Downhole (In Situ) Procedure and §3.2.3 Subsample procedures — 'locate sensors approximately 1 ft above the screened interval'",
+          "claimIds": [
+            "fm-subsample-forbidden-params-01",
+            "fm-subsample-bias-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.0-field-measurement-guidelines.pdf__99e41b1c2b83",
+          "contentHash": "99e41b1c2b83",
+          "filename": "usgs-nfm-a6.0-field-measurement-guidelines.pdf",
+          "grade": 2,
+          "evidence": "downhole can introduce atmospheric gases and\nparticulates into the water column, also resulting in\nbiased turbidity and other field measurements.",
+          "locator": "Section 3.2 Groundwater, bailer and well-type bullets and the three groundwater field-measurement procedures - \"Bailers are not recommended for purging\"",
+          "claimIds": [
+            "a60-bailer-turbidity-bias-01"
+          ]
+        }
+      ]
+    }
+  ]
+}

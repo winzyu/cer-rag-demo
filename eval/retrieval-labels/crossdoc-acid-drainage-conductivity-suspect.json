@@ -1,0 +1,223 @@
+{
+  "fixtureId": "crossdoc-acid-drainage-conductivity-suspect",
+  "set": "committed",
+  "fixtureClass": "cross-document",
+  "turns": [
+    {
+      "turn": 1,
+      "query": "We put a pod below an old mine adit. Water is running about pH 3.2 and the conductivity trace looks wrong to me — higher than the grab samples the lab ran. Is the low pH capable of throwing the conductivity off, and if so by how much?",
+      "relevant": [
+        {
+          "chunkId": "usgs-nfm-a6.3-specific-conductance.pdf__361ef9509206",
+          "contentHash": "361ef9509206",
+          "filename": "usgs-nfm-a6.3-specific-conductance.pdf",
+          "grade": 2,
+          "evidence": "factors can result in κ25 °C errors as large as 50 percent, because",
+          "locator": "Section 1.1 temperature dependence and equation 2 — \"Electrical conductivity increases by 0.5 to 3 percent per degree Celsius\"",
+          "claimIds": [
+            "sc-low-ph-50pct-error-01",
+            "sc-low-ph-largest-error-source-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.3-specific-conductance.pdf__e7c93d2b2493",
+          "contentHash": "e7c93d2b2493",
+          "filename": "usgs-nfm-a6.3-specific-conductance.pdf",
+          "grade": 2,
+          "evidence": "of errors as large as 50 percent for low-pH samples.",
+          "locator": "Technical Notes and Sections 4.3, 4.3.1, 4.3.2, 5.0 — \"Specific conductance (and electrical conductivity) data are reported at 25 degrees C\"",
+          "claimIds": [
+            "sc-compensation-50pct-lowph-error-01",
+            "sc-lowph-compare-to-25c-01",
+            "sc-mccleskey-lowph-method-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.3-specific-conductance.pdf__619a464ebb28",
+          "contentHash": "619a464ebb28",
+          "filename": "usgs-nfm-a6.3-specific-conductance.pdf",
+          "grade": 2,
+          "evidence": "Report the temperature-compensation factor in the",
+          "locator": "Sections 6.0 Reporting and 6.1 Uncertainty — \"Report the value on the field forms to three significant figures\"",
+          "claimIds": [
+            "sc-report-nonstandard-compensation-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.4-ph.pdf__1d9450892586",
+          "contentHash": "1d9450892586",
+          "filename": "usgs-nfm-a6.4-ph.pdf",
+          "grade": 2,
+          "evidence": "Standard pH buffer solutions 4, 7, and 10, labeled with expiration date (standard buffer solutions pH 1.68 or 2 are also needed if\nacidic waters are measured)",
+          "locator": "Section 2.1 pH Meters requirements, 2.2 pH Electrodes, and Table 6.4–1 — \"obtained and used for pH measurements ... are required to:\"",
+          "claimIds": [
+            "ph-table641-buffers-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.4-ph.pdf__b1653e60dd01",
+          "contentHash": "b1653e60dd01",
+          "filename": "usgs-nfm-a6.4-ph.pdf",
+          "grade": 2,
+          "evidence": "(3) the temperature of the pH buffers\nduring calibration needs be stable and similar to (within 10 °C\nof) the temperature of the solution being measured.",
+          "locator": "Section 4.0 Calibration of the pH Instrument System — \"A properly working pH system has—\"",
+          "claimIds": [
+            "ph-cal-three-conditions-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.4-ph.pdf__ff61308669d5",
+          "contentHash": "ff61308669d5",
+          "filename": "usgs-nfm-a6.4-ph.pdf",
+          "grade": 2,
+          "evidence": "brating a pH meter and electrode with buffers that are within±10 °C of the sample temperature is recommended.",
+          "locator": "Section 4.0 temperature guidance and general calibration guidelines — \"Calibrating a pH meter and electrode with buffers that are within ±10 °C\"",
+          "claimIds": [
+            "ph-buffer-within-10c-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.4-ph.pdf__164de423e5e7",
+          "contentHash": "164de423e5e7",
+          "filename": "usgs-nfm-a6.4-ph.pdf",
+          "grade": 2,
+          "evidence": "to yield accurate sample pH measurements for waters with\nspecific conductance between 100 and 60,000 μS/cm, tem-\nperature from 0 to 90 °C, and pH from 1.68 to 10.",
+          "locator": "Section 4.1.2 step 6 and section 5.0 Measurement of pH — \"Standard procedures for pH measurement are expected to yield accurate sample pH measurements\"",
+          "claimIds": [
+            "ph-measurement-envelope-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.4-ph.pdf__434fe1dc3109",
+          "contentHash": "434fe1dc3109",
+          "filename": "usgs-nfm-a6.4-ph.pdf",
+          "grade": 2,
+          "evidence": "accurate sample-pH measurements for waters with specific\nconductance less than 60,000 μS/cm, temperatures from 0 to\n90 °C, and pH in the range from 1.68 to 10.",
+          "locator": "Section 4.0 calibration guidelines and section 4.1 Calibration Procedure — \"Use at least two pH buffer solutions with documented, NIST-traceable pH values\"",
+          "claimIds": [
+            "ph-cal-procedure-envelope-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.4-ph.pdf__147ba11e0c62",
+          "contentHash": "147ba11e0c62",
+          "filename": "usgs-nfm-a6.4-ph.pdf",
+          "grade": 2,
+          "evidence": "pH 1.68 buffer: readings between 300 and 330 mV",
+          "locator": "Section 4.1.1 step 12 slope and millivolt tests, technical note, and section 4.1.2 — \"The millivolt test\"",
+          "claimIds": [
+            "ph-mv-test-168-01"
+          ]
+        }
+      ]
+    },
+    {
+      "turn": 2,
+      "query": "Fair enough, but that whole argument hangs on the pH reading being right. Are our normal buffers even good down there?",
+      "relevant": [
+        {
+          "chunkId": "usgs-nfm-a6.3-specific-conductance.pdf__361ef9509206",
+          "contentHash": "361ef9509206",
+          "filename": "usgs-nfm-a6.3-specific-conductance.pdf",
+          "grade": 2,
+          "evidence": "factors can result in κ25 °C errors as large as 50 percent, because",
+          "locator": "Section 1.1 temperature dependence and equation 2 — \"Electrical conductivity increases by 0.5 to 3 percent per degree Celsius\"",
+          "claimIds": [
+            "sc-low-ph-50pct-error-01",
+            "sc-low-ph-largest-error-source-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.3-specific-conductance.pdf__e7c93d2b2493",
+          "contentHash": "e7c93d2b2493",
+          "filename": "usgs-nfm-a6.3-specific-conductance.pdf",
+          "grade": 2,
+          "evidence": "of errors as large as 50 percent for low-pH samples.",
+          "locator": "Technical Notes and Sections 4.3, 4.3.1, 4.3.2, 5.0 — \"Specific conductance (and electrical conductivity) data are reported at 25 degrees C\"",
+          "claimIds": [
+            "sc-compensation-50pct-lowph-error-01",
+            "sc-lowph-compare-to-25c-01",
+            "sc-mccleskey-lowph-method-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.3-specific-conductance.pdf__619a464ebb28",
+          "contentHash": "619a464ebb28",
+          "filename": "usgs-nfm-a6.3-specific-conductance.pdf",
+          "grade": 2,
+          "evidence": "Report the temperature-compensation factor in the",
+          "locator": "Sections 6.0 Reporting and 6.1 Uncertainty — \"Report the value on the field forms to three significant figures\"",
+          "claimIds": [
+            "sc-report-nonstandard-compensation-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.4-ph.pdf__1d9450892586",
+          "contentHash": "1d9450892586",
+          "filename": "usgs-nfm-a6.4-ph.pdf",
+          "grade": 2,
+          "evidence": "Standard pH buffer solutions 4, 7, and 10, labeled with expiration date (standard buffer solutions pH 1.68 or 2 are also needed if\nacidic waters are measured)",
+          "locator": "Section 2.1 pH Meters requirements, 2.2 pH Electrodes, and Table 6.4–1 — \"obtained and used for pH measurements ... are required to:\"",
+          "claimIds": [
+            "ph-table641-buffers-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.4-ph.pdf__b1653e60dd01",
+          "contentHash": "b1653e60dd01",
+          "filename": "usgs-nfm-a6.4-ph.pdf",
+          "grade": 2,
+          "evidence": "(3) the temperature of the pH buffers\nduring calibration needs be stable and similar to (within 10 °C\nof) the temperature of the solution being measured.",
+          "locator": "Section 4.0 Calibration of the pH Instrument System — \"A properly working pH system has—\"",
+          "claimIds": [
+            "ph-cal-three-conditions-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.4-ph.pdf__ff61308669d5",
+          "contentHash": "ff61308669d5",
+          "filename": "usgs-nfm-a6.4-ph.pdf",
+          "grade": 2,
+          "evidence": "brating a pH meter and electrode with buffers that are within±10 °C of the sample temperature is recommended.",
+          "locator": "Section 4.0 temperature guidance and general calibration guidelines — \"Calibrating a pH meter and electrode with buffers that are within ±10 °C\"",
+          "claimIds": [
+            "ph-buffer-within-10c-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.4-ph.pdf__164de423e5e7",
+          "contentHash": "164de423e5e7",
+          "filename": "usgs-nfm-a6.4-ph.pdf",
+          "grade": 2,
+          "evidence": "to yield accurate sample pH measurements for waters with\nspecific conductance between 100 and 60,000 μS/cm, tem-\nperature from 0 to 90 °C, and pH from 1.68 to 10.",
+          "locator": "Section 4.1.2 step 6 and section 5.0 Measurement of pH — \"Standard procedures for pH measurement are expected to yield accurate sample pH measurements\"",
+          "claimIds": [
+            "ph-measurement-envelope-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.4-ph.pdf__434fe1dc3109",
+          "contentHash": "434fe1dc3109",
+          "filename": "usgs-nfm-a6.4-ph.pdf",
+          "grade": 2,
+          "evidence": "accurate sample-pH measurements for waters with specific\nconductance less than 60,000 μS/cm, temperatures from 0 to\n90 °C, and pH in the range from 1.68 to 10.",
+          "locator": "Section 4.0 calibration guidelines and section 4.1 Calibration Procedure — \"Use at least two pH buffer solutions with documented, NIST-traceable pH values\"",
+          "claimIds": [
+            "ph-cal-procedure-envelope-01"
+          ]
+        },
+        {
+          "chunkId": "usgs-nfm-a6.4-ph.pdf__147ba11e0c62",
+          "contentHash": "147ba11e0c62",
+          "filename": "usgs-nfm-a6.4-ph.pdf",
+          "grade": 2,
+          "evidence": "pH 1.68 buffer: readings between 300 and 330 mV",
+          "locator": "Section 4.1.1 step 12 slope and millivolt tests, technical note, and section 4.1.2 — \"The millivolt test\"",
+          "claimIds": [
+            "ph-mv-test-168-01"
+          ]
+        }
+      ]
+    }
+  ]
+}
