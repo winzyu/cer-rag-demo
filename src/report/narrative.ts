@@ -12,7 +12,7 @@
 
 import type { ParameterStats, ReportInput, ReportStatus } from "./types";
 import {
-  flagFor, heldSteady, isRelativeIndex, outOfRangeShare, statValue, withUnit,
+  CONFIDENCE_FLOOR, flagFor, heldSteady, isRelativeIndex, outOfRangeShare, statValue, withUnit,
 } from "./types";
 import { clarityBandFor, TURBIDITY_SCALE_CAVEAT } from "./referenceRanges";
 
@@ -244,8 +244,17 @@ export const deterministicNarrative = (
     operational = "Recalibrate and inspect sensors on flagged parameters at next service window.";
     investigative = `Collect grab samples to confirm flagged readings${
       report.events.length > 0 ? " and corroborate event classification." : "."}`;
+    // Escalation, not remediation: this names who to involve (client, authority, a
+    // water-quality professional) and never what to do about the reading. Gated on
+    // CONFIDENCE_FLOOR -- same floor overallStatus uses to keep a low-confidence finding off
+    // "Action Required" -- so an event events.ts already downgraded toward Inconclusive
+    // can't still push a call-an-authority line onto the page.
+    const escalate = report.events.some((e) => e.severity === "High" && e.confidence >= CONFIDENCE_FLOOR);
     stakeholder = `Notify client${
-      report.events.some((e) => e.severity === "High") ? " and relevant authority given event severity." : "."}`;
+      escalate
+        ? " and relevant authority given event severity. Consider referring this excursion to "
+          + "a qualified water-quality professional for review."
+        : "."}`;
   } else {
     operational = "No action needed; maintain routine calibration schedule.";
     investigative = "None required this period.";

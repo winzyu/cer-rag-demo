@@ -327,4 +327,62 @@ describe("deterministicNarrative — recommendations", () => {
     const { recommendationsStakeholder } = deterministicNarrative(report([ph], [highEvent]), noAccuracy, "Action Required");
     expect(recommendationsStakeholder).toContain("relevant authority");
   });
+
+  it("adds a professional-referral escalation line for a high-severity, high-confidence event", () => {
+    const ph = param(fixedBaseline("ph", "pH", "", 6.5, 8.5), { max: 9.0 });
+    const highEvent: WQEvent = {
+      type: "Sewage", windowStartMs: 0, windowEndMs: 1, severity: "High",
+      parameterMovements: "", interpretation: "", followUp: "", confidence: 0.7,
+    };
+    const { recommendationsStakeholder } = deterministicNarrative(report([ph], [highEvent]), noAccuracy, "Action Required");
+    expect(recommendationsStakeholder).toContain("qualified water-quality professional");
+  });
+
+  it("does not escalate a High-severity event below the confidence floor", () => {
+    // Same severity as the case above, but confidence sits below CONFIDENCE_FLOOR (0.5) -- the
+    // same floor overallStatus uses to keep a weak finding off "Action Required". An inconclusive
+    // finding must not tell someone to call an authority.
+    const ph = param(fixedBaseline("ph", "pH", "", 6.5, 8.5), { max: 9.0 });
+    const weakHighEvent: WQEvent = {
+      type: "Inconclusive", windowStartMs: 0, windowEndMs: 1, severity: "High",
+      parameterMovements: "", interpretation: "", followUp: "", confidence: 0.3,
+    };
+    const { recommendationsStakeholder } = deterministicNarrative(report([ph], [weakHighEvent]), noAccuracy, "Watch");
+    expect(recommendationsStakeholder).not.toContain("relevant authority");
+    expect(recommendationsStakeholder).not.toContain("water-quality professional");
+    expect(recommendationsStakeholder).toBe("Notify client.");
+  });
+
+  it("does not escalate a persistent-offset window, since those are capped at Moderate severity", () => {
+    // events.ts caps a window covering most of the reporting period at "Moderate" severity even
+    // at high confidence, specifically so a month-long baseline mismatch doesn't read as the most
+    // severe finding in the report. Confirms the escalation line respects that cap too.
+    const ph = param(fixedBaseline("ph", "pH", "", 7.8, 8.3), { max: 9.0 });
+    const persistentEvent: WQEvent = {
+      type: "Industrial", windowStartMs: 0, windowEndMs: 1, severity: "Moderate",
+      parameterMovements: "", interpretation: "", followUp: "", confidence: 0.9,
+    };
+    const { recommendationsStakeholder } = deterministicNarrative(report([ph], [persistentEvent]), noAccuracy, "Watch");
+    expect(recommendationsStakeholder).not.toContain("relevant authority");
+    expect(recommendationsStakeholder).not.toContain("water-quality professional");
+  });
+
+  it("never emits remediation phrasing anywhere in the narrative -- escalation names who, not what to do", () => {
+    const ph = param(fixedBaseline("ph", "pH", "", 6.5, 8.5), { max: 9.0 });
+    const highEvent: WQEvent = {
+      type: "Sewage", windowStartMs: 0, windowEndMs: 1, severity: "High",
+      parameterMovements: "", interpretation: "", followUp: "", confidence: 0.9,
+    };
+    const sections = deterministicNarrative(report([ph], [highEvent]), noAccuracy, "Action Required");
+    const allText = [
+      ...sections.summaryBullets,
+      ...sections.parameterAnalysis.values(),
+      sections.recommendationsOperational,
+      sections.recommendationsInvestigative,
+      sections.recommendationsStakeholder,
+    ].join(" \n ");
+    // Remediation is a separate, legally-gated piece of work -- the narrative may say who to
+    // involve, never what to do to the water or the system.
+    expect(allText).not.toMatch(/\binstall\b|\bdose\b|\baerat|\bincrease flow\b|\bflush\b|\breduce\b|\badd\s+(chlorine|treatment)/i);
+  });
 });
