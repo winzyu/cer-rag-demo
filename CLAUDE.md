@@ -68,9 +68,16 @@ will report anything that breaks.
 
 # Git
 
-**Show me the git plan before running any git command, and wait for my go-ahead.**
-You may run commit, push, branch and tag yourself — but only the commands in a
-plan I have seen and approved, never ahead of it and never beyond it.
+**Never run a git command until I have confirmed the plan for it.**
+
+The sequence is always: you show me the plan, I confirm it, and my confirmation
+says who runs it — I run it myself, or I tell you to run it. Both are normal.
+Until that confirmation arrives, run nothing: no commit, push, branch, tag,
+stash, or checkout.
+
+When I tell you to run it, run exactly the commands in the plan I approved —
+not a variation, not an extra step, and nothing the plan did not list. If you
+discover partway through that the plan was wrong, stop and show me a new one.
 
 After every checkpoint of functionality you reach **and verify** — a feature or
 partial feature that can be tested and that you have briefly tested — give me a
