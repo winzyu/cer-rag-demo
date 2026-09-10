@@ -21,6 +21,36 @@ file to the tree.
 docs/HANDOFF_2026-08-27.md is the current handoff. Do not treat any other
 handoff as current.
 
+# Delegation
+
+This project runs an Opus orchestrator with Sonnet subagents. Five rules, each
+of them a failure this pattern actually produces.
+
+- **Delegate implementation.** File edits, test writing, mechanical refactors and
+  scoped features go to a Sonnet subagent. Write code directly only when the task
+  needs cross-cutting judgment — retrieval strategy, eval methodology, prompt or
+  gate design, anything spanning `src/`, `eval/` and `docs/` at once. Left
+  unguided the orchestrator writes the code itself, which costs Opus rates for
+  Sonnet work.
+- **Verify the routing, do not assume it.** `model: sonnet` in agent frontmatter
+  and the equivalent env var have both been silently ignored, running everything
+  on the parent model. Check the usage dashboard or token cost after the first
+  delegation of a session; if it did not route, stop delegating and say so.
+- **Brief each subagent as if it just walked in, because it did.** It inherits
+  none of this conversation — only the prompt text. Carry into every task prompt:
+  the conventions and naming already in force, the decisions already settled (and
+  that they are not to be relitigated), the relevant traps, the exact files to
+  touch, and the house rules below. Point at the docs by name. A subagent
+  producing code that does not fit the rest of the repo is an under-specified
+  brief, not a bad agent.
+- **Review subagent output before treating it as done.** Read the actual diff,
+  not the agent's summary of it. Mandatory for anything touching retrieval
+  accuracy, numeric data handling, gate logic or judge logic — a
+  plausible-but-wrong implementation there is the real risk and it does not
+  announce itself.
+- **Delegation is one level deep.** Subagents do not spawn subagents; all
+  coordination flows back through the orchestrator.
+
 # Testing
 
 Run only the tests relevant to what you changed. Never run the full suite — it is
@@ -38,7 +68,9 @@ will report anything that breaks.
 
 # Git
 
-I run all git commands myself. Never commit, push, branch, or tag on my behalf.
+**Show me the git plan before running any git command, and wait for my go-ahead.**
+You may run commit, push, branch and tag yourself — but only the commands in a
+plan I have seen and approved, never ahead of it and never beyond it.
 
 After every checkpoint of functionality you reach **and verify** — a feature or
 partial feature that can be tested and that you have briefly tested — give me a
