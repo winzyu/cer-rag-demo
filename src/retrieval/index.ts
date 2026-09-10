@@ -2,6 +2,7 @@ import { config } from "../config";
 import { RetrievalRegistry } from "./RetrievalRegistry";
 import { StubAdapter } from "./adapters/StubAdapter";
 import { DirectFeedAdapter } from "./adapters/DirectFeedAdapter";
+import { GoldContextAdapter } from "./adapters/GoldContextAdapter";
 import { FirestoreVectorAdapter } from "./adapters/FirestoreVectorAdapter";
 import { HybridSliceVectorAdapter } from "./adapters/HybridSliceVectorAdapter";
 import { RrfHybridAdapter } from "./adapters/RrfHybridAdapter";
@@ -25,6 +26,12 @@ export const retrievalRegistry = new RetrievalRegistry();
 
 retrievalRegistry.register(new StubAdapter());
 retrievalRegistry.register(new DirectFeedAdapter(createCorpusSource()));
+
+/**
+ * The generation-ceiling arm: labelled-relevant chunks, verbatim, with no retrieval involved.
+ * Reads only the label files and the ingestion artifact — no network, no embeddings.
+ */
+retrievalRegistry.register(new GoldContextAdapter());
 
 /**
  * Bake-off arm ◆G10. Unlike the pgvector arm — now archived under `archive/pgvector-rag/` — this
@@ -85,6 +92,7 @@ export { StubAdapter } from "./adapters/StubAdapter";
 export { HybridSliceVectorAdapter } from "./adapters/HybridSliceVectorAdapter";
 export { RrfHybridAdapter, RRF_K, FUSION_DEPTH } from "./adapters/RrfHybridAdapter";
 export { DirectFeedAdapter } from "./adapters/DirectFeedAdapter";
+export { GoldContextAdapter } from "./adapters/GoldContextAdapter";
 export {
   CHUNK_COLLECTION,
   DISTANCE_FIELD,
